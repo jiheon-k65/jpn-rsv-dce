@@ -1,0 +1,406 @@
+===========================================================================
+Title: 3_dataImp_output.txt
+Date: 2026-07-20
+===========================================================================
+
+Column names of jpn_dataset_subset.csv:
+ [1] "id"            "block"         "passTest"      "allSame"      
+ [5] "task"          "choice_stage1" "choice_stage2" "mv_cost"      
+ [9] "mv_cost0.05"   "mv_cost0.1"    "mv_cost0.3"    "mv_cost1"     
+[13] "mv_hosp"       "mv_hosp0.3"    "mv_hosp0.9"    "mv_hosp1.2"   
+[17] "mv_preg"       "mv_preterm"    "mv_redness"    "mab_cost"     
+[21] "mab_cost0.05"  "mab_cost0.1"   "mab_cost0.3"   "mab_cost1"    
+[25] "mab_hosp"      "mab_hosp0.3"   "mab_hosp0.9"   "mab_hosp1.2"  
+[29] "mab_redness"   "risk"          "rptTask"       "mv_av"        
+[33] "mab_av"        "opt_av"        "propOpt"       "age"          
+[37] "sibling"       "numSib"        "fluCovVac"     "tdapVac"      
+[41] "rsvVac"        "gestAge"       "govTrust"      "vacImpt"      
+[45] "vacSafe"       "vacEff"        "vacBlf"        "education"    
+[49] "income"        "time"          "ageStd"        "sibGrp"       
+[53] "eduGrp"        "incGrp"       
+
+Dropped columns: fluCovVac tdapVac rsvVac 
+
+Proportion of unique IDs with missing values: 21.43 %
+
+File successfully saved as jpn_dataset_subset_complete.csv
+Column names of jpn_dataset_subset_complete.csv:
+ [1] "id"            "block"         "passTest"      "allSame"      
+ [5] "task"          "choice_stage1" "choice_stage2" "mv_cost"      
+ [9] "mv_cost0.05"   "mv_cost0.1"    "mv_cost0.3"    "mv_cost1"     
+[13] "mv_hosp"       "mv_hosp0.3"    "mv_hosp0.9"    "mv_hosp1.2"   
+[17] "mv_preg"       "mv_preterm"    "mv_redness"    "mab_cost"     
+[21] "mab_cost0.05"  "mab_cost0.1"   "mab_cost0.3"   "mab_cost1"    
+[25] "mab_hosp"      "mab_hosp0.3"   "mab_hosp0.9"   "mab_hosp1.2"  
+[29] "mab_redness"   "risk"          "rptTask"       "mv_av"        
+[33] "mab_av"        "opt_av"        "propOpt"       "age"          
+[37] "sibling"       "numSib"        "gestAge"       "govTrust"     
+[41] "vacImpt"       "vacSafe"       "vacEff"        "vacBlf"       
+[45] "education"     "income"        "time"          "ageStd"       
+[49] "sibGrp"        "eduGrp"        "incGrp"        "vacConf"      
+
+Crosstabulation of vacImpt_missing by numSib:
+               numSib
+vacImpt_missing 0           1           2          3         4        5       
+              0 317 (51.05) 218 (35.10) 65 (10.47) 13 (2.09) 6 (0.97) 2 (0.32)
+              1 24 (64.86)  9 (24.32)   4 (10.81)  0 (0.00)  0 (0.00) 0 (0.00)
+p-value (Fisher's exact test): 0.640
+
+Crosstabulation of vacImpt_missing by govTrust:
+               govTrust
+vacImpt_missing 0          1           2           3         
+              0 41 (6.60)  103 (16.59) 387 (62.32) 90 (14.49)
+              1 11 (29.73) 12 (32.43)  14 (37.84)  0 (0.00)  
+p-value (Fisher's exact test): <0.001
+
+Crosstabulation of vacImpt_missing by education:
+               education
+vacImpt_missing 1        2           3          4          5          
+              0 5 (0.81) 102 (16.43) 89 (14.33) 79 (12.72) 314 (50.56)
+              1 1 (2.70) 7 (18.92)   10 (27.03) 3 (8.11)   16 (43.24) 
+               education
+vacImpt_missing 6         7        8       
+              0 26 (4.19) 2 (0.32) 4 (0.64)
+              1 0 (0.00)  0 (0.00) 0 (0.00)
+p-value (Fisher's exact test): 0.278
+
+Crosstabulation of vacImpt_missing by income:
+               income
+vacImpt_missing 1          2           3           4          5        
+              0 94 (15.14) 179 (28.82) 167 (26.89) 94 (15.14) 49 (7.89)
+              1 12 (32.43) 9 (24.32)   5 (13.51)   6 (16.22)  5 (13.51)
+               income
+vacImpt_missing 6         7        
+              0 22 (3.54) 16 (2.58)
+              1 0 (0.00)  0 (0.00) 
+p-value (Fisher's exact test): 0.073
+
+Summary of age by vacImpt_missing:
+ group Count  Mean   SD   Min   Max
+     0   621 33.04 4.81 21.00 54.00
+     1    37 34.41 4.89 27.00 49.00
+p-value (t-test): 0.105 
+
+Summary of gestAge by vacImpt_missing:
+ group Count  Mean    SD  Min   Max
+     0   621 24.57  9.75 5.00 41.00
+     1    37 22.76 10.53 5.00 39.00
+p-value (t-test): 0.312 
+
+Summary of time by vacImpt_missing:
+ group Count Mean   SD  Min   Max
+     0   621 4.38 4.61 0.98 61.15
+     1    37 3.44 1.93 1.10 11.42
+p-value (t-test): 0.012 
+
+Summary of propOpt by vacImpt_missing:
+ group Count Mean   SD  Min  Max
+     0   621 0.39 0.37 0.00 1.00
+     1    37 0.71 0.34 0.00 1.00
+p-value (t-test): <0.001 
+
+Crosstabulation of vacSafe_missing by numSib:
+               numSib
+vacSafe_missing 0           1           2          3         4        5       
+              0 300 (51.64) 202 (34.77) 61 (10.50) 11 (1.89) 5 (0.86) 2 (0.34)
+              1 41 (53.25)  25 (32.47)  8 (10.39)  2 (2.60)  1 (1.30) 0 (0.00)
+p-value (Fisher's exact test): 0.902
+
+Crosstabulation of vacSafe_missing by govTrust:
+               govTrust
+vacSafe_missing 0         1          2           3         
+              0 43 (7.40) 97 (16.70) 351 (60.41) 90 (15.49)
+              1 9 (11.69) 18 (23.38) 50 (64.94)  0 (0.00)  
+p-value (chi-squared test): 0.001
+
+Crosstabulation of vacSafe_missing by education:
+               education
+vacSafe_missing 1        2          3          4          5           6        
+              0 4 (0.69) 93 (16.01) 85 (14.63) 72 (12.39) 297 (51.12) 24 (4.13)
+              1 2 (2.60) 16 (20.78) 14 (18.18) 10 (12.99) 33 (42.86)  2 (2.60) 
+               education
+vacSafe_missing 7        8       
+              0 2 (0.34) 4 (0.69)
+              1 0 (0.00) 0 (0.00)
+p-value (Fisher's exact test): 0.486
+
+Crosstabulation of vacSafe_missing by income:
+               income
+vacSafe_missing 1          2           3           4          5        
+              0 95 (16.35) 163 (28.06) 151 (25.99) 88 (15.15) 48 (8.26)
+              1 11 (14.29) 25 (32.47)  21 (27.27)  12 (15.58) 6 (7.79) 
+               income
+vacSafe_missing 6         7        
+              0 20 (3.44) 16 (2.75)
+              1 2 (2.60)  0 (0.00) 
+p-value (Fisher's exact test): 0.876
+
+Summary of age by vacSafe_missing:
+ group Count  Mean   SD   Min   Max
+     0   581 33.06 4.77 21.00 54.00
+     1    77 33.51 5.24 23.00 49.00
+p-value (t-test): 0.480 
+
+Summary of gestAge by vacSafe_missing:
+ group Count  Mean    SD  Min   Max
+     0   581 24.56  9.70 5.00 41.00
+     1    77 23.81 10.50 5.00 41.00
+p-value (t-test): 0.552 
+
+Summary of time by vacSafe_missing:
+ group Count Mean   SD  Min   Max
+     0   581 4.38 4.69 0.98 61.15
+     1    77 4.00 2.78 1.33 23.43
+p-value (t-test): 0.316 
+
+Summary of propOpt by vacSafe_missing:
+ group Count Mean   SD  Min  Max
+     0   581 0.39 0.37 0.00 1.00
+     1    77 0.57 0.38 0.00 1.00
+p-value (t-test): <0.001 
+
+Crosstabulation of vacEff_missing by numSib:
+              numSib
+vacEff_missing 0           1           2          3         4        5       
+             0 311 (51.32) 210 (34.65) 64 (10.56) 13 (2.15) 6 (0.99) 2 (0.33)
+             1 30 (57.69)  17 (32.69)  5 (9.62)   0 (0.00)  0 (0.00) 0 (0.00)
+p-value (Fisher's exact test): 0.926
+
+Crosstabulation of vacEff_missing by govTrust:
+              govTrust
+vacEff_missing 0          1          2           3         
+             0 41 (6.77)  97 (16.01) 378 (62.38) 90 (14.85)
+             1 11 (21.15) 18 (34.62) 23 (44.23)  0 (0.00)  
+p-value (Fisher's exact test): <0.001
+
+Crosstabulation of vacEff_missing by education:
+              education
+vacEff_missing 1        2          3          4          5           6        
+             0 4 (0.66) 98 (16.17) 88 (14.52) 76 (12.54) 308 (50.83) 26 (4.29)
+             1 2 (3.85) 11 (21.15) 11 (21.15) 6 (11.54)  22 (42.31)  0 (0.00) 
+              education
+vacEff_missing 7        8       
+             0 2 (0.33) 4 (0.66)
+             1 0 (0.00) 0 (0.00)
+p-value (Fisher's exact test): 0.166
+
+Crosstabulation of vacEff_missing by income:
+              income
+vacEff_missing 1          2           3           4          5        
+             0 92 (15.18) 174 (28.71) 160 (26.40) 93 (15.35) 50 (8.25)
+             1 14 (26.92) 14 (26.92)  12 (23.08)  7 (13.46)  4 (7.69) 
+              income
+vacEff_missing 6         7        
+             0 21 (3.47) 16 (2.64)
+             1 1 (1.92)  0 (0.00) 
+p-value (Fisher's exact test): 0.543
+
+Summary of age by vacEff_missing:
+ group Count  Mean   SD   Min   Max
+     0   606 33.09 4.75 21.00 54.00
+     1    52 33.33 5.64 23.00 49.00
+p-value (t-test): 0.774 
+
+Summary of gestAge by vacEff_missing:
+ group Count  Mean   SD  Min   Max
+     0   606 24.53 9.81 5.00 41.00
+     1    52 23.75 9.70 5.00 38.00
+p-value (t-test): 0.579 
+
+Summary of time by vacEff_missing:
+ group Count Mean   SD  Min   Max
+     0   606 4.41 4.67 0.98 61.15
+     1    52 3.43 1.29 1.33  6.58
+p-value (t-test): <0.001 
+
+Summary of propOpt by vacEff_missing:
+ group Count Mean   SD  Min  Max
+     0   606 0.38 0.36 0.00 1.00
+     1    52 0.72 0.37 0.00 1.00
+p-value (t-test): <0.001 
+
+Crosstabulation of vacBlf_missing by numSib:
+              numSib
+vacBlf_missing 0           1           2          3         4        5       
+             0 281 (51.37) 193 (35.28) 54 (9.87)  13 (2.38) 4 (0.73) 2 (0.37)
+             1 60 (54.05)  34 (30.63)  15 (13.51) 0 (0.00)  2 (1.80) 0 (0.00)
+p-value (Fisher's exact test): 0.257
+
+Crosstabulation of vacBlf_missing by govTrust:
+              govTrust
+vacBlf_missing 0          1          2           3         
+             0 38 (6.95)  89 (16.27) 332 (60.69) 88 (16.09)
+             1 14 (12.61) 26 (23.42) 69 (62.16)  2 (1.80)  
+p-value (chi-squared test): <0.001
+
+Crosstabulation of vacBlf_missing by education:
+              education
+vacBlf_missing 1        2          3          4          5           6        
+             0 4 (0.73) 88 (16.09) 71 (12.98) 70 (12.80) 285 (52.10) 24 (4.39)
+             1 2 (1.80) 21 (18.92) 28 (25.23) 12 (10.81) 45 (40.54)  2 (1.80) 
+              education
+vacBlf_missing 7        8       
+             0 2 (0.37) 3 (0.55)
+             1 0 (0.00) 1 (0.90)
+p-value (Fisher's exact test): 0.023
+
+Crosstabulation of vacBlf_missing by income:
+              income
+vacBlf_missing 1          2           3           4          5        
+             0 87 (15.90) 159 (29.07) 138 (25.23) 82 (14.99) 46 (8.41)
+             1 19 (17.12) 29 (26.13)  34 (30.63)  18 (16.22) 8 (7.21) 
+              income
+vacBlf_missing 6         7        
+             0 20 (3.66) 15 (2.74)
+             1 2 (1.80)  1 (0.90) 
+p-value (Fisher's exact test): 0.775
+
+Summary of age by vacBlf_missing:
+ group Count  Mean   SD   Min   Max
+     0   547 33.10 4.77 21.00 54.00
+     1   111 33.16 5.09 23.00 49.00
+p-value (t-test): 0.909 
+
+Summary of gestAge by vacBlf_missing:
+ group Count  Mean    SD  Min   Max
+     0   547 24.40  9.73 5.00 41.00
+     1   111 24.82 10.11 5.00 41.00
+p-value (t-test): 0.689 
+
+Summary of time by vacBlf_missing:
+ group Count Mean   SD  Min   Max
+     0   547 4.39 4.73 0.98 61.15
+     1   111 4.04 3.21 1.08 30.80
+p-value (t-test): 0.342 
+
+Summary of propOpt by vacBlf_missing:
+ group Count Mean   SD  Min  Max
+     0   547 0.37 0.36 0.00 1.00
+     1   111 0.59 0.38 0.00 1.00
+p-value (t-test): <0.001 
+
+Call:
+glm(formula = vacImpt_missing ~ age + gestAge + numSib + govTrust + 
+    education + income + time + propOpt, family = binomial, data = df_forImp)
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)   
+(Intercept) -2.05610    1.53198  -1.342   0.1796   
+age          0.04034    0.03575   1.129   0.2591   
+gestAge     -0.01700    0.01804  -0.942   0.3462   
+numSib      -0.47188    0.26393  -1.788   0.0738 . 
+govTrust    -0.69980    0.23237  -3.012   0.0026 **
+education   -0.10861    0.14156  -0.767   0.4429   
+income      -0.09680    0.13806  -0.701   0.4832   
+time        -0.12368    0.10303  -1.200   0.2300   
+propOpt      1.34074    0.54679   2.452   0.0142 * 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 284.87  on 657  degrees of freedom
+Residual deviance: 239.31  on 649  degrees of freedom
+AIC: 257.31
+
+Number of Fisher Scoring iterations: 7
+
+
+Call:
+glm(formula = vacSafe_missing ~ age + gestAge + numSib + govTrust + 
+    education + income + time + propOpt, family = binomial, data = df_forImp)
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)   
+(Intercept) -1.541218   1.074661  -1.434  0.15153   
+age          0.007166   0.025720   0.279  0.78053   
+gestAge     -0.007237   0.012550  -0.577  0.56417   
+numSib      -0.030919   0.151569  -0.204  0.83836   
+govTrust    -0.215097   0.171375  -1.255  0.20944   
+education   -0.143015   0.098588  -1.451  0.14688   
+income       0.002930   0.092021   0.032  0.97460   
+time        -0.014253   0.034408  -0.414  0.67869   
+propOpt      0.966271   0.364978   2.647  0.00811 **
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 475.01  on 657  degrees of freedom
+Residual deviance: 454.11  on 649  degrees of freedom
+AIC: 472.11
+
+Number of Fisher Scoring iterations: 5
+
+
+Call:
+glm(formula = vacEff_missing ~ age + gestAge + numSib + govTrust + 
+    education + income + time + propOpt, family = binomial, data = df_forImp)
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -0.857700   1.308521  -0.655 0.512163    
+age         -0.006442   0.031123  -0.207 0.836027    
+gestAge     -0.007481   0.015556  -0.481 0.630585    
+numSib      -0.313929   0.214416  -1.464 0.143162    
+govTrust    -0.469550   0.200673  -2.340 0.019290 *  
+education   -0.150423   0.120265  -1.251 0.211022    
+income      -0.106952   0.119196  -0.897 0.369569    
+time        -0.102260   0.082204  -1.244 0.213508    
+propOpt      1.776946   0.472104   3.764 0.000167 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 363.73  on 657  degrees of freedom
+Residual deviance: 311.31  on 649  degrees of freedom
+AIC: 329.31
+
+Number of Fisher Scoring iterations: 6
+
+
+Call:
+glm(formula = vacBlf_missing ~ age + gestAge + numSib + govTrust + 
+    education + income + time + propOpt, family = binomial, data = df_forImp)
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -0.956610   0.940338  -1.017   0.3090    
+age         -0.011663   0.022732  -0.513   0.6079    
+gestAge      0.005408   0.011092   0.488   0.6259    
+numSib      -0.033832   0.133756  -0.253   0.8003    
+govTrust    -0.203839   0.150980  -1.350   0.1770    
+education   -0.166996   0.085879  -1.945   0.0518 .  
+income       0.020695   0.079937   0.259   0.7957    
+time        -0.008887   0.027252  -0.326   0.7444    
+propOpt      1.304345   0.318038   4.101 4.11e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 597.21  on 657  degrees of freedom
+Residual deviance: 558.52  on 649  degrees of freedom
+AIC: 576.52
+
+Number of Fisher Scoring iterations: 4
+
+
+File successfully saved as jpn_dataset_subset_imputed.csv
+Column names of jpn_dataset_subset_imputed.csv:
+ [1] "id"              "block"           "passTest"        "allSame"        
+ [5] "task"            "choice_stage1"   "choice_stage2"   "mv_cost"        
+ [9] "mv_cost0.05"     "mv_cost0.1"      "mv_cost0.3"      "mv_cost1"       
+[13] "mv_hosp"         "mv_hosp0.3"      "mv_hosp0.9"      "mv_hosp1.2"     
+[17] "mv_preg"         "mv_preterm"      "mv_redness"      "mab_cost"       
+[21] "mab_cost0.05"    "mab_cost0.1"     "mab_cost0.3"     "mab_cost1"      
+[25] "mab_hosp"        "mab_hosp0.3"     "mab_hosp0.9"     "mab_hosp1.2"    
+[29] "mab_redness"     "risk"            "rptTask"         "mv_av"          
+[33] "mab_av"          "opt_av"          "propOpt"         "age"            
+[37] "sibling"         "numSib"          "gestAge"         "govTrust"       
+[41] "education"       "income"          "time"            "ageStd"         
+[45] "sibGrp"          "eduGrp"          "incGrp"          "vacImpt"        
+[49] "vacSafe"         "vacEff"          "vacBlf"          "vacImpt_missing"
+[53] "vacSafe_missing" "vacEff_missing"  "vacBlf_missing"  "imp"            
+[57] "vacConf"        

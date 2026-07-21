@@ -1,0 +1,688 @@
+Model run by Jiheo using Apollo 0.3.8 on R 4.5.1 for Windows.
+Please acknowledge the use of Apollo by citing Hess & Palma (2019)
+  DOI 10.1016/j.jocm.2019.100170
+  www.ApolloChoiceModelling.com
+
+Model name                                  : 7_mxl_costCont
+Model description                           : MXL; continuous cost
+Model run at                                : 2026-07-20 13:49:54.575889
+Estimation method                           : bgw
+Estimation diagnosis                        : Relative function convergence (favorable)
+Optimisation diagnosis                      : Maximum found
+     hessian properties                     : Negative definite
+     maximum eigenvalue                     : -3.116973
+     reciprocal of condition number         : 0.00808074
+Number of individuals                       : 658
+Number of rows in database                  : 5922
+Number of modelled outcomes                 : 5922
+
+Number of cores used                        :  12 
+Number of inter-individual draws            : 100 (sobol)
+
+LL(start)                                   : -6505.98
+LL at equal shares, LL(0)                   : -6505.98
+LL at observed shares, LL(C)                : -6436.96
+LL(final)                                   : -4241.65
+Rho-squared vs equal shares                  :  0.348 
+Adj.Rho-squared vs equal shares              :  0.3453 
+Rho-squared vs observed shares               :  0.341 
+Adj.Rho-squared vs observed shares           :  0.3386 
+AIC                                         :  8519.3 
+BIC                                         :  8639.66 
+
+Estimated parameters                        : 18
+Time taken (hh:mm:ss)                       :  00:01:25.02 
+     pre-estimation                         :  00:00:39.14 
+     estimation                             :  00:00:11.66 
+     post-estimation                        :  00:00:34.22 
+Iterations                                  :  38  
+
+Unconstrained optimisation.
+
+Estimates:
+                     Estimate        s.e.   t.rat.(0)  p(2-sided)    Rob.s.e.
+ascPdt               0.000000          NA          NA          NA          NA
+mu_ascOpt           -1.312860     0.16784    -7.82231   5.107e-15     0.21167
+sigma_ascOpt        -3.406118     0.16502   -20.64043    0.000000     0.20346
+bInf_mab             0.000000          NA          NA          NA          NA
+mu_bPreg_mv          0.415731     0.07677     5.41535   6.117e-08     0.08565
+sigma_bPreg_mv      -0.903126     0.10163    -8.88602    0.000000     0.14971
+bNoAe                0.000000          NA          NA          NA          NA
+mu_bRedness         -0.124161     0.06333    -1.96040    0.049949     0.05766
+sigma_bRedness      -0.063478     0.10097    -0.62869    0.529553     0.07218
+mu_bPreterm_mv      -1.005895     0.11227    -8.95934    0.000000     0.12596
+sigma_bPreterm_mv   -1.305383     0.13377    -9.75871    0.000000     0.16849
+bHosp15              0.000000          NA          NA          NA          NA
+mu_bHosp1.2         -0.020220     0.10447    -0.19355    0.846530     0.10983
+sigma_bHosp1.2      -0.439362     0.14312    -3.06991    0.002141     0.16958
+mu_bHosp0.9          0.058288     0.10198     0.57159    0.567603     0.10707
+sigma_bHosp0.9      -0.009760     0.23326    -0.04184    0.966626     0.38601
+mu_bHosp0.3          0.466862     0.10262     4.54964   5.374e-06     0.11055
+sigma_bHosp0.3      -0.187471     0.24347    -0.76999    0.441308     0.45834
+mu_bCost            -7.563687     0.46601   -16.23066    0.000000     0.78802
+sigma_bCost          5.642447     0.40807    13.82708    0.000000     0.68056
+bOptIntRisk          0.575853     0.13018     4.42365   9.705e-06     0.13878
+bHospIntRisk         0.042763     0.13014     0.32860    0.742460     0.13407
+                  Rob.t.rat.(0)  p(2-sided)
+ascPdt                       NA          NA
+mu_ascOpt              -6.20232   5.564e-10
+sigma_ascOpt          -16.74136    0.000000
+bInf_mab                     NA          NA
+mu_bPreg_mv             4.85394   1.210e-06
+sigma_bPreg_mv         -6.03231   1.616e-09
+bNoAe                        NA          NA
+mu_bRedness            -2.15344    0.031284
+sigma_bRedness         -0.87938    0.379194
+mu_bPreterm_mv         -7.98603   1.332e-15
+sigma_bPreterm_mv      -7.74764   9.326e-15
+bHosp15                      NA          NA
+mu_bHosp1.2            -0.18411    0.853930
+sigma_bHosp1.2         -2.59093    0.009572
+mu_bHosp0.9             0.54437    0.586188
+sigma_bHosp0.9         -0.02528    0.979829
+mu_bHosp0.3             4.22305   2.410e-05
+sigma_bHosp0.3         -0.40902    0.682522
+mu_bCost               -9.59839    0.000000
+sigma_bCost             8.29085   2.220e-16
+bOptIntRisk             4.14947   3.333e-05
+bHospIntRisk            0.31896    0.749755
+
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+
+Classical covariance matrix:
+                          mu_ascOpt      sigma_ascOpt       mu_bPreg_mv
+mu_ascOpt                  0.028169          0.005459        9.0971e-04
+sigma_ascOpt               0.005459          0.027232       -6.8067e-04
+mu_bPreg_mv              9.0971e-04       -6.8067e-04          0.005893
+sigma_bPreg_mv             0.001043        1.5128e-04        -4.346e-05
+mu_bRedness                0.002095         7.572e-05         9.850e-05
+sigma_bRedness           6.1090e-04        -1.096e-05       -2.1684e-04
+mu_bPreterm_mv             0.002043          0.001070         -0.004010
+sigma_bPreterm_mv          0.001483          0.003565         6.990e-05
+mu_bHosp1.2                0.006577        -2.517e-05        1.2465e-04
+sigma_bHosp1.2           5.4321e-04        6.9142e-04       -3.7620e-04
+mu_bHosp0.9                0.006346       -1.9193e-04         6.032e-05
+sigma_bHosp0.9            -0.001965          0.006854        3.7233e-04
+mu_bHosp0.3                0.006067       -7.2820e-04        1.1819e-04
+sigma_bHosp0.3             0.007434         -0.008970       -8.7209e-04
+mu_bCost                   0.010194          0.004007         -0.003174
+sigma_bCost               -0.020778         -0.005569          0.001669
+bOptIntRisk               -0.008984         -0.001195        3.5339e-04
+bHospIntRisk              -0.005967         5.305e-05        2.7832e-04
+                     sigma_bPreg_mv       mu_bRedness    sigma_bRedness
+mu_ascOpt                  0.001043          0.002095        6.1090e-04
+sigma_ascOpt             1.5128e-04         7.572e-05        -1.096e-05
+mu_bPreg_mv              -4.346e-05         9.850e-05       -2.1684e-04
+sigma_bPreg_mv             0.010330        2.9159e-04        1.4388e-04
+mu_bRedness              2.9159e-04          0.004011        2.6184e-04
+sigma_bRedness           1.4388e-04        2.6184e-04          0.010195
+mu_bPreterm_mv           6.9549e-04          0.001900        3.6831e-04
+sigma_bPreterm_mv         -0.001990         9.789e-06        4.1829e-04
+mu_bHosp1.2              3.5718e-04         2.503e-05         5.787e-05
+sigma_bHosp1.2           3.9020e-04        3.1315e-04        1.6033e-04
+mu_bHosp0.9               7.365e-05        2.2102e-04         4.105e-05
+sigma_bHosp0.9             0.002344         3.309e-05        4.5104e-04
+mu_bHosp0.3             -3.9094e-04        -6.925e-07         3.798e-05
+sigma_bHosp0.3             0.002517        3.0860e-04          0.001174
+mu_bCost                  -0.001138          0.001340          0.001629
+sigma_bCost               -0.004581         -0.001404        5.9241e-04
+bOptIntRisk               1.604e-05       -2.2735e-04       -1.8553e-04
+bHospIntRisk             2.9691e-04       -3.2853e-04       -1.8182e-04
+                     mu_bPreterm_mv sigma_bPreterm_mv       mu_bHosp1.2
+mu_ascOpt                  0.002043          0.001483          0.006577
+sigma_ascOpt               0.001070          0.003565        -2.517e-05
+mu_bPreg_mv               -0.004010         6.990e-05        1.2465e-04
+sigma_bPreg_mv           6.9549e-04         -0.001990        3.5718e-04
+mu_bRedness                0.001900         9.789e-06         2.503e-05
+sigma_bRedness           3.6831e-04        4.1829e-04         5.787e-05
+mu_bPreterm_mv             0.012605          0.004845         4.393e-05
+sigma_bPreterm_mv          0.004845          0.017893         9.308e-05
+mu_bHosp1.2               4.393e-05         9.308e-05          0.010914
+sigma_bHosp1.2           9.0381e-04        5.6917e-04          0.001645
+mu_bHosp0.9              2.7235e-04         9.475e-05          0.007229
+sigma_bHosp0.9           3.6126e-04          0.001217        3.4286e-04
+mu_bHosp0.3              -7.081e-05       -3.9465e-04          0.007072
+sigma_bHosp0.3          -1.9581e-04       -9.8199e-04        3.8959e-04
+mu_bCost                   0.003288          0.005452         -0.001510
+sigma_bCost               -0.005387         -0.004610         -0.002195
+bOptIntRisk             -5.1177e-04       -5.7357e-04         -0.005794
+bHospIntRisk            -2.8681e-04       -1.7922e-04         -0.007905
+                     sigma_bHosp1.2       mu_bHosp0.9    sigma_bHosp0.9
+mu_ascOpt                5.4321e-04          0.006346         -0.001965
+sigma_ascOpt             6.9142e-04       -1.9193e-04          0.006854
+mu_bPreg_mv             -3.7620e-04         6.032e-05        3.7233e-04
+sigma_bPreg_mv           3.9020e-04         7.365e-05          0.002344
+mu_bRedness              3.1315e-04        2.2102e-04         3.309e-05
+sigma_bRedness           1.6033e-04         4.105e-05        4.5104e-04
+mu_bPreterm_mv           9.0381e-04        2.7235e-04        3.6126e-04
+sigma_bPreterm_mv        5.6917e-04         9.475e-05          0.001217
+mu_bHosp1.2                0.001645          0.007229        3.4286e-04
+sigma_bHosp1.2             0.020483       -1.4032e-04         -0.001379
+mu_bHosp0.9             -1.4032e-04          0.010399        3.0845e-04
+sigma_bHosp0.9            -0.001379        3.0845e-04          0.054411
+mu_bHosp0.3             -3.5394e-04          0.007320       -1.1439e-04
+sigma_bHosp0.3          -9.9331e-04        1.3734e-04         -0.017615
+mu_bCost                   0.007618         -0.001515         -0.015536
+sigma_bCost               -0.006587         3.305e-07          0.003106
+bOptIntRisk             -4.0390e-04         -0.005974       -4.9467e-04
+bHospIntRisk            -3.2859e-04         -0.008148       -4.0606e-04
+                        mu_bHosp0.3    sigma_bHosp0.3          mu_bCost
+mu_ascOpt                  0.006067          0.007434          0.010194
+sigma_ascOpt            -7.2820e-04         -0.008970          0.004007
+mu_bPreg_mv              1.1819e-04       -8.7209e-04         -0.003174
+sigma_bPreg_mv          -3.9094e-04          0.002517         -0.001138
+mu_bRedness              -6.925e-07        3.0860e-04          0.001340
+sigma_bRedness            3.798e-05          0.001174          0.001629
+mu_bPreterm_mv           -7.081e-05       -1.9581e-04          0.003288
+sigma_bPreterm_mv       -3.9465e-04       -9.8199e-04          0.005452
+mu_bHosp1.2                0.007072        3.8959e-04         -0.001510
+sigma_bHosp1.2          -3.5394e-04       -9.9331e-04          0.007618
+mu_bHosp0.9                0.007320        1.3734e-04         -0.001515
+sigma_bHosp0.9          -1.1439e-04         -0.017615         -0.015536
+mu_bHosp0.3                0.010530        5.3091e-04         -0.002068
+sigma_bHosp0.3           5.3091e-04          0.059279          0.006083
+mu_bCost                  -0.002068          0.006083          0.217167
+sigma_bCost              1.0302e-04         -0.012142         -0.122465
+bOptIntRisk               -0.005976        1.2202e-04         -0.002750
+bHospIntRisk              -0.008361        4.8271e-04         -0.001291
+                        sigma_bCost       bOptIntRisk      bHospIntRisk
+mu_ascOpt                 -0.020778         -0.008984         -0.005967
+sigma_ascOpt              -0.005569         -0.001195         5.305e-05
+mu_bPreg_mv                0.001669        3.5339e-04        2.7832e-04
+sigma_bPreg_mv            -0.004581         1.604e-05        2.9691e-04
+mu_bRedness               -0.001404       -2.2735e-04       -3.2853e-04
+sigma_bRedness           5.9241e-04       -1.8553e-04       -1.8182e-04
+mu_bPreterm_mv            -0.005387       -5.1177e-04       -2.8681e-04
+sigma_bPreterm_mv         -0.004610       -5.7357e-04       -1.7922e-04
+mu_bHosp1.2               -0.002195         -0.005794         -0.007905
+sigma_bHosp1.2            -0.006587       -4.0390e-04       -3.2859e-04
+mu_bHosp0.9               3.305e-07         -0.005974         -0.008148
+sigma_bHosp0.9             0.003106       -4.9467e-04       -4.0606e-04
+mu_bHosp0.3              1.0302e-04         -0.005976         -0.008361
+sigma_bHosp0.3            -0.012142        1.2202e-04        4.8271e-04
+mu_bCost                  -0.122465         -0.002750         -0.001291
+sigma_bCost                0.166523          0.002387       -1.7960e-04
+bOptIntRisk                0.002387          0.016946          0.012594
+bHospIntRisk            -1.7960e-04          0.012594          0.016936
+
+Robust covariance matrix:
+                          mu_ascOpt      sigma_ascOpt       mu_bPreg_mv
+mu_ascOpt                  0.044805         -0.001055          0.001666
+sigma_ascOpt              -0.001055          0.041394       -7.3424e-04
+mu_bPreg_mv                0.001666       -7.3424e-04          0.007336
+sigma_bPreg_mv             0.003852         -0.001848        4.5086e-04
+mu_bRedness                0.002513        9.9587e-04        -6.728e-06
+sigma_bRedness           5.2117e-04       -7.5231e-04       -5.8563e-04
+mu_bPreterm_mv             0.003414          0.004614         -0.004219
+sigma_bPreterm_mv          0.001430          0.009442       -9.7301e-04
+mu_bHosp1.2                0.009017       -5.8289e-04        5.2224e-04
+sigma_bHosp1.2             0.001895       -8.4282e-04       -7.1027e-04
+mu_bHosp0.9                0.006643       -1.7841e-04        5.4289e-04
+sigma_bHosp0.9            -0.011607          0.035695        -2.116e-05
+mu_bHosp0.3                0.006098         -0.001582        7.8582e-04
+sigma_bHosp0.3             0.042242         -0.044875         -0.001985
+mu_bCost                  -0.001952         -0.004525         -0.013479
+sigma_bCost               -0.071022          0.011537        1.3959e-04
+bOptIntRisk               -0.007889         -0.002189        7.0639e-04
+bHospIntRisk              -0.004303         -0.001226        6.7430e-04
+                     sigma_bPreg_mv       mu_bRedness    sigma_bRedness
+mu_ascOpt                  0.003852          0.002513        5.2117e-04
+sigma_ascOpt              -0.001848        9.9587e-04       -7.5231e-04
+mu_bPreg_mv              4.5086e-04        -6.728e-06       -5.8563e-04
+sigma_bPreg_mv             0.022415        3.1890e-04        -9.564e-05
+mu_bRedness              3.1890e-04          0.003324        4.5854e-04
+sigma_bRedness           -9.564e-05        4.5854e-04          0.005211
+mu_bPreterm_mv           -6.860e-05          0.001732        8.0138e-04
+sigma_bPreterm_mv         -0.005052        3.6480e-04         3.060e-05
+mu_bHosp1.2              3.7455e-04        5.6424e-04       -1.9604e-04
+sigma_bHosp1.2            -0.003363        5.8807e-04       -4.0848e-04
+mu_bHosp0.9             -1.0949e-04        3.2630e-04       -2.1933e-04
+sigma_bHosp0.9             0.006804        9.9533e-04         -0.002788
+mu_bHosp0.3             -7.8295e-04        2.6988e-04       -8.6007e-04
+sigma_bHosp0.3             0.013359         -0.001280          0.004346
+mu_bCost                  -0.030288       -1.3200e-04          0.005447
+sigma_bCost                0.003959       -8.3400e-04          0.001146
+bOptIntRisk              9.4989e-04       -6.3724e-04       -1.7636e-04
+bHospIntRisk             7.8721e-04         -0.001093        2.3021e-04
+                     mu_bPreterm_mv sigma_bPreterm_mv       mu_bHosp1.2
+mu_ascOpt                  0.003414          0.001430          0.009017
+sigma_ascOpt               0.004614          0.009442       -5.8289e-04
+mu_bPreg_mv               -0.004219       -9.7301e-04        5.2224e-04
+sigma_bPreg_mv           -6.860e-05         -0.005052        3.7455e-04
+mu_bRedness                0.001732        3.6480e-04        5.6424e-04
+sigma_bRedness           8.0138e-04         3.060e-05       -1.9604e-04
+mu_bPreterm_mv             0.015865          0.010812       -8.6406e-04
+sigma_bPreterm_mv          0.010812          0.028388         -0.001273
+mu_bHosp1.2             -8.6406e-04         -0.001273          0.012063
+sigma_bHosp1.2          -1.8739e-04          0.001209          0.002327
+mu_bHosp0.9             -3.2539e-04       -9.7932e-04          0.007930
+sigma_bHosp0.9             0.002629          0.006627       -8.8500e-04
+mu_bHosp0.3             -8.3977e-04         -0.001857          0.008100
+sigma_bHosp0.3            -0.004471         -0.011022          0.003763
+mu_bCost                   0.005594          0.008025         -0.008688
+sigma_bCost               -0.005184          0.002283         -0.006654
+bOptIntRisk             -4.4459e-04         -0.001011         -0.005901
+bHospIntRisk             2.1042e-04         5.249e-05         -0.007968
+                     sigma_bHosp1.2       mu_bHosp0.9    sigma_bHosp0.9
+mu_ascOpt                  0.001895          0.006643         -0.011607
+sigma_ascOpt            -8.4282e-04       -1.7841e-04          0.035695
+mu_bPreg_mv             -7.1027e-04        5.4289e-04        -2.116e-05
+sigma_bPreg_mv            -0.003363       -1.0949e-04          0.006804
+mu_bRedness              5.8807e-04        3.2630e-04        9.9533e-04
+sigma_bRedness          -4.0848e-04       -2.1933e-04         -0.002788
+mu_bPreterm_mv          -1.8739e-04       -3.2539e-04          0.002629
+sigma_bPreterm_mv          0.001209       -9.7932e-04          0.006627
+mu_bHosp1.2                0.002327          0.007930       -8.8500e-04
+sigma_bHosp1.2             0.028756         -0.001090         -0.006009
+mu_bHosp0.9               -0.001090          0.011465          0.001288
+sigma_bHosp0.9            -0.006009          0.001288          0.149005
+mu_bHosp0.3             -4.0226e-04          0.008715       -1.3229e-04
+sigma_bHosp0.3             0.006705       -1.0639e-04         -0.097149
+mu_bCost                   0.015576         -0.010552         -0.084130
+sigma_bCost               -0.018108          0.002139          0.024332
+bOptIntRisk             -8.1498e-04         -0.005756       -4.3059e-04
+bHospIntRisk            -4.0189e-04         -0.007815       -2.6228e-04
+                        mu_bHosp0.3    sigma_bHosp0.3          mu_bCost
+mu_ascOpt                  0.006098          0.042242         -0.001952
+sigma_ascOpt              -0.001582         -0.044875         -0.004525
+mu_bPreg_mv              7.8582e-04         -0.001985         -0.013479
+sigma_bPreg_mv          -7.8295e-04          0.013359         -0.030288
+mu_bRedness              2.6988e-04         -0.001280       -1.3200e-04
+sigma_bRedness          -8.6007e-04          0.004346          0.005447
+mu_bPreterm_mv          -8.3977e-04         -0.004471          0.005594
+sigma_bPreterm_mv         -0.001857         -0.011022          0.008025
+mu_bHosp1.2                0.008100          0.003763         -0.008688
+sigma_bHosp1.2          -4.0226e-04          0.006705          0.015576
+mu_bHosp0.9                0.008715       -1.0639e-04         -0.010552
+sigma_bHosp0.9          -1.3229e-04         -0.097149         -0.084130
+mu_bHosp0.3                0.012222         -0.003031         -0.007218
+sigma_bHosp0.3            -0.003031          0.210073          0.016905
+mu_bCost                  -0.007218          0.016905          0.620970
+sigma_bCost              1.5373e-04         -0.077448         -0.264477
+bOptIntRisk               -0.005845        7.9430e-04         -0.007467
+bHospIntRisk              -0.008124          0.002596         -0.011617
+                        sigma_bCost       bOptIntRisk      bHospIntRisk
+mu_ascOpt                 -0.071022         -0.007889         -0.004303
+sigma_ascOpt               0.011537         -0.002189         -0.001226
+mu_bPreg_mv              1.3959e-04        7.0639e-04        6.7430e-04
+sigma_bPreg_mv             0.003959        9.4989e-04        7.8721e-04
+mu_bRedness             -8.3400e-04       -6.3724e-04         -0.001093
+sigma_bRedness             0.001146       -1.7636e-04        2.3021e-04
+mu_bPreterm_mv            -0.005184       -4.4459e-04        2.1042e-04
+sigma_bPreterm_mv          0.002283         -0.001011         5.249e-05
+mu_bHosp1.2               -0.006654         -0.005901         -0.007968
+sigma_bHosp1.2            -0.018108       -8.1498e-04       -4.0189e-04
+mu_bHosp0.9                0.002139         -0.005756         -0.007815
+sigma_bHosp0.9             0.024332       -4.3059e-04       -2.6228e-04
+mu_bHosp0.3              1.5373e-04         -0.005845         -0.008124
+sigma_bHosp0.3            -0.077448        7.9430e-04          0.002596
+mu_bCost                  -0.264477         -0.007467         -0.011617
+sigma_bCost                0.463166         -0.005629         -0.007740
+bOptIntRisk               -0.005629          0.019259          0.014011
+bHospIntRisk              -0.007740          0.014011          0.017975
+
+Classical correlation matrix:
+                          mu_ascOpt      sigma_ascOpt       mu_bPreg_mv
+mu_ascOpt                   1.00000          0.197109          0.070605
+sigma_ascOpt                0.19711          1.000000         -0.053729
+mu_bPreg_mv                 0.07061         -0.053729          1.000000
+sigma_bPreg_mv              0.06114          0.009020         -0.005569
+mu_bRedness                 0.19707          0.007245          0.020259
+sigma_bRedness              0.03605       -6.5808e-04         -0.027975
+mu_bPreterm_mv              0.10841          0.057734         -0.465208
+sigma_bPreterm_mv           0.06604          0.161485          0.006807
+mu_bHosp1.2                 0.37507         -0.001460          0.015541
+sigma_bHosp1.2              0.02261          0.029276         -0.034240
+mu_bHosp0.9                 0.37080         -0.011405          0.007705
+sigma_bHosp0.9             -0.05020          0.178047          0.020792
+mu_bHosp0.3                 0.35230         -0.043003          0.015003
+sigma_bHosp0.3              0.18192         -0.223256         -0.046658
+mu_bCost                    0.13033          0.052112         -0.088719
+sigma_bCost                -0.30337         -0.082697          0.053288
+bOptIntRisk                -0.41120         -0.055643          0.035363
+bHospIntRisk               -0.27317          0.002470          0.027858
+                     sigma_bPreg_mv       mu_bRedness    sigma_bRedness
+mu_ascOpt                  0.061145          0.197075          0.036050
+sigma_ascOpt               0.009020          0.007245       -6.5808e-04
+mu_bPreg_mv               -0.005569          0.020259         -0.027975
+sigma_bPreg_mv             1.000000          0.045300          0.014021
+mu_bRedness                0.045300          1.000000          0.040945
+sigma_bRedness             0.014021          0.040945          1.000000
+mu_bPreterm_mv             0.060949          0.267138          0.032490
+sigma_bPreterm_mv         -0.146363          0.001155          0.030970
+mu_bHosp1.2                0.033639          0.003783          0.005486
+sigma_bHosp1.2             0.026825          0.034547          0.011095
+mu_bHosp0.9                0.007106          0.034221          0.003987
+sigma_bHosp0.9             0.098883          0.002240          0.019151
+mu_bHosp0.3               -0.037485       -1.0656e-04          0.003665
+sigma_bHosp0.3             0.101709          0.020012          0.047768
+mu_bCost                  -0.024017          0.045411          0.034615
+sigma_bCost               -0.110459         -0.054337          0.014378
+bOptIntRisk                0.001213         -0.027575         -0.014115
+bHospIntRisk               0.022448         -0.039859         -0.013837
+                     mu_bPreterm_mv sigma_bPreterm_mv       mu_bHosp1.2
+mu_ascOpt                  0.108406          0.066041          0.375074
+sigma_ascOpt               0.057734          0.161485         -0.001460
+mu_bPreg_mv               -0.465208          0.006807          0.015541
+sigma_bPreg_mv             0.060949         -0.146363          0.033639
+mu_bRedness                0.267138          0.001155          0.003783
+sigma_bRedness             0.032490          0.030970          0.005486
+mu_bPreterm_mv             1.000000          0.322579          0.003745
+sigma_bPreterm_mv          0.322579          1.000000          0.006660
+mu_bHosp1.2                0.003745          0.006660          1.000000
+sigma_bHosp1.2             0.056248          0.029730          0.109989
+mu_bHosp0.9                0.023788          0.006946          0.678510
+sigma_bHosp0.9             0.013794          0.038989          0.014069
+mu_bHosp0.3               -0.006146         -0.028751          0.659640
+sigma_bHosp0.3            -0.007163         -0.030152          0.015316
+mu_bCost                   0.062849          0.087458         -0.031023
+sigma_bCost               -0.117579         -0.084447         -0.051492
+bOptIntRisk               -0.035016         -0.032939         -0.426052
+bHospIntRisk              -0.019630         -0.010295         -0.581390
+                     sigma_bHosp1.2       mu_bHosp0.9    sigma_bHosp0.9
+mu_ascOpt                  0.022615          0.370795         -0.050204
+sigma_ascOpt               0.029276         -0.011405          0.178047
+mu_bPreg_mv               -0.034240          0.007705          0.020792
+sigma_bPreg_mv             0.026825          0.007106          0.098883
+mu_bRedness                0.034547          0.034221          0.002240
+sigma_bRedness             0.011095          0.003987          0.019151
+mu_bPreterm_mv             0.056248          0.023788          0.013794
+sigma_bPreterm_mv          0.029730          0.006946          0.038989
+mu_bHosp1.2                0.109989          0.678510          0.014069
+sigma_bHosp1.2             1.000000         -0.009614         -0.041299
+mu_bHosp0.9               -0.009614          1.000000          0.012967
+sigma_bHosp0.9            -0.041299          0.012967          1.000000
+mu_bHosp0.3               -0.024100          0.699525         -0.004779
+sigma_bHosp0.3            -0.028506          0.005532         -0.310153
+mu_bCost                   0.114217         -0.031877         -0.142922
+sigma_bCost               -0.112788         7.943e-06          0.032626
+bOptIntRisk               -0.021679         -0.449994         -0.016291
+bHospIntRisk              -0.017642         -0.613965         -0.013376
+                        mu_bHosp0.3    sigma_bHosp0.3          mu_bCost
+mu_ascOpt                  0.352298          0.181921           0.13033
+sigma_ascOpt              -0.043003         -0.223256           0.05211
+mu_bPreg_mv                0.015003         -0.046658          -0.08872
+sigma_bPreg_mv            -0.037485          0.101709          -0.02402
+mu_bRedness             -1.0656e-04          0.020012           0.04541
+sigma_bRedness             0.003665          0.047768           0.03461
+mu_bPreterm_mv            -0.006146         -0.007163           0.06285
+sigma_bPreterm_mv         -0.028751         -0.030152           0.08746
+mu_bHosp1.2                0.659640          0.015316          -0.03102
+sigma_bHosp1.2            -0.024100         -0.028506           0.11422
+mu_bHosp0.9                0.699525          0.005532          -0.03188
+sigma_bHosp0.9            -0.004779         -0.310153          -0.14292
+mu_bHosp0.3                1.000000          0.021250          -0.04325
+sigma_bHosp0.3             0.021250          1.000000           0.05361
+mu_bCost                  -0.043246          0.053613           1.00000
+sigma_bCost                0.002460         -0.122213          -0.64399
+bOptIntRisk               -0.447350          0.003850          -0.04534
+bHospIntRisk              -0.626062          0.015234          -0.02129
+                        sigma_bCost       bOptIntRisk      bHospIntRisk
+mu_ascOpt                 -0.303374         -0.411204         -0.273169
+sigma_ascOpt              -0.082697         -0.055643          0.002470
+mu_bPreg_mv                0.053288          0.035363          0.027858
+sigma_bPreg_mv            -0.110459          0.001213          0.022448
+mu_bRedness               -0.054337         -0.027575         -0.039859
+sigma_bRedness             0.014378         -0.014115         -0.013837
+mu_bPreterm_mv            -0.117579         -0.035016         -0.019630
+sigma_bPreterm_mv         -0.084447         -0.032939         -0.010295
+mu_bHosp1.2               -0.051492         -0.426052         -0.581390
+sigma_bHosp1.2            -0.112788         -0.021679         -0.017642
+mu_bHosp0.9               7.943e-06         -0.449994         -0.613965
+sigma_bHosp0.9             0.032626         -0.016291         -0.013376
+mu_bHosp0.3                0.002460         -0.447350         -0.626062
+sigma_bHosp0.3            -0.122213          0.003850          0.015234
+mu_bCost                  -0.643989         -0.045337         -0.021289
+sigma_bCost                1.000000          0.044941         -0.003382
+bOptIntRisk                0.044941          1.000000          0.743416
+bHospIntRisk              -0.003382          0.743416          1.000000
+
+Robust correlation matrix:
+                          mu_ascOpt      sigma_ascOpt       mu_bPreg_mv
+mu_ascOpt                   1.00000         -0.024496          0.091877
+sigma_ascOpt               -0.02450          1.000000         -0.042136
+mu_bPreg_mv                 0.09188         -0.042136          1.000000
+sigma_bPreg_mv              0.12155         -0.060678          0.035161
+mu_bRedness                 0.20588          0.084895         -0.001362
+sigma_bRedness              0.03411         -0.051225         -0.094725
+mu_bPreterm_mv              0.12803          0.180052         -0.391043
+sigma_bPreterm_mv           0.04011          0.275429         -0.067426
+mu_bHosp1.2                 0.38786         -0.026085          0.055518
+sigma_bHosp1.2              0.05280         -0.024428         -0.048903
+mu_bHosp0.9                 0.29310         -0.008190          0.059198
+sigma_bHosp0.9             -0.14206          0.454501       -6.4005e-04
+mu_bHosp0.3                 0.26059         -0.070339          0.082993
+sigma_bHosp0.3              0.43541         -0.481224         -0.050563
+mu_bCost                   -0.01170         -0.028223         -0.199711
+sigma_bCost                -0.49302          0.083319          0.002395
+bOptIntRisk                -0.26856         -0.077511          0.059431
+bHospIntRisk               -0.15162         -0.044953          0.058722
+                     sigma_bPreg_mv       mu_bRedness    sigma_bRedness
+mu_ascOpt                  0.121551          0.205877          0.034109
+sigma_ascOpt              -0.060678          0.084895         -0.051225
+mu_bPreg_mv                0.035161         -0.001362         -0.094725
+sigma_bPreg_mv             1.000000          0.036944         -0.008850
+mu_bRedness                0.036944          1.000000          0.110175
+sigma_bRedness            -0.008850          0.110175          1.000000
+mu_bPreterm_mv            -0.003638          0.238542          0.088140
+sigma_bPreterm_mv         -0.200292          0.037552          0.002516
+mu_bHosp1.2                0.022778          0.089102         -0.024727
+sigma_bHosp1.2            -0.132475          0.060147         -0.033370
+mu_bHosp0.9               -0.006830          0.052855         -0.028377
+sigma_bHosp0.9             0.117742          0.044721         -0.100067
+mu_bHosp0.3               -0.047305          0.042341         -0.107777
+sigma_bHosp0.3             0.194676         -0.048421          0.131368
+mu_bCost                  -0.256725         -0.002905          0.095760
+sigma_bCost                0.038858         -0.021254          0.023318
+bOptIntRisk                0.045718         -0.079640         -0.017605
+bHospIntRisk               0.039219         -0.141393          0.023788
+                     mu_bPreterm_mv sigma_bPreterm_mv       mu_bHosp1.2
+mu_ascOpt                  0.128031          0.040110           0.38786
+sigma_ascOpt               0.180052          0.275429          -0.02609
+mu_bPreg_mv               -0.391043         -0.067426           0.05552
+sigma_bPreg_mv            -0.003638         -0.200292           0.02278
+mu_bRedness                0.238542          0.037552           0.08910
+sigma_bRedness             0.088140          0.002516          -0.02473
+mu_bPreterm_mv             1.000000          0.509474          -0.06246
+sigma_bPreterm_mv          0.509474          1.000000          -0.06877
+mu_bHosp1.2               -0.062460         -0.068765           1.00000
+sigma_bHosp1.2            -0.008773          0.042309           0.12493
+mu_bHosp0.9               -0.024127         -0.054284           0.67435
+sigma_bHosp0.9             0.054063          0.101897          -0.02087
+mu_bHosp0.3               -0.060308         -0.099719           0.66709
+sigma_bHosp0.3            -0.077442         -0.142732           0.07476
+mu_bCost                   0.056356          0.060441          -0.10039
+sigma_bCost               -0.060478          0.019909          -0.08902
+bOptIntRisk               -0.025434         -0.043241          -0.38713
+bHospIntRisk               0.012461          0.002324          -0.54112
+                     sigma_bHosp1.2       mu_bHosp0.9    sigma_bHosp0.9
+mu_ascOpt                  0.052798          0.293099         -0.142057
+sigma_ascOpt              -0.024428         -0.008190          0.454501
+mu_bPreg_mv               -0.048903          0.059198       -6.4005e-04
+sigma_bPreg_mv            -0.132475         -0.006830          0.117742
+mu_bRedness                0.060147          0.052855          0.044721
+sigma_bRedness            -0.033370         -0.028377         -0.100067
+mu_bPreterm_mv            -0.008773         -0.024127          0.054063
+sigma_bPreterm_mv          0.042309         -0.054284          0.101897
+mu_bHosp1.2                0.124934          0.674346         -0.020875
+sigma_bHosp1.2             1.000000         -0.060038         -0.091799
+mu_bHosp0.9               -0.060038          1.000000          0.031158
+sigma_bHosp0.9            -0.091799          0.031158          1.000000
+mu_bHosp0.3               -0.021457          0.736241         -0.003100
+sigma_bHosp0.3             0.086269         -0.002168         -0.549100
+mu_bCost                   0.116563         -0.125056         -0.276575
+sigma_bCost               -0.156902          0.029358          0.092621
+bOptIntRisk               -0.034630         -0.387339         -0.008038
+bHospIntRisk              -0.017677         -0.544356         -0.005068
+                        mu_bHosp0.3    sigma_bHosp0.3          mu_bCost
+mu_ascOpt                  0.260593          0.435406         -0.011701
+sigma_ascOpt              -0.070339         -0.481224         -0.028223
+mu_bPreg_mv                0.082993         -0.050563         -0.199711
+sigma_bPreg_mv            -0.047305          0.194676         -0.256725
+mu_bRedness                0.042341         -0.048421         -0.002905
+sigma_bRedness            -0.107777          0.131368          0.095760
+mu_bPreterm_mv            -0.060308         -0.077442          0.056356
+sigma_bPreterm_mv         -0.099719         -0.142732          0.060441
+mu_bHosp1.2                0.667095          0.074755         -0.100387
+sigma_bHosp1.2            -0.021457          0.086269          0.116563
+mu_bHosp0.9                0.736241         -0.002168         -0.125056
+sigma_bHosp0.9            -0.003100         -0.549100         -0.276575
+mu_bHosp0.3                1.000000         -0.059813         -0.082856
+sigma_bHosp0.3            -0.059813          1.000000          0.046804
+mu_bCost                  -0.082856          0.046804          1.000000
+sigma_bCost                0.002043         -0.248289         -0.493156
+bOptIntRisk               -0.380951          0.012488         -0.068280
+bHospIntRisk              -0.548153          0.042251         -0.109958
+                        sigma_bCost       bOptIntRisk      bHospIntRisk
+mu_ascOpt                 -0.493017         -0.268562         -0.151623
+sigma_ascOpt               0.083319         -0.077511         -0.044953
+mu_bPreg_mv                0.002395          0.059431          0.058722
+sigma_bPreg_mv             0.038858          0.045718          0.039219
+mu_bRedness               -0.021254         -0.079640         -0.141393
+sigma_bRedness             0.023318         -0.017605          0.023788
+mu_bPreterm_mv            -0.060478         -0.025434          0.012461
+sigma_bPreterm_mv          0.019909         -0.043241          0.002324
+mu_bHosp1.2               -0.089023         -0.387125         -0.541118
+sigma_bHosp1.2            -0.156902         -0.034630         -0.017677
+mu_bHosp0.9                0.029358         -0.387339         -0.544356
+sigma_bHosp0.9             0.092621         -0.008038         -0.005068
+mu_bHosp0.3                0.002043         -0.380951         -0.548153
+sigma_bHosp0.3            -0.248289          0.012488          0.042251
+mu_bCost                  -0.493156         -0.068280         -0.109958
+sigma_bCost                1.000000         -0.059594         -0.084833
+bOptIntRisk               -0.059594          1.000000          0.753021
+bHospIntRisk              -0.084833          0.753021          1.000000
+
+ 20 most extreme outliers in terms of lowest average per choice prediction:
+                ID Avg prob per choice
+ RYmoiw-UtLf3d-WOm           0.1617237
+ RO2Vbmd0CZLJFGjDN           0.1725904
+ RtP6t8TN3Uy2BAtnl           0.1769157
+ RwwCrqBGhHgOyyqLF           0.1840448
+ Rc0N6rmY2xAnSm5D0           0.1959634
+ Roxy8rrZvRBvRV6ek           0.1966569
+ Rpj2XhQtl-bcyZ21W           0.1972247
+ RPxVyr8DJpUlflpAO           0.1985319
+ RcnpfgvalI6QkBoG0           0.2066448
+ RzXcrU4b1XcNgM1u7           0.2084345
+ R00EMI_kGieMB8z_K           0.2086848
+ RnVkHL1P0jJCKe6Se           0.2112503
+ RVw_FdVyVPX6UEIUG           0.2116508
+ RjN3SrQR4SZfkkg_9           0.2124319
+ RdPEVc1B1qMbV5gJ0           0.2128038
+ RoTWWzx4ZIibDOvNW           0.2128139
+ R6p0xDqcqJr26jnrI           0.2132503
+ RcMyn_1AFSpMpImMO           0.2147635
+ RMHMMenIBtuBz92g4           0.2177188
+ RMLOLYrU6CugWPM_K           0.2181486
+
+Settings and functions used in model definition:
+
+apollo_control
+--------------
+                       Value                                                        
+modelDescr             "MXL; continuous cost"                                       
+modelName              "7_mxl_costCont"                                             
+indivID                "id"                                                         
+outputDirectory        "C:/Users/Jiheo/0_working_directory/Japanese RSV DCE/output/"
+nCores                 "12"                                                         
+mixing                 "TRUE"                                                       
+debug                  "FALSE"                                                      
+workInLogs             "FALSE"                                                      
+seed                   "13"                                                         
+HB                     "FALSE"                                                      
+noValidation           "FALSE"                                                      
+noDiagnostics          "FALSE"                                                      
+calculateLLC           "TRUE"                                                       
+analyticHessian        "FALSE"                                                      
+dropLoopExpansion      "FALSE"                                                      
+dropRedefCheck         "FALSE"                                                      
+memorySaver            "FALSE"                                                      
+panelData              "TRUE"                                                       
+analyticGrad           "TRUE"                                                       
+analyticGrad_manualSet "FALSE"                                                      
+overridePanel          "FALSE"                                                      
+preventOverridePanel   "FALSE"                                                      
+noModification         "FALSE"                                                      
+
+Hessian routines attempted
+--------------------------
+numerical jacobian of LL analytical gradient
+
+
+apollo_randCoeff
+------------------
+function(apollo_beta, apollo_inputs) {
+    randcoeff <- list()
+    randcoeff[["ascOpt"]] <- mu_ascOpt + sigma_ascOpt * draws_ascOpt
+    randcoeff[["bPreg_mv"]] <- mu_bPreg_mv + sigma_bPreg_mv * draws_bPreg
+    randcoeff[["bRedness"]] <- mu_bRedness + sigma_bRedness * draws_bRedness
+    randcoeff[["bPreterm_mv"]] <- mu_bPreterm_mv + sigma_bPreterm_mv * draws_bPreterm
+    randcoeff[["bHosp1.2"]] <- mu_bHosp1.2 + sigma_bHosp1.2 * draws_bHosp1.2
+    randcoeff[["bHosp0.9"]] <- mu_bHosp0.9 + sigma_bHosp0.9 * draws_bHosp0.9
+    randcoeff[["bHosp0.3"]] <- mu_bHosp0.3 + sigma_bHosp0.3 * draws_bHosp0.3
+    randcoeff[["bCost"]] <- mu_bCost + sigma_bCost * draws_bCost
+    return(randcoeff)
+}
+<bytecode: 0x0000021abdc56000>
+
+
+apollo_probabilities
+----------------------
+function(apollo_beta, apollo_inputs, functionality = "estimate") {
+    # To attach inputs & detach after function exit
+    apollo_attach(apollo_beta, apollo_inputs)
+    on.exit(apollo_detach(apollo_beta, apollo_inputs))
+
+    # To create list of probabilities
+    P <- list()
+
+    # List utilities
+    V <- list()
+    V[["mv"]] <- (
+        bPreg_mv * mv_preg +
+        bRedness * mv_redness +
+        bPreterm_mv * mv_preterm +
+        (bHosp1.2 + bHospIntRisk * risk) * mv_hosp1.2 +
+        (bHosp0.9 + bHospIntRisk * risk) * mv_hosp0.9 +
+        (bHosp0.3 + bHospIntRisk * risk) * mv_hosp0.3 +
+        bCost * mv_cost
+    )
+    V[["mab"]] <- (
+        bRedness * mab_redness +
+        (bHosp1.2 + bHospIntRisk * risk) * mab_hosp1.2 +
+        (bHosp0.9 + bHospIntRisk * risk) * mab_hosp0.9 +
+        (bHosp0.3 + bHospIntRisk * risk) * mab_hosp0.3 +
+        bCost * mab_cost
+    )
+    V[["opt"]] <- ascOpt + bOptIntRisk * risk
+
+    # Define MNL model settings
+    mnl_settings <- list(
+        alternatives = c(mv = 1, mab = 2, opt = 3),
+        avail = 1, # All alternatives available
+        choiceVar = choice_stage2,
+        utilities = V
+    )
+
+    # To compute probabilities using MNL model
+    P[["model"]] <- apollo_mnl(mnl_settings, functionality)
+
+    # To take product across observation for same individual
+    P <- apollo_panelProd(P, apollo_inputs, functionality)
+
+    # To average across inter-individual draws
+    P <- apollo_avgInterDraws(P, apollo_inputs, functionality)
+
+    # To prepare & return outputs of function
+    P <- apollo_prepareProb(P, apollo_inputs, functionality)
+    return(P)
+}

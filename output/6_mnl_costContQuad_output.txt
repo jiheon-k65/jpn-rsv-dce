@@ -1,0 +1,344 @@
+Model run by Jiheo using Apollo 0.3.8 on R 4.5.1 for Windows.
+Please acknowledge the use of Apollo by citing Hess & Palma (2019)
+  DOI 10.1016/j.jocm.2019.100170
+  www.ApolloChoiceModelling.com
+
+Model name                                  : 6_mnl_costContQuad
+Model description                           : MNL; quadratic cost
+Model run at                                : 2026-07-20 12:51:16.11371
+Estimation method                           : bgw
+Estimation diagnosis                        : Relative function convergence (favorable)
+Optimisation diagnosis                      : Maximum found
+     hessian properties                     : Negative definite
+     maximum eigenvalue                     : -5.737522
+     reciprocal of condition number         : 0.00180177
+Number of individuals                       : 658
+Number of rows in database                  : 5922
+Number of modelled outcomes                 : 5922
+
+Number of cores used                        :  1 
+Model without mixing
+
+LL(start)                                   : -6505.98
+LL at equal shares, LL(0)                   : -6505.98
+LL at observed shares, LL(C)                : -6436.96
+LL(final)                                   : -5789.24
+Rho-squared vs equal shares                  :  0.1102 
+Adj.Rho-squared vs equal shares              :  0.1085 
+Rho-squared vs observed shares               :  0.1006 
+Adj.Rho-squared vs observed shares           :  0.0992 
+AIC                                         :  11600.48 
+BIC                                         :  11674.03 
+
+Estimated parameters                        : 11
+Time taken (hh:mm:ss)                       :  00:00:1.14 
+     pre-estimation                         :  00:00:0.21 
+     estimation                             :  00:00:0.18 
+     post-estimation                        :  00:00:0.74 
+Iterations                                  :  7  
+
+Unconstrained optimisation.
+
+Estimates:
+                Estimate        s.e.   t.rat.(0)  p(2-sided)    Rob.s.e.
+ascPdt          0.000000          NA          NA          NA          NA
+ascOpt         -0.423143     0.07119    -5.94373   2.786e-09     0.08942
+bInf_mab        0.000000          NA          NA          NA          NA
+bPreg_mv        0.254834     0.05026     5.07013   3.976e-07     0.05456
+bNoAe           0.000000          NA          NA          NA          NA
+bRedness       -0.083165     0.04584    -1.81425     0.06964     0.04529
+bPreterm_mv    -0.483663     0.06535    -7.40126   1.350e-13     0.06664
+bHosp1.5        0.000000          NA          NA          NA          NA
+bHosp1.2        0.018923     0.07413     0.25528     0.79851     0.06762
+bHosp0.9        0.029463     0.07381     0.39917     0.68977     0.06715
+bHosp0.3        0.304160     0.07347     4.14009   3.472e-05     0.06568
+bCost          -5.722212     0.29897   -19.13980     0.00000     0.38365
+bCostSq         3.678153     0.29559    12.44334     0.00000     0.34361
+bOptIntRisk     0.213016     0.08887     2.39688     0.01654     0.07440
+bHospIntRisk    0.006018     0.09490     0.06342     0.94943     0.08166
+             Rob.t.rat.(0)  p(2-sided)
+ascPdt                  NA          NA
+ascOpt            -4.73233   2.220e-06
+bInf_mab                NA          NA
+bPreg_mv           4.67068   3.002e-06
+bNoAe                   NA          NA
+bRedness          -1.83622    0.066325
+bPreterm_mv       -7.25833   3.919e-13
+bHosp1.5                NA          NA
+bHosp1.2           0.27986    0.779584
+bHosp0.9           0.43876    0.660836
+bHosp0.3           4.63104   3.638e-06
+bCost            -14.91520    0.000000
+bCostSq           10.70438    0.000000
+bOptIntRisk        2.86324    0.004193
+bHospIntRisk       0.07370    0.941251
+
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+
+Classical covariance matrix:
+                   ascOpt     bPreg_mv     bRedness  bPreterm_mv     bHosp1.2
+ascOpt           0.005068   6.7206e-04     0.001064   5.6068e-04     0.003120
+bPreg_mv       6.7206e-04     0.002526    2.942e-05    -0.002088    9.446e-05
+bRedness         0.001064    2.942e-05     0.002101     0.001007   -7.299e-05
+bPreterm_mv    5.6068e-04    -0.002088     0.001007     0.004270  -1.4633e-04
+bHosp1.2         0.003120    9.446e-05   -7.299e-05  -1.4633e-04     0.005495
+bHosp0.9         0.003145    2.993e-05    2.237e-05    3.686e-05     0.003784
+bHosp0.3         0.003107    5.150e-05   -5.341e-05   -8.120e-05     0.003814
+bCost            0.005945  -6.4131e-04   6.7323e-04     0.001152  -2.1602e-04
+bCostSq         -0.005287   5.6475e-04  -6.0172e-04    -0.001008    8.631e-05
+bOptIntRisk     -0.003794    2.881e-05    6.965e-06   -2.631e-05    -0.003125
+bHospIntRisk    -0.003168    7.123e-06   -3.417e-05   -5.027e-06    -0.004304
+                 bHosp0.9     bHosp0.3        bCost      bCostSq  bOptIntRisk
+ascOpt           0.003145     0.003107     0.005945    -0.005287    -0.003794
+bPreg_mv        2.993e-05    5.150e-05  -6.4131e-04   5.6475e-04    2.881e-05
+bRedness        2.237e-05   -5.341e-05   6.7323e-04  -6.0172e-04    6.965e-06
+bPreterm_mv     3.686e-05   -8.120e-05     0.001152    -0.001008   -2.631e-05
+bHosp1.2         0.003784     0.003814  -2.1602e-04    8.631e-05    -0.003125
+bHosp0.9         0.005448     0.003803  -5.2393e-04   3.1952e-04    -0.003150
+bHosp0.3         0.003803     0.005397  -6.1439e-04   3.4797e-04    -0.003221
+bCost         -5.2393e-04  -6.1439e-04     0.089383    -0.085505  -2.5414e-04
+bCostSq        3.1952e-04   3.4797e-04    -0.085505     0.087375   3.2886e-04
+bOptIntRisk     -0.003150    -0.003221  -2.5414e-04   3.2886e-04     0.007898
+bHospIntRisk    -0.004291    -0.004430   -3.391e-05   1.7306e-04     0.006689
+             bHospIntRisk
+ascOpt          -0.003168
+bPreg_mv        7.123e-06
+bRedness       -3.417e-05
+bPreterm_mv    -5.027e-06
+bHosp1.2        -0.004304
+bHosp0.9        -0.004291
+bHosp0.3        -0.004430
+bCost          -3.391e-05
+bCostSq        1.7306e-04
+bOptIntRisk      0.006689
+bHospIntRisk     0.009006
+
+Robust covariance matrix:
+                   ascOpt     bPreg_mv     bRedness  bPreterm_mv     bHosp1.2
+ascOpt           0.007995   5.7551e-04     0.001002     0.001335     0.002342
+bPreg_mv       5.7551e-04     0.002977  -2.1371e-04    -0.001720  -2.5163e-04
+bRedness         0.001002  -2.1371e-04     0.002051     0.001105    8.876e-05
+bPreterm_mv      0.001335    -0.001720     0.001105     0.004440    1.280e-05
+bHosp1.2         0.002342  -2.5163e-04    8.876e-05    1.280e-05     0.004572
+bHosp0.9         0.002578  -2.2484e-04   1.7585e-04   3.0159e-04     0.002963
+bHosp0.3         0.002161   1.4629e-04  -1.8362e-04  -2.1231e-04     0.002730
+bCost            0.009670    -0.001605  -7.2667e-04     0.001665   3.4959e-04
+bCostSq         -0.007125     0.001004   8.5166e-04  -7.7438e-04  -1.0609e-04
+bOptIntRisk     -0.002722    7.273e-05  -1.4897e-04   1.0655e-04    -0.002129
+bHospIntRisk    -0.002403    5.250e-05  -3.5975e-04   2.0962e-04    -0.002991
+                 bHosp0.9     bHosp0.3        bCost      bCostSq  bOptIntRisk
+ascOpt           0.002578     0.002161     0.009670    -0.007125    -0.002722
+bPreg_mv      -2.2484e-04   1.4629e-04    -0.001605     0.001004    7.273e-05
+bRedness       1.7585e-04  -1.8362e-04  -7.2667e-04   8.5166e-04  -1.4897e-04
+bPreterm_mv    3.0159e-04  -2.1231e-04     0.001665  -7.7438e-04   1.0655e-04
+bHosp1.2         0.002963     0.002730   3.4959e-04  -1.0609e-04    -0.002129
+bHosp0.9         0.004509     0.003086   4.6341e-04  -3.2340e-04    -0.002079
+bHosp0.3         0.003086     0.004314   -2.182e-05    1.356e-05    -0.002130
+bCost          4.6341e-04   -2.182e-05     0.147187    -0.126840    -0.001400
+bCostSq       -3.2340e-04    1.356e-05    -0.126840     0.118069   7.2285e-04
+bOptIntRisk     -0.002079    -0.002130    -0.001400   7.2285e-04     0.005535
+bHospIntRisk    -0.002913    -0.002886  -9.2354e-04   2.2816e-04     0.005077
+             bHospIntRisk
+ascOpt          -0.002403
+bPreg_mv        5.250e-05
+bRedness      -3.5975e-04
+bPreterm_mv    2.0962e-04
+bHosp1.2        -0.002991
+bHosp0.9        -0.002913
+bHosp0.3        -0.002886
+bCost         -9.2354e-04
+bCostSq        2.2816e-04
+bOptIntRisk      0.005077
+bHospIntRisk     0.006669
+
+Classical correlation matrix:
+                   ascOpt     bPreg_mv     bRedness  bPreterm_mv     bHosp1.2
+ascOpt             1.0000     0.187820     0.326104     0.120517     0.591141
+bPreg_mv           0.1878     1.000000     0.012770    -0.635643     0.025354
+bRedness           0.3261     0.012770     1.000000     0.336191    -0.021481
+bPreterm_mv        0.1205    -0.635643     0.336191     1.000000    -0.030207
+bHosp1.2           0.5911     0.025354    -0.021481    -0.030207     1.000000
+bHosp0.9           0.5985     0.008068     0.006610     0.007641     0.691569
+bHosp0.3           0.5941     0.013948    -0.015858    -0.016912     0.700352
+bCost              0.2793    -0.042678     0.049124     0.058983    -0.009747
+bCostSq           -0.2512     0.038012    -0.044408    -0.052168     0.003939
+bOptIntRisk       -0.5997     0.006450     0.001710    -0.004530    -0.474429
+bHospIntRisk      -0.4689     0.001493    -0.007854  -8.1063e-04    -0.611791
+                 bHosp0.9     bHosp0.3        bCost      bCostSq  bOptIntRisk
+ascOpt           0.598535      0.59412     0.279306    -0.251220    -0.599671
+bPreg_mv         0.008068      0.01395    -0.042678     0.038012     0.006450
+bRedness         0.006610     -0.01586     0.049124    -0.044408     0.001710
+bPreterm_mv      0.007641     -0.01691     0.058983    -0.052168    -0.004530
+bHosp1.2         0.691569      0.70035    -0.009747     0.003939    -0.474429
+bHosp0.9         1.000000      0.70126    -0.023743     0.014645    -0.480126
+bHosp0.3         0.701263      1.00000    -0.027972     0.016024    -0.493362
+bCost           -0.023743     -0.02797     1.000000    -0.967542    -0.009565
+bCostSq          0.014645      0.01602    -0.967542     1.000000     0.012518
+bOptIntRisk     -0.480126     -0.49336    -0.009565     0.012518     1.000000
+bHospIntRisk    -0.612568     -0.63543    -0.001195     0.006169     0.793129
+             bHospIntRisk
+ascOpt          -0.468941
+bPreg_mv         0.001493
+bRedness        -0.007854
+bPreterm_mv   -8.1063e-04
+bHosp1.2        -0.611791
+bHosp0.9        -0.612568
+bHosp0.3        -0.635432
+bCost           -0.001195
+bCostSq          0.006169
+bOptIntRisk      0.793129
+bHospIntRisk     1.000000
+
+Robust correlation matrix:
+                   ascOpt     bPreg_mv     bRedness  bPreterm_mv     bHosp1.2
+ascOpt             1.0000      0.11797      0.24736     0.224020     0.387420
+bPreg_mv           0.1180      1.00000     -0.08648    -0.473155    -0.068207
+bRedness           0.2474     -0.08648      1.00000     0.366298     0.028985
+bPreterm_mv        0.2240     -0.47316      0.36630     1.000000     0.002840
+bHosp1.2           0.3874     -0.06821      0.02898     0.002840     1.000000
+bHosp0.9           0.4293     -0.06137      0.05782     0.067399     0.652658
+bHosp0.3           0.3679      0.04083     -0.06173    -0.048511     0.614723
+bCost              0.2819     -0.07667     -0.04182     0.065127     0.013477
+bCostSq           -0.2319      0.05353      0.05472    -0.033820    -0.004566
+bOptIntRisk       -0.4092      0.01792     -0.04421     0.021492    -0.423274
+bHospIntRisk      -0.3292      0.01178     -0.09727     0.038521    -0.541732
+                 bHosp0.9     bHosp0.3        bCost      bCostSq  bOptIntRisk
+ascOpt            0.42931      0.36795      0.28188    -0.231895     -0.40916
+bPreg_mv         -0.06137      0.04083     -0.07667     0.053531      0.01792
+bRedness          0.05782     -0.06173     -0.04182     0.054725     -0.04421
+bPreterm_mv       0.06740     -0.04851      0.06513    -0.033820      0.02149
+bHosp1.2          0.65266      0.61472      0.01348    -0.004566     -0.42327
+bHosp0.9          1.00000      0.69969      0.01799    -0.014016     -0.41621
+bHosp0.3          0.69969      1.00000  -8.6587e-04   6.0083e-04     -0.43593
+bCost             0.01799  -8.6587e-04      1.00000    -0.962171     -0.04906
+bCostSq          -0.01402   6.0083e-04     -0.96217     1.000000      0.02828
+bOptIntRisk      -0.41621     -0.43593     -0.04906     0.028276      1.00000
+bHospIntRisk     -0.53115     -0.53813     -0.02948     0.008131      0.83571
+             bHospIntRisk
+ascOpt          -0.329153
+bPreg_mv         0.011783
+bRedness        -0.097265
+bPreterm_mv      0.038521
+bHosp1.2        -0.541732
+bHosp0.9        -0.531149
+bHosp0.3        -0.538129
+bCost           -0.029477
+bCostSq          0.008131
+bOptIntRisk      0.835707
+bHospIntRisk     1.000000
+
+ 20 most extreme outliers in terms of lowest average per choice prediction:
+                ID Avg prob per choice
+ Rl0fcNh3sDlrmLcCT           0.1282303
+ R9VwoS7tRq_2CJ8ye           0.1486631
+ RlN2um-8DnKmX0Noj           0.1553117
+ R-bdeapmz8tZcKSJk           0.1640112
+ R9uS7hLRwsexIdTJq           0.1833388
+ RcnpfgvalI6QkBoG0           0.1852880
+ RdEkEZslVN8dFrw4x           0.1855059
+ R_cFLoDxCrxOgaO_v           0.1959438
+ R2NoMa-9FrmL80cIx           0.2013937
+ R1PRdTKPokiTQ1WIk           0.2023548
+ RggtT_O17jUvyHm7J           0.2053356
+ RJBmcLAXVaOH9_5gB           0.2053356
+ R7WVS5ys4QNecqezX           0.2061120
+ RmaNDH8HSESRrOVUs           0.2077376
+ R00EMI_kGieMB8z_K           0.2113495
+ RPxVyr8DJpUlflpAO           0.2124906
+ R2bSSe1G86AUoNQ33           0.2128943
+ ROeLsYS9mhAbOgeby           0.2128943
+ RaFHMWqPt82kIUJyX           0.2131211
+ RS_ETi7TniwUltPv9           0.2142661
+
+Settings and functions used in model definition:
+
+apollo_control
+--------------
+                       Value                                                        
+modelDescr             "MNL; quadratic cost"                                        
+modelName              "6_mnl_costContQuad"                                         
+indivID                "id"                                                         
+outputDirectory        "C:/Users/Jiheo/0_working_directory/Japanese RSV DCE/output/"
+debug                  "FALSE"                                                      
+nCores                 "1"                                                          
+workInLogs             "FALSE"                                                      
+seed                   "13"                                                         
+mixing                 "FALSE"                                                      
+HB                     "FALSE"                                                      
+noValidation           "FALSE"                                                      
+noDiagnostics          "FALSE"                                                      
+calculateLLC           "TRUE"                                                       
+analyticHessian        "FALSE"                                                      
+dropLoopExpansion      "FALSE"                                                      
+dropRedefCheck         "FALSE"                                                      
+memorySaver            "FALSE"                                                      
+panelData              "TRUE"                                                       
+analyticGrad           "TRUE"                                                       
+analyticGrad_manualSet "FALSE"                                                      
+overridePanel          "FALSE"                                                      
+preventOverridePanel   "FALSE"                                                      
+noModification         "FALSE"                                                      
+
+Hessian routines attempted
+--------------------------
+numerical jacobian of LL analytical gradient
+
+
+apollo_probabilities
+----------------------
+function(apollo_beta, apollo_inputs, functionality = "estimate") {
+    # Attach inputs & detach after function exit
+    apollo_attach(apollo_beta, apollo_inputs)
+    on.exit(apollo_detach(apollo_beta, apollo_inputs))
+
+    # Create list of probabilities
+    P <- list()
+
+    # List utilities
+    V <- list()
+    V[["mv"]] <- (
+        bPreg_mv * mv_preg +
+        bRedness * mv_redness +
+        bPreterm_mv * mv_preterm +
+        (bHosp1.2 + bHospIntRisk * risk) * mv_hosp1.2 +
+        (bHosp0.9 + bHospIntRisk * risk) * mv_hosp0.9 +
+        (bHosp0.3 + bHospIntRisk * risk) * mv_hosp0.3 +
+        bCost * mv_cost +
+        bCostSq * (mv_cost * mv_cost)
+    )
+    V[["mab"]] <- (
+        bRedness * mab_redness +
+        (bHosp1.2 + bHospIntRisk * risk) * mab_hosp1.2 +
+        (bHosp0.9 + bHospIntRisk * risk) * mab_hosp0.9 +
+        (bHosp0.3 + bHospIntRisk * risk) * mab_hosp0.3 +
+        bCost * mab_cost +
+        bCostSq * (mab_cost * mab_cost)
+    )
+    V[["opt"]] <- ascOpt + bOptIntRisk * risk
+
+    # Define MNL model settings
+    mnl_settings <- list(
+        alternatives = c(mv = 1, mab = 2, opt = 3),
+        avail = 1, # All alternatives available
+        choiceVar = choice_stage2,
+        utilities = V
+    )
+
+    # Compute probabilities using MNL model
+    P[["model"]] <- apollo_mnl(mnl_settings, functionality)
+
+    # Take product across observation for same individual
+    P <- apollo_panelProd(P, apollo_inputs, functionality)
+
+    # Prepare & return outputs of function
+    P <- apollo_prepareProb(P, apollo_inputs, functionality)
+    return(P)
+}

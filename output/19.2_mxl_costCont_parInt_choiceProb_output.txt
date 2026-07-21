@@ -1,0 +1,20 @@
+===========================================================================
+Title: 19.2_mxl_costCont_parInt_choiceProb_output.txt
+Date: 2026-07-20
+===========================================================================
+
+Alternative-specific choice probabilities:
+  Alternative    Mean Lower_UI Upper_UI
+1          MV 0.29380  0.26720  0.32051
+2         mAb 0.17609  0.15613  0.19756
+3         Opt 0.53011  0.49801  0.56170
+
+Alternative-specific choice probability variances:
+  Alternative Var_byN Var_byS Var_byM
+1          MV 0.07262 0.05764 0.05790
+2         mAb 0.05321 0.04958 0.04963
+3         Opt 0.15677 0.12530 0.12582
+
+Var_byN: Preference heterogeneity
+Var_byS: Parameter uncertainty
+Var_byM: Imputation uncertainty

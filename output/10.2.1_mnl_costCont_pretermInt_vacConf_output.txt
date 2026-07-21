@@ -1,0 +1,29 @@
+===========================================================================
+Title: 10.2.1_mnl_costCont_pretermInt_vacConf_output.txt
+Date: 2026-07-20
+===========================================================================
+
+Pooled coefficients using Rubin's rules:
+                   Estimate      se      p
+ascOpt             -0.20373 0.06899  0.003
+bPreg_mv            0.23358 0.04976 <0.001
+bRedness           -0.05457 0.04536  0.229
+bPreterm_mv        -2.28976 0.18001 <0.001
+bHosp1.2            0.00821 0.07379  0.911
+bHosp0.9            0.00306 0.07372  0.967
+bHosp0.3            0.29603 0.07326 <0.001
+bCost              -2.23326 0.08606 <0.001
+bOptIntRisk         0.20495 0.08880  0.021
+bHospIntRisk       -0.00315 0.09446  0.973
+bPretermIntAge     -0.08882 0.05058  0.079
+bPretermIntSib      0.10211 0.06123  0.095
+bPretermIntEdu      0.16277 0.08840  0.066
+bPretermIntInc     -0.08336 0.08671  0.336
+bPretermIntGov      0.43097 0.08532 <0.001
+bPretermIntVacConf  0.47282 0.10993 <0.001
+
+AIC values:
+[1] Min: 11574.82, Max: 11595.00
+
+BIC values:
+[1] Min: 11681.80, Max: 11701.98

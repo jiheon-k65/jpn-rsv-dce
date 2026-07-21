@@ -1,0 +1,2547 @@
+here() starts at /hpctmp/e1519538/jpn_dce
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+
+             . ,,                                                            
+            ,      ,,                                                        
+ ,,,,,,    ,         ,,                                                      
+,     ,,  ,            ,,,,.                                                 
+,,     , ,,   ,,,,,,    ,,,                                 //  //           
+  ,     ,,,.   ,,,,,.   ,,      ////                        //  //           
+,,     ,,,,,.           ,,     // //     //////    /////    //  //    /////  
+,,,        ,,           ,      //  //    /    //  //   //   //  //   //   // 
+              ,,       ,      ////////   /    //  //   //   //  //   //   // 
+                ,,   ,,      //     //   /   ///  //   //   //  //   //   // 
+                   ,         //      //  /////      ///      //  //    ///   
+                                         //                                  
+                                         //                                  
+
+Apollo 0.3.8
+https://www.ApolloChoiceModelling.com
+See url for a detailed manual, examples and a user forum.
+Sign up to the user forum to receive updates on new releases.
+
+Please cite Apollo in all written material you produce:
+Hess S, Palma D (2019). "Apollo: a flexible, powerful and customisable
+freeware package for choice model estimation and application." Journal
+of Choice Modelling, 32. doi.org/10.1016/j.jocm.2019.100170
+
+The developers of Apollo acknowledge the substantial support provided by
+the European Research Council (ERC) through the consolidator grant DECISIONS,
+the proof of concept grant APOLLO, and the advanced grant SYNERGY.
+
+Apollo is integrated into SurveyEngine, a leading stated choice platform
+Try it at www.surveyengine.com/apollo
+Apollo ignition sequence completed
+
+===========================================================================
+
+Running model for imputation 1 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Testing probability function (apollo_probabilities)
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+INFORMATION: Apollo was not able to compute analytical gradients for
+  your model. This could be because you are using model components for
+  which analytical gradients are not yet implemented, or because you
+  coded your own model functions. If however you only used apollo_mnl,
+  apollo_fmnl, apollo_normalDensity, apollo_ol or apollo_op, then there
+  could be another issue. You might want to ask for help in the Apollo
+  forum (https://www.ApolloChoiceModelling.com/forum) on how to solve
+  this issue. If you do, please post your code and data (if not
+  confidential). 
+Creating initial set of 100 candidate values.
+Calculating LL of candidates 0%....50%.....100%
+
+Stage 1, 100 active candidates.
+Estimating 20 BGW iteration(s) for each active candidate.
+ Candidate......LLstart.....LLfinish.....GradientNorm...Converged
+         1        -6506        -4145            0.001           1
+         2        -6420        -4149            0.035           0
+         3        -6538        -4141            0.001           1
+         4        -6506        -4141            0.091           0
+         5        -6548        -4160            1.139           0
+         6        -6458        -4160            4.812           0
+         7        -6502        -4150             0.01           0
+         8        -6497        -4151            0.046           0
+         9        -6473        -4151            0.016           0
+        10        -6574        -4147            0.031           0
+        11        -6545        -4149            0.083           0
+        12        -6524        -4147            0.001           1
+        13        -6593        -4149            0.008           0
+        14        -6444        -4158            0.002           1
+        15        -6483        -4160            0.006           0
+        16        -6583        -4149            0.035           0
+        17        -6581        -4160             0.01           0
+        18        -6454        -4141            0.055           0
+        19        -6496        -4149            0.164           0
+        20        -6587        -4151            0.014           0
+        21        -6614        -4149            2.737           0
+        22        -6488        -4149            0.016           0
+        23        -6619        -4158            0.018           0
+        24        -6528        -4148            0.002           1
+        25        -6441        -4151            0.003           1
+        26        -6619        -4149            0.138           0
+        27        -6473        -4158            0.122           0
+        28        -6461        -4150            0.077           0
+        29        -6512        -4151            0.003           1
+        30        -6464        -4147            0.005           1
+        31        -6498        -4149            0.038           0
+        32        -6496        -4149            0.225           0
+        33        -6409        -4150             0.02           0
+        34        -6639        -4158            0.004           1
+        35        -6482        -4141            1.273           0
+        36        -6572        -4150            0.167           0
+        37        -6510        -4160            0.066           0
+        38        -6559        -4151            0.004           0
+        39        -6491        -4147            0.003           1
+        40        -6394        -4149            0.014           0
+        41        -6546        -4148            0.004           1
+        42        -6454        -4147            0.003           0
+        43        -6547        -4141            0.988           0
+        44        -6571        -4142            5.729           0
+        45        -6546        -4149            3.334           0
+        46        -6543        -4145            0.003           1
+        47        -6422        -4149            0.002           1
+        48        -6479        -4149            1.665           0
+        49        -6640        -4151            0.008           0
+        50        -6544        -4151            0.017           0
+        51        -6632        -4147            0.027           0
+        52        -6573        -4149            0.043           0
+        53        -6649        -4149            0.158           0
+        54        -6550        -4149            0.096           0
+        55        -6519        -4149            0.001           1
+        56        -6608        -4148            0.747           0
+        57        -6553        -4158            0.031           0
+        58        -6540        -4147            0.003           1
+        59        -6538        -4158            0.198           0
+        60        -6597        -4148            0.015           0
+        61        -6666        -4151            0.056           0
+        62        -6410        -4149            0.026           0
+        63        -6512        -4148            0.015           0
+        64        -6613        -4149            0.009           0
+        65        -6538        -4158            0.176           0
+        66        -6485        -4145            0.001           1
+        67        -6519        -4147            0.009           0
+        68        -6495        -4141            0.042           0
+        69        -6432        -4158            0.131           0
+        70        -6420        -4145            0.001           1
+        71        -6492        -4166           22.887           0
+        72        -6399        -4145            0.001           1
+        73        -6541        -4151            0.122           0
+        74        -6380        -4149            2.836           0
+        75        -6580        -4150            0.001           1
+        76        -6524        -4150            0.003           1
+        77        -6580        -4149            0.033           0
+        78        -6612        -4149            0.011           0
+        79        -6397        -4147            0.001           1
+        80        -6457        -4161            6.399           0
+        81        -6419        -4147            0.084           0
+        82        -6671        -4151            0.037           0
+        83        -6491        -4151            5.969           0
+        84        -6504        -4160            0.118           0
+        85        -6418        -4151            0.001           1
+        86        -6625        -4149            0.033           0
+        87        -6445        -4151            0.157           0
+        88        -6515        -4145            0.002           1
+        89        -6472        -4147            0.004           1
+        90        -6504        -4158            0.142           0
+        91        -6513        -4149             0.57           0
+        92        -6535        -4147            0.017           0
+        93        -6447        -4151            0.014           0
+        94        -6596        -4149            0.012           0
+        95        -6646        -4141            0.605           0
+        96        -6575        -4147             0.01           0
+        97        -6453        -4151             0.06           0
+        98        -6578        -4149             0.05           0
+        99        -6578        -4149            0.001           0
+       100        -6433        -4159              8.6           0
+Candidate 2 dropped.
+- Failed test 1: Too close to 13, 22, 40, 52, 78 in parameter space.
+Candidate 4 dropped.
+- Failed test 1: Too close to 3, 18, 68 in parameter space.
+Candidate 5 dropped.
+- Failed test 1: Too close to 15, 17, 37, 84 in parameter space.
+Candidate 6 dropped.
+- Failed test 1: Too close to 5, 15, 17, 37, 84 in parameter space.
+Candidate 7 dropped.
+- Failed test 1: Too close to 75, 76 in parameter space.
+Candidate 8 dropped.
+- Failed test 1: Too close to 9, 20, 38, 50 in parameter space.
+Candidate 9 dropped.
+- Failed test 1: Too close to 38, 50 in parameter space.
+Candidate 10 dropped.
+- Failed test 1: Too close to 39, 79, 89, 96 in parameter space.
+Candidate 11 dropped.
+- Failed test 1: Too close to 47, 55, 62, 64, 94, 99 in parameter
+  space.
+Candidate 17 dropped.
+- Failed test 1: Too close to 15 in parameter space.
+Candidate 18 dropped.
+- Failed test 1: Too close to 3 in parameter space.
+Candidate 19 dropped.
+- Failed test 1: Too close to 2, 13, 22, 40, 52, 78, 98 in parameter
+  space.
+Candidate 20 dropped.
+- Failed test 1: Too close to 9, 38, 50 in parameter space.
+Candidate 21 dropped.
+- Failed test 1: Too close to 2, 13, 19, 22, 40, 52, 78, 98 in
+  parameter space.
+Candidate 22 dropped.
+- Failed test 1: Too close to 13, 40, 78 in parameter space.
+Candidate 23 dropped.
+- Failed test 1: Too close to 34 in parameter space.
+Candidate 26 dropped.
+- Failed test 1: Too close to 31, 54 in parameter space.
+Candidate 27 dropped.
+- Failed test 1: Too close to 23, 34, 90 in parameter space.
+Candidate 28 dropped.
+- Failed test 1: Too close to 7, 33, 75, 76 in parameter space.
+Candidate 32 dropped.
+- Failed test 1: Too close to 26, 31, 54 in parameter space.
+Candidate 33 dropped.
+- Failed test 1: Too close to 7, 75, 76 in parameter space.
+Candidate 35 dropped.
+- Failed test 1: Too close to 3, 4, 18, 68 in parameter space.
+Candidate 36 dropped.
+- Failed test 1: Too close to 7, 28, 33, 75, 76 in parameter space.
+Candidate 37 dropped.
+- Failed test 1: Too close to 15, 17 in parameter space.
+Candidate 40 dropped.
+- Failed test 1: Too close to 13, 78 in parameter space.
+Candidate 42 dropped.
+- Failed test 1: Too close to 12, 58 in parameter space.
+Candidate 43 dropped.
+- Failed test 1: Too close to 95 in parameter space.
+Candidate 44 dropped.
+- Failed test 1: Too close to 43, 95 in parameter space.
+Candidate 45 dropped.
+- Failed test 1: Too close to 16, 48, 74, 77, 86, 91 in parameter
+  space.
+Candidate 48 dropped.
+- Failed test 1: Too close to 16, 74, 77, 86, 91 in parameter space.
+Candidate 49 dropped.
+- Failed test 1: Too close to 25, 29, 85 in parameter space.
+Candidate 50 dropped.
+- Failed test 1: Too close to 38 in parameter space.
+Candidate 51 dropped.
+- Failed test 1: Too close to 12, 30, 42, 58, 67, 92 in parameter
+  space.
+Candidate 52 dropped.
+- Failed test 1: Too close to 13, 22, 40, 78 in parameter space.
+Candidate 53 dropped.
+- Failed test 1: Too close to 26, 31, 32, 54 in parameter space.
+Candidate 54 dropped.
+- Failed test 1: Too close to 31 in parameter space.
+Candidate 56 dropped.
+- Failed test 1: Too close to 24, 41, 60, 63 in parameter space.
+Candidate 57 dropped.
+- Failed test 1: Too close to 14 in parameter space.
+Candidate 59 dropped.
+- Failed test 1: Too close to 23, 27, 34, 65, 90 in parameter space.
+Candidate 60 dropped.
+- Failed test 1: Too close to 24, 41, 63 in parameter space.
+Candidate 61 dropped.
+- Failed test 1: Too close to 8, 9, 20, 38, 50, 82 in parameter space.
+Candidate 62 dropped.
+- Failed test 1: Too close to 47, 55, 64, 94, 99 in parameter space.
+Candidate 63 dropped.
+- Failed test 1: Too close to 24, 41 in parameter space.
+Candidate 64 dropped.
+- Failed test 1: Too close to 47, 55, 99 in parameter space.
+Candidate 65 dropped.
+- Failed test 1: Too close to 23, 27, 34, 90 in parameter space.
+Candidate 67 dropped.
+- Failed test 1: Too close to 12, 30, 42, 58 in parameter space.
+Candidate 68 dropped.
+- Failed test 1: Too close to 3, 18 in parameter space.
+Candidate 69 dropped.
+- Failed test 1: Too close to 14, 57 in parameter space.
+Candidate 73 dropped.
+- Failed test 1: Too close to 8, 9, 20, 38, 50, 61, 82, 87 in parameter
+  space.
+Candidate 74 dropped.
+- Failed test 1: Too close to 16, 77, 86, 91 in parameter space.
+Candidate 77 dropped.
+- Failed test 1: Too close to 16 in parameter space.
+Candidate 78 dropped.
+- Failed test 1: Too close to 13 in parameter space.
+Candidate 80 dropped.
+- Failed test 1: Too close to 5, 6, 15, 17, 37, 84 in parameter space.
+Candidate 81 dropped.
+- Failed test 1: Too close to 10, 39, 79, 89, 96 in parameter space.
+Candidate 82 dropped.
+- Failed test 1: Too close to 8, 9, 20, 38, 50 in parameter space.
+Candidate 83 dropped.
+- Failed test 1: Too close to 8, 9, 20, 38, 50, 61, 73, 82, 87 in
+  parameter space.
+Candidate 84 dropped.
+- Failed test 1: Too close to 15, 17, 37 in parameter space.
+Candidate 86 dropped.
+- Failed test 1: Too close to 16, 77 in parameter space.
+Candidate 87 dropped.
+- Failed test 1: Too close to 8, 9, 20, 38, 50, 61, 82 in parameter
+  space.
+Candidate 90 dropped.
+- Failed test 1: Too close to 23, 34 in parameter space.
+Candidate 91 dropped.
+- Failed test 1: Too close to 16, 77, 86 in parameter space.
+Candidate 92 dropped.
+- Failed test 1: Too close to 12, 30, 42, 58, 67 in parameter space.
+Candidate 93 dropped.
+- Failed test 1: Too close to 25, 29, 49, 85 in parameter space.
+Candidate 94 dropped.
+- Failed test 1: Too close to 47, 55, 64, 99 in parameter space.
+Candidate 96 dropped.
+- Failed test 1: Too close to 39, 79, 89 in parameter space.
+Candidate 97 dropped.
+- Failed test 1: Too close to 25, 29, 49, 85, 93 in parameter space.
+Candidate 98 dropped.
+- Failed test 1: Too close to 2, 13, 22, 40, 52, 78 in parameter space.
+Candidate 99 dropped.
+- Failed test 1: Too close to 55 in parameter space.
+Candidate 100 dropped.
+- Failed test 1: Too close to 23, 27, 34, 59, 65, 90 in parameter
+  space.
+Best candidate so far (LL=-4140.6)
+                         Value
+delta_ascOpt            4.6176
+gamma_ascOptIntGov     -1.0938
+gamma_ascOptIntVacConf -2.0061
+sigma_ascOpt            2.7045
+mu_bPreg_mv             0.3826
+sigma_bPreg_mv          0.9500
+bRedness               -0.1307
+mu_bPreterm_mv         -0.9676
+sigma_bPreterm_mv       1.1469
+bHosp1.2               -0.0017
+bHosp0.9                0.0628
+bHosp0.3                0.4505
+delta_bCost            -9.6346
+gamma_bCostIntEdu       2.7098
+sigma_bCost            -6.8597
+bOptIntRisk             0.5698
+bHospIntRisk            0.0308
+
+Stage 2, 8 active candidates.
+Estimating 20 BGW iteration(s) for each active candidate.
+ Candidate......LLstart.....LLfinish.....GradientNorm...Converged
+         3        -4141        -4141                0           1
+        13        -4149        -4149            0.003           1
+        15        -4160        -4160            0.003           1
+        16        -4149        -4149            0.004           1
+        31        -4149        -4149            0.015           1
+        38        -4151        -4151            0.003           1
+        71        -4166        -4160            0.004           1
+        95        -4141        -4141            0.002           1
+Best candidate so far (LL=-4140.6)
+                         Value
+delta_ascOpt            4.6176
+gamma_ascOptIntGov     -1.0938
+gamma_ascOptIntVacConf -2.0061
+sigma_ascOpt            2.7045
+mu_bPreg_mv             0.3826
+sigma_bPreg_mv          0.9500
+bRedness               -0.1307
+mu_bPreterm_mv         -0.9676
+sigma_bPreterm_mv       1.1469
+bHosp1.2               -0.0017
+bHosp0.9                0.0628
+bHosp0.3                0.4505
+delta_bCost            -9.6346
+gamma_bCostIntEdu       2.7098
+sigma_bCost            -6.8597
+bOptIntRisk             0.5698
+bHospIntRisk            0.0308
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.140589790e+03
+     1     2 4.140589790e+03 1.963e-12 1.346e-12 1.31e-06   G   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt              4.617609     0.34868        13.24326
+gamma_ascOptIntGov       -1.093840     0.19605        -5.57925
+gamma_ascOptIntVacConf   -2.006058     0.24595        -8.15629
+sigma_ascOpt              2.704451     0.11658        23.19785
+mu_bPreg_mv               0.382589     0.07323         5.22465
+sigma_bPreg_mv            0.950040     0.06986        13.59956
+bRedness                 -0.130718     0.06829        -1.91420
+mu_bPreterm_mv           -0.967582     0.09926        -9.74777
+sigma_bPreterm_mv         1.146868     0.11058        10.37108
+bHosp1.2                 -0.001737     0.09848        -0.01764
+bHosp0.9                  0.062792     0.09813         0.63989
+bHosp0.3                  0.450474     0.09568         4.70819
+delta_bCost              -9.634597     0.45560       -21.14686
+gamma_bCostIntEdu         2.709817     0.44210         6.12942
+sigma_bCost              -6.859726     0.32468       -21.12751
+bOptIntRisk               0.569797     0.12184         4.67662
+bHospIntRisk              0.030818     0.12824         0.24032
+
+Final LL: -4140.5898
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.258945
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 2 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.132333996e+03
+     1     2 4.132008241e+03 7.883e-05 7.150e-05 6.33e-03   G   1.24e-01
+     2     4 4.131460983e+03 1.324e-04 1.131e-04 4.29e-02   G   0.00e+00
+     3     5 4.131304562e+03 3.786e-05 2.638e-05 1.29e-02   S   0.00e+00
+     4     6 4.131175905e+03 3.114e-05 2.223e-05 1.57e-02   S   0.00e+00
+     5     7 4.131099508e+03 1.849e-05 1.105e-05 3.75e-03   S   0.00e+00
+     6     8 4.131019578e+03 1.935e-05 1.637e-05 4.98e-03   S   0.00e+00
+     7     9 4.130996209e+03 5.657e-06 3.509e-06 2.63e-03   S   0.00e+00
+     8    10 4.130977901e+03 4.432e-06 3.590e-06 2.96e-03   G   0.00e+00
+     9    11 4.130975824e+03 5.028e-07 4.600e-07 1.83e-03   S   0.00e+00
+    10    12 4.130975684e+03 3.385e-08 2.679e-08 1.79e-04   S   0.00e+00
+    11    13 4.130975662e+03 5.523e-09 5.052e-09 6.58e-05   S   0.00e+00
+    12    14 4.130975661e+03 1.926e-10 1.673e-10 2.21e-05   S   0.00e+00
+    13    15 4.130975661e+03 1.290e-11 1.092e-11 4.61e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt              4.504551     0.34413        13.08977
+gamma_ascOptIntGov       -0.773238     0.18975        -4.07497
+gamma_ascOptIntVacConf   -2.298234     0.25097        -9.15741
+sigma_ascOpt              2.713480     0.12023        22.56944
+mu_bPreg_mv               0.405078     0.07401         5.47353
+sigma_bPreg_mv            0.952781     0.07252        13.13808
+bRedness                 -0.136924     0.06873        -1.99220
+mu_bPreterm_mv           -0.982358     0.10136        -9.69206
+sigma_bPreterm_mv         1.185458     0.11324        10.46892
+bHosp1.2                 -0.001911     0.09884        -0.01934
+bHosp0.9                  0.065399     0.09838         0.66479
+bHosp0.3                  0.459254     0.09632         4.76815
+delta_bCost              -9.398079     0.45532       -20.64057
+gamma_bCostIntEdu         2.310276     0.45372         5.09185
+sigma_bCost              -7.047715     0.33871       -20.80732
+bOptIntRisk               0.570586     0.12335         4.62567
+bHospIntRisk              0.030328     0.13020         0.23293
+
+Final LL: -4130.9757
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.266336
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 3 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.131916768e+03
+     1     2 4.131578579e+03 8.185e-05 7.795e-05 5.82e-03   G   1.90e-01
+     2     4 4.131381782e+03 4.763e-05 3.939e-05 1.75e-02   G   0.00e+00
+     3     5 4.131364450e+03 4.195e-06 3.851e-06 4.06e-03   S   0.00e+00
+     4     6 4.131363162e+03 3.119e-07 2.305e-07 8.68e-04   S   0.00e+00
+     5     7 4.131362769e+03 9.497e-08 8.196e-08 6.32e-04   S   0.00e+00
+     6     8 4.131362732e+03 9.020e-09 7.334e-09 1.86e-04   S   0.00e+00
+     7     9 4.131362728e+03 9.935e-10 9.014e-10 9.04e-05   S   0.00e+00
+     8    10 4.131362728e+03 3.333e-11 2.924e-11 9.72e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt              4.646657     0.36485        12.73580
+gamma_ascOptIntGov       -0.901619     0.17649        -5.10858
+gamma_ascOptIntVacConf   -2.232418     0.24219        -9.21765
+sigma_ascOpt              2.710861     0.11980        22.62742
+mu_bPreg_mv               0.400956     0.07488         5.35443
+sigma_bPreg_mv            0.979036     0.07274        13.45883
+bRedness                 -0.139535     0.06870        -2.03118
+mu_bPreterm_mv           -0.980074     0.10129        -9.67596
+sigma_bPreterm_mv         1.170281     0.11628        10.06459
+bHosp1.2                 -0.003078     0.09878        -0.03116
+bHosp0.9                  0.064201     0.09857         0.65130
+bHosp0.3                  0.459461     0.09633         4.76969
+delta_bCost              -9.640833     0.47114       -20.46261
+gamma_bCostIntEdu         2.506326     0.46995         5.33321
+sigma_bCost              -7.094992     0.33785       -21.00017
+bOptIntRisk               0.568371     0.12317         4.61451
+bHospIntRisk              0.025573     0.12995         0.19678
+
+Final LL: -4131.3627
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.244408
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 4 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.133960804e+03
+     1     2 4.133618020e+03 8.292e-05 6.752e-05 5.90e-03   G   5.23e-02
+     2     3 4.133368621e+03 6.033e-05 5.094e-05 1.77e-02   G   9.32e-03
+     3     4 4.133319237e+03 1.195e-05 1.192e-05 6.87e-03   S   0.00e+00
+     4     5 4.133318193e+03 2.525e-07 2.003e-07 2.74e-04   S   0.00e+00
+     5     6 4.133318021e+03 4.165e-08 3.763e-08 2.17e-04   S   0.00e+00
+     6     7 4.133318012e+03 2.274e-09 1.805e-09 4.90e-05   S   0.00e+00
+     7     8 4.133318010e+03 3.341e-10 2.918e-10 2.81e-05   S   0.00e+00
+     8     9 4.133318010e+03 3.170e-11 2.408e-11 9.20e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt               4.72988     0.35671       13.259629
+gamma_ascOptIntGov        -1.04796     0.18786       -5.578368
+gamma_ascOptIntVacConf    -2.10665     0.23827       -8.841434
+sigma_ascOpt               2.68792     0.11676       23.020606
+mu_bPreg_mv                0.38697     0.07477        5.175065
+sigma_bPreg_mv             0.98079     0.07258       13.513691
+bRedness                  -0.13357     0.06868       -1.944763
+mu_bPreterm_mv            -0.98318     0.10025       -9.807459
+sigma_bPreterm_mv          1.15334     0.10925       10.556771
+bHosp1.2                7.9198e-04     0.09837        0.008051
+bHosp0.9                   0.06973     0.09794        0.711923
+bHosp0.3                   0.45794     0.09589        4.775723
+delta_bCost               -9.63454     0.45221      -21.305584
+gamma_bCostIntEdu          2.66786     0.43743        6.098888
+sigma_bCost               -6.91468     0.32708      -21.140563
+bOptIntRisk                0.56752     0.12198        4.652540
+bHospIntRisk               0.02311     0.12878        0.179450
+
+Final LL: -4133.318
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.29534
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 5 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.134283290e+03
+     1     2 4.133655929e+03 1.517e-04 1.298e-04 5.51e-03   G   9.71e-02
+     2     3 4.133294107e+03 8.753e-05 8.098e-05 1.55e-02   G   2.81e-02
+     3     4 4.133250181e+03 1.063e-05 1.098e-05 6.55e-03   S   0.00e+00
+     4     5 4.133249457e+03 1.750e-07 1.393e-07 3.55e-04   S   0.00e+00
+     5     6 4.133249326e+03 3.167e-08 2.679e-08 2.34e-04   S   0.00e+00
+     6     7 4.133249311e+03 3.581e-09 2.929e-09 6.50e-05   S   0.00e+00
+     7     8 4.133249310e+03 4.121e-10 3.652e-10 2.21e-05   S   0.00e+00
+     8     9 4.133249310e+03 2.089e-11 1.804e-11 6.21e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt               4.53471     0.36724       12.348246
+gamma_ascOptIntGov        -0.92457     0.18792       -4.920010
+gamma_ascOptIntVacConf    -2.16614     0.23960       -9.040548
+sigma_ascOpt               2.73693     0.12057       22.700224
+mu_bPreg_mv                0.40244     0.07500        5.365974
+sigma_bPreg_mv             0.96045     0.07306       13.146782
+bRedness                  -0.13574     0.06887       -1.970856
+mu_bPreterm_mv            -0.98317     0.10156       -9.680477
+sigma_bPreterm_mv          1.19385     0.11158       10.699179
+bHosp1.2               -8.4435e-04     0.09876       -0.008549
+bHosp0.9                   0.06679     0.09838        0.678894
+bHosp0.3                   0.46112     0.09616        4.795358
+delta_bCost               -9.65399     0.46598      -20.717628
+gamma_bCostIntEdu          2.57287     0.46106        5.580272
+sigma_bCost               -7.09735     0.33568      -21.143049
+bOptIntRisk                0.57084     0.12293        4.643445
+bHospIntRisk               0.02757     0.12955        0.212790
+
+Final LL: -4133.2493
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.168134
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 6 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.137610885e+03
+     1     2 4.137228498e+03 9.242e-05 6.488e-05 5.78e-03   G   6.66e-02
+     2     3 4.137038472e+03 4.593e-05 3.081e-05 1.23e-02   G   0.00e+00
+     3     4 4.136940056e+03 2.379e-05 2.265e-05 7.77e-03   S   0.00e+00
+     4     5 4.136936550e+03 8.475e-07 5.948e-07 6.69e-04   S   0.00e+00
+     5     6 4.136935290e+03 3.046e-07 2.754e-07 9.79e-04   S   0.00e+00
+     6     7 4.136935187e+03 2.496e-08 1.794e-08 2.96e-04   S   0.00e+00
+     7     8 4.136935155e+03 7.592e-09 6.820e-09 2.05e-04   S   0.00e+00
+     8     9 4.136935153e+03 4.710e-10 3.691e-10 2.82e-05   S   0.00e+00
+     9    10 4.136935153e+03 7.625e-11 6.660e-11 1.57e-05   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt               4.64225     0.35409       13.110294
+gamma_ascOptIntGov        -1.03617     0.19055       -5.437750
+gamma_ascOptIntVacConf    -2.06718     0.24864       -8.313891
+sigma_ascOpt               2.67949     0.11441       23.420369
+mu_bPreg_mv                0.38920     0.07450        5.224205
+sigma_bPreg_mv             0.97785     0.07208       13.566507
+bRedness                  -0.13275     0.06858       -1.935876
+mu_bPreterm_mv            -0.97823     0.09996       -9.785935
+sigma_bPreterm_mv          1.15051     0.10926       10.529865
+bHosp1.2               -8.7540e-04     0.09845       -0.008892
+bHosp0.9                   0.06758     0.09793        0.690149
+bHosp0.3                   0.45598     0.09582        4.758901
+delta_bCost               -9.60011     0.45007      -21.330388
+gamma_bCostIntEdu          2.70001     0.43747        6.171898
+sigma_bCost               -6.88218     0.32323      -21.292002
+bOptIntRisk                0.56256     0.12216        4.605160
+bHospIntRisk               0.02156     0.12898        0.167183
+
+Final LL: -4136.9352
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.255277
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 7 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.127095095e+03
+     1     2 4.126802647e+03 7.086e-05 6.360e-05 7.32e-03   G   9.25e-02
+     2     3 4.126539592e+03 6.374e-05 5.711e-05 1.53e-02   G   3.70e-02
+     3     4 4.126395476e+03 3.492e-05 3.464e-05 2.39e-02   S   0.00e+00
+     4     5 4.126392858e+03 6.345e-07 4.551e-07 6.01e-04   S   0.00e+00
+     5     6 4.126392169e+03 1.669e-07 1.605e-07 4.32e-04   S   0.00e+00
+     6     7 4.126392147e+03 5.334e-09 4.104e-09 1.06e-04   S   0.00e+00
+     7     8 4.126392143e+03 9.999e-10 9.131e-10 6.20e-05   S   0.00e+00
+     8     9 4.126392143e+03 5.579e-11 4.227e-11 5.58e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt              4.662979     0.35606        13.09609
+gamma_ascOptIntGov       -0.859061     0.17484        -4.91350
+gamma_ascOptIntVacConf   -2.295210     0.22875       -10.03388
+sigma_ascOpt              2.718969     0.11938        22.77624
+mu_bPreg_mv               0.402874     0.07523         5.35518
+sigma_bPreg_mv            0.976661     0.07326        13.33092
+bRedness                 -0.137680     0.06875        -2.00263
+mu_bPreterm_mv           -0.973874     0.10091        -9.65045
+sigma_bPreterm_mv         1.170271     0.11437        10.23206
+bHosp1.2                 -0.003971     0.09858        -0.04028
+bHosp0.9                  0.064334     0.09850         0.65314
+bHosp0.3                  0.459492     0.09607         4.78286
+delta_bCost              -9.674038     0.47043       -20.56437
+gamma_bCostIntEdu         2.618506     0.46692         5.60808
+sigma_bCost              -6.965572     0.33531       -20.77349
+bOptIntRisk               0.566244     0.12232         4.62936
+bHospIntRisk              0.024689     0.12938         0.19083
+
+Final LL: -4126.3921
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.245989
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 8 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.135498648e+03
+     1     2 4.135310979e+03 4.538e-05 4.009e-05 5.75e-03   G   6.66e-02
+     2     3 4.135248369e+03 1.514e-05 1.263e-05 6.83e-03   G   2.50e-02
+     3     4 4.135221021e+03 6.613e-06 6.472e-06 8.72e-03   S   0.00e+00
+     4     5 4.135220522e+03 1.208e-07 8.886e-08 3.08e-04   S   0.00e+00
+     5     6 4.135220374e+03 3.559e-08 3.172e-08 1.31e-04   S   0.00e+00
+     6     7 4.135220365e+03 2.237e-09 1.787e-09 4.97e-05   S   0.00e+00
+     7     8 4.135220364e+03 3.467e-10 2.917e-10 3.12e-05   S   0.00e+00
+     8     9 4.135220364e+03 4.757e-11 3.646e-11 1.25e-05   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt               4.68202     0.35543       13.172739
+gamma_ascOptIntGov        -0.96095     0.17783       -5.403633
+gamma_ascOptIntVacConf    -2.19308     0.23554       -9.310782
+sigma_ascOpt               2.72560     0.11826       23.048369
+mu_bPreg_mv                0.39432     0.07429        5.308157
+sigma_bPreg_mv             0.96514     0.07226       13.356533
+bRedness                  -0.13492     0.06849       -1.970040
+mu_bPreterm_mv            -0.97721     0.10051       -9.722871
+sigma_bPreterm_mv          1.15328     0.11352       10.158948
+bHosp1.2               -6.4736e-04     0.09855       -0.006569
+bHosp0.9                   0.06656     0.09830        0.677074
+bHosp0.3                   0.45760     0.09600        4.766466
+delta_bCost               -9.77554     0.46096      -21.206936
+gamma_bCostIntEdu          2.81363     0.44274        6.355075
+sigma_bCost               -6.95354     0.32883      -21.146597
+bOptIntRisk                0.56622     0.12204        4.639778
+bHospIntRisk               0.02451     0.12891        0.190146
+
+Final LL: -4135.2204
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.214813
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 9 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.139400933e+03
+     1     2 4.139175731e+03 5.440e-05 5.028e-05 7.39e-03   G   1.28e-01
+     2     4 4.138989406e+03 4.502e-05 4.246e-05 1.98e-02   G   1.63e-02
+     3     5 4.138939771e+03 1.199e-05 1.092e-05 1.40e-02   S   0.00e+00
+     4     6 4.138937385e+03 5.764e-07 4.308e-07 1.72e-03   S   0.00e+00
+     5     7 4.138936736e+03 1.569e-07 1.331e-07 8.70e-04   S   0.00e+00
+     6     8 4.138936666e+03 1.705e-08 1.374e-08 2.47e-04   S   0.00e+00
+     7     9 4.138936656e+03 2.426e-09 2.048e-09 1.35e-04   S   0.00e+00
+     8    10 4.138936654e+03 2.955e-10 2.304e-10 2.69e-05   S   0.00e+00
+     9    11 4.138936654e+03 5.820e-11 4.908e-11 7.58e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt              4.497316     0.35505        12.66659
+gamma_ascOptIntGov       -1.065712     0.19053        -5.59355
+gamma_ascOptIntVacConf   -1.984065     0.24648        -8.04961
+sigma_ascOpt              2.740652     0.11896        23.03911
+mu_bPreg_mv               0.393069     0.07346         5.35053
+sigma_bPreg_mv            0.947068     0.07110        13.31988
+bRedness                 -0.132529     0.06843        -1.93669
+mu_bPreterm_mv           -0.974026     0.10114        -9.63041
+sigma_bPreterm_mv         1.179925     0.11221        10.51557
+bHosp1.2                 -0.003207     0.09853        -0.03255
+bHosp0.9                  0.064262     0.09836         0.65334
+bHosp0.3                  0.455362     0.09584         4.75131
+delta_bCost              -9.698078     0.46184       -20.99879
+gamma_bCostIntEdu         2.705079     0.44976         6.01455
+sigma_bCost              -6.936714     0.33057       -20.98387
+bOptIntRisk               0.566544     0.12223         4.63523
+bHospIntRisk              0.026225     0.12872         0.20374
+
+Final LL: -4138.9367
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.202509
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 10 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.134907898e+03
+     1     2 4.134540460e+03 8.886e-05 7.826e-05 5.52e-03   G   1.37e-01
+     2     3 4.134415605e+03 3.020e-05 2.771e-05 7.49e-03   G   2.43e-02
+     3     4 4.134360454e+03 1.334e-05 1.313e-05 1.30e-02   S   0.00e+00
+     4     5 4.134358968e+03 3.593e-07 2.549e-07 1.02e-03   S   0.00e+00
+     5     6 4.134358528e+03 1.065e-07 9.730e-08 8.58e-04   S   0.00e+00
+     6     7 4.134358496e+03 7.757e-09 5.581e-09 1.05e-04   S   0.00e+00
+     7     8 4.134358487e+03 2.178e-09 2.000e-09 8.82e-05   S   0.00e+00
+     8     9 4.134358486e+03 1.140e-10 8.548e-11 1.63e-05   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt              4.494755     0.36255        12.39749
+gamma_ascOptIntGov       -0.949544     0.18760        -5.06161
+gamma_ascOptIntVacConf   -2.110885     0.23952        -8.81294
+sigma_ascOpt              2.739557     0.11989        22.85006
+mu_bPreg_mv               0.403124     0.07374         5.46698
+sigma_bPreg_mv            0.925008     0.06966        13.27840
+bRedness                 -0.134808     0.06853        -1.96713
+mu_bPreterm_mv           -0.970887     0.10069        -9.64250
+sigma_bPreterm_mv         1.189865     0.11237        10.58889
+bHosp1.2                 -0.003449     0.09870        -0.03494
+bHosp0.9                  0.064588     0.09847         0.65593
+bHosp0.3                  0.459857     0.09586         4.79722
+delta_bCost              -9.623583     0.46425       -20.72914
+gamma_bCostIntEdu         2.589811     0.46381         5.58374
+sigma_bCost              -7.064555     0.33663       -20.98609
+bOptIntRisk               0.572365     0.12264         4.66689
+bHospIntRisk              0.030509     0.12889         0.23671
+
+Final LL: -4134.3585
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.237113
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 11 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.138974114e+03
+     1     2 4.138632275e+03 8.259e-05 6.994e-05 6.01e-03   G   7.13e-02
+     2     3 4.138543410e+03 2.147e-05 1.583e-05 7.20e-03   G   1.17e-02
+     3     4 4.138513618e+03 7.199e-06 7.091e-06 6.22e-03   S   0.00e+00
+     4     5 4.138512855e+03 1.843e-07 1.206e-07 5.17e-04   S   0.00e+00
+     5     6 4.138512489e+03 8.852e-08 8.395e-08 6.04e-04   S   0.00e+00
+     6     7 4.138512473e+03 3.886e-09 2.682e-09 7.86e-05   S   0.00e+00
+     7     8 4.138512468e+03 1.244e-09 1.202e-09 6.06e-05   S   0.00e+00
+     8     9 4.138512467e+03 1.357e-11 1.112e-11 5.47e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt               4.54991     0.35253       12.906429
+gamma_ascOptIntGov        -1.03933     0.18762       -5.539516
+gamma_ascOptIntVacConf    -2.04249     0.24424       -8.362567
+sigma_ascOpt               2.72932     0.11835       23.060600
+mu_bPreg_mv                0.39000     0.07341        5.312356
+sigma_bPreg_mv             0.94971     0.07069       13.434720
+bRedness                  -0.13351     0.06824       -1.956452
+mu_bPreterm_mv            -0.97370     0.10067       -9.672325
+sigma_bPreterm_mv          1.17009     0.11349       10.310237
+bHosp1.2               -4.1108e-04     0.09843       -0.004176
+bHosp0.9                   0.06451     0.09839        0.655676
+bHosp0.3                   0.45436     0.09580        4.742866
+delta_bCost               -9.68425     0.46053      -21.028490
+gamma_bCostIntEdu          2.69514     0.44768        6.020262
+sigma_bCost               -6.91289     0.32980      -20.960738
+bOptIntRisk                0.56940     0.12208        4.664275
+bHospIntRisk               0.02833     0.12852        0.220429
+
+Final LL: -4138.5125
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.222776
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 12 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.142262982e+03
+     1     2 4.142105075e+03 3.812e-05 3.124e-05 6.53e-03   G   7.92e-02
+     2     3 4.141951370e+03 3.711e-05 2.555e-05 1.80e-02   G   0.00e+00
+     3     4 4.141827315e+03 2.995e-05 2.275e-05 1.43e-02   S   0.00e+00
+     4     5 4.141770757e+03 1.366e-05 8.343e-06 6.07e-03   S   0.00e+00
+     5     6 4.141723794e+03 1.134e-05 9.156e-06 5.63e-03   S   0.00e+00
+     6     7 4.141708230e+03 3.758e-06 2.248e-06 1.51e-03   S   0.00e+00
+     7     8 4.141693034e+03 3.669e-06 2.778e-06 5.02e-03   G   0.00e+00
+     8     9 4.141689411e+03 8.748e-07 7.557e-07 1.94e-03   S   0.00e+00
+     9    10 4.141688972e+03 1.058e-07 7.802e-08 6.70e-04   S   0.00e+00
+    10    11 4.141688848e+03 3.001e-08 2.588e-08 4.11e-04   S   0.00e+00
+    11    12 4.141688837e+03 2.761e-09 2.227e-09 5.26e-05   S   0.00e+00
+    12    13 4.141688835e+03 3.392e-10 3.004e-10 1.62e-05   S   0.00e+00
+    13    14 4.141688835e+03 2.020e-11 1.646e-11 5.88e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt              4.277874     0.34151        12.52650
+gamma_ascOptIntGov       -1.071138     0.19225        -5.57152
+gamma_ascOptIntVacConf   -1.858463     0.25293        -7.34783
+sigma_ascOpt              2.762599     0.12106        22.81937
+mu_bPreg_mv               0.395086     0.07236         5.46038
+sigma_bPreg_mv            0.921399     0.06833        13.48365
+bRedness                 -0.135194     0.06819        -1.98251
+mu_bPreterm_mv           -0.959357     0.10017        -9.57777
+sigma_bPreterm_mv         1.171658     0.11237        10.42710
+bHosp1.2                 -0.005301     0.09862        -0.05375
+bHosp0.9                  0.059482     0.09843         0.60432
+bHosp0.3                  0.452962     0.09568         4.73389
+delta_bCost              -9.092999     0.43856       -20.73356
+gamma_bCostIntEdu         2.090869     0.44605         4.68751
+sigma_bCost              -6.834258     0.32901       -20.77217
+bOptIntRisk               0.578935     0.12312         4.70236
+bHospIntRisk              0.039038     0.12904         0.30254
+
+Final LL: -4141.6888
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.133929
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 13 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.134712523e+03
+     1     2 4.134292200e+03 1.017e-04 8.978e-05 6.83e-03   G   1.48e-01
+     2     4 4.133435780e+03 2.072e-04 1.584e-04 4.93e-02   G   0.00e+00
+     3     5 4.133265809e+03 4.112e-05 3.916e-05 2.44e-02   S   0.00e+00
+     4     6 4.133251837e+03 3.380e-06 2.408e-06 1.94e-03   S   0.00e+00
+     5     7 4.133247698e+03 1.001e-06 9.408e-07 1.63e-03   S   0.00e+00
+     6     8 4.133247464e+03 5.675e-08 3.879e-08 2.93e-04   S   0.00e+00
+     7     9 4.133247367e+03 2.349e-08 2.145e-08 2.41e-04   S   0.00e+00
+     8    10 4.133247361e+03 1.414e-09 1.060e-09 2.61e-05   S   0.00e+00
+     9    11 4.133247360e+03 2.977e-10 2.698e-10 1.62e-05   S   0.00e+00
+    10    12 4.133247360e+03 1.703e-11 1.306e-11 3.15e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt              4.318274     0.33432        12.91656
+gamma_ascOptIntGov       -0.757079     0.18328        -4.13072
+gamma_ascOptIntVacConf   -2.243396     0.24734        -9.07025
+sigma_ascOpt              2.764374     0.12089        22.86650
+mu_bPreg_mv               0.410613     0.07485         5.48589
+sigma_bPreg_mv            0.963131     0.07259        13.26760
+bRedness                 -0.138879     0.06866        -2.02285
+mu_bPreterm_mv           -0.975834     0.10164        -9.60085
+sigma_bPreterm_mv         1.189572     0.11395        10.43961
+bHosp1.2                 -0.002227     0.09890        -0.02252
+bHosp0.9                  0.065367     0.09868         0.66244
+bHosp0.3                  0.462892     0.09638         4.80267
+delta_bCost              -9.513235     0.46127       -20.62385
+gamma_bCostIntEdu         2.383756     0.45494         5.23972
+sigma_bCost              -7.082212     0.33852       -20.92104
+bOptIntRisk               0.570325     0.12331         4.62523
+bHospIntRisk              0.027746     0.13014         0.21321
+
+Final LL: -4133.2474
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.213357
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 14 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.135921902e+03
+     1     2 4.135725615e+03 4.746e-05 4.060e-05 6.70e-03   G   7.57e-02
+     2     3 4.135652603e+03 1.765e-05 1.497e-05 7.71e-03   G   3.34e-02
+     3     4 4.135612759e+03 9.634e-06 8.971e-06 1.11e-02   S   0.00e+00
+     4     5 4.135610533e+03 5.382e-07 3.720e-07 1.86e-03   S   0.00e+00
+     5     6 4.135609726e+03 1.951e-07 1.792e-07 1.12e-03   S   0.00e+00
+     6     7 4.135609686e+03 9.693e-09 7.241e-09 1.36e-04   S   0.00e+00
+     7     8 4.135609677e+03 2.230e-09 1.970e-09 9.76e-05   S   0.00e+00
+     8     9 4.135609676e+03 1.932e-10 1.453e-10 2.29e-05   S   0.00e+00
+     9    10 4.135609676e+03 4.745e-11 4.066e-11 1.09e-05   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt              4.373871     0.35360        12.36949
+gamma_ascOptIntGov       -0.880350     0.18023        -4.88450
+gamma_ascOptIntVacConf   -2.121532     0.24793        -8.55711
+sigma_ascOpt              2.743702     0.12004        22.85702
+mu_bPreg_mv               0.406375     0.07492         5.42381
+sigma_bPreg_mv            0.966836     0.07250        13.33614
+bRedness                 -0.137096     0.06873        -1.99485
+mu_bPreterm_mv           -0.975865     0.10053        -9.70712
+sigma_bPreterm_mv         1.173812     0.11230        10.45257
+bHosp1.2                 -0.002076     0.09880        -0.02101
+bHosp0.9                  0.064977     0.09840         0.66037
+bHosp0.3                  0.460294     0.09622         4.78368
+delta_bCost              -9.387894     0.46005       -20.40644
+gamma_bCostIntEdu         2.268469     0.45539         4.98133
+sigma_bCost              -6.999704     0.33517       -20.88403
+bOptIntRisk               0.573943     0.12329         4.65512
+bHospIntRisk              0.030893     0.12993         0.23777
+
+Final LL: -4135.6097
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.171173
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 15 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.135832652e+03
+     1     2 4.135766236e+03 1.606e-05 1.062e-05 3.71e-03   G   0.00e+00
+     2     3 4.135743592e+03 5.475e-06 3.345e-06 2.57e-03   G   0.00e+00
+     3     4 4.135722726e+03 5.045e-06 4.561e-06 4.91e-03   S   0.00e+00
+     4     5 4.135720393e+03 5.641e-07 4.135e-07 1.60e-03   S   0.00e+00
+     5     6 4.135719126e+03 3.064e-07 2.316e-07 1.16e-03   S   0.00e+00
+     6     7 4.135718651e+03 1.148e-07 8.993e-08 9.02e-04   S   0.00e+00
+     7     8 4.135718513e+03 3.356e-08 2.503e-08 3.44e-04   S   0.00e+00
+     8     9 4.135718470e+03 1.022e-08 8.442e-09 2.06e-04   S   0.00e+00
+     9    10 4.135718465e+03 1.283e-09 1.071e-09 8.93e-05   S   0.00e+00
+    10    11 4.135718465e+03 1.145e-10 1.014e-10 2.75e-05   S   0.00e+00
+    11    12 4.135718465e+03 5.368e-12 4.624e-12 4.77e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt              4.497604     0.34806        12.92177
+gamma_ascOptIntGov       -0.900994     0.18524        -4.86386
+gamma_ascOptIntVacConf   -2.157772     0.24874        -8.67483
+sigma_ascOpt              2.716750     0.11753        23.11480
+mu_bPreg_mv               0.398500     0.07479         5.32817
+sigma_bPreg_mv            0.968790     0.07230        13.39959
+bRedness                 -0.137695     0.06867        -2.00510
+mu_bPreterm_mv           -0.971431     0.10052        -9.66414
+sigma_bPreterm_mv         1.162633     0.11442        10.16096
+bHosp1.2                 -0.004024     0.09861        -0.04081
+bHosp0.9                  0.061862     0.09838         0.62881
+bHosp0.3                  0.457875     0.09592         4.77352
+delta_bCost              -9.417370     0.45631       -20.63805
+gamma_bCostIntEdu         2.411517     0.45702         5.27660
+sigma_bCost              -6.873791     0.33126       -20.75064
+bOptIntRisk               0.567372     0.12271         4.62373
+bHospIntRisk              0.026905     0.12931         0.20807
+
+Final LL: -4135.7185
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -0.796622
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 16 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.138284640e+03
+     1     2 4.138067674e+03 5.243e-05 4.361e-05 6.97e-03   G   9.61e-02
+     2     3 4.137917324e+03 3.633e-05 3.005e-05 1.60e-02   G   6.60e-03
+     3     4 4.137870729e+03 1.126e-05 1.023e-05 9.33e-03   S   0.00e+00
+     4     5 4.137867553e+03 7.677e-07 5.734e-07 1.27e-03   S   0.00e+00
+     5     6 4.137866820e+03 1.769e-07 1.559e-07 7.46e-04   S   0.00e+00
+     6     7 4.137866755e+03 1.584e-08 1.179e-08 2.18e-04   S   0.00e+00
+     7     8 4.137866738e+03 4.093e-09 3.533e-09 1.17e-04   S   0.00e+00
+     8     9 4.137866736e+03 3.797e-10 3.044e-10 1.51e-05   S   0.00e+00
+     9    10 4.137866736e+03 4.854e-11 4.338e-11 1.06e-05   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt              4.510116     0.36127        12.48402
+gamma_ascOptIntGov       -1.043814     0.19810        -5.26909
+gamma_ascOptIntVacConf   -2.011056     0.25091        -8.01508
+sigma_ascOpt              2.757318     0.12107        22.77493
+mu_bPreg_mv               0.396772     0.07266         5.46066
+sigma_bPreg_mv            0.925800     0.06889        13.43840
+bRedness                 -0.135564     0.06834        -1.98355
+mu_bPreterm_mv           -0.964064     0.09963        -9.67610
+sigma_bPreterm_mv         1.163026     0.11269        10.32048
+bHosp1.2                 -0.001248     0.09857        -0.01266
+bHosp0.9                  0.064396     0.09835         0.65479
+bHosp0.3                  0.454626     0.09563         4.75392
+delta_bCost              -9.292302     0.44595       -20.83695
+gamma_bCostIntEdu         2.239467     0.45169         4.95797
+sigma_bCost              -6.920275     0.32941       -21.00815
+bOptIntRisk               0.576292     0.12273         4.69559
+bHospIntRisk              0.036344     0.12862         0.28256
+
+Final LL: -4137.8667
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.325303
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 17 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.132467373e+03
+     1     4 4.131936682e+03 1.284e-04 1.089e-04 2.35e-02   G   2.07e-02
+     2     5 4.131775239e+03 3.907e-05 3.014e-05 2.12e-02   G   0.00e+00
+     3     6 4.131751316e+03 5.790e-06 5.624e-06 7.80e-03   S   0.00e+00
+     4     7 4.131750280e+03 2.506e-07 1.886e-07 3.53e-04   S   0.00e+00
+     5     8 4.131750085e+03 4.728e-08 4.368e-08 2.24e-04   S   0.00e+00
+     6     9 4.131750076e+03 2.286e-09 1.739e-09 4.43e-05   S   0.00e+00
+     7    10 4.131750074e+03 3.990e-10 3.698e-10 2.27e-05   S   0.00e+00
+     8    11 4.131750074e+03 1.355e-11 1.086e-11 2.86e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt              4.538795     0.35097        12.93203
+gamma_ascOptIntGov       -0.824279     0.18175        -4.53534
+gamma_ascOptIntVacConf   -2.263359     0.24851        -9.10784
+sigma_ascOpt              2.741423     0.12118        22.62344
+mu_bPreg_mv               0.403219     0.07415         5.43806
+sigma_bPreg_mv            0.953283     0.07216        13.21084
+bRedness                 -0.138094     0.06859        -2.01326
+mu_bPreterm_mv           -0.970407     0.10146        -9.56486
+sigma_bPreterm_mv         1.183386     0.11430        10.35303
+bHosp1.2                 -0.002841     0.09880        -0.02876
+bHosp0.9                  0.063897     0.09853         0.64853
+bHosp0.3                  0.460068     0.09611         4.78675
+delta_bCost              -9.375601     0.45886       -20.43257
+gamma_bCostIntEdu         2.274418     0.45591         4.98869
+sigma_bCost              -6.970483     0.33358       -20.89570
+bOptIntRisk               0.570360     0.12316         4.63110
+bHospIntRisk              0.029207     0.12955         0.22546
+
+Final LL: -4131.7501
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.292479
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 18 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.131521973e+03
+     1     2 4.130974828e+03 1.324e-04 9.804e-05 6.85e-03   G   2.24e-01
+     2     3 4.130558378e+03 1.008e-04 6.403e-05 1.01e-02   G   0.00e+00
+     3     4 4.130365123e+03 4.679e-05 4.332e-05 9.56e-03   S   0.00e+00
+     4     5 4.130359383e+03 1.390e-06 1.008e-06 1.03e-03   S   0.00e+00
+     5     6 4.130357862e+03 3.684e-07 3.393e-07 5.91e-04   S   0.00e+00
+     6     7 4.130357777e+03 2.046e-08 1.528e-08 1.36e-04   S   0.00e+00
+     7     8 4.130357757e+03 4.964e-09 4.362e-09 8.17e-05   S   0.00e+00
+     8     9 4.130357755e+03 4.310e-10 3.360e-10 2.67e-05   S   0.00e+00
+     9    10 4.130357755e+03 7.013e-11 6.320e-11 1.29e-05   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt              4.713513     0.35011        13.46302
+gamma_ascOptIntGov       -0.912594     0.18068        -5.05081
+gamma_ascOptIntVacConf   -2.245228     0.23145        -9.70052
+sigma_ascOpt              2.669921     0.11533        23.15111
+mu_bPreg_mv               0.388366     0.07511         5.17054
+sigma_bPreg_mv            0.991261     0.07293        13.59231
+bRedness                 -0.133556     0.06872        -1.94344
+mu_bPreterm_mv           -0.980936     0.10043        -9.76719
+sigma_bPreterm_mv         1.149147     0.11264        10.20154
+bHosp1.2                 -0.001525     0.09864        -0.01547
+bHosp0.9                  0.068106     0.09833         0.69262
+bHosp0.3                  0.457747     0.09620         4.75821
+delta_bCost              -9.833179     0.46591       -21.10548
+gamma_bCostIntEdu         2.860449     0.44795         6.38558
+sigma_bCost              -6.947402     0.32763       -21.20475
+bOptIntRisk               0.560287     0.12198         4.59310
+bHospIntRisk              0.019507     0.12916         0.15103
+
+Final LL: -4130.3578
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.207669
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 19 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.137134352e+03
+     1     2 4.136171611e+03 2.327e-04 1.889e-04 5.34e-03   G   5.13e-02
+     2     3 4.135267409e+03 2.186e-04 1.617e-04 2.28e-02   G   1.04e-02
+     3     4 4.134919114e+03 8.423e-05 7.735e-05 1.14e-02   S   0.00e+00
+     4     5 4.134894979e+03 5.837e-06 4.212e-06 4.33e-03   S   0.00e+00
+     5     6 4.134887404e+03 1.832e-06 1.600e-06 3.57e-03   S   0.00e+00
+     6     7 4.134886824e+03 1.402e-07 1.126e-07 6.71e-04   S   0.00e+00
+     7     8 4.134886752e+03 1.734e-08 1.549e-08 1.76e-04   S   0.00e+00
+     8     9 4.134886748e+03 1.051e-09 8.293e-10 3.25e-05   S   0.00e+00
+     9    10 4.134886747e+03 1.864e-10 1.574e-10 1.12e-05   S   0.00e+00
+    10    11 4.134886747e+03 2.044e-11 1.688e-11 5.67e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt              4.343088     0.34179        12.70690
+gamma_ascOptIntGov       -0.915349     0.18470        -4.95583
+gamma_ascOptIntVacConf   -2.083925     0.24739        -8.42370
+sigma_ascOpt              2.763639     0.12187        22.67656
+mu_bPreg_mv               0.402816     0.07285         5.52967
+sigma_bPreg_mv            0.922910     0.07035        13.11876
+bRedness                 -0.135795     0.06842        -1.98477
+mu_bPreterm_mv           -0.971696     0.10212        -9.51483
+sigma_bPreterm_mv         1.214050     0.11368        10.67997
+bHosp1.2                 -0.003123     0.09875        -0.03162
+bHosp0.9                  0.061203     0.09862         0.62058
+bHosp0.3                  0.456306     0.09589         4.75839
+delta_bCost              -9.413322     0.45887       -20.51419
+gamma_bCostIntEdu         2.306368     0.46098         5.00319
+sigma_bCost              -7.016879     0.33484       -20.95605
+bOptIntRisk               0.577685     0.12318         4.68975
+bHospIntRisk              0.036823     0.12922         0.28496
+
+Final LL: -4134.8867
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.238596
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 20 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.134127235e+03
+     1     2 4.133323399e+03 1.944e-04 1.486e-04 5.78e-03   G   2.31e-01
+     2     3 4.132764386e+03 1.352e-04 1.006e-04 2.01e-02   G   1.43e-02
+     3     4 4.132549591e+03 5.197e-05 5.753e-05 2.06e-02   S   0.00e+00
+     4     5 4.132538130e+03 2.774e-06 2.245e-06 2.95e-03   S   0.00e+00
+     5     6 4.132535732e+03 5.801e-07 3.858e-07 1.03e-03   G   0.00e+00
+     6     7 4.132534702e+03 2.493e-07 2.379e-07 1.33e-03   S   0.00e+00
+     7     8 4.132534675e+03 6.514e-09 4.862e-09 1.14e-04   S   0.00e+00
+     8     9 4.132534670e+03 1.255e-09 1.174e-09 5.21e-05   S   0.00e+00
+     9    10 4.132534670e+03 5.014e-11 3.749e-11 9.24e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt              4.676193     0.35915        13.02008
+gamma_ascOptIntGov       -0.870926     0.18599        -4.68276
+gamma_ascOptIntVacConf   -2.274264     0.24542        -9.26664
+sigma_ascOpt              2.696246     0.11708        23.03000
+mu_bPreg_mv               0.395135     0.07514         5.25850
+sigma_bPreg_mv            0.990858     0.07279        13.61241
+bRedness                 -0.136564     0.06861        -1.99052
+mu_bPreterm_mv           -0.978333     0.10038        -9.74657
+sigma_bPreterm_mv         1.149098     0.11525         9.97055
+bHosp1.2                 -0.001904     0.09864        -0.01931
+bHosp0.9                  0.065890     0.09844         0.66931
+bHosp0.3                  0.458639     0.09611         4.77199
+delta_bCost              -9.820614     0.46929       -20.92663
+gamma_bCostIntEdu         2.754995     0.45561         6.04684
+sigma_bCost              -7.033370     0.33536       -20.97282
+bOptIntRisk               0.562082     0.12192         4.61010
+bHospIntRisk              0.019965     0.12906         0.15470
+
+Final LL: -4132.5347
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.227699
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 21 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.134289122e+03
+     1     2 4.133840612e+03 1.085e-04 8.259e-05 5.66e-03   G   1.45e-01
+     2     3 4.133545875e+03 7.130e-05 5.434e-05 1.93e-02   G   0.00e+00
+     3     4 4.133455967e+03 2.175e-05 2.052e-05 7.11e-03   S   0.00e+00
+     4     5 4.133448066e+03 1.911e-06 1.316e-06 2.27e-03   S   0.00e+00
+     5     6 4.133445299e+03 6.694e-07 6.292e-07 1.99e-03   S   0.00e+00
+     6     7 4.133445229e+03 1.703e-08 1.348e-08 1.40e-04   S   0.00e+00
+     7     8 4.133445221e+03 2.017e-09 1.857e-09 6.41e-05   S   0.00e+00
+     8     9 4.133445220e+03 9.243e-11 6.981e-11 1.09e-05   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt              4.445749     0.35027        12.69232
+gamma_ascOptIntGov       -0.892266     0.17931        -4.97619
+gamma_ascOptIntVacConf   -2.146316     0.24376        -8.80488
+sigma_ascOpt              2.725778     0.11948        22.81422
+mu_bPreg_mv               0.404279     0.07442         5.43239
+sigma_bPreg_mv            0.965726     0.07250        13.32048
+bRedness                 -0.139496     0.06866        -2.03163
+mu_bPreterm_mv           -0.977000     0.10140        -9.63539
+sigma_bPreterm_mv         1.182105     0.11390        10.37814
+bHosp1.2                 -0.002967     0.09882        -0.03002
+bHosp0.9                  0.063394     0.09850         0.64357
+bHosp0.3                  0.460527     0.09630         4.78228
+delta_bCost              -9.393974     0.46135       -20.36204
+gamma_bCostIntEdu         2.288864     0.46144         4.96024
+sigma_bCost              -7.020732     0.33590       -20.90118
+bOptIntRisk               0.570801     0.12332         4.62854
+bHospIntRisk              0.030482     0.13003         0.23443
+
+Final LL: -4133.4452
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.198699
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 22 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.134111932e+03
+     1     2 4.133691337e+03 1.017e-04 7.396e-05 6.28e-03   G   7.12e-02
+     2     3 4.133524593e+03 4.034e-05 2.706e-05 8.42e-03   G   0.00e+00
+     3     4 4.133455835e+03 1.663e-05 1.755e-05 6.06e-03   S   0.00e+00
+     4     5 4.133451837e+03 9.673e-07 6.821e-07 7.13e-04   S   0.00e+00
+     5     6 4.133450679e+03 2.801e-07 2.024e-07 4.92e-04   G   0.00e+00
+     6     7 4.133450319e+03 8.712e-08 7.857e-08 5.57e-04   S   0.00e+00
+     7     8 4.133450295e+03 5.853e-09 4.538e-09 1.29e-04   S   0.00e+00
+     8     9 4.133450291e+03 9.810e-10 8.821e-10 4.47e-05   S   0.00e+00
+     9    10 4.133450291e+03 5.430e-11 4.335e-11 6.23e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt               4.59361     0.35233       13.037718
+gamma_ascOptIntGov        -0.89652     0.19346       -4.634140
+gamma_ascOptIntVacConf    -2.20813     0.24551       -8.993932
+sigma_ascOpt               2.67468     0.11738       22.785854
+mu_bPreg_mv                0.39346     0.07385        5.327544
+sigma_bPreg_mv             0.96338     0.06976       13.809983
+bRedness                  -0.13247     0.06842       -1.936242
+mu_bPreterm_mv            -0.97462     0.09979       -9.766852
+sigma_bPreterm_mv          1.15175     0.11051       10.422118
+bHosp1.2                8.2467e-04     0.09840        0.008381
+bHosp0.9                   0.06742     0.09813        0.687020
+bHosp0.3                   0.45414     0.09560        4.750645
+delta_bCost               -9.71276     0.45985      -21.121403
+gamma_bCostIntEdu          2.68559     0.44895        5.981970
+sigma_bCost               -6.98433     0.33151      -21.068476
+bOptIntRisk                0.56491     0.12178        4.638800
+bHospIntRisk               0.02457     0.12845        0.191278
+
+Final LL: -4133.4503
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.265138
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 23 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.139551021e+03
+     1     2 4.139393789e+03 3.798e-05 3.437e-05 7.65e-03   G   7.26e-02
+     2     3 4.139319794e+03 1.788e-05 1.574e-05 7.41e-03   G   3.94e-02
+     3     4 4.139267090e+03 1.273e-05 1.241e-05 1.45e-02   S   0.00e+00
+     4     5 4.139266511e+03 1.398e-07 1.012e-07 5.06e-04   S   0.00e+00
+     5     6 4.139266356e+03 3.742e-08 3.411e-08 2.58e-04   S   0.00e+00
+     6     7 4.139266348e+03 2.105e-09 1.586e-09 7.94e-05   S   0.00e+00
+     7     8 4.139266345e+03 5.020e-10 4.213e-10 5.43e-05   S   0.00e+00
+     8     9 4.139266345e+03 9.660e-11 6.607e-11 1.50e-05   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt              4.593115     0.34765        13.21198
+gamma_ascOptIntGov       -1.032620     0.18833        -5.48291
+gamma_ascOptIntVacConf   -2.068934     0.23699        -8.73022
+sigma_ascOpt              2.695140     0.11535        23.36518
+mu_bPreg_mv               0.384288     0.07327         5.24457
+sigma_bPreg_mv            0.951128     0.06950        13.68575
+bRedness                 -0.130803     0.06829        -1.91540
+mu_bPreterm_mv           -0.963319     0.09870        -9.76031
+sigma_bPreterm_mv         1.130858     0.11074        10.21205
+bHosp1.2                  0.001741     0.09835         0.01771
+bHosp0.9                  0.066979     0.09806         0.68305
+bHosp0.3                  0.453233     0.09561         4.74049
+delta_bCost              -9.667745     0.45164       -21.40598
+gamma_bCostIntEdu         2.683156     0.43501         6.16807
+sigma_bCost              -6.904520     0.32396       -21.31297
+bOptIntRisk               0.565258     0.12185         4.63885
+bHospIntRisk              0.026061     0.12845         0.20289
+
+Final LL: -4139.2663
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.245683
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 24 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.134880743e+03
+     1     2 4.134690018e+03 4.613e-05 3.618e-05 7.21e-03   G   8.74e-02
+     2     3 4.134491554e+03 4.800e-05 3.056e-05 1.62e-02   G   0.00e+00
+     3     4 4.134275120e+03 5.235e-05 5.043e-05 2.64e-02   S   0.00e+00
+     4     5 4.134210081e+03 1.573e-05 9.431e-06 2.36e-03   S   0.00e+00
+     5     6 4.134145059e+03 1.573e-05 1.232e-05 5.55e-03   G   0.00e+00
+     6     7 4.134123349e+03 5.251e-06 4.315e-06 2.83e-03   S   0.00e+00
+     7     8 4.134118576e+03 1.155e-06 8.380e-07 1.40e-03   S   0.00e+00
+     8     9 4.134117148e+03 3.454e-07 2.987e-07 8.24e-04   S   0.00e+00
+     9    10 4.134117021e+03 3.078e-08 2.453e-08 2.35e-04   S   0.00e+00
+    10    11 4.134117002e+03 4.627e-09 3.943e-09 8.62e-05   S   0.00e+00
+    11    12 4.134116999e+03 5.422e-10 4.159e-10 2.53e-05   S   0.00e+00
+    12    13 4.134116999e+03 1.166e-10 9.988e-11 1.34e-05   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt              4.372321     0.33668        12.98671
+gamma_ascOptIntGov       -0.828801     0.18336        -4.52007
+gamma_ascOptIntVacConf   -2.183291     0.24716        -8.83358
+sigma_ascOpt              2.737259     0.11951        22.90355
+mu_bPreg_mv               0.404916     0.07447         5.43758
+sigma_bPreg_mv            0.962854     0.07228        13.32128
+bRedness                 -0.137657     0.06862        -2.00593
+mu_bPreterm_mv           -0.976277     0.10180        -9.59018
+sigma_bPreterm_mv         1.187159     0.11614        10.22193
+bHosp1.2                 -0.002025     0.09878        -0.02051
+bHosp0.9                  0.063804     0.09864         0.64687
+bHosp0.3                  0.460685     0.09618         4.78979
+delta_bCost              -9.549655     0.46134       -20.69997
+gamma_bCostIntEdu         2.424443     0.45697         5.30547
+sigma_bCost              -7.101549     0.33881       -20.96001
+bOptIntRisk               0.570640     0.12309         4.63579
+bHospIntRisk              0.028934     0.12991         0.22273
+
+Final LL: -4134.117
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.177839
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 25 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws .... Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/16.2_mxl_costCont_parInt_final_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.136724306e+03
+     1     2 4.136225643e+03 1.205e-04 1.127e-04 5.70e-03   G   2.73e-01
+     2     4 4.135906030e+03 7.727e-05 7.264e-05 1.71e-02   G   4.49e-02
+     3     5 4.135793061e+03 2.731e-05 2.632e-05 1.86e-02   S   0.00e+00
+     4     6 4.135786003e+03 1.707e-06 1.136e-06 1.92e-03   S   0.00e+00
+     5     7 4.135782616e+03 8.188e-07 7.561e-07 1.85e-03   S   0.00e+00
+     6     8 4.135782457e+03 3.858e-08 2.890e-08 3.07e-04   S   0.00e+00
+     7     9 4.135782425e+03 7.753e-09 7.136e-09 1.35e-04   S   0.00e+00
+     8    10 4.135782423e+03 3.624e-10 2.733e-10 2.53e-05   S   0.00e+00
+     9    11 4.135782423e+03 8.212e-11 7.184e-11 7.42e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                          Estimate     BHHH se BHH t-ratio (0)
+delta_ascOpt              4.504097     0.34870        12.91681
+gamma_ascOptIntGov       -1.027697     0.19334        -5.31546
+gamma_ascOptIntVacConf   -2.034994     0.23927        -8.50491
+sigma_ascOpt              2.765398     0.12113        22.83084
+mu_bPreg_mv               0.395993     0.07299         5.42540
+sigma_bPreg_mv            0.931386     0.06911        13.47644
+bRedness                 -0.136537     0.06823        -2.00103
+mu_bPreterm_mv           -0.959150     0.10004        -9.58766
+sigma_bPreterm_mv         1.161767     0.11452        10.14464
+bHosp1.2                 -0.001420     0.09842        -0.01443
+bHosp0.9                  0.063248     0.09843         0.64256
+bHosp0.3                  0.454824     0.09554         4.76047
+delta_bCost              -9.410911     0.45340       -20.75623
+gamma_bCostIntEdu         2.387948     0.45678         5.22779
+sigma_bCost              -6.872217     0.32948       -20.85785
+bOptIntRisk               0.570921     0.12263         4.65574
+bHospIntRisk              0.033083     0.12842         0.25762
+
+Final LL: -4135.7824
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -1.20862
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+      ======================================================================================
+     Resource Usage on 2026-07-21 02:36:35.268793:
+     JobId: 972759.venus01  				 Project: jpn_dce 
+     Submission Host: atlas9-c01 
+     Exit Status: 0
+     NCPUs Requested: 12 				 NCPUs Used: 12
+     Memory Requested: 40gb 				 Memory Used: 6609896kb 
+     Vmem Used: 31820356kb
+     CPU Time Used: 03:17:40 
+     Walltime requested: 240:00:00 			 Walltime Used: 02:01:12
+     Submit Time:  Tue Jul 21 00:35:18 2026 		 Start Time: Tue Jul 21 00:35:22 2026 
+     End Time: Tue Jul 21 02:36:35 2026 
+     Execution Nodes Used: (cnode-33-43-36:ncpus=12)
+     ======================================================================================

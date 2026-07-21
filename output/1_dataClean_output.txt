@@ -1,0 +1,86 @@
+===========================================================================
+Title: 1_dataClean_output.txt
+Date: 2026-07-20
+===========================================================================
+
+Dummy columns created for adv_col 
+
+Dummy columns created for hosp_col 
+
+Dummy columns created for cost_col 
+
+Added prefix alt1_ to columns: preg hosp cost redness preterm hosp1.2 hosp0.9 hosp0.3 cost0.05 cost0.1 cost0.3 cost1 
+
+Added prefix alt2_ to columns: preg hosp cost redness preterm hosp1.2 hosp0.9 hosp0.3 cost0.05 cost0.1 cost0.3 cost1 
+
+File successfully saved as jpn_design.csv
+Column names of jpn_design.csv:
+ [1] "alt1_cost"     "alt1_cost0.05" "alt1_cost0.1"  "alt1_cost0.3" 
+ [5] "alt1_cost1"    "alt1_hosp"     "alt1_hosp0.3"  "alt1_hosp0.9" 
+ [9] "alt1_hosp1.2"  "alt1_preg"     "alt1_preterm"  "alt1_redness" 
+[13] "alt2_cost"     "alt2_cost0.05" "alt2_cost0.1"  "alt2_cost0.3" 
+[17] "alt2_cost1"    "alt2_hosp"     "alt2_hosp0.3"  "alt2_hosp0.9" 
+[21] "alt2_hosp1.2"  "alt2_preg"     "alt2_preterm"  "alt2_redness" 
+[25] "block"         "risk"          "task"         
+
+Added column for logical test results (passTest)
+No. of women that passed logical test: 786 
+
+Added column for same responses (allSame)
+No. of women with same responses: 106 
+
+Added column for repeated task (rptTask)
+
+Reassigned columns as mv (left) & mab (right)
+Dropped mab_preg & mab_preterm columns as not applicable
+
+Added columns for product availability (mv_av, mab_av, opt_av)
+
+Added column for proportion of opt-out (propOpt)
+
+File successfully saved as jpn_dceDesign.csv
+Column names of jpn_dceDesign.csv:
+ [1] "id"            "block"         "passTest"      "allSame"      
+ [5] "task"          "choice_stage1" "choice_stage2" "mv_cost"      
+ [9] "mv_cost0.05"   "mv_cost0.1"    "mv_cost0.3"    "mv_cost1"     
+[13] "mv_hosp"       "mv_hosp0.3"    "mv_hosp0.9"    "mv_hosp1.2"   
+[17] "mv_preg"       "mv_preterm"    "mv_redness"    "mab_cost"     
+[21] "mab_cost0.05"  "mab_cost0.1"   "mab_cost0.3"   "mab_cost1"    
+[25] "mab_hosp"      "mab_hosp0.3"   "mab_hosp0.9"   "mab_hosp1.2"  
+[29] "mab_redness"   "risk"          "rptTask"       "mv_av"        
+[33] "mab_av"        "opt_av"        "propOpt"      
+
+Indicated NA for Q11 Q16 Q17 Q18 Q19 
+
+Indicated NA for Q12 Q13 
+
+Added column for completion time (time)
+
+Dropped redundant columns: start end X1 SC1 SC2 SEG SEX AGE CHILD NAGE 
+
+Added column for standardized age (ageStd)
+
+Added column for sibling group (sibGrp)
+
+Added column for education group (eduGrp)
+
+Added column for income group (incGrp)
+
+File successfully saved as jpn_dataset.csv
+Column names of jpn_dataset.csv:
+ [1] "id"            "block"         "passTest"      "allSame"      
+ [5] "task"          "choice_stage1" "choice_stage2" "mv_cost"      
+ [9] "mv_cost0.05"   "mv_cost0.1"    "mv_cost0.3"    "mv_cost1"     
+[13] "mv_hosp"       "mv_hosp0.3"    "mv_hosp0.9"    "mv_hosp1.2"   
+[17] "mv_preg"       "mv_preterm"    "mv_redness"    "mab_cost"     
+[21] "mab_cost0.05"  "mab_cost0.1"   "mab_cost0.3"   "mab_cost1"    
+[25] "mab_hosp"      "mab_hosp0.3"   "mab_hosp0.9"   "mab_hosp1.2"  
+[29] "mab_redness"   "risk"          "rptTask"       "mv_av"        
+[33] "mab_av"        "opt_av"        "propOpt"       "age"          
+[37] "sibling"       "numSib"        "fluCovVac"     "tdapVac"      
+[41] "rsvVac"        "gestAge"       "govTrust"      "vacImpt"      
+[45] "vacSafe"       "vacEff"        "vacBlf"        "chiiki"       
+[49] "marriage"      "job"           "family"        "education"    
+[53] "income"        "home"          "license"       "car"          
+[57] "time"          "ageStd"        "sibGrp"        "eduGrp"       
+[61] "incGrp"       

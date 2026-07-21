@@ -1,0 +1,36 @@
+===========================================================================
+Title: 12.2_mnl_costCont_fullInt_output.txt
+Date: 2026-07-20
+===========================================================================
+
+Pooled coefficients using Rubin's rules:
+                      Estimate      se      p
+ascOpt                 2.55578 0.16450 <0.001
+ascOptIntAge           0.09937 0.03703  0.007
+ascOptIntEdu          -0.14473 0.07491  0.053
+ascOptIntGov          -0.59091 0.07725 <0.001
+ascOptIntVacConf      -0.89262 0.10942 <0.001
+bPreg_mv              -0.03781 0.20940  0.857
+bPregIntEdu_mv         0.06897 0.07542  0.360
+bPregIntGov_mv         0.11610 0.10557  0.271
+bPregIntVacConf_mv     0.01262 0.13376  0.925
+bRedness              -0.07341 0.04656  0.115
+bPreterm_mv           -0.37579 0.25318  0.138
+bPretermIntGov_mv      0.00631 0.12864  0.961
+bPretermIntVacConf_mv -0.06583 0.16187  0.684
+bHosp1.2               0.01364 0.07554  0.857
+bHosp0.9               0.01450 0.07548  0.848
+bHosp0.3               0.30727 0.07511 <0.001
+bCost                 -1.47564 0.28185 <0.001
+bCostIntAge           -0.21196 0.10735  0.048
+bCostIntSib            0.33368 0.11467  0.004
+bCostIntEdu            0.39352 0.18178  0.030
+bCostIntGov           -0.64600 0.12636 <0.001
+bOptIntRisk            0.25282 0.09299  0.007
+bHospIntRisk           0.00613 0.09680  0.949
+
+AIC values:
+[1] Min: 10711.60, Max: 10817.91
+
+BIC values:
+[1] Min: 10865.39, Max: 10971.69

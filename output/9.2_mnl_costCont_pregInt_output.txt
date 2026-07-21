@@ -1,0 +1,32 @@
+===========================================================================
+Title: 9.2_mnl_costCont_pregInt_output.txt
+Date: 2026-07-20
+===========================================================================
+
+Pooled coefficients using Rubin's rules:
+                Estimate      se      p
+ascOpt          -0.20814 0.06959  0.003
+bPreg_mv        -1.54087 0.14016 <0.001
+bRedness        -0.04924 0.04609  0.285
+bPreterm_mv     -0.47885 0.06639 <0.001
+bHosp1.2         0.01335 0.07456  0.858
+bHosp0.9         0.01234 0.07441  0.868
+bHosp0.3         0.30091 0.07401 <0.001
+bCost           -2.28163 0.08701 <0.001
+bOptIntRisk      0.22033 0.08959  0.014
+bHospIntRisk     0.01148 0.09544  0.904
+bPregIntAge     -0.05997 0.03779  0.113
+bPregIntSib     -0.02460 0.04660  0.598
+bPregIntEdu      0.17828 0.06685  0.008
+bPregIntInc     -0.01272 0.06575  0.847
+bPregIntGov      0.43704 0.06558 <0.001
+bPregIntVacImpt  0.17326 0.07391  0.019
+bPregIntVacSafe -0.01772 0.08260  0.830
+bPregIntVacEff  -0.03835 0.08246  0.642
+bPregIntVacBlf   0.35390 0.07704 <0.001
+
+AIC values:
+[1] Min: 11387.38, Max: 11426.58
+
+BIC values:
+[1] Min: 11514.42, Max: 11553.62

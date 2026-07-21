@@ -1,0 +1,615 @@
+Model run by Jiheo using Apollo 0.3.8 on R 4.5.1 for Windows.
+Please acknowledge the use of Apollo by citing Hess & Palma (2019)
+  DOI 10.1016/j.jocm.2019.100170
+  www.ApolloChoiceModelling.com
+
+Model name                                  : 9.1_mnl_costCont_pregInt
+Model description                           : MNL; continuous cost & recipient interaction (complete)
+Model run at                                : 2026-07-20 13:30:44.383212
+Estimation method                           : bgw
+Estimation diagnosis                        : Relative function convergence (favorable)
+Optimisation diagnosis                      : Maximum found
+     hessian properties                     : Negative definite
+     maximum eigenvalue                     : -31.280465
+     reciprocal of condition number         : 0.00147268
+Number of individuals                       : 517
+Number of rows in database                  : 4653
+Number of modelled outcomes                 : 4653
+
+Number of cores used                        :  1 
+Model without mixing
+
+LL(start)                                   : -5111.84
+LL at equal shares, LL(0)                   : -5111.84
+LL at observed shares, LL(C)                : -5104.13
+LL(final)                                   : -4519.98
+Rho-squared vs equal shares                  :  0.1158 
+Adj.Rho-squared vs equal shares              :  0.1121 
+Rho-squared vs observed shares               :  0.1144 
+Adj.Rho-squared vs observed shares           :  0.1111 
+AIC                                         :  9077.95 
+BIC                                         :  9200.41 
+
+Estimated parameters                        : 19
+Time taken (hh:mm:ss)                       :  00:00:1.68 
+     pre-estimation                         :  00:00:0.31 
+     estimation                             :  00:00:0.23 
+     post-estimation                        :  00:00:1.13 
+Iterations                                  :  9  
+
+Unconstrained optimisation.
+
+Estimates:
+                   Estimate        s.e.   t.rat.(0)  p(2-sided)    Rob.s.e.
+ascOpt            -0.380910     0.07782    -4.89505   9.828e-07     0.09759
+bPreg_mv          -1.478551     0.15176    -9.74263     0.00000     0.22328
+bRedness          -0.064741     0.05084    -1.27345     0.20286     0.05072
+bPreterm_mv       -0.431367     0.07313    -5.89883   3.661e-09     0.07488
+bHosp1.2          -0.005370     0.08201    -0.06548     0.94779     0.07803
+bHosp0.9           0.019164     0.08197     0.23379     0.81515     0.07523
+bHosp0.3           0.303485     0.08156     3.72119  1.9828e-04     0.07367
+bCost             -2.212449     0.09260   -23.89134     0.00000     0.15663
+bOptIntRisk        0.201998     0.09984     2.02314     0.04306     0.08589
+bHospIntRisk       0.006933     0.10466     0.06624     0.94719     0.09247
+bPregIntAge       -0.062999     0.04120    -1.52899     0.12627     0.06552
+bPregIntSib       -0.050569     0.05129    -0.98591     0.32418     0.07559
+bPregIntEdu        0.182561     0.07335     2.48877     0.01282     0.11130
+bPregIntInc       -0.020646     0.07170    -0.28794     0.77339     0.11234
+bPregIntGov        0.397826     0.06756     5.88827   3.903e-09     0.09846
+bPregIntVacImpt    0.149287     0.07599     1.96467     0.04945     0.13977
+bPregIntVacSafe    0.010752     0.07933     0.13553     0.89220     0.11229
+bPregIntVacEff     0.016891     0.08182     0.20645     0.83644     0.13600
+bPregIntVacBlf     0.283834     0.07495     3.78720  1.5235e-04     0.11402
+                Rob.t.rat.(0)  p(2-sided)
+ascOpt               -3.90305   9.499e-05
+bPreg_mv             -6.62181   3.548e-11
+bRedness             -1.27655     0.20176
+bPreterm_mv          -5.76090   8.367e-09
+bHosp1.2             -0.06882     0.94513
+bHosp0.9              0.25473     0.79893
+bHosp0.3              4.11929   3.800e-05
+bCost               -14.12533     0.00000
+bOptIntRisk           2.35184     0.01868
+bHospIntRisk          0.07497     0.94024
+bPregIntAge          -0.96151     0.33630
+bPregIntSib          -0.66899     0.50350
+bPregIntEdu           1.64032     0.10094
+bPregIntInc          -0.18379     0.85418
+bPregIntGov           4.04059   5.332e-05
+bPregIntVacImpt       1.06812     0.28547
+bPregIntVacSafe       0.09575     0.92372
+bPregIntVacEff        0.12420     0.90115
+bPregIntVacBlf        2.48939     0.01280
+
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  4653.00 4653.00 4653.00
+Times chosen                     1520.00 1460.00 1673.00
+Percentage chosen overall          32.67   31.38   35.96
+Percentage chosen when available   32.67   31.38   35.96
+
+
+
+Classical covariance matrix:
+                         ascOpt        bPreg_mv        bRedness     bPreterm_mv
+ascOpt                 0.006055        0.001018        0.001327      5.8554e-04
+bPreg_mv               0.001018        0.023031       4.000e-05       -0.002318
+bRedness               0.001327       4.000e-05        0.002585        0.001193
+bPreterm_mv          5.8554e-04       -0.002318        0.001193        0.005348
+bHosp1.2               0.003851       9.766e-05      -4.142e-05     -1.9818e-04
+bHosp0.9               0.003922       8.316e-05       5.317e-05       4.200e-05
+bHosp0.3               0.003835      -8.499e-05      -3.336e-05      -8.919e-05
+bCost                  0.001092      7.3793e-04      1.0156e-04      2.4353e-04
+bOptIntRisk           -0.004806     -1.2239e-04       1.116e-05      -1.601e-05
+bHospIntRisk          -0.003857     -1.4831e-04      -1.204e-05       1.453e-05
+bPregIntAge           3.085e-05      4.1118e-04       3.932e-05      -3.120e-05
+bPregIntSib          -1.086e-05       -0.001614      -2.276e-05       2.608e-05
+bPregIntEdu           2.789e-05       -0.002133       2.290e-05       3.405e-06
+bPregIntInc          -3.737e-05       -0.001775      -4.904e-05      -9.053e-06
+bPregIntGov          -3.630e-05       -0.001569       2.995e-05      -8.008e-05
+bPregIntVacImpt      -1.714e-05       -0.003361       1.900e-05      -4.352e-05
+bPregIntVacSafe      -3.805e-05       -0.001064      -3.728e-05      -4.114e-05
+bPregIntVacEff        3.374e-05       -0.002737       3.520e-05      -1.016e-05
+bPregIntVacBlf       -1.283e-05      9.7782e-04       3.010e-06      -1.424e-05
+                       bHosp1.2        bHosp0.9        bHosp0.3           bCost
+ascOpt                 0.003851        0.003922        0.003835        0.001092
+bPreg_mv              9.766e-05       8.316e-05      -8.499e-05      7.3793e-04
+bRedness             -4.142e-05       5.317e-05      -3.336e-05      1.0156e-04
+bPreterm_mv         -1.9818e-04       4.200e-05      -8.919e-05      2.4353e-04
+bHosp1.2               0.006725        0.004665        0.004683     -1.8633e-04
+bHosp0.9               0.004665        0.006720        0.004683     -3.0294e-04
+bHosp0.3               0.004683        0.004683        0.006651     -4.1492e-04
+bCost               -1.8633e-04     -3.0294e-04     -4.1492e-04        0.008576
+bOptIntRisk           -0.003861       -0.003894       -0.003938       8.451e-05
+bHospIntRisk          -0.005298       -0.005288       -0.005438      1.5017e-04
+bPregIntAge           1.388e-05       1.120e-05      -1.444e-06       3.119e-05
+bPregIntSib          -1.892e-05       5.516e-06       4.147e-07       2.059e-06
+bPregIntEdu           4.374e-05       5.369e-05       3.971e-05     -1.3857e-04
+bPregIntInc           2.656e-05      -3.105e-05       9.715e-06      -1.064e-05
+bPregIntGov          -9.087e-06       3.614e-05       5.824e-05     -2.4732e-04
+bPregIntVacImpt       1.320e-05      -5.513e-05      -1.509e-05     -1.3720e-04
+bPregIntVacSafe       2.491e-05      -1.728e-05      -1.794e-05      -1.107e-05
+bPregIntVacEff       -1.556e-05       1.961e-06      -3.168e-05      1.2017e-04
+bPregIntVacBlf       -1.586e-05       1.591e-05       6.626e-05     -1.5948e-04
+                    bOptIntRisk    bHospIntRisk     bPregIntAge     bPregIntSib
+ascOpt                -0.004806       -0.003857       3.085e-05      -1.086e-05
+bPreg_mv            -1.2239e-04     -1.4831e-04      4.1118e-04       -0.001614
+bRedness              1.116e-05      -1.204e-05       3.932e-05      -2.276e-05
+bPreterm_mv          -1.601e-05       1.453e-05      -3.120e-05       2.608e-05
+bHosp1.2              -0.003861       -0.005298       1.388e-05      -1.892e-05
+bHosp0.9              -0.003894       -0.005288       1.120e-05       5.516e-06
+bHosp0.3              -0.003938       -0.005438      -1.444e-06       4.147e-07
+bCost                 8.451e-05      1.5017e-04       3.119e-05       2.059e-06
+bOptIntRisk            0.009969        0.008134      -1.947e-05       1.024e-05
+bHospIntRisk           0.008134        0.010953      -2.862e-05       2.199e-05
+bPregIntAge          -1.947e-05      -2.862e-05        0.001698     -5.0023e-04
+bPregIntSib           1.024e-05       2.199e-05     -5.0023e-04        0.002631
+bPregIntEdu          -4.318e-06       1.791e-05       3.273e-05      5.3442e-04
+bPregIntInc           6.306e-05       5.118e-05       3.919e-06      -8.146e-05
+bPregIntGov           1.399e-05      -2.764e-05      2.7093e-04     -1.8847e-04
+bPregIntVacImpt       7.309e-06       3.920e-05      -6.091e-05      2.3393e-04
+bPregIntVacSafe       3.816e-05       1.707e-05      -6.587e-05      -7.189e-06
+bPregIntVacEff       -9.310e-06      -2.541e-06      -8.861e-05      1.1368e-04
+bPregIntVacBlf        2.889e-05       4.025e-05      -1.521e-05     -3.8289e-04
+                    bPregIntEdu     bPregIntInc     bPregIntGov bPregIntVacImpt
+ascOpt                2.789e-05      -3.737e-05      -3.630e-05      -1.714e-05
+bPreg_mv              -0.002133       -0.001775       -0.001569       -0.003361
+bRedness              2.290e-05      -4.904e-05       2.995e-05       1.900e-05
+bPreterm_mv           3.405e-06      -9.053e-06      -8.008e-05      -4.352e-05
+bHosp1.2              4.374e-05       2.656e-05      -9.087e-06       1.320e-05
+bHosp0.9              5.369e-05      -3.105e-05       3.614e-05      -5.513e-05
+bHosp0.3              3.971e-05       9.715e-06       5.824e-05      -1.509e-05
+bCost               -1.3857e-04      -1.064e-05     -2.4732e-04     -1.3720e-04
+bOptIntRisk          -4.318e-06       6.306e-05       1.399e-05       7.309e-06
+bHospIntRisk          1.791e-05       5.118e-05      -2.764e-05       3.920e-05
+bPregIntAge           3.273e-05       3.919e-06      2.7093e-04      -6.091e-05
+bPregIntSib          5.3442e-04      -8.146e-05     -1.8847e-04      2.3393e-04
+bPregIntEdu            0.005381       -0.001350      -8.783e-05     -1.4187e-04
+bPregIntInc           -0.001350        0.005141       7.336e-05      -8.949e-05
+bPregIntGov          -8.783e-05       7.336e-05        0.004565       -0.001028
+bPregIntVacImpt     -1.4187e-04      -8.949e-05       -0.001028        0.005774
+bPregIntVacSafe     -2.0801e-04       9.942e-05       -0.001517     -6.1653e-04
+bPregIntVacEff       3.4019e-04     -2.9687e-04     -4.1181e-04       -0.002214
+bPregIntVacBlf      -2.5104e-04       9.939e-05     -7.2007e-04       -0.001057
+                bPregIntVacSafe  bPregIntVacEff  bPregIntVacBlf
+ascOpt               -3.805e-05       3.374e-05      -1.283e-05
+bPreg_mv              -0.001064       -0.002737      9.7782e-04
+bRedness             -3.728e-05       3.520e-05       3.010e-06
+bPreterm_mv          -4.114e-05      -1.016e-05      -1.424e-05
+bHosp1.2              2.491e-05      -1.556e-05      -1.586e-05
+bHosp0.9             -1.728e-05       1.961e-06       1.591e-05
+bHosp0.3             -1.794e-05      -3.168e-05       6.626e-05
+bCost                -1.107e-05      1.2017e-04     -1.5948e-04
+bOptIntRisk           3.816e-05      -9.310e-06       2.889e-05
+bHospIntRisk          1.707e-05      -2.541e-06       4.025e-05
+bPregIntAge          -6.587e-05      -8.861e-05      -1.521e-05
+bPregIntSib          -7.189e-06      1.1368e-04     -3.8289e-04
+bPregIntEdu         -2.0801e-04      3.4019e-04     -2.5104e-04
+bPregIntInc           9.942e-05     -2.9687e-04       9.939e-05
+bPregIntGov           -0.001517     -4.1181e-04     -7.2007e-04
+bPregIntVacImpt     -6.1653e-04       -0.002214       -0.001057
+bPregIntVacSafe        0.006294       -0.001164       -0.001818
+bPregIntVacEff        -0.001164        0.006694       -0.001887
+bPregIntVacBlf        -0.001818       -0.001887        0.005617
+
+Robust covariance matrix:
+                         ascOpt        bPreg_mv        bRedness     bPreterm_mv
+ascOpt                 0.009524       -0.002281        0.001483        0.001389
+bPreg_mv              -0.002281        0.049856      1.9553e-04       -0.001172
+bRedness               0.001483      1.9553e-04        0.002572        0.001320
+bPreterm_mv            0.001389       -0.001172        0.001320        0.005607
+bHosp1.2               0.003107     -5.1697e-04      1.7420e-04     -1.4299e-04
+bHosp0.9               0.003208     -6.7293e-04      2.5499e-04      3.0663e-04
+bHosp0.3               0.002606     -8.0317e-04     -1.0955e-04     -2.3114e-04
+bCost                  0.003159        0.005392      -2.840e-05        0.001251
+bOptIntRisk           -0.003431     -6.3811e-04     -2.8016e-04      1.4652e-04
+bHospIntRisk          -0.002947     -8.5705e-04     -4.6063e-04      4.3539e-04
+bPregIntAge          1.1446e-04        0.001986      2.9857e-04      4.1163e-04
+bPregIntSib          3.1233e-04       -0.004984      -5.825e-06      -6.476e-05
+bPregIntEdu          4.0698e-04       -0.001826       7.130e-05       9.171e-05
+bPregIntInc         -1.0538e-04       -0.005429     -2.8604e-04     -5.4626e-04
+bPregIntGov          4.6485e-04       -0.001633      -1.023e-05     -3.1971e-04
+bPregIntVacImpt      1.1353e-04       -0.012943      2.7783e-04      -1.117e-07
+bPregIntVacSafe     -3.2152e-04       -0.004999     -2.8064e-04     -3.6957e-04
+bPregIntVacEff         0.001180      1.6153e-04     -3.9203e-04      3.2778e-04
+bPregIntVacBlf       1.1425e-04      8.7086e-04      3.0684e-04     -1.0441e-04
+                       bHosp1.2        bHosp0.9        bHosp0.3           bCost
+ascOpt                 0.003107        0.003208        0.002606        0.003159
+bPreg_mv            -5.1697e-04     -6.7293e-04     -8.0317e-04        0.005392
+bRedness             1.7420e-04      2.5499e-04     -1.0955e-04      -2.840e-05
+bPreterm_mv         -1.4299e-04      3.0663e-04     -2.3114e-04        0.001251
+bHosp1.2               0.006088        0.003816        0.003568      3.7666e-04
+bHosp0.9               0.003816        0.005660        0.003776      1.8963e-04
+bHosp0.3               0.003568        0.003776        0.005428       4.606e-05
+bCost                3.7666e-04      1.8963e-04       4.606e-05        0.024533
+bOptIntRisk           -0.002851       -0.002665       -0.002617       -0.001068
+bHospIntRisk          -0.004050       -0.003707       -0.003643       -0.001064
+bPregIntAge           6.156e-05       9.516e-05      -3.668e-05      3.2469e-04
+bPregIntSib          5.0840e-04      3.2062e-04      3.1602e-04       8.298e-06
+bPregIntEdu          2.4017e-04     -1.7902e-04      1.9953e-04      2.9977e-04
+bPregIntInc           2.189e-05       4.080e-05     -1.3124e-04     -2.0298e-04
+bPregIntGov         -1.8630e-04     -2.5534e-04      -2.289e-05      -7.127e-05
+bPregIntVacImpt     -5.4999e-04      -8.712e-05      1.1071e-04       -0.002156
+bPregIntVacSafe      1.0898e-04     -1.7660e-04      3.5969e-04       -0.001021
+bPregIntVacEff       5.8502e-04      8.4368e-04      1.1657e-04        0.001045
+bPregIntVacBlf        1.501e-05     -3.6707e-04     -3.6479e-04     -7.9011e-04
+                    bOptIntRisk    bHospIntRisk     bPregIntAge     bPregIntSib
+ascOpt                -0.003431       -0.002947      1.1446e-04      3.1233e-04
+bPreg_mv            -6.3811e-04     -8.5705e-04        0.001986       -0.004984
+bRedness            -2.8016e-04     -4.6063e-04      2.9857e-04      -5.825e-06
+bPreterm_mv          1.4652e-04      4.3539e-04      4.1163e-04      -6.476e-05
+bHosp1.2              -0.002851       -0.004050       6.156e-05      5.0840e-04
+bHosp0.9              -0.002665       -0.003707       9.516e-05      3.2062e-04
+bHosp0.3              -0.002617       -0.003643      -3.668e-05      3.1602e-04
+bCost                 -0.001068       -0.001064      3.2469e-04       8.298e-06
+bOptIntRisk            0.007377        0.006561     -3.3060e-04       8.907e-05
+bHospIntRisk           0.006561        0.008551     -3.1339e-04      -9.301e-05
+bPregIntAge         -3.3060e-04     -3.1339e-04        0.004293     -7.5201e-04
+bPregIntSib           8.907e-05      -9.301e-05     -7.5201e-04        0.005714
+bPregIntEdu          1.6596e-04      1.8736e-04     -3.2080e-04      2.6008e-04
+bPregIntInc          2.3630e-04       3.840e-05     -4.2725e-04      7.2295e-04
+bPregIntGov          2.6596e-04      1.9367e-04        0.001023      3.4300e-04
+bPregIntVacImpt       7.935e-05      2.5026e-04       -0.001606      -9.494e-05
+bPregIntVacSafe      3.1293e-04      2.7058e-04     -5.8002e-04       3.770e-07
+bPregIntVacEff       -5.266e-05     -1.3596e-04      1.8927e-04      6.8920e-04
+bPregIntVacBlf      -3.8704e-04     -1.4624e-04      8.5177e-04     -4.7356e-04
+                    bPregIntEdu     bPregIntInc     bPregIntGov bPregIntVacImpt
+ascOpt               4.0698e-04     -1.0538e-04      4.6485e-04      1.1353e-04
+bPreg_mv              -0.001826       -0.005429       -0.001633       -0.012943
+bRedness              7.130e-05     -2.8604e-04      -1.023e-05      2.7783e-04
+bPreterm_mv           9.171e-05     -5.4626e-04     -3.1971e-04      -1.117e-07
+bHosp1.2             2.4017e-04       2.189e-05     -1.8630e-04     -5.4999e-04
+bHosp0.9            -1.7902e-04       4.080e-05     -2.5534e-04      -8.712e-05
+bHosp0.3             1.9953e-04     -1.3124e-04      -2.289e-05      1.1071e-04
+bCost                2.9977e-04     -2.0298e-04      -7.127e-05       -0.002156
+bOptIntRisk          1.6596e-04      2.3630e-04      2.6596e-04       7.935e-05
+bHospIntRisk         1.8736e-04       3.840e-05      1.9367e-04      2.5026e-04
+bPregIntAge         -3.2080e-04     -4.2725e-04        0.001023       -0.001606
+bPregIntSib          2.6008e-04      7.2295e-04      3.4300e-04      -9.494e-05
+bPregIntEdu            0.012387       -0.003301       -0.001003       -0.001803
+bPregIntInc           -0.003301        0.012619        0.001086       -0.001013
+bPregIntGov           -0.001003        0.001086        0.009694       -0.003115
+bPregIntVacImpt       -0.001803       -0.001013       -0.003115        0.019535
+bPregIntVacSafe      3.8007e-04      1.7016e-04       -0.002878     -1.9618e-04
+bPregIntVacEff         0.002159     -8.4864e-04       -0.001532       -0.009632
+bPregIntVacBlf        -0.001174      7.4572e-04     -9.7589e-04       -0.002138
+                bPregIntVacSafe  bPregIntVacEff  bPregIntVacBlf
+ascOpt              -3.2152e-04        0.001180      1.1425e-04
+bPreg_mv              -0.004999      1.6153e-04      8.7086e-04
+bRedness            -2.8064e-04     -3.9203e-04      3.0684e-04
+bPreterm_mv         -3.6957e-04      3.2778e-04     -1.0441e-04
+bHosp1.2             1.0898e-04      5.8502e-04       1.501e-05
+bHosp0.9            -1.7660e-04      8.4368e-04     -3.6707e-04
+bHosp0.3             3.5969e-04      1.1657e-04     -3.6479e-04
+bCost                 -0.001021        0.001045     -7.9011e-04
+bOptIntRisk          3.1293e-04      -5.266e-05     -3.8704e-04
+bHospIntRisk         2.7058e-04     -1.3596e-04     -1.4624e-04
+bPregIntAge         -5.8002e-04      1.8927e-04      8.5177e-04
+bPregIntSib           3.770e-07      6.8920e-04     -4.7356e-04
+bPregIntEdu          3.8007e-04        0.002159       -0.001174
+bPregIntInc          1.7016e-04     -8.4864e-04      7.4572e-04
+bPregIntGov           -0.002878       -0.001532     -9.7589e-04
+bPregIntVacImpt     -1.9618e-04       -0.009632       -0.002138
+bPregIntVacSafe        0.012609       -0.002510       -0.003479
+bPregIntVacEff        -0.002510        0.018495       -0.005398
+bPregIntVacBlf        -0.003479       -0.005398        0.013000
+
+Classical correlation matrix:
+                         ascOpt        bPreg_mv        bRedness     bPreterm_mv
+ascOpt                 1.000000        0.086191        0.335399        0.102899
+bPreg_mv               0.086191        1.000000        0.005184       -0.208825
+bRedness               0.335399        0.005184        1.000000        0.320789
+bPreterm_mv            0.102899       -0.208825        0.320789        1.000000
+bHosp1.2               0.603447        0.007847       -0.009936       -0.033047
+bHosp0.9               0.614841        0.006685        0.012759        0.007007
+bHosp0.3               0.604282       -0.006867       -0.008045       -0.014955
+bCost                  0.151486        0.052507        0.021573        0.035962
+bOptIntRisk           -0.618616       -0.008077        0.002199       -0.002193
+bHospIntRisk          -0.473577       -0.009338       -0.002264        0.001899
+bPregIntAge            0.009621        0.065757        0.018772       -0.010355
+bPregIntSib           -0.002721       -0.207289       -0.008729        0.006953
+bPregIntEdu            0.004885       -0.191637        0.006141      6.3484e-04
+bPregIntInc           -0.006697       -0.163102       -0.013454       -0.001727
+bPregIntGov           -0.006905       -0.153020        0.008721       -0.016208
+bPregIntVacImpt       -0.002898       -0.291419        0.004919       -0.007833
+bPregIntVacSafe       -0.006164       -0.088404       -0.009244       -0.007091
+bPregIntVacEff         0.005300       -0.220408        0.008461       -0.001698
+bPregIntVacBlf        -0.002201        0.085971      7.8994e-04       -0.002598
+                       bHosp1.2        bHosp0.9        bHosp0.3           bCost
+ascOpt                 0.603447        0.614841        0.604282        0.151486
+bPreg_mv               0.007847        0.006685       -0.006867        0.052507
+bRedness              -0.009936        0.012759       -0.008045        0.021573
+bPreterm_mv           -0.033047        0.007007       -0.014955        0.035962
+bHosp1.2               1.000000        0.694012        0.700201       -0.024536
+bHosp0.9               0.694012        1.000000        0.700475       -0.039907
+bHosp0.3               0.700201        0.700475        1.000000       -0.054938
+bCost                 -0.024536       -0.039907       -0.054938        1.000000
+bOptIntRisk           -0.471507       -0.475782       -0.483572        0.009140
+bHospIntRisk          -0.617319       -0.616435       -0.637162        0.015495
+bPregIntAge            0.004107        0.003315     -4.2961e-04        0.008174
+bPregIntSib           -0.004498        0.001312       9.914e-05      4.3356e-04
+bPregIntEdu            0.007271        0.008929        0.006638       -0.020399
+bPregIntInc            0.004517       -0.005283        0.001661       -0.001602
+bPregIntGov           -0.001640        0.006524        0.010569       -0.039530
+bPregIntVacImpt        0.002118       -0.008851       -0.002435       -0.019498
+bPregIntVacSafe        0.003829       -0.002656       -0.002774       -0.001506
+bPregIntVacEff        -0.002319      2.9241e-04       -0.004748        0.015860
+bPregIntVacBlf        -0.002581        0.002589        0.010841       -0.022979
+                    bOptIntRisk    bHospIntRisk     bPregIntAge     bPregIntSib
+ascOpt                -0.618616       -0.473577        0.009621       -0.002721
+bPreg_mv              -0.008077       -0.009338        0.065757       -0.207289
+bRedness               0.002199       -0.002264        0.018772       -0.008729
+bPreterm_mv           -0.002193        0.001899       -0.010355        0.006953
+bHosp1.2              -0.471507       -0.617319        0.004107       -0.004498
+bHosp0.9              -0.475782       -0.616435        0.003315        0.001312
+bHosp0.3              -0.483572       -0.637162     -4.2961e-04       9.914e-05
+bCost                  0.009140        0.015495        0.008174      4.3356e-04
+bOptIntRisk            1.000000        0.778377       -0.004732        0.001999
+bHospIntRisk           0.778377        1.000000       -0.006636        0.004097
+bPregIntAge           -0.004732       -0.006636        1.000000       -0.236700
+bPregIntSib            0.001999        0.004097       -0.236700        1.000000
+bPregIntEdu         -5.8961e-04        0.002333        0.010828        0.142040
+bPregIntInc            0.008808        0.006820        0.001327       -0.022150
+bPregIntGov            0.002074       -0.003910        0.097324       -0.054385
+bPregIntVacImpt      9.6342e-04        0.004929       -0.019456        0.060021
+bPregIntVacSafe        0.004818        0.002055       -0.020150       -0.001767
+bPregIntVacEff        -0.001140     -2.9679e-04       -0.026284        0.027089
+bPregIntVacBlf         0.003860        0.005131       -0.004925       -0.099605
+                    bPregIntEdu     bPregIntInc     bPregIntGov bPregIntVacImpt
+ascOpt                 0.004885       -0.006697       -0.006905       -0.002898
+bPreg_mv              -0.191637       -0.163102       -0.153020       -0.291419
+bRedness               0.006141       -0.013454        0.008721        0.004919
+bPreterm_mv          6.3484e-04       -0.001727       -0.016208       -0.007833
+bHosp1.2               0.007271        0.004517       -0.001640        0.002118
+bHosp0.9               0.008929       -0.005283        0.006524       -0.008851
+bHosp0.3               0.006638        0.001661        0.010569       -0.002435
+bCost                 -0.020399       -0.001602       -0.039530       -0.019498
+bOptIntRisk         -5.8961e-04        0.008808        0.002074      9.6342e-04
+bHospIntRisk           0.002333        0.006820       -0.003910        0.004929
+bPregIntAge            0.010828        0.001327        0.097324       -0.019456
+bPregIntSib            0.142040       -0.022150       -0.054385        0.060021
+bPregIntEdu            1.000000       -0.256705       -0.017723       -0.025453
+bPregIntInc           -0.256705        1.000000        0.015143       -0.016426
+bPregIntGov           -0.017723        0.015143        1.000000       -0.200180
+bPregIntVacImpt       -0.025453       -0.016426       -0.200180        1.000000
+bPregIntVacSafe       -0.035745        0.017477       -0.282960       -0.102276
+bPregIntVacEff         0.056682       -0.050603       -0.074499       -0.356189
+bPregIntVacBlf        -0.045664        0.018496       -0.142209       -0.185691
+                bPregIntVacSafe  bPregIntVacEff  bPregIntVacBlf
+ascOpt                -0.006164        0.005300       -0.002201
+bPreg_mv              -0.088404       -0.220408        0.085971
+bRedness              -0.009244        0.008461      7.8994e-04
+bPreterm_mv           -0.007091       -0.001698       -0.002598
+bHosp1.2               0.003829       -0.002319       -0.002581
+bHosp0.9              -0.002656      2.9241e-04        0.002589
+bHosp0.3              -0.002774       -0.004748        0.010841
+bCost                 -0.001506        0.015860       -0.022979
+bOptIntRisk            0.004818       -0.001140        0.003860
+bHospIntRisk           0.002055     -2.9679e-04        0.005131
+bPregIntAge           -0.020150       -0.026284       -0.004925
+bPregIntSib           -0.001767        0.027089       -0.099605
+bPregIntEdu           -0.035745        0.056682       -0.045664
+bPregIntInc            0.017477       -0.050603        0.018496
+bPregIntGov           -0.282960       -0.074499       -0.142209
+bPregIntVacImpt       -0.102276       -0.356189       -0.185691
+bPregIntVacSafe        1.000000       -0.179311       -0.305831
+bPregIntVacEff        -0.179311        1.000000       -0.307774
+bPregIntVacBlf        -0.305831       -0.307774        1.000000
+
+Robust correlation matrix:
+                         ascOpt        bPreg_mv        bRedness     bPreterm_mv
+ascOpt                 1.000000       -0.104666        0.299648         0.19003
+bPreg_mv              -0.104666        1.000000        0.017267        -0.07009
+bRedness               0.299648        0.017267        1.000000         0.34768
+bPreterm_mv            0.190027       -0.070093        0.347680         1.00000
+bHosp1.2               0.407957       -0.029673        0.044022        -0.02447
+bHosp0.9               0.436955       -0.040059        0.066831         0.05443
+bHosp0.3               0.362458       -0.048824       -0.029319        -0.04190
+bCost                  0.206643        0.154171       -0.003575         0.10670
+bOptIntRisk           -0.409312       -0.033274       -0.064318         0.02278
+bHospIntRisk          -0.326577       -0.041509       -0.098221         0.06288
+bPregIntAge            0.017900        0.135768        0.089850         0.08390
+bPregIntSib            0.042338       -0.295312       -0.001519        -0.01144
+bPregIntEdu            0.037469       -0.073478        0.012632         0.01101
+bPregIntInc           -0.009612       -0.216439       -0.050208        -0.06494
+bPregIntGov            0.048378       -0.074287       -0.002049        -0.04337
+bPregIntVacImpt        0.008323       -0.414746        0.039195      -1.067e-05
+bPregIntVacSafe       -0.029339       -0.199364       -0.049279        -0.04395
+bPregIntVacEff         0.088873        0.005319       -0.056839         0.03219
+bPregIntVacBlf         0.010267        0.034207        0.053064        -0.01223
+                       bHosp1.2        bHosp0.9        bHosp0.3           bCost
+ascOpt                 0.407957        0.436955        0.362458        0.206643
+bPreg_mv              -0.029673       -0.040059       -0.048824        0.154171
+bRedness               0.044022        0.066831       -0.029319       -0.003575
+bPreterm_mv           -0.024474        0.054432       -0.041899        0.106698
+bHosp1.2               1.000000        0.650086        0.620632        0.030820
+bHosp0.9               0.650086        1.000000        0.681300        0.016092
+bHosp0.3               0.620632        0.681300        1.000000        0.003991
+bCost                  0.030820        0.016092        0.003991        1.000000
+bOptIntRisk           -0.425458       -0.412356       -0.413614       -0.079412
+bHospIntRisk          -0.561317       -0.532885       -0.534681       -0.073491
+bPregIntAge            0.012041        0.019305       -0.007599        0.031638
+bPregIntSib            0.086198        0.056379        0.056747      7.0087e-04
+bPregIntEdu            0.027656       -0.021380        0.024334        0.017196
+bPregIntInc            0.002498        0.004828       -0.015858       -0.011536
+bPregIntGov           -0.024251       -0.034472       -0.003155       -0.004622
+bPregIntVacImpt       -0.050432       -0.008285        0.010751       -0.098482
+bPregIntVacSafe        0.012438       -0.020904        0.043477       -0.058070
+bPregIntVacEff         0.055131        0.082459        0.011635        0.049041
+bPregIntVacBlf         0.001687       -0.042793       -0.043427       -0.044243
+                    bOptIntRisk    bHospIntRisk     bPregIntAge     bPregIntSib
+ascOpt                -0.409312       -0.326577        0.017900        0.042338
+bPreg_mv              -0.033274       -0.041509        0.135768       -0.295312
+bRedness              -0.064318       -0.098221        0.089850       -0.001519
+bPreterm_mv            0.022782        0.062880        0.083902       -0.011441
+bHosp1.2              -0.425458       -0.561317        0.012041        0.086198
+bHosp0.9              -0.412356       -0.532885        0.019305        0.056379
+bHosp0.3              -0.413614       -0.534681       -0.007599        0.056747
+bCost                 -0.079412       -0.073491        0.031638      7.0087e-04
+bOptIntRisk            1.000000        0.826097       -0.058746        0.013719
+bHospIntRisk           0.826097        1.000000       -0.051724       -0.013306
+bPregIntAge           -0.058746       -0.051724        1.000000       -0.151837
+bPregIntSib            0.013719       -0.013306       -0.151837        1.000000
+bPregIntEdu            0.017361        0.018205       -0.043993        0.030915
+bPregIntInc            0.024491        0.003697       -0.058047        0.085138
+bPregIntGov            0.031450        0.021272        0.158520        0.046087
+bPregIntVacImpt        0.006610        0.019364       -0.175423       -0.008986
+bPregIntVacSafe        0.032446        0.026058       -0.078834       4.442e-05
+bPregIntVacEff        -0.004508       -0.010811        0.021240        0.067042
+bPregIntVacBlf        -0.039523       -0.013870        0.114017       -0.054947
+                    bPregIntEdu     bPregIntInc     bPregIntGov bPregIntVacImpt
+ascOpt                  0.03747       -0.009612        0.048378        0.008323
+bPreg_mv               -0.07348       -0.216439       -0.074287       -0.414746
+bRedness                0.01263       -0.050208       -0.002049        0.039195
+bPreterm_mv             0.01101       -0.064942       -0.043366      -1.067e-05
+bHosp1.2                0.02766        0.002498       -0.024251       -0.050432
+bHosp0.9               -0.02138        0.004828       -0.034472       -0.008285
+bHosp0.3                0.02433       -0.015858       -0.003155        0.010751
+bCost                   0.01720       -0.011536       -0.004622       -0.098482
+bOptIntRisk             0.01736        0.024491        0.031450        0.006610
+bHospIntRisk            0.01821        0.003697        0.021272        0.019364
+bPregIntAge            -0.04399       -0.058047        0.158520       -0.175423
+bPregIntSib             0.03091        0.085138        0.046087       -0.008986
+bPregIntEdu             1.00000       -0.264026       -0.091569       -0.115927
+bPregIntInc            -0.26403        1.000000        0.098162       -0.064508
+bPregIntGov            -0.09157        0.098162        1.000000       -0.226333
+bPregIntVacImpt        -0.11593       -0.064508       -0.226333        1.000000
+bPregIntVacSafe         0.03041        0.013489       -0.260295       -0.012500
+bPregIntVacEff          0.14266       -0.055549       -0.114436       -0.506757
+bPregIntVacBlf         -0.09249        0.058222       -0.086933       -0.134141
+                bPregIntVacSafe  bPregIntVacEff  bPregIntVacBlf
+ascOpt                 -0.02934        0.088873        0.010267
+bPreg_mv               -0.19936        0.005319        0.034207
+bRedness               -0.04928       -0.056839        0.053064
+bPreterm_mv            -0.04395        0.032188       -0.012229
+bHosp1.2                0.01244        0.055131        0.001687
+bHosp0.9               -0.02090        0.082459       -0.042793
+bHosp0.3                0.04348        0.011635       -0.043427
+bCost                  -0.05807        0.049041       -0.044243
+bOptIntRisk             0.03245       -0.004508       -0.039523
+bHospIntRisk            0.02606       -0.010811       -0.013870
+bPregIntAge            -0.07883        0.021240        0.114017
+bPregIntSib           4.442e-05        0.067042       -0.054947
+bPregIntEdu             0.03041        0.142661       -0.092491
+bPregIntInc             0.01349       -0.055549        0.058222
+bPregIntGov            -0.26030       -0.114436       -0.086933
+bPregIntVacImpt        -0.01250       -0.506757       -0.134141
+bPregIntVacSafe         1.00000       -0.164386       -0.271752
+bPregIntVacEff         -0.16439        1.000000       -0.348151
+bPregIntVacBlf         -0.27175       -0.348151        1.000000
+
+ 20 most extreme outliers in terms of lowest average per choice prediction:
+                ID Avg prob per choice
+ Rl0fcNh3sDlrmLcCT           0.1191773
+ R9VwoS7tRq_2CJ8ye           0.1332385
+ RbaObaCaAXKQLOFxH           0.1335582
+ Rl38Hq_KYNJaNH95y           0.1420889
+ RRDJurbLd6gkYRd6Y           0.1623065
+ RdEkEZslVN8dFrw4x           0.1694014
+ R00EMI_kGieMB8z_K           0.1808356
+ RaFHMWqPt82kIUJyX           0.1831173
+ RlN2um-8DnKmX0Noj           0.1836045
+ R-bdeapmz8tZcKSJk           0.1864085
+ R2NoMa-9FrmL80cIx           0.1883982
+ R_cFLoDxCrxOgaO_v           0.2015975
+ RVLTBA6yG-fP94Vk6           0.2025370
+ RcnpfgvalI6QkBoG0           0.2045990
+ R7WVS5ys4QNecqezX           0.2076719
+ RfuKG28d3qvCQ9goc           0.2159533
+ RNmvso8pycMrB8mDU           0.2204887
+ RYmoiw-UtLf3d-WOm           0.2211437
+ R9uS7hLRwsexIdTJq           0.2216129
+ Rg3XaFVm-lKs1iWcu           0.2263436
+
+Settings and functions used in model definition:
+
+apollo_control
+--------------
+                       Value                                                        
+modelDescr             "MNL; continuous cost & recipient interaction (complete)"    
+modelName              "9.1_mnl_costCont_pregInt"                                   
+indivID                "id"                                                         
+outputDirectory        "C:/Users/Jiheo/0_working_directory/Japanese RSV DCE/output/"
+debug                  "FALSE"                                                      
+nCores                 "1"                                                          
+workInLogs             "FALSE"                                                      
+seed                   "13"                                                         
+mixing                 "FALSE"                                                      
+HB                     "FALSE"                                                      
+noValidation           "FALSE"                                                      
+noDiagnostics          "FALSE"                                                      
+calculateLLC           "TRUE"                                                       
+analyticHessian        "FALSE"                                                      
+dropLoopExpansion      "FALSE"                                                      
+dropRedefCheck         "FALSE"                                                      
+memorySaver            "FALSE"                                                      
+panelData              "TRUE"                                                       
+analyticGrad           "TRUE"                                                       
+analyticGrad_manualSet "FALSE"                                                      
+overridePanel          "FALSE"                                                      
+preventOverridePanel   "FALSE"                                                      
+noModification         "FALSE"                                                      
+
+Hessian routines attempted
+--------------------------
+numerical jacobian of LL analytical gradient
+
+
+apollo_probabilities
+----------------------
+function(apollo_beta, apollo_inputs, functionality = "estimate") {
+    # Attach inputs & detach after function exit
+    apollo_attach(apollo_beta, apollo_inputs)
+    on.exit(apollo_detach(apollo_beta, apollo_inputs))
+
+    # Create list of probabilities
+    P <- list()
+    
+    # List utilities
+    V <- list()
+    V[["mv"]] <- (
+        (bPreg_mv + 
+        (bPregIntAge * ageStd) +
+        (bPregIntSib * sibGrp) +
+        (bPregIntEdu * eduGrp) +
+        (bPregIntInc * incGrp) +
+        (bPregIntGov * govTrust) +
+        (bPregIntVacImpt * vacImpt) +
+        (bPregIntVacSafe * vacSafe) +
+        (bPregIntVacEff * vacEff) +
+        (bPregIntVacBlf * vacBlf)) * mv_preg +
+        bRedness * mv_redness +
+        bPreterm_mv * mv_preterm +
+        (bHosp1.2 + bHospIntRisk * risk) * mv_hosp1.2 +
+        (bHosp0.9 + bHospIntRisk * risk) * mv_hosp0.9 +
+        (bHosp0.3 + bHospIntRisk * risk) * mv_hosp0.3 +
+        bCost * mv_cost
+    )
+    V[["mab"]] <- (
+        bRedness * mab_redness +
+        (bHosp1.2 + bHospIntRisk * risk) * mab_hosp1.2 +
+        (bHosp0.9 + bHospIntRisk * risk) * mab_hosp0.9 +
+        (bHosp0.3 + bHospIntRisk * risk) * mab_hosp0.3 +
+        bCost * mab_cost
+    )
+    V[["opt"]] <- ascOpt + bOptIntRisk * risk
+
+    # Define MNL model settings
+    mnl_settings <- list(
+        alternatives = c(mv = 1, mab = 2, opt = 3),
+        avail = 1, # All alternatives available
+        choiceVar = choice_stage2,
+        utilities = V
+    )
+
+    # Compute probabilities using MNL model
+    P[["model"]] <- apollo_mnl(mnl_settings, functionality)
+
+    # Take product across observation for same individual
+    P <- apollo_panelProd(P, apollo_inputs, functionality)
+
+    # Prepare & return outputs of function
+    P <- apollo_prepareProb(P, apollo_inputs, functionality)
+    return(P)
+}
