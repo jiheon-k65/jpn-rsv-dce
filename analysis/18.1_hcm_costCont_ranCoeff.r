@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 18.1_hcm_costCont_ranCoeff.r
-# Date: 2026-07-20
+# Date: 2026-07-22
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -62,8 +62,8 @@ apollo_beta <- c(
     mu_bCost = 0,
     sigma_bCost = 0,
     bHospIntRisk = 0,
-    ascIntRisk = 0,
-    ascIntLV = 1,
+    bOptIntRisk = 0,
+    bOptIntLV = 1,
     gamma_age = 0,
     gamma_sib = 0,
     gamma_edu = 0,
@@ -124,7 +124,7 @@ apollo_randCoeff <- function(apollo_beta, apollo_inputs) {
         gamma_inc * incGrp +
         eta
     )
-    randcoeff[["ascOpt"]] <- sigma_ascOpt * draws_ascOpt # Only random intercept
+    randcoeff[["alpha"]] <- sigma_ascOpt * draws_ascOpt # Only random intercept
     randcoeff[["bPreg_mv"]] <- mu_bPreg_mv + sigma_bPreg_mv * draws_bPreg
     randcoeff[["bPreterm_mv"]] <- mu_bPreterm_mv + sigma_bPreterm_mv * draws_bPreterm
     randcoeff[["bCost"]] <- mu_bCost + sigma_bCost * draws_bCost
@@ -210,9 +210,9 @@ apollo_probabilities <- function(apollo_beta, apollo_inputs, functionality = "es
         bCost * mab_cost
     )
     V[["opt"]] <- (
-        ascOpt +
-        ascIntLV * LV +
-        ascIntRisk * risk
+        alpha +
+        bOptIntLV * LV +
+        bOptIntRisk * risk
     )
 
     # Define MNL model settings
@@ -263,3 +263,9 @@ apollo_modelOutput(fit, modelOutput_settings)
 
 # Save model output to WD
 apollo_saveOutput(fit, saveOutput_settings)
+
+# Save estimates & variance-covariance matrix to WD
+saveRDS(list(
+    est = fit$estimate,
+    varcov = fit$varcov
+), here("output", "18.1_hcm_costCont_ranCoeff_results.rds"))

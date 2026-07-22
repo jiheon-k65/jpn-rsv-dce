@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 18.2_hcm_costCont_ranCoeff.r
-# Date: 2026-07-20
+# Date: 2026-07-22
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -68,8 +68,8 @@ apollo_beta <- c(
     mu_bCost = 0,
     sigma_bCost = 0,
     bHospIntRisk = 0,
-    ascIntRisk = 0,
-    ascIntLV = 1,
+    bOptIntRisk = 0,
+    bOptIntLV = 1,
     gamma_age = 0,
     gamma_sib = 0,
     gamma_edu = 0,
@@ -130,7 +130,7 @@ apollo_randCoeff <- function(apollo_beta, apollo_inputs) {
         gamma_inc * incGrp +
         eta
     )
-    randcoeff[["ascOpt"]] <- sigma_ascOpt * draws_ascOpt # Only random intercept
+    randcoeff[["alpha"]] <- sigma_ascOpt * draws_ascOpt # Only random intercept
     randcoeff[["bPreg_mv"]] <- mu_bPreg_mv + sigma_bPreg_mv * draws_bPreg
     randcoeff[["bPreterm_mv"]] <- mu_bPreterm_mv + sigma_bPreterm_mv * draws_bPreterm
     randcoeff[["bCost"]] <- mu_bCost + sigma_bCost * draws_bCost
@@ -210,9 +210,9 @@ apollo_probabilities <- function(apollo_beta, apollo_inputs, functionality = "es
         bCost * mab_cost
     )
     V[["opt"]] <- (
-        ascOpt +
-        ascIntLV * LV +
-        ascIntRisk * risk
+        alpha +
+        bOptIntLV * LV +
+        bOptIntRisk * risk
     )
 
     # Define MNL model settings
@@ -281,6 +281,15 @@ for (i in 1:M) {
     bic_list[[i]] <- fit$BIC
 }
 
+# Save estimates and variance-covariance matrices to RDS files
+saveRDS(
+    list(
+        est = est_list,
+        varcov = varcov_list
+    ),
+    here("output", "18.2_hcm_costCont_ranCoeff_results.rds")
+)
+
 # ------------------------------------------------------------------------
 # SECTION 7: Pool results using Rubin's rules
 # ------------------------------------------------------------------------
@@ -289,7 +298,7 @@ for (i in 1:M) {
 sink(here("output", "18.2_hcm_costCont_ranCoeff_output.txt"))
 cat("===========================================================================\n")
 cat("Title: 18.2_hcm_costCont_ranCoeff_output.txt\n")
-cat("Date: 2026-07-20\n")
+cat("Date: 2026-07-22\n")
 cat("===========================================================================\n")
 
 pool_coeff(est_list, varcov_list, M)

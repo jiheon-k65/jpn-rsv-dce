@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 17.2_hcm_costCont.r
-# Date: 2026-07-20
+# Date: 2026-07-22
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -56,7 +56,7 @@ data <- data[data$rptTask != 1, ]
 
 # List all parameters & starting values
 apollo_beta <- c(
-    ascOpt = 0,
+    alpha = 0,
     bPreg_mv = 0,
     bRedness = 0 ,
     bPreterm_mv = 0,
@@ -65,8 +65,8 @@ apollo_beta <- c(
     bHosp0.3 = 0,
     bCost = 0,
     bHospIntRisk = 0,
-    ascIntRisk = 0,
-    ascIntLV = 1,
+    bOptIntRisk = 0,
+    bOptIntLV = 1,
     gamma_age = 0,
     gamma_sib = 0,
     gamma_edu = 0,
@@ -197,9 +197,9 @@ apollo_probabilities <- function(apollo_beta, apollo_inputs, functionality = "es
         bCost * mab_cost
     )
     V[["opt"]] <- (
-        ascOpt +
-        ascIntLV * LV +
-        ascIntRisk * risk
+        alpha +
+        bOptIntLV * LV +
+        bOptIntRisk * risk
     )
 
     # Define MNL model settings
@@ -276,7 +276,7 @@ for (i in 1:M) {
 sink(here("output", "17.2_hcm_costCont_output.txt"))
 cat("===========================================================================\n")
 cat("Title: 17.2_hcm_costCont_output.txt\n")
-cat("Date: 2026-07-20\n")
+cat("Date: 2026-07-22\n")
 cat("===========================================================================\n")
 
 pool_coeff(est_list, varcov_list, M)
