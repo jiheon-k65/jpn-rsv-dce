@@ -13,7 +13,7 @@ library(dplyr)
 library(MASS)
 
 # ------------------------------------------------------------------------
-# SECTION 2: Load results from 15.2_mxl_costCont_parInt.r
+# SECTION 2: Load results from 18.2_hcm_costCont_ranCoeff.r
 # ------------------------------------------------------------------------
 
 # Load data from WD
