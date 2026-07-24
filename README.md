@@ -1,6 +1,6 @@
 # jpn-rsv-dce
 
-Analaysis codes for a discrete choice experiment (DCE) conducted among Japanese pregnant women to understand their preferences for respiratory syncytial virus (RSV) immunization products. This repository contains R scripts to format DCE dataset, conduct descriptive analyses, impute missing values & fit various choice models.
+Analysis codes for a discrete choice experiment (DCE) conducted among Japanese pregnant women to understand their preferences for respiratory syncytial virus (RSV) immunization products. This repository contains R scripts to format DCE dataset, conduct descriptive analyses, impute missing values & fit various choice models.
 
 ## 1. Folders
 
@@ -62,7 +62,7 @@ The scripts assume the project root is the working directory & use `here()` for 
 ### MXL models with interactions
 |Script|Description|Reported|
 |----|-----------|:------:|
-|`15.x_mxl_costCont_parInt.r`|Selected random coefficient with interactions||
+|`15.x_mxl_costCont_parInt.r`|Selected random coefficients with interactions||
 |`16.x_mxl_costCont_parInt_final.r`|Final reduced model from `15.2`||
 
 ### Hybrid choice models (HCM)
