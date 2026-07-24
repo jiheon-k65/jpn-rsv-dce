@@ -24,7 +24,7 @@ Restore the project library after opening the repository:
 renv::restore()
 ```
 
-The scripts assume the project root is the working directory & use `here()` for Script paths.
+The scripts assume the project root is the working directory & use `here()` for script paths
 
 ## 4. Workflow
 
@@ -62,7 +62,7 @@ The scripts assume the project root is the working directory & use `here()` for 
 ### MXL models with interactions
 |Script|Description|Reported|
 |----|-----------|:------:|
-|`15.x_mxl_costCont_parInt.r`|Selected random coefficient interactions||
+|`15.x_mxl_costCont_parInt.r`|Selected random coefficient with interactions||
 |`16.x_mxl_costCont_parInt_final.r`|Final reduced model from `15.2`||
 
 ### Hybrid choice models (HCM)
