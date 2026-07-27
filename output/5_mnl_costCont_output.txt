@@ -5,7 +5,7 @@ Please acknowledge the use of Apollo by citing Hess & Palma (2019)
 
 Model name                                  : 5_mnl_costCont
 Model description                           : MNL; continuous cost
-Model run at                                : 2026-07-20 13:20:56.079661
+Model run at                                : 2026-07-26 21:22:28.872798
 Estimation method                           : bgw
 Estimation diagnosis                        : Relative function convergence (favorable)
 Optimisation diagnosis                      : Maximum found
@@ -31,10 +31,10 @@ AIC                                         :  11763.18
 BIC                                         :  11830.04 
 
 Estimated parameters                        : 10
-Time taken (hh:mm:ss)                       :  00:00:1.3 
-     pre-estimation                         :  00:00:0.46 
-     estimation                             :  00:00:0.21 
-     post-estimation                        :  00:00:0.62 
+Time taken (hh:mm:ss)                       :  00:00:0.86 
+     pre-estimation                         :  00:00:0.18 
+     estimation                             :  00:00:0.19 
+     post-estimation                        :  00:00:0.49 
 Iterations                                  :  7  
 
 Unconstrained optimisation.
@@ -204,30 +204,30 @@ Settings and functions used in model definition:
 
 apollo_control
 --------------
-                       Value                                                        
-modelDescr             "MNL; continuous cost"                                       
-modelName              "5_mnl_costCont"                                             
-indivID                "id"                                                         
-outputDirectory        "C:/Users/Jiheo/0_working_directory/Japanese RSV DCE/output/"
-debug                  "FALSE"                                                      
-nCores                 "1"                                                          
-workInLogs             "FALSE"                                                      
-seed                   "13"                                                         
-mixing                 "FALSE"                                                      
-HB                     "FALSE"                                                      
-noValidation           "FALSE"                                                      
-noDiagnostics          "FALSE"                                                      
-calculateLLC           "TRUE"                                                       
-analyticHessian        "FALSE"                                                      
-dropLoopExpansion      "FALSE"                                                      
-dropRedefCheck         "FALSE"                                                      
-memorySaver            "FALSE"                                                      
-panelData              "TRUE"                                                       
-analyticGrad           "TRUE"                                                       
-analyticGrad_manualSet "FALSE"                                                      
-overridePanel          "FALSE"                                                      
-preventOverridePanel   "FALSE"                                                      
-noModification         "FALSE"                                                      
+                       Value                                                   
+modelDescr             "MNL; continuous cost"                                  
+modelName              "5_mnl_costCont"                                        
+indivID                "id"                                                    
+outputDirectory        "C:/Users/Jiheo/0_working_directory/jpn-rsv-dce/output/"
+debug                  "FALSE"                                                 
+nCores                 "1"                                                     
+workInLogs             "FALSE"                                                 
+seed                   "13"                                                    
+mixing                 "FALSE"                                                 
+HB                     "FALSE"                                                 
+noValidation           "FALSE"                                                 
+noDiagnostics          "FALSE"                                                 
+calculateLLC           "TRUE"                                                  
+analyticHessian        "FALSE"                                                 
+dropLoopExpansion      "FALSE"                                                 
+dropRedefCheck         "FALSE"                                                 
+memorySaver            "FALSE"                                                 
+panelData              "TRUE"                                                  
+analyticGrad           "TRUE"                                                  
+analyticGrad_manualSet "FALSE"                                                 
+overridePanel          "FALSE"                                                 
+preventOverridePanel   "FALSE"                                                 
+noModification         "FALSE"                                                 
 
 Hessian routines attempted
 --------------------------

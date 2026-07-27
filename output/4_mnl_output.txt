@@ -5,7 +5,7 @@ Please acknowledge the use of Apollo by citing Hess & Palma (2019)
 
 Model name                                  : 4_mnl
 Model description                           : MNL
-Model run at                                : 2026-07-20 12:50:23.517183
+Model run at                                : 2026-07-26 21:22:24.473687
 Estimation method                           : bgw
 Estimation diagnosis                        : Relative function convergence (favorable)
 Optimisation diagnosis                      : Maximum found
@@ -31,10 +31,10 @@ AIC                                         :  11560.58
 BIC                                         :  11647.5 
 
 Estimated parameters                        : 13
-Time taken (hh:mm:ss)                       :  00:00:1.29 
-     pre-estimation                         :  00:00:0.29 
-     estimation                             :  00:00:0.2 
-     post-estimation                        :  00:00:0.8 
+Time taken (hh:mm:ss)                       :  00:00:1.56 
+     pre-estimation                         :  00:00:0.28 
+     estimation                             :  00:00:0.22 
+     post-estimation                        :  00:00:1.06 
 Iterations                                  :  8  
 
 Unconstrained optimisation.
@@ -292,30 +292,30 @@ Settings and functions used in model definition:
 
 apollo_control
 --------------
-                       Value                                                        
-modelDescr             "MNL"                                                        
-modelName              "4_mnl"                                                      
-indivID                "id"                                                         
-outputDirectory        "C:/Users/Jiheo/0_working_directory/Japanese RSV DCE/output/"
-debug                  "FALSE"                                                      
-nCores                 "1"                                                          
-workInLogs             "FALSE"                                                      
-seed                   "13"                                                         
-mixing                 "FALSE"                                                      
-HB                     "FALSE"                                                      
-noValidation           "FALSE"                                                      
-noDiagnostics          "FALSE"                                                      
-calculateLLC           "TRUE"                                                       
-analyticHessian        "FALSE"                                                      
-dropLoopExpansion      "FALSE"                                                      
-dropRedefCheck         "FALSE"                                                      
-memorySaver            "FALSE"                                                      
-panelData              "TRUE"                                                       
-analyticGrad           "TRUE"                                                       
-analyticGrad_manualSet "FALSE"                                                      
-overridePanel          "FALSE"                                                      
-preventOverridePanel   "FALSE"                                                      
-noModification         "FALSE"                                                      
+                       Value                                                   
+modelDescr             "MNL"                                                   
+modelName              "4_mnl"                                                 
+indivID                "id"                                                    
+outputDirectory        "C:/Users/Jiheo/0_working_directory/jpn-rsv-dce/output/"
+debug                  "FALSE"                                                 
+nCores                 "1"                                                     
+workInLogs             "FALSE"                                                 
+seed                   "13"                                                    
+mixing                 "FALSE"                                                 
+HB                     "FALSE"                                                 
+noValidation           "FALSE"                                                 
+noDiagnostics          "FALSE"                                                 
+calculateLLC           "TRUE"                                                  
+analyticHessian        "FALSE"                                                 
+dropLoopExpansion      "FALSE"                                                 
+dropRedefCheck         "FALSE"                                                 
+memorySaver            "FALSE"                                                 
+panelData              "TRUE"                                                  
+analyticGrad           "TRUE"                                                  
+analyticGrad_manualSet "FALSE"                                                 
+overridePanel          "FALSE"                                                 
+preventOverridePanel   "FALSE"                                                 
+noModification         "FALSE"                                                 
 
 Hessian routines attempted
 --------------------------
