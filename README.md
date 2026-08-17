@@ -7,6 +7,7 @@ Analysis codes for a discrete choice experiment (DCE) conducted among Japanese p
 - `analysis/` - numbered R scripts for data preparation, multiple imputation & analysis
 - `data/` - raw, cleaned & derived datasets to be used by analysis scripts
 - `figs/` - exported figures from analysis scripts
+- `markdown/` - markdown files for equations & legend
 - `output/` - text log files from analysis scripts
 - `utils.r` - shared helper functions used across analysis scripts
 - `renv/`, `renv.lock` - project library management
