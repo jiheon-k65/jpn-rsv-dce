@@ -74,7 +74,15 @@ The scripts assume the project root is the working directory & use `here()` for 
 
 **Note:** complete-case (`x=1`) & multiple imputation (`x=2`)
 
-## 6. Outputs
+## 6. Calculate mean & 95% uncertainty intervals (UIs)
+
+- `19_hcm_costCont_ranCoeff_wtp.r` - Willingness-to-pay
+- `20_hcm_costCont_ranCoeff_choiceProb.r` - Choice probabilities
+- `21_hcm_costCont_ranCoeff_choiceProb_mvCost.r` - Choice probabilities across MV cost range
+- `22_hcm_costCont_ranCoeff_choiceProb_mabCost.r` - Choice probabilities across mAb cost range
+- `23_hcm_costCont_ranCoeff_choiceProb_plot.r` - Plot choice probabilities
+
+## 7. Outputs
 
 - Derived datasets are written back to `data/`
 - Figures are written to `figs/`

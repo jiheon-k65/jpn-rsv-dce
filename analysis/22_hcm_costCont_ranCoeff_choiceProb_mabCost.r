@@ -1,5 +1,5 @@
 # ===========================================================================
-# Title: 21.2_hcm_costCont_ranCoeff_choiceProb_mabCost.r
+# Title: 22_hcm_costCont_ranCoeff_choiceProb_mabCost.r
 # Date: 2026-07-23
 # ===========================================================================
 

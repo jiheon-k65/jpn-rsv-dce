@@ -1,6 +1,6 @@
 # ===========================================================================
-# Title: 19.2_mxl_costCont_parInt_choiceProb.r
-# Date: 2026-07-20
+# Title: 20_hcm_costCont_ranCoeff_choiceProb.r
+# Date: 2026-08-28
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -13,14 +13,14 @@ library(dplyr)
 library(MASS)
 
 # ------------------------------------------------------------------------
-# SECTION 2: Load results from 15.2_mxl_costCont_parInt.r
+# SECTION 2: Load results from 18.2_hcm_costCont_ranCoeff.r
 # ------------------------------------------------------------------------
 
 # Load data from WD
 data <- read.csv(here("data", "jpn_dataset_subset_imputed.csv"), header = TRUE)
 
-# Load results from 16.2_mxl_costCont_parInt_final.r
-results <- readRDS(here("output", "16.2_mxl_costCont_parInt_final_results.rds"))
+# Load results from 18.2_hcm_costCont_ranCoeff.r
+results <- readRDS(here("output", "18.2_hcm_costCont_ranCoeff_results.rds"))
 est_list <- results$est
 varcov_list <- results$varcov
 
@@ -51,6 +51,13 @@ mab_redness <- 0
 # SECTION 4: Simulate parameter values
 # ------------------------------------------------------------------------
 
+# Obtain respondent characteristics
+df <- data %>% filter(imp == 1) # Same for all imputations
+ageStd <- df$ageStd
+sibGrp <- df$sibGrp
+eduGrp <- df$eduGrp
+incGrp <- df$incGrp
+
 # Initialize array to hold probabilities
 prob_mv_array <- array(NA, dim = c(N, S, M))
 prob_mab_array <- array(NA, dim = c(N, S, M))
@@ -59,12 +66,6 @@ prob_opt_array <- array(NA, dim = c(N, S, M))
 for (m in 1:M) {
     cat("\n===========================================================================\n")
     cat("\nCalculating probabilities for imputation", m, "\n")
-
-    # Obtain respondent characteristics
-    df <- data %>% filter(imp == m)
-    govTrust <- df$govTrust
-    vacConf <- df$vacConf
-    eduGrp <- df$eduGrp
 
     # Extract estimates & variance-covariance matrix
     theta_hat <- est_list[[m]]
@@ -77,24 +78,19 @@ for (m in 1:M) {
 
     # Simulate random coefficients
     for (s in 1:S) {
-        # Isolate fixed coefficients
+        # Simulate fixed coefficients
         bHosp1.2 <- theta[s, "bHosp1.2"]
         bHosp0.9 <- theta[s, "bHosp0.9"]
         bHosp0.3 <- theta[s, "bHosp0.3"]
         bRedness <- theta[s, "bRedness"]
         bHospIntRisk <- theta[s, "bHospIntRisk"]
         bOptIntRisk <- theta[s, "bOptIntRisk"]
+        bOptIntLV <- theta[s, "bOptIntLV"]
 
         # Simulate bCost for each respondent
-        delta_bCost <- theta[s, "delta_bCost"]
-        gamma_bCostIntEdu <- theta[s, "gamma_bCostIntEdu"]
+        mu_bCost <- theta[s, "mu_bCost"]
         sigma_bCost <- theta[s, "sigma_bCost"]
-        mu_cost <- (
-            delta_bCost +
-            gamma_bCostIntEdu * eduGrp
-        ) # Systematic component
-        stopifnot(length(mu_cost) == N)
-        bCost <- rnorm(N, mean = mu_cost, sd = abs(sigma_bCost))
+        bCost <- rnorm(N, mean = mu_bCost, sd = abs(sigma_bCost))
 
         # Simulate bPreg_mv for each respondent
         mu_bPreg_mv <- theta[s, "mu_bPreg_mv"]
@@ -106,18 +102,24 @@ for (m in 1:M) {
         sigma_bPreterm_mv <- theta[s, "sigma_bPreterm_mv"]
         bPreterm_mv <- rnorm(N, mean = mu_bPreterm_mv, sd = abs(sigma_bPreterm_mv))
 
-        # Simulate ASC for each respondent
-        delta_ascOpt <- theta[s, "delta_ascOpt"]
-        gamma_ascOptIntGov <- theta[s, "gamma_ascOptIntGov"]
-        gamma_ascOptIntVacConf <- theta[s, "gamma_ascOptIntVacConf"]
+        # Simulate alpha for each respondent
         sigma_ascOpt <- theta[s, "sigma_ascOpt"]
-        mu_ascOpt <- (
-            delta_ascOpt +
-            gamma_ascOptIntGov * govTrust +
-            gamma_ascOptIntVacConf * vacConf
-        ) # Systematic component
-        stopifnot(length(mu_ascOpt) == N)
-        ascOpt <- rnorm(N, mean = mu_ascOpt, sd = abs(sigma_ascOpt))
+        alpha <- rnorm(N, mean = 0, sd = abs(sigma_ascOpt))
+
+        # Simulate LV for each respondent
+        gamma_age <- theta[s, "gamma_age"]
+        gamma_sib <- theta[s, "gamma_sib"]
+        gamma_edu <- theta[s, "gamma_edu"]
+        gamma_inc <- theta[s, "gamma_inc"]
+        eta <- rnorm(N, mean = 0, sd = 1) # Random distur   xsdbance
+        LV <- (
+            gamma_age * ageStd +
+            gamma_sib * sibGrp +
+            gamma_edu * eduGrp +
+            gamma_inc * incGrp +
+            eta
+        )
+        stopifnot(length(LV) == N)
 
         # Calculate utilities for each alternative
         V_mv <- (
@@ -136,7 +138,11 @@ for (m in 1:M) {
             (bHosp0.3 + bHospIntRisk * risk) * mab_hosp0.3 +
             bCost * mab_cost
         )
-        V_opt <- ascOpt + bOptIntRisk * risk
+        V_opt <- (
+            alpha +
+            bOptIntRisk * risk +
+            bOptIntLV* LV
+        )
 
         # Calculate choice probabilities for each alternative
         denom <- exp(V_mv) + exp(V_mab) + exp(V_opt)
@@ -152,26 +158,26 @@ for (m in 1:M) {
 }
 
 # Write output to text file
-sink(here("output", "19.2_mxl_costCont_parInt_choiceProb_output.txt"))
+sink(here("output", "20_hcm_costCont_ranCoeff_choiceProb_output.txt"))
 cat("===========================================================================\n")
-cat("Title: 19.2_mxl_costCont_parInt_choiceProb_output.txt\n")
-cat("Date: 2026-07-20\n")
+cat("Title: 20_hcm_costCont_ranCoeff_choiceProb_output.txt\n")
+cat("Date: 2026-07-22\n")
 cat("===========================================================================\n")
 
 # Calculate means across respondents (Dim: S x M)
-# \bar{P}_i^{(m,s)} = E_n[P_{i,n}^{(m,s)}]
+# \bar{P}_j^{(m,s)} = E_n[P_{j,n}^{(m,s)}]
 prob_mv_mean_byN <- apply(prob_mv_array, c(2, 3), mean)
 prob_mab_mean_byN <- apply(prob_mab_array, c(2, 3), mean)
 prob_opt_mean_byN <- apply(prob_opt_array, c(2, 3), mean)
 
-# Flatten over S & M
-# \bar{P}_i = E_{m,s}[\bar{P}_i^{(m,s)}]
+# Flatten over simulations & imputations
+# \bar{P}_j = E_{m,s}[\bar{P}_j^{(m,s)}]
 prob_mv_mean <- mean(prob_mv_mean_byN)
 prob_mab_mean <- mean(prob_mab_mean_byN)
 prob_opt_mean <- mean(prob_opt_mean_byN)
 
 # Calculate 95% uncertainty intervals (UIs)
-# [Q_{0.025}(\bar{P}_i^{(m,s)}, Q_{0.975}(\bar{P}_i^{(m,s)}]
+# [Q_{0.025}(\bar{P}_j^{(m,s)}, Q_{0.975}(\bar{P}_j^{(m,s)}]
 prob_mv_low_byN <- quantile(as.vector(prob_mv_mean_byN), 0.025)
 prob_mv_upp_byN <- quantile(as.vector(prob_mv_mean_byN), 0.975)
 prob_mab_low_byN <- quantile(as.vector(prob_mab_mean_byN), 0.025)
@@ -192,19 +198,19 @@ cat("\nAlternative-specific choice probabilities:\n")
 print(tot_summary)
 
 # Calculate variance across respondents
-# E_{m,s}[Var_n[P_{i,n}^{(m,s)}]]
+# E_{m,s}[Var_n[P_{j,n}^{(m,s)}]]
 prob_mv_var_byN <- mean(apply(prob_mv_array, c(2, 3), var))
 prob_mab_var_byN <- mean(apply(prob_mab_array, c(2, 3), var))
 prob_opt_var_byN <- mean(apply(prob_opt_array, c(2, 3), var))
 
 # Calculate variance across simulations
-# E_{m,n}[Var_s[P_{i,n}^{(m,s)}]]
+# E_{m,n}[Var_s[P_{j,n}^{(m,s)}]]
 prob_mv_var_byS <- mean(apply(prob_mv_array, c(1, 3), var))
 prob_mab_var_byS <- mean(apply(prob_mab_array, c(1, 3), var))
 prob_opt_var_byS <- mean(apply(prob_opt_array, c(1, 3), var))
 
 # Calculate variance across imputations
-# E_{n,s}[Var_m[P_{i,n}^{(m,s)}]]
+# E_{n,s}[Var_m[P_{j,n}^{(m,s)}]]
 prob_mv_var_byM <- mean(apply(prob_mv_array, c(1, 2), var))
 prob_mab_var_byM <- mean(apply(prob_mab_array, c(1, 2), var))
 prob_opt_var_byM <- mean(apply(prob_opt_array, c(1, 2), var))

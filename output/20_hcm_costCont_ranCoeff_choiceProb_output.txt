@@ -1,5 +1,5 @@
 ===========================================================================
-Title: 20.2_hcm_costCont_ranCoeff_choiceProb_output.txt
+Title: 20_hcm_costCont_ranCoeff_choiceProb_output.txt
 Date: 2026-07-22
 ===========================================================================
 

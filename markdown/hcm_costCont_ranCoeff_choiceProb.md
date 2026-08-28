@@ -1,4 +1,4 @@
-# Monte Carlo simulation for choice probabilities
+# Simulation algorithm for choice probabilities
 
 $$
 \begin{aligned}
@@ -18,12 +18,12 @@ $$
 &\quad \quad \text{4) Calculate systematic utilities:} \\
 &\quad \quad \quad V_{j,n}^{(m,s)} = \mathbf{x}_j^{\top}(\beta^{(m,s)} + \beta_n^{(m,s)})\\
 &\quad \quad \text{5) Calculate choice probabilities:} \\
-&\quad \quad  \quad P_{j*,n}^{(m,s)} = \frac{\exp(V_{j*,n}^{(m,s)})}{\sum_{j=1}^J \exp(V_{j,n}^{(m,s)})} \\
+&\quad \quad  \quad P_{j^{\ast},n}^{(m,s)} = \frac{\exp(V_{j^{\ast},n}^{(m,s)})}{\sum_{j=1}^J \exp(V_{j,n}^{(m,s)})} \\
 &\text{Average across respondents:}\\
-&\quad \bar{P}_{j*}^{(m,s)} = E_n[P_{j*,n}^{(m,s)}]\\
+&\quad \bar{P}_{j^{\ast}}^{(m,s)} = E_n[P_{j^{\ast},n}^{(m,s)}]\\
 &\text{Average across imputations and simulations:}\\
-&\quad \bar{P}_{j*} = E_{m,s}[\bar{P}_{j*}^{(m,s)}]\\
+&\quad \bar{P}_{j^{\ast}} = E_{m,s}[\bar{P}_{j^{\ast}}^{(m,s)}]\\
 &\text{Calculate uncertainty intervals:}\\
-&\quad 95\%\ UI_{j*} = [Q_{0.025} (\bar{P}_{j*}^{(m,s)}),\ Q_{0.975} (\bar{P}_{j*}^{(m,s)})]
+&\quad 95\%\ UI_{j^{\ast}} = [Q_{0.025} (\bar{P}_{j^{\ast}}^{(m,s)}),\ Q_{0.975} (\bar{P}_{j^{\ast}}^{(m,s)})]
 \end{aligned}
 $$

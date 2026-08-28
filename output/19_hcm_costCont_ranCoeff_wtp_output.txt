@@ -1,0 +1,12 @@
+===========================================================================
+Title: 19_hcm_costCont_ranCoeff_wtp_output.txt
+Date: 2026-08-28
+===========================================================================
+
+Willingness-to-pay (WTP) for attribute changes (JPY):
+  Attribute   Mean Lower_UI Upper_UI
+1      Preg   6040     3940     8221
+2   Preterm -12952   -16224    -9904
+3   Hosp0.3   7418     4621    10424
+
+Note: WTP for Preterm is -ve as it is a negative attribute
