@@ -33,7 +33,7 @@ The scripts assume the project root is the working directory & use `here()` for 
 - `2_dataDesc.r` - describe data & respondents that failed quality checks
 - `3_dataImp.r` - describe missingness & conduct multiple imputation
 - `4_mnl.r` onwards - fit choice models to data
-- `19_mxl_costCont_ranCoeff_choiceProb.r` onwards - calculate choice probabilities
+- `19_hcm_costCont_ranCoeff_wtp.r` onwards - calculate willingness-to-pay (WTP) & choice probabilities
 
 ## 5. Choice Models
 
@@ -76,7 +76,7 @@ The scripts assume the project root is the working directory & use `here()` for 
 
 ## 6. Calculate mean & 95% uncertainty intervals (UIs)
 
-- `19_hcm_costCont_ranCoeff_wtp.r` - Willingness-to-pay
+- `19_hcm_costCont_ranCoeff_wtp.r` - WTP
 - `20_hcm_costCont_ranCoeff_choiceProb.r` - Choice probabilities
 - `21_hcm_costCont_ranCoeff_choiceProb_mvCost.r` - Choice probabilities across MV cost range
 - `22_hcm_costCont_ranCoeff_choiceProb_mabCost.r` - Choice probabilities across mAb cost range
