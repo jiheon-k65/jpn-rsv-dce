@@ -52,6 +52,10 @@ cat_cols <- c(
 )
 summ_cat(df, cat_cols)
 
+cont_cols <- c("age", "gestAge")
+summ_cont(df, cont_cols)
+summ_cont(df, "time", iqr = TRUE)
+
 query_age(df$age)
 
 query_gestAge(df$gestAge)
@@ -64,7 +68,7 @@ query_time(df$time)
 
 summ_cat_bySub(df, "allSame", "passTest")
 
-cont_cols_toIx <- c("age", "gestAge", "time")
+cont_cols_toIx <- c("age", "gestAge")
 cat_cols_toIx <- c("sibGrp", "eduGrp", "incGrp")
 
 for (col in cont_cols_toIx) {
@@ -105,6 +109,15 @@ corr_mat <- cor(
     use = "complete.obs"
 )
 print(round(corr_mat, 3))
+
+# ===========================================================================
+# SECTION 6: Explore respondent characteristics of subset
+# ===========================================================================
+
+summ_cat(df_subset, cat_cols)
+
+summ_cont(df_subset, cont_cols)
+summ_cont(df_subset, "time", iqr = TRUE)
 
 # Save dataframe subset
 write.csv(df_subset, file = here("data", "jpn_dataset_subset.csv"), row.names = FALSE)

@@ -187,6 +187,15 @@ Summary of categorical variable(s):
     incGrp        0   464      46.40
     incGrp        1   536      53.60
 
+Summary of continuous variable(s):
+ Variable Count  Mean    SD   Min   Max
+      age  1000 33.45  5.48 18.00 66.00
+  gestAge  1000 23.13 10.64  0.00 48.00
+
+Summary of continuous variable(s):
+ Variable Count Median   Q1   Q3  Min   Max
+     time  1000   3.20 2.07 4.42 0.98 61.77
+
 No. of women by age group:
    <20 20-<30 30-<40 40-<50 50-<60    >60 
      2    257    606    128      5      2 
@@ -217,12 +226,6 @@ Summary of gestAge by passTest:
      0   214 22.24 10.47 0.00 40.00
      1   786 23.37 10.68 0.00 48.00
 p-value (t-test): 0.165 
-
-Summary of time by passTest:
- group Count Mean   SD  Min   Max
-     0   214 3.29 3.14 0.98 29.70
-     1   786 4.12 4.75 0.98 61.77
-p-value (t-test): 0.003 
 
 Crosstabulation of passTest by sibGrp:
         sibGrp
@@ -257,12 +260,6 @@ Summary of gestAge by allSame:
      1   106 20.63 11.82 0.00 48.00
 p-value (t-test): 0.022 
 
-Summary of time by allSame:
- group Count Mean   SD  Min   Max
-     0   894 4.12 4.62 0.98 61.77
-     1   106 2.45 2.45 0.98 23.53
-p-value (t-test): <0.001 
-
 Crosstabulation of allSame by sibGrp:
        sibGrp
 allSame 0           1           2          
@@ -294,6 +291,83 @@ vacImpt     0.583   1.000   0.577  0.663  0.638
 vacSafe     0.634   0.577   1.000  0.617  0.703
 vacEff      0.563   0.663   0.617  1.000  0.677
 vacBlf      0.610   0.638   0.703  0.677  1.000
+
+Summary of categorical variable(s):
+  Variable Category Count Percentage
+   sibling        0   341      51.82
+   sibling        1   317      48.18
+    numSib        0   341      51.82
+    numSib        1   227      34.50
+    numSib        2    69      10.49
+    numSib        3    13       1.98
+    numSib        4     6       0.91
+    numSib        5     2       0.30
+ fluCovVac        0   314      47.72
+ fluCovVac        1    76      11.55
+ fluCovVac        2   166      25.23
+ fluCovVac        3    84      12.77
+ fluCovVac     <NA>    18       2.74
+   tdapVac        0   540      82.07
+   tdapVac        1    52       7.90
+   tdapVac     <NA>    66      10.03
+    rsvVac        0   523      79.48
+    rsvVac        1    89      13.53
+    rsvVac     <NA>    46       6.99
+  govTrust        0    52       7.90
+  govTrust        1   115      17.48
+  govTrust        2   401      60.94
+  govTrust        3    90      13.68
+   vacImpt        0    20       3.04
+   vacImpt        1    49       7.45
+   vacImpt        2   358      54.41
+   vacImpt        3   194      29.48
+   vacImpt     <NA>    37       5.62
+   vacSafe        0    35       5.32
+   vacSafe        1   149      22.64
+   vacSafe        2   355      53.95
+   vacSafe        3    42       6.38
+   vacSafe     <NA>    77      11.70
+    vacEff        0    19       2.89
+    vacEff        1    74      11.25
+    vacEff        2   389      59.12
+    vacEff        3   124      18.84
+    vacEff     <NA>    52       7.90
+    vacBlf        0    40       6.08
+    vacBlf        1   129      19.60
+    vacBlf        2   309      46.96
+    vacBlf        3    69      10.49
+    vacBlf     <NA>   111      16.87
+ education        1     6       0.91
+ education        2   109      16.57
+ education        3    99      15.05
+ education        4    82      12.46
+ education        5   330      50.15
+ education        6    26       3.95
+ education        7     2       0.30
+ education        8     4       0.61
+    income        1   106      16.11
+    income        2   188      28.57
+    income        3   172      26.14
+    income        4   100      15.20
+    income        5    54       8.21
+    income        6    22       3.34
+    income        7    16       2.43
+    sibGrp        0   341      51.82
+    sibGrp        1   227      34.50
+    sibGrp        2    90      13.68
+    eduGrp        0   302      45.90
+    eduGrp        1   356      54.10
+    incGrp        0   294      44.68
+    incGrp        1   364      55.32
+
+Summary of continuous variable(s):
+ Variable Count  Mean   SD   Min   Max
+      age   658 33.11 4.82 21.00 54.00
+  gestAge   658 24.47 9.79  5.00 41.00
+
+Summary of continuous variable(s):
+ Variable Count Median   Q1   Q3  Min   Max
+     time   658   3.49 2.62 4.75 0.98 61.15
 
 File successfully saved as jpn_dataset_subset.csv
 Column names of jpn_dataset_subset.csv:

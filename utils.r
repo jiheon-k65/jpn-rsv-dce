@@ -208,6 +208,45 @@ summ_cat <- function(df, cols) {
     invisible(summary)
 }
 
+# Function to summarize continuous variables
+summ_cont <- function(df, cols, iqr = NULL) {
+    # Keep first observation for each "id"
+    df_person <- df %>%
+        group_by(id) %>%
+        summarise(
+            across(all_of(cols), first),
+            .groups = "drop"
+        ) %>% as.data.frame()
+    # Summarize continuous variable(s)
+    if (!is.null(iqr)) {
+        summary <- lapply(cols, function(col) {
+            data.frame(
+                Variable = col,
+                Count = sum(!is.na(df_person[[col]])),
+                Median = sprintf("%.2f", median(df_person[[col]], na.rm = TRUE)),
+                Q1 = sprintf("%.2f", quantile(df_person[[col]], 0.25, na.rm = TRUE)),
+                Q3 = sprintf("%.2f", quantile(df_person[[col]], 0.75, na.rm = TRUE)),
+                Min = sprintf("%.2f", min(df_person[[col]], na.rm = TRUE)),
+                Max = sprintf("%.2f", max(df_person[[col]], na.rm = TRUE))
+            )
+        }) %>% bind_rows() # Combine into one dataframe
+    } else {
+        summary <- lapply(cols, function(col) {
+            data.frame(
+                Variable = col,
+                Count = sum(!is.na(df_person[[col]])),
+                Mean = sprintf("%.2f", mean(df_person[[col]], na.rm = TRUE)),
+                SD = sprintf("%.2f", sd(df_person[[col]], na.rm = TRUE)),
+                Min = sprintf("%.2f", min(df_person[[col]], na.rm = TRUE)),
+                Max = sprintf("%.2f", max(df_person[[col]], na.rm = TRUE))
+            )
+        }) %>% bind_rows() # Combine into one dataframe
+    }
+    cat("\nSummary of continuous variable(s):\n")
+    print(summary, row.names = FALSE)
+    invisible(summary)
+}
+
 # Function to summarize categorical variable by subgroup
 summ_cat_bySub <- function(df, col, grp_col) {
     # Keep first observation for each "id"
