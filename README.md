@@ -70,17 +70,18 @@ The scripts assume the project root is the working directory & use `here()` for 
 |Script|Description|Reported|
 |----|-----------|:------:|
 |`17.x_hcm_costCont.r`|All fixed coefficients||
-|`18.x_hcm_costCont_ranCoeff.r`|Selected random coefficients|✅|
+|`18.x_hcm_costCont_ranInt.r`|Only random intercept||
+|`19.x_hcm_costCont_ranCoeff.r`|Selected random coefficients|✅|
 
 **Note:** complete-case (`x=1`) & multiple imputation (`x=2`)
 
 ## 6. Calculate mean & 95% uncertainty intervals (UIs)
 
-- `19_hcm_costCont_ranCoeff_wtp.r` - WTP
-- `20_hcm_costCont_ranCoeff_choiceProb.r` - Choice probabilities
-- `21_hcm_costCont_ranCoeff_choiceProb_mvCost.r` - Choice probabilities across MV cost range
-- `22_hcm_costCont_ranCoeff_choiceProb_mabCost.r` - Choice probabilities across mAb cost range
-- `23_hcm_costCont_ranCoeff_choiceProb_plot.r` - Plot choice probabilities
+- `20_hcm_costCont_ranCoeff_wtp.r` - WTP
+- `21_hcm_costCont_ranCoeff_choiceProb.r` - Choice probabilities
+- `22_hcm_costCont_ranCoeff_choiceProb_mvCost.r` - Choice probabilities across MV cost range
+- `23_hcm_costCont_ranCoeff_choiceProb_mabCost.r` - Choice probabilities across mAb cost range
+- `24_hcm_costCont_ranCoeff_choiceProb_plot.r` - Plot choice probabilities
 
 ## 7. Outputs
 

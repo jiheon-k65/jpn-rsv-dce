@@ -4,19 +4,21 @@ $$
 \text{Utility functions}\\
 \begin{aligned}
 V_{\mathrm{mv},n,t} =\
-&\sum_{h=1}^3 \Big[ \big(\beta_{\mathrm{hosp}[h]} + \beta_{\mathrm{hosp} \times \mathrm{risk}}x_{\mathrm{risk},n,t} \big) x_{\mathrm{hosp}[h],n,t} \Big]\\
+&\sum_{h=1}^3 \Big[ \big(\beta_{\mathrm{hosp}[h]} + \beta_{\mathrm{hosp} \times \mathrm{risk}}w_{\mathrm{risk},n,t} \big) x_{\mathrm{hosp}[h],n,t} \Big]\\
 &+ \beta_{\mathrm{cost},n}x_{\mathrm{cost},n,t}
-+ \beta_{\mathrm{red}}x_{\mathrm{red},n,t}\\
++ \beta_{\mathrm{red}}x_{\mathrm{red},n,t}
++ \alpha_{\mathrm{pdt},n}\\
 &+ \beta_{\mathrm{pret},n}^{\mathrm{mv}}x_{\mathrm{pret},n,t}
 + \beta_{\mathrm{preg},n}^{\mathrm{mv}}x_{\mathrm{preg},n,t}\\
 V_{\mathrm{mab},n,t} =\
-&\sum_{h=1}^3 \Big[ \big( \beta_{\mathrm{hosp}[h]} + \beta_{\mathrm{hosp} \times \mathrm{risk}}x_{\mathrm{risk},n,t} \big) x_{\mathrm{hosp}[h],n,t} \Big]\\
+&\sum_{h=1}^3 \Big[ \big( \beta_{\mathrm{hosp}[h]} + \beta_{\mathrm{hosp} \times \mathrm{risk}}w_{\mathrm{risk},n,t} \big) x_{\mathrm{hosp}[h],n,t} \Big]\\
 &+ \beta_{\mathrm{cost},n}x_{\mathrm{cost},n,t}
-+ \beta_{\mathrm{red}}x_{\mathrm{red},n,t}\\
++ \beta_{\mathrm{red}}x_{\mathrm{red},n,t}
++ \alpha_{\mathrm{pdt},n}\\
 V_{\mathrm{opt},n,t} =\
-&\beta_{\mathrm{opt} \times \mathrm{LV}}\lambda_n
-+ \beta_{\mathrm{opt} \times \mathrm{risk}}x_{\mathrm{risk},n,t}
-+ \alpha_{\mathrm{opt},n}
+&\mathrm{ASC}_{\mathrm{opt}}
++ \beta_{\mathrm{opt} \times \mathrm{LV}}\lambda_n
++ \beta_{\mathrm{opt} \times \mathrm{risk}}w_{\mathrm{risk},n,t}
 \end{aligned}
 $$
 
@@ -29,9 +31,13 @@ $$
 &\sim \mathrm{Normal}(\mu_{\mathrm{pret}}, \sigma_{\mathrm{pret}})\\
 \beta_{\mathrm{preg},n}^{\mathrm{mv}}
 &\sim \mathrm{Normal}(\mu_{\mathrm{preg}}, \sigma_{\mathrm{preg}})\\
-\alpha_{\mathrm{opt},n}
-&\sim \mathrm{Normal}(0, \sigma_{\mathrm{opt}})
 \end{aligned}
+$$
+
+$$
+\text{Random intercept shared across products}\\
+\alpha_{\mathrm{pdt},n}
+\sim \mathrm{Normal}(0, \sigma_{\mathrm{pdt}})
 $$
 
 $$
@@ -48,17 +54,17 @@ $$
 $$
 
 $$
-\text{Ordered logit model for responses}\\
+\text{Ordered logit component for indicator responses}\\
 \begin{aligned}
-&R_{i,n}^{\ell} =
+&R_{i,n}^{(\ell)} =
 \zeta_i \lambda_n + \varepsilon_{i,n},
 \qquad \varepsilon_{i,n} \sim \mathrm{Logistic}(0,1)\\
 &R_{i,n} =
 \begin{cases}
-1 \quad \text{if } R_{i,n}^{\ell} \leq \tau_{i,1},\\
-2 \quad \text{if } \tau_{i,1} < R_{i,n}^{\ell} \leq \tau_{i,2}\\
-3 \quad \text{if } \tau_{i,2} < R_{i,n}^{\ell} \leq \tau_{i,3}\\
-4 \quad \text{if } R_{i,n}^{\ell} > \tau_{i,3}
+1 \quad \text{if } R_{i,n}^{(\ell)} \leq \tau_{i,1},\\
+2 \quad \text{if } \tau_{i,1} < R_{i,n}^{(\ell)} \leq \tau_{i,2}\\
+3 \quad \text{if } \tau_{i,2} < R_{i,n}^{(\ell)} \leq \tau_{i,3}\\
+4 \quad \text{if } R_{i,n}^{(\ell)} > \tau_{i,3}
 \end{cases}\\
 \end{aligned}
 $$
@@ -91,7 +97,7 @@ $$
 |$j$|Alternative index, $j \in \{1,\ \ldots,\ 3\}$|
 |$j^{\ast}$|Chosen alternative (either product or opt-out)|
 |$t$|Choice task index, $t \in \{1,\ \ldots,\ 9\}$|
-|$\alpha_n$|Respondent-specific random intercept|
+|$\alpha_n$|Respondent-specific random intercept shared across products|
 |$\beta$|Fixed coefficient for product attribute|
 |$\beta_n$|Random coefficient for product attribute|
 |$\varepsilon_{i,n}$|Indicator- & respondent-specific logistic error term|
@@ -101,9 +107,11 @@ $$
 |$\Omega$|Vector of model parameters|
 |$\tau_{i,r}$|Indicator- & response-specific threshold|
 |$\zeta_i$|Indicator-specific factor loading|
+|$\mathrm{ASC}_{\mathrm{opt}}$|Alternative-specific constant for opting out|
 |$R_{i,n}$|Observed indicator- & respondent-specific response|
-|$R_{i,n}^{\ell}$|Latent indicator- & respondent-specific response|
-|$x_{n,t}$|Respondent- & task-specific product attribute|
+|$R_{i,n}^{(\ell)}$|Latent indicator- & respondent-specific response|
+|$w_{n,t}$|Respondent- & task-specific scenario attribute|
+|$x_{n,t}$|Respondent- & task-specific choice attribute|
 |$z_n$|Respondent-specific characteristic|
 |$\tilde{z}_{\mathrm{age},n}$|Respondent-specific standardized age|
 |$V_{j,n,t}$|Alternative-, respondent- & task-specific systematic utility|
