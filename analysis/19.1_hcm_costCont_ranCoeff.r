@@ -1,6 +1,6 @@
 # ===========================================================================
-# Title: 18.1_hcm_costCont_ranCoeff.r
-# Date: 2026-07-22
+# Title: 19.1_hcm_costCont_ranCoeff.r
+# Date: 2026-09-02
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -21,7 +21,7 @@ apollo_initialise()
 # Set core controls
 apollo_control <- list(
     modelDescr = ("HCM; continuous cost & random coefficients (complete)"),
-    modelName = "18.1_hcm_costCont_ranCoeff",
+    modelName = "19.1_hcm_costCont_ranCoeff",
     indivID = "id",
     outputDirectory = here("output"),
     nCores = 12
@@ -50,7 +50,7 @@ database <- data[data$rptTask != 1, ]
 
 # List all parameters & starting values
 apollo_beta <- c(
-    sigma_ascOpt = 0,
+    sigma_pdt = 0,
     mu_bPreg_mv = 0,
     sigma_bPreg_mv = 0,
     bRedness = 0 ,
@@ -62,8 +62,8 @@ apollo_beta <- c(
     mu_bCost = 0,
     sigma_bCost = 0,
     bHospIntRisk = 0,
-    bOptIntRisk = 0,
     bOptIntLV = 1,
+    bOptIntRisk = 0,
     gamma_age = 0,
     gamma_sib = 0,
     gamma_edu = 0,
@@ -103,7 +103,7 @@ apollo_draws <- list(
     interUnifDraws = c(),
     interNormDraws = c(
         "eta",
-        "draws_ascOpt",
+        "draws_pdt",
         "draws_bPreg",
         "draws_bPreterm",
         "draws_bCost"
@@ -124,7 +124,7 @@ apollo_randCoeff <- function(apollo_beta, apollo_inputs) {
         gamma_inc * incGrp +
         eta
     )
-    randcoeff[["alpha"]] <- sigma_ascOpt * draws_ascOpt # Only random intercept
+    randcoeff[["alpha"]] <- sigma_pdt * draws_pdt # Random intercept for product (mimics nested logit)
     randcoeff[["bPreg_mv"]] <- mu_bPreg_mv + sigma_bPreg_mv * draws_bPreg
     randcoeff[["bPreterm_mv"]] <- mu_bPreterm_mv + sigma_bPreterm_mv * draws_bPreterm
     randcoeff[["bCost"]] <- mu_bCost + sigma_bCost * draws_bCost
@@ -200,17 +200,18 @@ apollo_probabilities <- function(apollo_beta, apollo_inputs, functionality = "es
         (bHosp1.2 + bHospIntRisk * risk) * mv_hosp1.2 +
         (bHosp0.9 + bHospIntRisk * risk) * mv_hosp0.9 +
         (bHosp0.3 + bHospIntRisk * risk) * mv_hosp0.3 +
-        bCost * mv_cost
+        bCost * mv_cost + 
+        alpha
     )
     V[["mab"]] <- (
         bRedness * mab_redness +
         (bHosp1.2 + bHospIntRisk * risk) * mab_hosp1.2 +
         (bHosp0.9 + bHospIntRisk * risk) * mab_hosp0.9 +
         (bHosp0.3 + bHospIntRisk * risk) * mab_hosp0.3 +
-        bCost * mab_cost
+        bCost * mab_cost +
+        alpha
     )
     V[["opt"]] <- (
-        alpha +
         bOptIntLV * LV +
         bOptIntRisk * risk
     )
@@ -268,4 +269,4 @@ apollo_saveOutput(fit, saveOutput_settings)
 saveRDS(list(
     est = fit$estimate,
     varcov = fit$varcov
-), here("output", "18.1_hcm_costCont_ranCoeff_results.rds"))
+), here("output", "19.1_hcm_costCont_ranCoeff_results.rds"))

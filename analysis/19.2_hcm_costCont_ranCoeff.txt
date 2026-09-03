@@ -13,5 +13,5 @@ module load R-bundle-CRAN/2024.06-foss-2023b
 
 export RENV_CONFIG_SANDBOX_ENABLED=FALSE
 
-Rscript analysis/18.2_hcm_costCont_ranCoeff.r
+Rscript analysis/19.2_hcm_costCont_ranCoeff.r
 exit $?

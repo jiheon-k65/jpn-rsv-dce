@@ -1,6 +1,6 @@
 # ===========================================================================
-# Title: 19_hcm_costCont_ranCoeff_wtp.r
-# Date: 2026-08-28
+# Title: 20_hcm_costCont_ranCoeff_wtp.r
+# Date: 2026-09-02
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -13,14 +13,14 @@ library(dplyr)
 library(MASS)
 
 # ------------------------------------------------------------------------
-# SECTION 2: Load results from 18.2_hcm_costCont_ranCoeff.r
+# SECTION 2: Load results from 19.2_hcm_costCont_ranCoeff.r
 # ------------------------------------------------------------------------
 
 # Load data from WD
 data <- read.csv(here("data", "jpn_dataset_subset_imputed.csv"), header = TRUE)
 
-# Load results from 18.2_hcm_costCont_ranCoeff.r
-results <- readRDS(here("output", "18.2_hcm_costCont_ranCoeff_results.rds"))
+# Load results from 19.2_hcm_costCont_ranCoeff.r
+results <- readRDS(here("output", "19.2_hcm_costCont_ranCoeff_results.rds"))
 est_list <- results$est
 varcov_list <- results$varcov
 
@@ -85,10 +85,10 @@ for (m in 1:M) {
 }
 
 # Write output to text file
-sink(here("output", "19_hcm_costCont_ranCoeff_wtp_output.txt"))
+sink(here("output", "20_hcm_costCont_ranCoeff_wtp_output.txt"))
 cat("===========================================================================\n")
-cat("Title: 19_hcm_costCont_ranCoeff_wtp_output.txt\n")
-cat("Date: 2026-08-28\n")
+cat("Title: 20_hcm_costCont_ranCoeff_wtp_output.txt\n")
+cat("Date: 2026-09-02\n")
 cat("===========================================================================\n")
 
 # Calculate mean coefficients across respondents (Dims: S x M)

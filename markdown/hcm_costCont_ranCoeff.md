@@ -16,8 +16,7 @@ V_{\mathrm{mab},n,t} =\
 + \beta_{\mathrm{red}}x_{\mathrm{red},n,t}
 + \alpha_{\mathrm{pdt},n}\\
 V_{\mathrm{opt},n,t} =\
-&\mathrm{ASC}_{\mathrm{opt}}
-+ \beta_{\mathrm{opt} \times \mathrm{LV}}\lambda_n
+& \beta_{\mathrm{opt} \times \mathrm{LV}}\lambda_n
 + \beta_{\mathrm{opt} \times \mathrm{risk}}w_{\mathrm{risk},n,t}
 \end{aligned}
 $$
@@ -107,7 +106,6 @@ $$
 |$\Omega$|Vector of model parameters|
 |$\tau_{i,r}$|Indicator- & response-specific threshold|
 |$\zeta_i$|Indicator-specific factor loading|
-|$\mathrm{ASC}_{\mathrm{opt}}$|Alternative-specific constant for opting out|
 |$R_{i,n}$|Observed indicator- & respondent-specific response|
 |$R_{i,n}^{(\ell)}$|Latent indicator- & respondent-specific response|
 |$w_{n,t}$|Respondent- & task-specific scenario attribute|

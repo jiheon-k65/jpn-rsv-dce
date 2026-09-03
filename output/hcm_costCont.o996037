@@ -1,0 +1,4017 @@
+here() starts at /hpctmp/e1519538/jpn_dce
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+
+             . ,,                                                            
+            ,      ,,                                                        
+ ,,,,,,    ,         ,,                                                      
+,     ,,  ,            ,,,,.                                                 
+,,     , ,,   ,,,,,,    ,,,                                 //  //           
+  ,     ,,,.   ,,,,,.   ,,      ////                        //  //           
+,,     ,,,,,.           ,,     // //     //////    /////    //  //    /////  
+,,,        ,,           ,      //  //    /    //  //   //   //  //   //   // 
+              ,,       ,      ////////   /    //  //   //   //  //   //   // 
+                ,,   ,,      //     //   /   ///  //   //   //  //   //   // 
+                   ,         //      //  /////      ///      //  //    ///   
+                                         //                                  
+                                         //                                  
+
+Apollo 0.3.8
+https://www.ApolloChoiceModelling.com
+See url for a detailed manual, examples and a user forum.
+Sign up to the user forum to receive updates on new releases.
+
+Please cite Apollo in all written material you produce:
+Hess S, Palma D (2019). "Apollo: a flexible, powerful and customisable
+freeware package for choice model estimation and application." Journal
+of Choice Modelling, 32. doi.org/10.1016/j.jocm.2019.100170
+
+The developers of Apollo acknowledge the substantial support provided by
+the European Research Council (ERC) through the consolidator grant DECISIONS,
+the proof of concept grant APOLLO, and the advanced grant SYNERGY.
+
+Apollo is integrated into SurveyEngine, a leading stated choice platform
+Try it at www.surveyengine.com/apollo
+Apollo ignition sequence completed
+
+===========================================================================
+
+Running model for imputation 1 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                              1     2      3      4
+Times chosen              29.00 54.00 378.00 197.00
+Percentage chosen overall  4.41  8.21  57.45  29.94
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1      2      3     4
+Times chosen              41.00 176.00 399.00 42.00
+Percentage chosen overall  6.23  26.75  60.64  6.38
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                             1     2      3      4
+Times chosen              27.0 85.00 416.00 130.00
+Percentage chosen overall  4.1 12.92  63.22  19.76
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3     4
+Times chosen              57.00 165.00 365.00 71.00
+Percentage chosen overall  8.66  25.08  55.47 10.79
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 1.024701693e+04
+     1     4 9.765423132e+03 4.700e-02 2.785e-02 5.19e-02   G   2.57e-01
+     2     5 9.311245041e+03 4.651e-02 2.865e-02 1.60e-01   G   0.00e+00
+     3     6 8.394491504e+03 9.846e-02 7.557e-02 1.80e-01   S   0.00e+00
+     4    10 8.084400047e+03 3.694e-02 2.420e-02 6.97e-02  S-G  1.76e-01
+     5    11 7.994265307e+03 1.115e-02 3.246e-02 4.31e-02   S   -8.36e+00
+     6    12 7.784522976e+03 2.624e-02 1.766e-02 7.51e-02   G   1.31e-01
+     7    13 7.656210442e+03 1.648e-02 1.113e-02 1.26e-01   G   0.00e+00
+     8    15 7.576272354e+03 1.044e-02 1.632e-02 8.03e-02   S   5.40e-01
+     9    17 7.559202745e+03 2.253e-03 2.310e-03 4.06e-02  S-G  0.00e+00
+    10    18 7.558977370e+03 2.981e-05 2.036e-03 5.19e-02   G   0.00e+00
+    11    19 7.546354786e+03 1.670e-03 2.487e-03 2.83e-02   G   4.64e-01
+    12    20 7.543220820e+03 4.153e-04 5.022e-04 2.02e-02   S   0.00e+00
+    13    21 7.541054684e+03 2.872e-04 2.097e-04 8.40e-03   S   0.00e+00
+    14    22 7.540305854e+03 9.930e-05 1.637e-04 1.39e-02   G   0.00e+00
+    15    23 7.539362342e+03 1.251e-04 8.760e-05 8.07e-03   S   0.00e+00
+    16    24 7.539232843e+03 1.718e-05 5.201e-05 9.22e-03   G   0.00e+00
+    17    25 7.538799319e+03 5.750e-05 4.259e-05 4.93e-03   S   0.00e+00
+    18    26 7.538718124e+03 1.077e-05 1.464e-05 3.29e-03   G   0.00e+00
+    19    27 7.538697957e+03 2.675e-06 1.674e-05 5.23e-03   G   0.00e+00
+    20    29 7.538591329e+03 1.414e-05 1.125e-05 2.53e-03  G-S  0.00e+00
+    21    30 7.538555412e+03 4.764e-06 3.741e-06 1.73e-03   S   0.00e+00
+    22    31 7.538534223e+03 2.811e-06 1.950e-06 1.36e-03   S   0.00e+00
+    23    32 7.538520716e+03 1.792e-06 1.441e-06 1.39e-03   S   0.00e+00
+    24    33 7.538516670e+03 5.367e-07 4.519e-07 6.41e-04   S   0.00e+00
+    25    34 7.538515280e+03 1.844e-07 1.518e-07 2.79e-04   S   0.00e+00
+    26    35 7.538515064e+03 2.863e-08 2.926e-08 1.45e-04   S   0.00e+00
+    27    36 7.538514990e+03 9.791e-09 7.944e-09 6.03e-05   S   0.00e+00
+    28    37 7.538514956e+03 4.566e-09 3.526e-09 5.28e-05   S   0.00e+00
+    29    38 7.538514947e+03 1.194e-09 1.165e-09 3.38e-05   S   0.00e+00
+    30    39 7.538514946e+03 1.280e-10 1.360e-10 7.36e-06   S   0.00e+00
+    31    40 7.538514946e+03 3.792e-11 2.680e-11 3.73e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.298322     0.05063         5.89194
+bRedness        -0.090773     0.05314        -1.70810
+bPreterm_mv     -0.569301     0.06905        -8.24422
+bHosp1.2         0.003920     0.08520         0.04601
+bHosp0.9         0.014028     0.08423         0.16653
+bHosp0.3         0.332454     0.08787         3.78354
+bCost           -2.356359     0.05687       -41.43397
+bHospIntRisk     0.014521     0.11690         0.12422
+bOptIntLV        2.694973     0.10353        26.03048
+bOptIntRisk      0.433366     0.11178         3.87690
+gamma_age        0.142212     0.04699         3.02662
+gamma_sib       -0.097983     0.05220        -1.87693
+gamma_edu       -0.275164     0.08357        -3.29246
+gamma_inc       -0.012658     0.08245        -0.15353
+zeta_govTrust   -1.849921     0.15925       -11.61647
+zeta_vacImpt    -1.780682     0.16018       -11.11701
+zeta_vacSafe    -1.637556     0.15484       -10.57553
+zeta_vacEff     -1.600930     0.14902       -10.74308
+zeta_vacBlf     -1.881982     0.16098       -11.69061
+tau_govTrust1   -3.287741     0.22137       -14.85147
+tau_govTrust2   -1.212830     0.13851        -8.75609
+tau_govTrust3    3.151544     0.20053        15.71628
+tau_vacImpt1    -4.087242     0.31852       -12.83180
+tau_vacImpt2    -2.491735     0.20237       -12.31293
+tau_vacImpt3     1.682308     0.14353        11.72072
+tau_vacSafe1    -3.413292     0.25421       -13.42688
+tau_vacSafe2    -0.636958     0.12591        -5.05879
+tau_vacSafe3     4.051864     0.29045        13.95043
+tau_vacEff1     -3.932669     0.33372       -11.78442
+tau_vacEff2     -1.840348     0.16399       -11.22234
+tau_vacEff3      2.321204     0.16415        14.14038
+tau_vacBlf1     -3.146223     0.21983       -14.31194
+tau_vacBlf2     -0.591933     0.12536        -4.72187
+tau_vacBlf3      3.563641     0.24991        14.25965
+
+Final LL: -7538.5149
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -9.492685
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 2 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                              1     2      3      4
+Times chosen              29.00 58.00 374.00 197.00
+Percentage chosen overall  4.41  8.81  56.84  29.94
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1      2      3     4
+Times chosen              42.00 178.00 395.00 43.00
+Percentage chosen overall  6.38  27.05  60.03  6.53
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                              1     2      3      4
+Times chosen              29.00 85.00 416.00 128.00
+Percentage chosen overall  4.41 12.92  63.22  19.45
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3     4
+Times chosen              58.00 161.00 367.00 72.00
+Percentage chosen overall  8.81  24.47  55.78 10.94
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.504918439e+03
+     1     2 7.503814827e+03 1.471e-04 1.582e-04 4.20e-03   G   1.00e+00
+     2     3 7.503198417e+03 8.215e-05 7.320e-05 4.91e-03   G   3.19e-01
+     3     4 7.502665605e+03 7.101e-05 6.515e-05 8.91e-03   S   0.00e+00
+     4     5 7.502525710e+03 1.865e-05 1.500e-05 4.42e-03   S   0.00e+00
+     5     6 7.502446445e+03 1.057e-05 8.132e-06 3.07e-03   S   0.00e+00
+     6     7 7.502394973e+03 6.861e-06 5.555e-06 2.63e-03   S   0.00e+00
+     7     8 7.502371800e+03 3.089e-06 2.404e-06 1.44e-03   S   0.00e+00
+     8     9 7.502361535e+03 1.368e-06 1.108e-06 1.15e-03   S   0.00e+00
+     9    10 7.502357854e+03 4.906e-07 4.055e-07 6.19e-04   S   0.00e+00
+    10    11 7.502356609e+03 1.659e-07 1.434e-07 2.78e-04   S   0.00e+00
+    11    12 7.502356291e+03 4.235e-08 3.949e-08 1.72e-04   S   0.00e+00
+    12    13 7.502356241e+03 6.756e-09 7.758e-09 8.73e-05   S   0.00e+00
+    13    14 7.502356229e+03 1.507e-09 1.293e-09 3.45e-05   S   0.00e+00
+    14    15 7.502356227e+03 2.936e-10 2.499e-10 1.44e-05   S   0.00e+00
+    15    16 7.502356227e+03 7.195e-11 5.539e-11 5.13e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.296876     0.05052        5.876705
+bRedness        -0.090812     0.05313       -1.709261
+bPreterm_mv     -0.568052     0.06899       -8.234246
+bHosp1.2       4.6325e-04     0.08486        0.005459
+bHosp0.9         0.009940     0.08403        0.118296
+bHosp0.3         0.328008     0.08775        3.738176
+bCost           -2.355996     0.05695      -41.371308
+bHospIntRisk     0.018695     0.11652        0.160444
+bOptIntLV        2.653186     0.10148       26.145602
+bOptIntRisk      0.432414     0.11144        3.880113
+gamma_age        0.148326     0.04624        3.207495
+gamma_sib       -0.106103     0.05282       -2.008658
+gamma_edu       -0.264206     0.08455       -3.124807
+gamma_inc       -0.012210     0.08301       -0.147097
+zeta_govTrust   -1.871156     0.15653      -11.953653
+zeta_vacImpt    -1.948204     0.16380      -11.894050
+zeta_vacSafe    -1.804821     0.16397      -11.006749
+zeta_vacEff     -1.796298     0.15785      -11.379898
+zeta_vacBlf     -1.992930     0.17101      -11.653896
+tau_govTrust1   -3.336809     0.21767      -15.329325
+tau_govTrust2   -1.226412     0.13798       -8.888276
+tau_govTrust3    3.162311     0.19956       15.846067
+tau_vacImpt1    -4.296583     0.34237      -12.549488
+tau_vacImpt2    -2.501254     0.20171      -12.399957
+tau_vacImpt3     1.783524     0.14914       11.959033
+tau_vacSafe1    -3.568810     0.26013      -13.719144
+tau_vacSafe2    -0.613375     0.13062       -4.695828
+tau_vacSafe3     4.213093     0.29366       14.346937
+tau_vacEff1     -4.074668     0.35405      -11.508719
+tau_vacEff2     -1.890909     0.16665      -11.346838
+tau_vacEff3      2.495931     0.17654       14.137865
+tau_vacBlf1     -3.233603     0.22573      -14.324945
+tau_vacBlf2     -0.625638     0.12998       -4.813400
+tau_vacBlf3      3.646703     0.25873       14.094581
+
+Final LL: -7502.3562
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -8.228747
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 3 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                             1    2     3      4
+Times chosen              27.0 52.0 381.0 198.00
+Percentage chosen overall  4.1  7.9  57.9  30.09
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1      2      3     4
+Times chosen              41.00 181.00 394.00 42.00
+Percentage chosen overall  6.23  27.51  59.88  6.38
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                              1     2      3     4
+Times chosen              26.00 89.00 414.00 129.0
+Percentage chosen overall  3.95 13.53  62.92  19.6
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3     4
+Times chosen              53.00 164.00 368.00 73.00
+Percentage chosen overall  8.05  24.92  55.93 11.09
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.518831401e+03
+     1     2 7.517593884e+03 1.646e-04 1.903e-04 5.39e-03   G   1.29e+00
+     2     3 7.517098341e+03 6.592e-05 6.317e-05 4.14e-03   G   1.97e-01
+     3     4 7.516826233e+03 3.620e-05 2.628e-05 3.98e-03   S   0.00e+00
+     4     5 7.516670959e+03 2.066e-05 1.655e-05 4.08e-03   S   0.00e+00
+     5     6 7.516605684e+03 8.684e-06 6.511e-06 2.00e-03   S   0.00e+00
+     6     7 7.516573106e+03 4.334e-06 3.390e-06 2.21e-03   S   0.00e+00
+     7     8 7.516560921e+03 1.621e-06 1.343e-06 1.81e-03   S   0.00e+00
+     8     9 7.516556210e+03 6.268e-07 4.933e-07 8.72e-04   S   0.00e+00
+     9    10 7.516554379e+03 2.435e-07 1.954e-07 3.37e-04   S   0.00e+00
+    10    11 7.516553909e+03 6.262e-08 5.588e-08 1.77e-04   S   0.00e+00
+    11    12 7.516553812e+03 1.290e-08 1.244e-08 8.46e-05   S   0.00e+00
+    12    13 7.516553785e+03 3.583e-09 3.019e-09 4.57e-05   S   0.00e+00
+    13    14 7.516553778e+03 9.423e-10 7.951e-10 2.32e-05   S   0.00e+00
+    14    15 7.516553776e+03 2.505e-10 2.105e-10 1.16e-05   S   0.00e+00
+    15    16 7.516553775e+03 9.564e-11 7.803e-11 6.05e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.299378     0.05041         5.93891
+bRedness        -0.090469     0.05320        -1.70058
+bPreterm_mv     -0.569670     0.06884        -8.27526
+bHosp1.2         0.005166     0.08506         0.06074
+bHosp0.9         0.016240     0.08447         0.19227
+bHosp0.3         0.334420     0.08782         3.80808
+bCost           -2.357126     0.05680       -41.49747
+bHospIntRisk     0.011939     0.11652         0.10246
+bOptIntLV        2.681916     0.10255        26.15284
+bOptIntRisk      0.426756     0.11198         3.81113
+gamma_age        0.127884     0.04800         2.66446
+gamma_sib       -0.093930     0.05208        -1.80341
+gamma_edu       -0.279238     0.08230        -3.39287
+gamma_inc       -0.008093     0.08009        -0.10104
+zeta_govTrust   -1.817123     0.15224       -11.93626
+zeta_vacImpt    -1.782556     0.15560       -11.45629
+zeta_vacSafe    -1.677229     0.15407       -10.88630
+zeta_vacEff     -1.699264     0.15702       -10.82230
+zeta_vacBlf     -1.875080     0.16543       -11.33450
+tau_govTrust1   -3.265426     0.21256       -15.36241
+tau_govTrust2   -1.215272     0.13662        -8.89544
+tau_govTrust3    3.120304     0.19531        15.97606
+tau_vacImpt1    -4.174238     0.30333       -13.76126
+tau_vacImpt2    -2.570546     0.19975       -12.86892
+tau_vacImpt3     1.673463     0.14415        11.60929
+tau_vacSafe1    -3.457971     0.25030       -13.81551
+tau_vacSafe2    -0.594410     0.12792        -4.64663
+tau_vacSafe3     4.102514     0.28933        14.17918
+tau_vacEff1     -4.083678     0.32559       -12.54234
+tau_vacEff2     -1.842627     0.16110       -11.43787
+tau_vacEff3      2.410649     0.17617        13.68404
+tau_vacBlf1     -3.271387     0.22528       -14.52133
+tau_vacBlf2     -0.650807     0.13067        -4.98065
+tau_vacBlf3      3.515243     0.24965        14.08076
+
+Final LL: -7516.5538
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -9.053502
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 4 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                             1     2      3      4
+Times chosen              27.0 61.00 375.00 195.00
+Percentage chosen overall  4.1  9.27  56.99  29.64
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1     2      3     4
+Times chosen              41.00 177.0 396.00 44.00
+Percentage chosen overall  6.23  26.9  60.18  6.69
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                             1     2      3      4
+Times chosen              25.0 91.00 414.00 128.00
+Percentage chosen overall  3.8 13.83  62.92  19.45
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3     4
+Times chosen              49.00 171.00 364.00 74.00
+Percentage chosen overall  7.45  25.99  55.32 11.25
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.534071500e+03
+     1     2 7.532900747e+03 1.554e-04 1.720e-04 6.38e-03   G   1.08e+00
+     2     3 7.532587079e+03 4.164e-05 5.402e-05 6.14e-03   G   1.90e-01
+     3     4 7.532571107e+03 2.120e-06 5.430e-06 1.90e-03   G   0.00e+00
+     4     5 7.532550815e+03 2.694e-06 2.594e-06 8.77e-04   S   0.00e+00
+     5     6 7.532549612e+03 1.597e-07 4.740e-07 5.05e-04   S   0.00e+00
+     6     7 7.532547710e+03 2.524e-07 2.291e-07 3.09e-04   S   0.00e+00
+     7     8 7.532547393e+03 4.216e-08 4.130e-08 1.05e-04   S   0.00e+00
+     8     9 7.532547219e+03 2.303e-08 1.466e-08 9.63e-05   S   0.00e+00
+     9    10 7.532547081e+03 1.829e-08 1.658e-08 1.66e-04   S   0.00e+00
+    10    11 7.532547062e+03 2.641e-09 2.305e-09 3.70e-05   S   0.00e+00
+    11    12 7.532547052e+03 1.228e-09 8.837e-10 2.13e-05   S   0.00e+00
+    12    13 7.532547049e+03 4.217e-10 3.948e-10 1.34e-05   S   0.00e+00
+    13    14 7.532547049e+03 5.571e-11 5.305e-11 5.76e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.299696     0.05050         5.93499
+bRedness        -0.090523     0.05320        -1.70142
+bPreterm_mv     -0.571655     0.06893        -8.29348
+bHosp1.2         0.003902     0.08518         0.04581
+bHosp0.9         0.013692     0.08428         0.16246
+bHosp0.3         0.333939     0.08788         3.80003
+bCost           -2.357554     0.05677       -41.52617
+bHospIntRisk     0.014255     0.11695         0.12189
+bOptIntLV        2.680015     0.10479        25.57560
+bOptIntRisk      0.434047     0.11210         3.87200
+gamma_age        0.138221     0.04832         2.86040
+gamma_sib       -0.095295     0.05272        -1.80758
+gamma_edu       -0.274641     0.08332        -3.29638
+gamma_inc       -0.010911     0.08205        -0.13298
+zeta_govTrust   -1.806551     0.15226       -11.86496
+zeta_vacImpt    -1.787916     0.15729       -11.36716
+zeta_vacSafe    -1.645925     0.15649       -10.51801
+zeta_vacEff     -1.713029     0.15197       -11.27213
+zeta_vacBlf     -1.856878     0.16053       -11.56699
+tau_govTrust1   -3.251359     0.21624       -15.03560
+tau_govTrust2   -1.208740     0.13552        -8.91898
+tau_govTrust3    3.114325     0.19470        15.99587
+tau_vacImpt1    -4.178967     0.31667       -13.19648
+tau_vacImpt2    -2.408070     0.18971       -12.69322
+tau_vacImpt3     1.710483     0.14650        11.67563
+tau_vacSafe1    -3.421715     0.25089       -13.63808
+tau_vacSafe2    -0.629418     0.12743        -4.93918
+tau_vacSafe3     3.999474     0.27953        14.30787
+tau_vacEff1     -4.144129     0.35216       -11.76768
+tau_vacEff2     -1.833754     0.16097       -11.39198
+tau_vacEff3      2.438551     0.17352        14.05338
+tau_vacBlf1     -3.371698     0.22596       -14.92154
+tau_vacBlf2     -0.610869     0.12992        -4.70177
+tau_vacBlf3      3.479097     0.23245        14.96720
+
+Final LL: -7532.547
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -9.211213
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 5 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                              1     2      3      4
+Times chosen              28.00 58.00 378.00 194.00
+Percentage chosen overall  4.26  8.81  57.45  29.48
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1      2      3     4
+Times chosen              45.00 181.00 389.00 43.00
+Percentage chosen overall  6.84  27.51  59.12  6.53
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                             1     2      3      4
+Times chosen              27.0 85.00 420.00 126.00
+Percentage chosen overall  4.1 12.92  63.83  19.15
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                             1      2      3     4
+Times chosen              52.0 169.00 366.00 71.00
+Percentage chosen overall  7.9  25.68  55.62 10.79
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.521985695e+03
+     1     2 7.521007117e+03 1.301e-04 1.466e-04 4.91e-03   G   9.32e-01
+     2     3 7.520732993e+03 3.645e-05 4.370e-05 4.67e-03   G   1.11e-01
+     3     4 7.520693333e+03 5.273e-06 1.224e-05 2.78e-03   G   0.00e+00
+     4     5 7.520626332e+03 8.909e-06 6.711e-06 1.78e-03   S   0.00e+00
+     5     6 7.520609100e+03 2.291e-06 2.261e-06 1.53e-03   G   0.00e+00
+     6     7 7.520602082e+03 9.331e-07 2.191e-06 1.01e-03   G   0.00e+00
+     7     9 7.520589559e+03 1.665e-06 2.447e-06 9.74e-04   G   3.55e-01
+     8    10 7.520585457e+03 5.454e-07 6.229e-07 5.84e-04   G   0.00e+00
+     9    11 7.520584468e+03 1.315e-07 7.220e-07 6.87e-04   G   0.00e+00
+    10    13 7.520579841e+03 6.153e-07 4.710e-07 3.72e-04  G-S  0.00e+00
+    11    14 7.520578168e+03 2.224e-07 1.889e-07 3.30e-04   S   0.00e+00
+    12    15 7.520577107e+03 1.411e-07 1.050e-07 2.41e-04   S   0.00e+00
+    13    16 7.520576432e+03 8.982e-08 6.265e-08 2.53e-04   S   0.00e+00
+    14    17 7.520576095e+03 4.483e-08 3.799e-08 2.28e-04   S   0.00e+00
+    15    18 7.520576030e+03 8.660e-09 8.813e-09 6.59e-05   S   0.00e+00
+    16    19 7.520576004e+03 3.332e-09 2.641e-09 4.45e-05   S   0.00e+00
+    17    20 7.520576002e+03 3.016e-10 4.684e-10 1.92e-05   G   0.00e+00
+    18    22 7.520575999e+03 4.457e-10 3.404e-10 1.36e-05  G-S  0.00e+00
+    19    23 7.520575997e+03 1.994e-10 1.499e-10 8.73e-06   S   0.00e+00
+    20    24 7.520575997e+03 6.783e-11 5.932e-11 5.02e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.297400     0.05045         5.89497
+bRedness        -0.090226     0.05302        -1.70159
+bPreterm_mv     -0.568012     0.06897        -8.23533
+bHosp1.2         0.004759     0.08502         0.05597
+bHosp0.9         0.016218     0.08426         0.19247
+bHosp0.3         0.333783     0.08778         3.80247
+bCost           -2.357062     0.05652       -41.69954
+bHospIntRisk     0.012246     0.11668         0.10495
+bOptIntLV        2.656995     0.10369        25.62545
+bOptIntRisk      0.426697     0.11184         3.81534
+gamma_age        0.134863     0.04776         2.82368
+gamma_sib       -0.096791     0.05311        -1.82249
+gamma_edu       -0.279501     0.08328        -3.35600
+gamma_inc       -0.003055     0.08231        -0.03711
+zeta_govTrust   -1.849280     0.15472       -11.95240
+zeta_vacImpt    -1.864522     0.16078       -11.59706
+zeta_vacSafe    -1.727912     0.16020       -10.78615
+zeta_vacEff     -1.728708     0.15477       -11.16955
+zeta_vacBlf     -1.878533     0.16496       -11.38755
+tau_govTrust1   -3.300912     0.21549       -15.31784
+tau_govTrust2   -1.221960     0.13619        -8.97245
+tau_govTrust3    3.147906     0.19860        15.85028
+tau_vacImpt1    -4.235599     0.32034       -13.22232
+tau_vacImpt2    -2.492357     0.19624       -12.70056
+tau_vacImpt3     1.765342     0.14874        11.86876
+tau_vacSafe1    -3.367835     0.25549       -13.18187
+tau_vacSafe2    -0.546031     0.12748        -4.28321
+tau_vacSafe3     4.129767     0.28776        14.35148
+tau_vacEff1     -4.083390     0.33163       -12.31304
+tau_vacEff2     -1.912201     0.16303       -11.72923
+tau_vacEff3      2.473740     0.17613        14.04460
+tau_vacBlf1     -3.314644     0.21926       -15.11739
+tau_vacBlf2     -0.613055     0.13025        -4.70674
+tau_vacBlf3      3.557895     0.25251        14.08994
+
+Final LL: -7520.576
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -8.714962
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 6 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                              1     2      3      4
+Times chosen              30.00 55.00 374.00 199.00
+Percentage chosen overall  4.56  8.36  56.84  30.24
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1      2     3     4
+Times chosen              43.00 166.00 406.0 43.00
+Percentage chosen overall  6.53  25.23  61.7  6.53
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                              1     2      3   4
+Times chosen              26.00 89.00 418.00 125
+Percentage chosen overall  3.95 13.53  63.53  19
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3     4
+Times chosen              51.00 165.00 372.00 70.00
+Percentage chosen overall  7.75  25.08  56.53 10.64
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.513083843e+03
+     1     3 7.511220125e+03 2.481e-04 3.000e-04 1.03e-02   G   8.00e-01
+     2     4 7.510816207e+03 5.378e-05 7.931e-05 7.73e-03   G   0.00e+00
+     3     6 7.510642004e+03 2.319e-05 2.283e-05 3.68e-03  G-S  0.00e+00
+     4     7 7.510597697e+03 5.899e-06 5.127e-06 1.41e-03   S   0.00e+00
+     5     8 7.510582636e+03 2.005e-06 2.209e-06 1.17e-03   G   0.00e+00
+     6    10 7.510572355e+03 1.369e-06 1.766e-06 6.33e-04   G   2.72e-01
+     7    11 7.510570554e+03 2.399e-07 9.165e-07 7.26e-04   G   3.10e-02
+     8    12 7.510566309e+03 5.652e-07 1.910e-06 8.71e-04   G   2.74e-01
+     9    13 7.510561092e+03 6.946e-07 5.519e-07 4.77e-04   S   0.00e+00
+    10    14 7.510559352e+03 2.317e-07 1.958e-07 2.94e-04   S   0.00e+00
+    11    15 7.510558341e+03 1.346e-07 9.280e-08 2.77e-04   S   0.00e+00
+    12    16 7.510557713e+03 8.359e-08 6.701e-08 2.81e-04   S   0.00e+00
+    13    17 7.510557572e+03 1.886e-08 1.586e-08 1.15e-04   S   0.00e+00
+    14    18 7.510557534e+03 5.079e-09 5.075e-09 4.70e-05   S   0.00e+00
+    15    19 7.510557522e+03 1.545e-09 1.253e-09 2.18e-05   S   0.00e+00
+    16    20 7.510557517e+03 6.452e-10 5.848e-10 1.61e-05   S   0.00e+00
+    17    21 7.510557515e+03 3.027e-10 2.147e-10 8.52e-06   S   0.00e+00
+    18    22 7.510557513e+03 1.981e-10 1.544e-10 7.97e-06   S   0.00e+00
+    19    23 7.510557513e+03 6.081e-11 4.885e-11 8.55e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.297999     0.05060         5.88931
+bRedness        -0.089689     0.05316        -1.68705
+bPreterm_mv     -0.567966     0.06905        -8.22496
+bHosp1.2         0.003213     0.08522         0.03770
+bHosp0.9         0.014682     0.08463         0.17350
+bHosp0.3         0.332008     0.08823         3.76301
+bCost           -2.356093     0.05697       -41.35386
+bHospIntRisk     0.014045     0.11691         0.12013
+bOptIntLV        2.701677     0.10468        25.80801
+bOptIntRisk      0.432320     0.11208         3.85716
+gamma_age        0.135684     0.04745         2.85945
+gamma_sib       -0.099533     0.05260        -1.89224
+gamma_edu       -0.270868     0.08346        -3.24568
+gamma_inc       -0.008066     0.08242        -0.09787
+zeta_govTrust   -1.849438     0.15779       -11.72065
+zeta_vacImpt    -1.789049     0.15828       -11.30271
+zeta_vacSafe    -1.657734     0.15382       -10.77744
+zeta_vacEff     -1.749562     0.15959       -10.96304
+zeta_vacBlf     -1.921679     0.16770       -11.45930
+tau_govTrust1   -3.300117     0.21959       -15.02869
+tau_govTrust2   -1.216470     0.13737        -8.85568
+tau_govTrust3    3.141915     0.19916        15.77613
+tau_vacImpt1    -4.059741     0.33098       -12.26580
+tau_vacImpt2    -2.446758     0.19973       -12.25004
+tau_vacImpt3     1.661107     0.14191        11.70563
+tau_vacSafe1    -3.370282     0.26126       -12.90029
+tau_vacSafe2    -0.716064     0.13201        -5.42413
+tau_vacSafe3     4.034611     0.28239        14.28736
+tau_vacEff1     -4.163252     0.35082       -11.86720
+tau_vacEff2     -1.870089     0.16616       -11.25448
+tau_vacEff3      2.493811     0.18270        13.64948
+tau_vacBlf1     -3.378542     0.22388       -15.09080
+tau_vacBlf2     -0.668058     0.13444        -4.96921
+tau_vacBlf3      3.618962     0.25966        13.93745
+
+Final LL: -7510.5575
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -9.12245
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 7 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                             1     2      3      4
+Times chosen              25.0 59.00 378.00 196.00
+Percentage chosen overall  3.8  8.97  57.45  29.79
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1     2      3     4
+Times chosen              41.00 175.0 400.00 42.00
+Percentage chosen overall  6.23  26.6  60.79  6.38
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                             1     2      3     4
+Times chosen              23.0 90.00 418.00 127.0
+Percentage chosen overall  3.5 13.68  63.53  19.3
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3     4
+Times chosen              55.00 166.00 366.00 71.00
+Percentage chosen overall  8.36  25.23  55.62 10.79
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.479327516e+03
+     1     3 7.477492409e+03 2.454e-04 2.863e-04 6.76e-03   G   7.17e-01
+     2     4 7.476864528e+03 8.397e-05 9.571e-05 8.98e-03   G   2.62e-02
+     3     5 7.476830860e+03 4.503e-06 3.405e-05 5.66e-03   G   0.00e+00
+     4     6 7.476645505e+03 2.479e-05 2.343e-05 4.72e-03   S   0.00e+00
+     5     7 7.476633203e+03 1.645e-06 2.289e-06 1.52e-03   S   0.00e+00
+     6     8 7.476623928e+03 1.241e-06 9.340e-07 6.42e-04   S   0.00e+00
+     7     9 7.476621285e+03 3.535e-07 3.706e-07 5.21e-04   G   0.00e+00
+     8    10 7.476620184e+03 1.472e-07 2.964e-07 7.35e-04   G   0.00e+00
+     9    12 7.476618775e+03 1.885e-07 3.111e-07 2.99e-04   G   2.82e-01
+    10    13 7.476618355e+03 5.613e-08 1.298e-07 2.60e-04   G   0.00e+00
+    11    15 7.476617610e+03 9.968e-08 7.056e-08 1.41e-04  G-S  0.00e+00
+    12    16 7.476617381e+03 3.055e-08 2.930e-08 1.43e-04   G   0.00e+00
+    13    17 7.476617289e+03 1.238e-08 2.955e-08 1.38e-04   G   0.00e+00
+    14    19 7.476617106e+03 2.451e-08 1.681e-08 5.93e-05  G-S  0.00e+00
+    15    20 7.476617051e+03 7.351e-09 7.912e-09 6.38e-05   G   0.00e+00
+    16    21 7.476616997e+03 7.132e-09 4.215e-09 3.90e-05   S   0.00e+00
+    17    22 7.476616928e+03 9.299e-09 8.884e-09 1.11e-04   S   0.00e+00
+    18    23 7.476616926e+03 2.253e-10 2.178e-10 1.45e-05   S   0.00e+00
+    19    24 7.476616926e+03 3.458e-11 4.043e-11 4.28e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.297773     0.05070        5.872895
+bRedness        -0.091820     0.05307       -1.730164
+bPreterm_mv     -0.570149     0.06916       -8.243714
+bHosp1.2      -4.0072e-04     0.08516       -0.004705
+bHosp0.9         0.012326     0.08447        0.145919
+bHosp0.3         0.329941     0.08805        3.747293
+bCost           -2.358599     0.05672      -41.585104
+bHospIntRisk     0.017587     0.11671        0.150696
+bOptIntLV        2.685288     0.10375       25.883268
+bOptIntRisk      0.435548     0.11213        3.884477
+gamma_age        0.145377     0.04572        3.179772
+gamma_sib       -0.105186     0.05268       -1.996863
+gamma_edu       -0.274407     0.08359       -3.282599
+gamma_inc       -0.004020     0.08233       -0.048835
+zeta_govTrust   -1.817308     0.15166      -11.982742
+zeta_vacImpt    -1.876877     0.15918      -11.790814
+zeta_vacSafe    -1.774450     0.15802      -11.229564
+zeta_vacEff     -1.729850     0.15076      -11.474565
+zeta_vacBlf     -1.967665     0.16648      -11.819526
+tau_govTrust1   -3.290881     0.20848      -15.784890
+tau_govTrust2   -1.219284     0.13629       -8.946467
+tau_govTrust3    3.113197     0.19608       15.877468
+tau_vacImpt1    -4.434697     0.32859      -13.496133
+tau_vacImpt2    -2.541433     0.20163      -12.604454
+tau_vacImpt3     1.751325     0.14769       11.857742
+tau_vacSafe1    -3.569400     0.25376      -14.065844
+tau_vacSafe2    -0.654455     0.13040       -5.018665
+tau_vacSafe3     4.217728     0.29434       14.329408
+tau_vacEff1     -4.321614     0.34722      -12.446280
+tau_vacEff2     -1.901931     0.16101      -11.812191
+tau_vacEff3      2.457889     0.17522       14.027289
+tau_vacBlf1     -3.316169     0.21956      -15.103942
+tau_vacBlf2     -0.610732     0.13063       -4.675271
+tau_vacBlf3      3.652268     0.25267       14.454982
+
+Final LL: -7476.6169
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -8.241546
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 8 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                              1     2      3      4
+Times chosen              26.00 55.00 380.00 197.00
+Percentage chosen overall  3.95  8.36  57.75  29.94
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1      2      3     4
+Times chosen              46.00 174.00 396.00 42.00
+Percentage chosen overall  6.99  26.44  60.18  6.38
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                              1     2      3   4
+Times chosen              26.00 86.00 421.00 125
+Percentage chosen overall  3.95 13.07  63.98  19
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3     4
+Times chosen              53.00 163.00 371.00 71.00
+Percentage chosen overall  8.05  24.77  56.38 10.79
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.508497954e+03
+     1     2 7.507386027e+03 1.481e-04 1.573e-04 4.91e-03   G   1.03e+00
+     2     3 7.506876408e+03 6.788e-05 6.968e-05 5.93e-03   G   2.77e-01
+     3     4 7.506754113e+03 1.629e-05 1.518e-05 3.25e-03   G   0.00e+00
+     4     6 7.506693368e+03 8.092e-06 7.405e-06 2.16e-03  G-S  0.00e+00
+     5     7 7.506673762e+03 2.612e-06 2.398e-06 1.37e-03   S   0.00e+00
+     6     8 7.506665108e+03 1.153e-06 8.737e-07 8.00e-04   S   0.00e+00
+     7     9 7.506660751e+03 5.805e-07 4.157e-07 5.31e-04   S   0.00e+00
+     8    10 7.506658494e+03 3.006e-07 2.368e-07 3.61e-04   S   0.00e+00
+     9    11 7.506657702e+03 1.055e-07 8.534e-08 2.41e-04   S   0.00e+00
+    10    12 7.506657369e+03 4.429e-08 3.459e-08 1.35e-04   S   0.00e+00
+    11    13 7.506657247e+03 1.638e-08 1.301e-08 8.41e-05   S   0.00e+00
+    12    14 7.506657214e+03 4.318e-09 3.728e-09 4.51e-05   S   0.00e+00
+    13    15 7.506657207e+03 1.003e-09 8.629e-10 2.19e-05   S   0.00e+00
+    14    16 7.506657204e+03 3.039e-10 2.474e-10 1.34e-05   S   0.00e+00
+    15    17 7.506657203e+03 1.140e-10 9.326e-11 8.28e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.298757     0.05058         5.90720
+bRedness        -0.089235     0.05287        -1.68780
+bPreterm_mv     -0.569064     0.06900        -8.24687
+bHosp1.2         0.004653     0.08524         0.05458
+bHosp0.9         0.014919     0.08435         0.17688
+bHosp0.3         0.332957     0.08813         3.77820
+bCost           -2.356346     0.05682       -41.47220
+bHospIntRisk     0.013158     0.11656         0.11288
+bOptIntLV        2.710973     0.10393        26.08350
+bOptIntRisk      0.433014     0.11166         3.87798
+gamma_age        0.142897     0.04612         3.09817
+gamma_sib       -0.098773     0.05185        -1.90492
+gamma_edu       -0.268440     0.08336        -3.22022
+gamma_inc       -0.008672     0.08285        -0.10466
+zeta_govTrust   -1.852229     0.15572       -11.89495
+zeta_vacImpt    -1.854523     0.16034       -11.56604
+zeta_vacSafe    -1.681475     0.15522       -10.83255
+zeta_vacEff     -1.709775     0.15416       -11.09072
+zeta_vacBlf     -1.883619     0.16341       -11.52662
+tau_govTrust1   -3.292818     0.21976       -14.98384
+tau_govTrust2   -1.215069     0.13605        -8.93074
+tau_govTrust3    3.140791     0.19720        15.92665
+tau_vacImpt1    -4.331100     0.31757       -13.63846
+tau_vacImpt2    -2.564977     0.20271       -12.65360
+tau_vacImpt3     1.719461     0.14393        11.94645
+tau_vacSafe1    -3.305624     0.23000       -14.37245
+tau_vacSafe2    -0.622698     0.12853        -4.84481
+tau_vacSafe3     4.097339     0.29194        14.03492
+tau_vacEff1     -4.098169     0.34974       -11.71761
+tau_vacEff2     -1.893565     0.16181       -11.70242
+tau_vacEff3      2.459808     0.17850        13.78062
+tau_vacBlf1     -3.282684     0.21773       -15.07655
+tau_vacBlf2     -0.666481     0.13210        -5.04514
+tau_vacBlf3      3.554732     0.24573        14.46614
+
+Final LL: -7506.6572
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -8.5868
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 9 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                              1     2      3     4
+Times chosen              28.00 55.00 375.00 200.0
+Percentage chosen overall  4.26  8.36  56.99  30.4
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1      2      3     4
+Times chosen              45.00 173.00 397.00 43.00
+Percentage chosen overall  6.84  26.29  60.33  6.53
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                              1     2      3     4
+Times chosen              24.00 86.00 419.00 129.0
+Percentage chosen overall  3.65 13.07  63.68  19.6
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3    4
+Times chosen              54.00 160.00 369.00 75.0
+Percentage chosen overall  8.21  24.32  56.08 11.4
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.539775468e+03
+     1     2 7.539116765e+03 8.736e-05 1.122e-04 4.49e-03   G   7.62e-01
+     2     3 7.538828973e+03 3.817e-05 4.579e-05 4.15e-03   G   1.72e-01
+     3     5 7.538701882e+03 1.686e-05 1.634e-05 3.97e-03  G-S  0.00e+00
+     4     6 7.538668609e+03 4.414e-06 4.195e-06 1.41e-03   S   0.00e+00
+     5     7 7.538655762e+03 1.704e-06 1.246e-06 8.66e-04   S   0.00e+00
+     6     8 7.538652106e+03 4.849e-07 5.278e-07 6.66e-04   S   0.00e+00
+     7     9 7.538651413e+03 9.193e-08 1.029e-07 2.66e-04   S   0.00e+00
+     8    10 7.538650963e+03 5.973e-08 3.680e-08 1.33e-04   S   0.00e+00
+     9    11 7.538650882e+03 1.080e-08 4.114e-08 1.94e-04   G   0.00e+00
+    10    12 7.538650447e+03 5.761e-08 5.033e-08 2.29e-04   S   0.00e+00
+    11    13 7.538650371e+03 1.007e-08 7.896e-09 8.58e-05   S   0.00e+00
+    12    14 7.538650333e+03 5.095e-09 4.188e-09 5.54e-05   S   0.00e+00
+    13    15 7.538650323e+03 1.337e-09 1.075e-09 3.16e-05   S   0.00e+00
+    14    16 7.538650321e+03 2.810e-10 2.587e-10 1.36e-05   S   0.00e+00
+    15    17 7.538650321e+03 4.588e-11 4.514e-11 7.22e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.297946     0.05043         5.90757
+bRedness        -0.090650     0.05336        -1.69876
+bPreterm_mv     -0.568483     0.06900        -8.23899
+bHosp1.2         0.004100     0.08479         0.04835
+bHosp0.9         0.015269     0.08429         0.18115
+bHosp0.3         0.332413     0.08776         3.78777
+bCost           -2.356425     0.05692       -41.39866
+bHospIntRisk     0.012864     0.11659         0.11033
+bOptIntLV        2.683719     0.10408        25.78490
+bOptIntRisk      0.428198     0.11193         3.82570
+gamma_age        0.130971     0.04844         2.70403
+gamma_sib       -0.094493     0.05294        -1.78507
+gamma_edu       -0.274350     0.08358        -3.28263
+gamma_inc       -0.009171     0.08200        -0.11184
+zeta_govTrust   -1.846618     0.15953       -11.57503
+zeta_vacImpt    -1.783390     0.15814       -11.27714
+zeta_vacSafe    -1.701245     0.16205       -10.49841
+zeta_vacEff     -1.616475     0.14936       -10.82275
+zeta_vacBlf     -1.827864     0.16888       -10.82326
+tau_govTrust1   -3.288947     0.22067       -14.90418
+tau_govTrust2   -1.214481     0.13758        -8.82776
+tau_govTrust3    3.147101     0.19987        15.74548
+tau_vacImpt1    -4.138595     0.34336       -12.05312
+tau_vacImpt2    -2.480746     0.20207       -12.27695
+tau_vacImpt3     1.655134     0.14294        11.57934
+tau_vacSafe1    -3.348042     0.24166       -13.85457
+tau_vacSafe2    -0.628938     0.13293        -4.73119
+tau_vacSafe3     4.096468     0.28923        14.16336
+tau_vacEff1     -4.088726     0.38552       -10.60572
+tau_vacEff2     -1.878987     0.16217       -11.58642
+tau_vacEff3      2.342461     0.17116        13.68581
+tau_vacBlf1     -3.201028     0.21144       -15.13922
+tau_vacBlf2     -0.688244     0.13380        -5.14394
+tau_vacBlf3      3.423367     0.24549        13.94511
+
+Final LL: -7538.6503
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -9.169793
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 10 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                             1     2      3      4
+Times chosen              27.0 55.00 377.00 199.00
+Percentage chosen overall  4.1  8.36  57.29  30.24
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1      2      3     4
+Times chosen              41.00 178.00 393.00 46.00
+Percentage chosen overall  6.23  27.05  59.73  6.99
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                             1     2      3     4
+Times chosen              25.0 85.00 419.00 129.0
+Percentage chosen overall  3.8 12.92  63.68  19.6
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3    4
+Times chosen              56.00 164.00 363.00 75.0
+Percentage chosen overall  8.51  24.92  55.17 11.4
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.528270082e+03
+     1     2 7.527340452e+03 1.235e-04 1.429e-04 4.85e-03   G   9.12e-01
+     2     3 7.527114378e+03 3.003e-05 4.192e-05 3.91e-03   G   1.67e-01
+     3     5 7.527088241e+03 3.472e-06 7.371e-06 2.85e-03  G-S  0.00e+00
+     4     6 7.527059852e+03 3.772e-06 3.123e-06 1.21e-03   S   0.00e+00
+     5     7 7.527051843e+03 1.064e-06 9.822e-07 1.17e-03   S   0.00e+00
+     6     8 7.527047648e+03 5.573e-07 3.881e-07 4.74e-04   S   0.00e+00
+     7     9 7.527044913e+03 3.633e-07 2.936e-07 5.35e-04   S   0.00e+00
+     8    10 7.527044056e+03 1.139e-07 8.601e-08 3.20e-04   S   0.00e+00
+     9    11 7.527043633e+03 5.625e-08 4.249e-08 2.53e-04   S   0.00e+00
+    10    12 7.527043456e+03 2.343e-08 1.843e-08 1.59e-04   S   0.00e+00
+    11    13 7.527043397e+03 7.918e-09 6.911e-09 8.40e-05   S   0.00e+00
+    12    14 7.527043378e+03 2.448e-09 2.169e-09 4.85e-05   S   0.00e+00
+    13    15 7.527043374e+03 6.286e-10 6.065e-10 2.26e-05   S   0.00e+00
+    14    17 7.527043373e+03 1.340e-10 1.391e-10 1.04e-05  G-S  0.00e+00
+    15    18 7.527043372e+03 1.607e-11 1.521e-11 3.20e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.297581     0.05060         5.88146
+bRedness        -0.091415     0.05332        -1.71461
+bPreterm_mv     -0.568628     0.06901        -8.23999
+bHosp1.2         0.002024     0.08522         0.02375
+bHosp0.9         0.014133     0.08449         0.16727
+bHosp0.3         0.332277     0.08814         3.76970
+bCost           -2.358130     0.05678       -41.52989
+bHospIntRisk     0.014543     0.11701         0.12429
+bOptIntLV        2.688986     0.10389        25.88321
+bOptIntRisk      0.434468     0.11211         3.87537
+gamma_age        0.138527     0.04823         2.87221
+gamma_sib       -0.093635     0.05233        -1.78935
+gamma_edu       -0.276727     0.08347        -3.31524
+gamma_inc       -0.011311     0.08240        -0.13727
+zeta_govTrust   -1.840161     0.15654       -11.75508
+zeta_vacImpt    -1.768764     0.15662       -11.29332
+zeta_vacSafe    -1.714239     0.15679       -10.93354
+zeta_vacEff     -1.710812     0.15787       -10.83665
+zeta_vacBlf     -1.889150     0.16816       -11.23439
+tau_govTrust1   -3.280769     0.21671       -15.13932
+tau_govTrust2   -1.212849     0.13663        -8.87680
+tau_govTrust3    3.132731     0.19778        15.83972
+tau_vacImpt1    -4.157348     0.35715       -11.64023
+tau_vacImpt2    -2.490523     0.19643       -12.67878
+tau_vacImpt3     1.654858     0.14155        11.69100
+tau_vacSafe1    -3.494229     0.25449       -13.73029
+tau_vacSafe2    -0.618749     0.12982        -4.76633
+tau_vacSafe3     4.008757     0.26686        15.02170
+tau_vacEff1     -4.147105     0.38565       -10.75350
+tau_vacEff2     -1.930605     0.16630       -11.60951
+tau_vacEff3      2.413400     0.17847        13.52283
+tau_vacBlf1     -3.191932     0.21825       -14.62481
+tau_vacBlf2     -0.610697     0.13309        -4.58873
+tau_vacBlf3      3.480156     0.24021        14.48792
+
+Final LL: -7527.0434
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -9.084931
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 11 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                              1     2     3      4
+Times chosen              29.00 53.00 381.0 195.00
+Percentage chosen overall  4.41  8.05  57.9  29.64
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1      2      3     4
+Times chosen              41.00 176.00 398.00 43.00
+Percentage chosen overall  6.23  26.75  60.49  6.53
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                             1     2      3   4
+Times chosen              23.0 88.00 422.00 125
+Percentage chosen overall  3.5 13.37  64.13  19
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3     4
+Times chosen              56.00 163.00 367.00 72.00
+Percentage chosen overall  8.51  24.77  55.78 10.94
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.520632004e+03
+     1     2 7.519878009e+03 1.003e-04 1.380e-04 4.30e-03   G   8.28e-01
+     2     3 7.519765429e+03 1.497e-05 2.552e-05 3.65e-03   G   2.86e-02
+     3     5 7.519683649e+03 1.088e-05 9.223e-06 2.30e-03  G-S  0.00e+00
+     4     6 7.519658803e+03 3.304e-06 2.498e-06 1.05e-03   S   0.00e+00
+     5     7 7.519644302e+03 1.928e-06 1.474e-06 1.19e-03   S   0.00e+00
+     6     8 7.519637632e+03 8.870e-07 7.133e-07 8.50e-04   S   0.00e+00
+     7     9 7.519634913e+03 3.616e-07 2.835e-07 3.96e-04   S   0.00e+00
+     8    10 7.519633762e+03 1.531e-07 1.171e-07 2.05e-04   S   0.00e+00
+     9    11 7.519633331e+03 5.732e-08 4.643e-08 1.80e-04   S   0.00e+00
+    10    12 7.519633196e+03 1.797e-08 1.590e-08 1.35e-04   S   0.00e+00
+    11    13 7.519633146e+03 6.561e-09 5.453e-09 4.03e-05   S   0.00e+00
+    12    14 7.519633131e+03 2.003e-09 1.671e-09 3.03e-05   S   0.00e+00
+    13    15 7.519633129e+03 3.222e-10 3.208e-10 1.75e-05   S   0.00e+00
+    14    16 7.519633128e+03 9.045e-11 7.416e-11 5.49e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.297440     0.05049         5.89095
+bRedness        -0.092474     0.05323        -1.73709
+bPreterm_mv     -0.569070     0.06903        -8.24406
+bHosp1.2         0.003141     0.08505         0.03693
+bHosp0.9         0.014619     0.08440         0.17321
+bHosp0.3         0.332012     0.08806         3.77047
+bCost           -2.357396     0.05695       -41.39457
+bHospIntRisk     0.013790     0.11673         0.11814
+bOptIntLV        2.712054     0.10443        25.97130
+bOptIntRisk      0.433024     0.11165         3.87848
+gamma_age        0.140627     0.04653         3.02200
+gamma_sib       -0.097517     0.05241        -1.86049
+gamma_edu       -0.275240     0.08384        -3.28310
+gamma_inc       -0.005896     0.08242        -0.07154
+zeta_govTrust   -1.843990     0.15544       -11.86335
+zeta_vacImpt    -1.789314     0.15816       -11.31345
+zeta_vacSafe    -1.639382     0.14927       -10.98231
+zeta_vacEff     -1.635483     0.15397       -10.62186
+zeta_vacBlf     -1.864150     0.16144       -11.54685
+tau_govTrust1   -3.286568     0.21966       -14.96194
+tau_govTrust2   -1.211470     0.13718        -8.83157
+tau_govTrust3    3.138902     0.19684        15.94633
+tau_vacImpt1    -4.089920     0.32999       -12.39418
+tau_vacImpt2    -2.507608     0.19662       -12.75381
+tau_vacImpt3     1.702565     0.14514        11.73025
+tau_vacSafe1    -3.423256     0.25289       -13.53674
+tau_vacSafe2    -0.634844     0.12585        -5.04454
+tau_vacSafe3     4.015584     0.27633        14.53188
+tau_vacEff1     -4.186596     0.34867       -12.00739
+tau_vacEff2     -1.888382     0.15797       -11.95421
+tau_vacEff3      2.404978     0.17934        13.40997
+tau_vacBlf1     -3.164851     0.21865       -14.47426
+tau_vacBlf2     -0.607987     0.12907        -4.71057
+tau_vacBlf3      3.517625     0.23885        14.72713
+
+Final LL: -7519.6331
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -9.229386
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 12 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                              1     2      3      4
+Times chosen              29.00 55.00 377.00 197.00
+Percentage chosen overall  4.41  8.36  57.29  29.94
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1      2      3     4
+Times chosen              42.00 173.00 398.00 45.00
+Percentage chosen overall  6.38  26.29  60.49  6.84
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                             1     2      3      4
+Times chosen              25.0 87.00 413.00 133.00
+Percentage chosen overall  3.8 13.22  62.77  20.21
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3     4
+Times chosen              54.00 163.00 369.00 72.00
+Percentage chosen overall  8.21  24.77  56.08 10.94
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.535759748e+03
+     1     2 7.535078812e+03 9.036e-05 1.148e-04 5.92e-03   G   6.17e-01
+     2     3 7.534895133e+03 2.438e-05 3.887e-05 5.57e-03   G   1.55e-01
+     3     5 7.534837111e+03 7.700e-06 9.088e-06 1.93e-03  G-S  0.00e+00
+     4     6 7.534826091e+03 1.463e-06 2.343e-06 1.31e-03   S   0.00e+00
+     5     7 7.534818885e+03 9.563e-07 7.952e-07 4.52e-04   S   0.00e+00
+     6     8 7.534816670e+03 2.940e-07 2.480e-07 3.19e-04   S   0.00e+00
+     7     9 7.534815791e+03 1.166e-07 8.708e-08 1.86e-04   S   0.00e+00
+     8    10 7.534815401e+03 5.180e-08 4.621e-08 1.85e-04   S   0.00e+00
+     9    11 7.534815282e+03 1.578e-08 1.353e-08 1.03e-04   S   0.00e+00
+    10    12 7.534815224e+03 7.720e-09 5.362e-09 5.27e-05   S   0.00e+00
+    11    13 7.534815187e+03 4.977e-09 4.089e-09 5.06e-05   S   0.00e+00
+    12    14 7.534815176e+03 1.444e-09 1.128e-09 2.73e-05   S   0.00e+00
+    13    15 7.534815171e+03 5.937e-10 4.745e-10 1.86e-05   S   0.00e+00
+    14    16 7.534815170e+03 1.633e-10 1.324e-10 7.69e-06   S   0.00e+00
+    15    17 7.534815170e+03 2.839e-11 2.952e-11 4.42e-06   G   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.298101     0.05065         5.88559
+bRedness        -0.092740     0.05299        -1.74998
+bPreterm_mv     -0.570761     0.06903        -8.26859
+bHosp1.2        -0.001599     0.08508        -0.01879
+bHosp0.9         0.009543     0.08435         0.11313
+bHosp0.3         0.328773     0.08785         3.74243
+bCost           -2.358372     0.05676       -41.55010
+bHospIntRisk     0.018134     0.11652         0.15563
+bOptIntLV        2.714951     0.10269        26.43765
+bOptIntRisk      0.439014     0.11171         3.92988
+gamma_age        0.143214     0.04663         3.07154
+gamma_sib       -0.097801     0.05193        -1.88322
+gamma_edu       -0.278002     0.08409        -3.30597
+gamma_inc       -0.012178     0.08283        -0.14701
+zeta_govTrust   -1.846855     0.15876       -11.63320
+zeta_vacImpt    -1.818670     0.15932       -11.41551
+zeta_vacSafe    -1.671355     0.15332       -10.90137
+zeta_vacEff     -1.595071     0.14606       -10.92078
+zeta_vacBlf     -1.898821     0.16297       -11.65101
+tau_govTrust1   -3.284638     0.22330       -14.70950
+tau_govTrust2   -1.205295     0.13672        -8.81554
+tau_govTrust3    3.144539     0.19961        15.75377
+tau_vacImpt1    -4.130098     0.31546       -13.09227
+tau_vacImpt2    -2.482723     0.20239       -12.26676
+tau_vacImpt3     1.703858     0.14559        11.70276
+tau_vacSafe1    -3.416771     0.25228       -13.54331
+tau_vacSafe2    -0.651295     0.13383        -4.86643
+tau_vacSafe3     3.993788     0.26781        14.91304
+tau_vacEff1     -4.034621     0.32593       -12.37884
+tau_vacEff2     -1.835870     0.16231       -11.31080
+tau_vacEff3      2.274953     0.16212        14.03216
+tau_vacBlf1     -3.253895     0.22097       -14.72549
+tau_vacBlf2     -0.636086     0.13394        -4.74897
+tau_vacBlf3      3.559591     0.23743        14.99188
+
+Final LL: -7534.8152
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -9.310548
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 13 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                             1     2      3      4
+Times chosen              25.0 63.00 373.00 197.00
+Percentage chosen overall  3.8  9.57  56.69  29.94
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1      2      3     4
+Times chosen              47.00 172.00 397.00 42.00
+Percentage chosen overall  7.14  26.14  60.33  6.38
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                              1     2      3      4
+Times chosen              24.00 93.00 415.00 126.00
+Percentage chosen overall  3.65 14.13  63.07  19.15
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                             1     2      3     4
+Times chosen              52.0 175.0 360.00 71.00
+Percentage chosen overall  7.9  26.6  54.71 10.79
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.522625779e+03
+     1     3 7.520205895e+03 3.217e-04 3.642e-04 8.03e-03   G   6.65e-01
+     2     4 7.519689615e+03 6.865e-05 7.739e-05 9.62e-03   G   0.00e+00
+     3     5 7.519551547e+03 1.836e-05 2.930e-05 5.06e-03   G   0.00e+00
+     4     6 7.519525742e+03 3.432e-06 2.436e-05 6.48e-03   G   0.00e+00
+     5     7 7.519402655e+03 1.637e-05 1.379e-05 2.59e-03   S   0.00e+00
+     6     8 7.519375712e+03 3.583e-06 2.473e-06 1.15e-03   S   0.00e+00
+     7     9 7.519357136e+03 2.470e-06 1.995e-06 1.22e-03   S   0.00e+00
+     8    10 7.519350612e+03 8.677e-07 6.677e-07 7.58e-04   S   0.00e+00
+     9    11 7.519347419e+03 4.246e-07 3.289e-07 5.65e-04   S   0.00e+00
+    10    12 7.519346255e+03 1.548e-07 1.354e-07 3.41e-04   S   0.00e+00
+    11    13 7.519345890e+03 4.851e-08 4.765e-08 1.14e-04   S   0.00e+00
+    12    14 7.519345748e+03 1.884e-08 1.422e-08 8.47e-05   S   0.00e+00
+    13    15 7.519345688e+03 7.976e-09 6.862e-09 5.91e-05   S   0.00e+00
+    14    16 7.519345672e+03 2.172e-09 1.694e-09 2.61e-05   S   0.00e+00
+    15    17 7.519345665e+03 9.598e-10 7.363e-10 2.29e-05   S   0.00e+00
+    16    18 7.519345662e+03 3.227e-10 2.629e-10 1.60e-05   S   0.00e+00
+    17    19 7.519345662e+03 9.363e-11 7.326e-11 6.11e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.298087     0.05060         5.89134
+bRedness        -0.089301     0.05338        -1.67283
+bPreterm_mv     -0.567369     0.06889        -8.23576
+bHosp1.2         0.005867     0.08520         0.06887
+bHosp0.9         0.017465     0.08445         0.20681
+bHosp0.3         0.335424     0.08840         3.79435
+bCost           -2.355904     0.05677       -41.50031
+bHospIntRisk     0.011094     0.11666         0.09510
+bOptIntLV        2.639171     0.10212        25.84377
+bOptIntRisk      0.425597     0.11205         3.79839
+gamma_age        0.132377     0.04780         2.76942
+gamma_sib       -0.094762     0.05292        -1.79068
+gamma_edu       -0.282005     0.08178        -3.44851
+gamma_inc       -0.001038     0.08008        -0.01296
+zeta_govTrust   -1.843777     0.15683       -11.75630
+zeta_vacImpt    -1.863665     0.15796       -11.79818
+zeta_vacSafe    -1.721731     0.15741       -10.93806
+zeta_vacEff     -1.732154     0.15294       -11.32558
+zeta_vacBlf     -1.919061     0.16816       -11.41230
+tau_govTrust1   -3.310382     0.21688       -15.26400
+tau_govTrust2   -1.227532     0.13773        -8.91237
+tau_govTrust3    3.145979     0.19919        15.79374
+tau_vacImpt1    -4.390684     0.31903       -13.76274
+tau_vacImpt2    -2.441909     0.19577       -12.47319
+tau_vacImpt3     1.737101     0.14516        11.96705
+tau_vacSafe1    -3.319579     0.23547       -14.09764
+tau_vacSafe2    -0.629631     0.12896        -4.88236
+tau_vacSafe3     4.157404     0.29416        14.13327
+tau_vacEff1     -4.234346     0.35415       -11.95633
+tau_vacEff2     -1.833590     0.16150       -11.35341
+tau_vacEff3      2.479481     0.17505        14.16439
+tau_vacBlf1     -3.361791     0.22653       -14.84064
+tau_vacBlf2     -0.552697     0.12929        -4.27474
+tau_vacBlf3      3.608028     0.25073        14.39016
+
+Final LL: -7519.3457
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -8.3836
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 14 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                              1     2      3      4
+Times chosen              28.00 55.00 374.00 201.00
+Percentage chosen overall  4.26  8.36  56.84  30.55
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1      2      3     4
+Times chosen              42.00 176.00 398.00 42.00
+Percentage chosen overall  6.38  26.75  60.49  6.38
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                              1     2      3     4
+Times chosen              24.00 88.00 417.00 129.0
+Percentage chosen overall  3.65 13.37  63.37  19.6
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3     4
+Times chosen              60.00 163.00 361.00 74.00
+Percentage chosen overall  9.12  24.77  54.86 11.25
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.536580904e+03
+     1     3 7.533908186e+03 3.546e-04 4.111e-04 1.07e-02   G   5.31e-01
+     2     4 7.533591921e+03 4.198e-05 8.557e-05 1.09e-02   G   0.00e+00
+     3     6 7.533321503e+03 3.589e-05 3.525e-05 5.70e-03  G-S  0.00e+00
+     4     7 7.533287575e+03 4.504e-06 5.082e-06 1.59e-03   S   0.00e+00
+     5     8 7.533269614e+03 2.384e-06 1.732e-06 8.01e-04   S   0.00e+00
+     6     9 7.533264717e+03 6.500e-07 9.847e-07 9.61e-04   G   0.00e+00
+     7    10 7.533258022e+03 8.888e-07 6.825e-07 6.92e-04   S   0.00e+00
+     8    11 7.533255809e+03 2.938e-07 2.231e-07 3.65e-04   S   0.00e+00
+     9    12 7.533254818e+03 1.315e-07 1.026e-07 2.86e-04   S   0.00e+00
+    10    13 7.533254384e+03 5.756e-08 4.378e-08 1.55e-04   S   0.00e+00
+    11    14 7.533254207e+03 2.356e-08 1.867e-08 1.03e-04   S   0.00e+00
+    12    15 7.533254152e+03 7.310e-09 6.079e-09 5.22e-05   S   0.00e+00
+    13    16 7.533254136e+03 2.157e-09 1.740e-09 3.12e-05   S   0.00e+00
+    14    17 7.533254131e+03 6.532e-10 5.129e-10 1.70e-05   S   0.00e+00
+    15    18 7.533254129e+03 1.973e-10 1.594e-10 1.49e-05   S   0.00e+00
+    16    19 7.533254129e+03 6.153e-11 4.787e-11 6.63e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.297757     0.05066         5.87707
+bRedness        -0.091467     0.05315        -1.72107
+bPreterm_mv     -0.568359     0.06900        -8.23676
+bHosp1.2         0.003231     0.08530         0.03788
+bHosp0.9         0.013659     0.08456         0.16154
+bHosp0.3         0.331427     0.08787         3.77197
+bCost           -2.357280     0.05669       -41.58119
+bHospIntRisk     0.017067     0.11644         0.14657
+bOptIntLV        2.675503     0.10197        26.23786
+bOptIntRisk      0.433309     0.11185         3.87414
+gamma_age        0.129125     0.04721         2.73509
+gamma_sib       -0.090975     0.05233        -1.73861
+gamma_edu       -0.275524     0.08406        -3.27754
+gamma_inc       -0.019766     0.08198        -0.24112
+zeta_govTrust   -1.834217     0.15318       -11.97390
+zeta_vacImpt    -1.777422     0.15754       -11.28247
+zeta_vacSafe    -1.717429     0.15655       -10.97064
+zeta_vacEff     -1.710723     0.15422       -11.09310
+zeta_vacBlf     -1.864005     0.16153       -11.53959
+tau_govTrust1   -3.276447     0.21703       -15.09706
+tau_govTrust2   -1.213712     0.13682        -8.87069
+tau_govTrust3    3.135299     0.19571        16.02048
+tau_vacImpt1    -4.124747     0.29756       -13.86171
+tau_vacImpt2    -2.480682     0.19377       -12.80190
+tau_vacImpt3     1.641423     0.14213        11.54841
+tau_vacSafe1    -3.463733     0.24339       -14.23095
+tau_vacSafe2    -0.633113     0.12986        -4.87520
+tau_vacSafe3     4.149789     0.28878        14.36996
+tau_vacEff1     -4.197879     0.34777       -12.07082
+tau_vacEff2     -1.889529     0.15888       -11.89258
+tau_vacEff3      2.419299     0.17465        13.85260
+tau_vacBlf1     -3.059330     0.20435       -14.97096
+tau_vacBlf2     -0.580811     0.12811        -4.53372
+tau_vacBlf3      3.477969     0.24595        14.14124
+
+Final LL: -7533.2541
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -9.078965
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 15 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                              1     2      3      4
+Times chosen              26.00 59.00 378.00 195.00
+Percentage chosen overall  3.95  8.97  57.45  29.64
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1      2      3     4
+Times chosen              42.00 178.00 395.00 43.00
+Percentage chosen overall  6.38  27.05  60.03  6.53
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                              1     2      3     4
+Times chosen              24.00 91.00 416.00 127.0
+Percentage chosen overall  3.65 13.83  63.22  19.3
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3     4
+Times chosen              51.00 173.00 358.00 76.00
+Percentage chosen overall  7.75  26.29  54.41 11.55
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.515993234e+03
+     1     2 7.514516257e+03 1.965e-04 2.089e-04 7.56e-03   G   1.36e+00
+     2     3 7.514025540e+03 6.530e-05 1.009e-04 1.19e-02   G   0.00e+00
+     3     4 7.513767267e+03 3.437e-05 3.637e-05 4.51e-03   S   0.00e+00
+     4     5 7.513698096e+03 9.206e-06 7.275e-06 1.56e-03   S   0.00e+00
+     5     6 7.513682552e+03 2.069e-06 2.259e-06 1.16e-03   G   0.00e+00
+     6     8 7.513670270e+03 1.635e-06 1.394e-06 1.01e-03  G-S  0.00e+00
+     7     9 7.513665895e+03 5.824e-07 5.188e-07 5.73e-04   S   0.00e+00
+     8    10 7.513663434e+03 3.275e-07 2.263e-07 3.27e-04   S   0.00e+00
+     9    11 7.513661798e+03 2.178e-07 1.792e-07 4.68e-04   S   0.00e+00
+    10    12 7.513661268e+03 7.052e-08 5.376e-08 2.44e-04   S   0.00e+00
+    11    13 7.513660990e+03 3.695e-08 2.826e-08 1.87e-04   S   0.00e+00
+    12    14 7.513660887e+03 1.380e-08 1.145e-08 8.51e-05   S   0.00e+00
+    13    15 7.513660861e+03 3.376e-09 2.924e-09 4.62e-05   S   0.00e+00
+    14    16 7.513660856e+03 6.853e-10 5.852e-10 1.67e-05   S   0.00e+00
+    15    17 7.513660855e+03 1.128e-10 1.075e-10 1.19e-05   S   0.00e+00
+    16    18 7.513660855e+03 3.161e-11 2.857e-11 5.32e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.297137     0.05049         5.88490
+bRedness        -0.090221     0.05311        -1.69885
+bPreterm_mv     -0.567754     0.06894        -8.23575
+bHosp1.2         0.003858     0.08514         0.04531
+bHosp0.9         0.014253     0.08446         0.16875
+bHosp0.3         0.332013     0.08827         3.76117
+bCost           -2.356148     0.05688       -41.42083
+bHospIntRisk     0.013783     0.11686         0.11794
+bOptIntLV        2.660144     0.10237        25.98462
+bOptIntRisk      0.428814     0.11196         3.83012
+gamma_age        0.152221     0.04559         3.33907
+gamma_sib       -0.107928     0.05236        -2.06111
+gamma_edu       -0.266025     0.08329        -3.19406
+gamma_inc       -0.005109     0.08210        -0.06223
+zeta_govTrust   -1.867927     0.15942       -11.71721
+zeta_vacImpt    -1.823752     0.16028       -11.37843
+zeta_vacSafe    -1.762138     0.15934       -11.05864
+zeta_vacEff     -1.760851     0.15557       -11.31839
+zeta_vacBlf     -1.901866     0.16287       -11.67710
+tau_govTrust1   -3.317067     0.22093       -15.01443
+tau_govTrust2   -1.221657     0.13979        -8.73925
+tau_govTrust3    3.167230     0.20051        15.79573
+tau_vacImpt1    -4.287264     0.33179       -12.92176
+tau_vacImpt2    -2.470517     0.19264       -12.82457
+tau_vacImpt3     1.728072     0.14667        11.78200
+tau_vacSafe1    -3.514159     0.25442       -13.81255
+tau_vacSafe2    -0.613839     0.13281        -4.62181
+tau_vacSafe3     4.169631     0.28734        14.51122
+tau_vacEff1     -4.274745     0.35584       -12.01324
+tau_vacEff2     -1.876088     0.16279       -11.52442
+tau_vacEff3      2.483278     0.17780        13.96649
+tau_vacBlf1     -3.369297     0.21713       -15.51759
+tau_vacBlf2     -0.586085     0.13147        -4.45808
+tau_vacBlf3      3.475373     0.23606        14.72223
+
+Final LL: -7513.6609
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -8.520322
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 16 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                              1     2      3      4
+Times chosen              26.00 57.00 376.00 199.00
+Percentage chosen overall  3.95  8.66  57.14  30.24
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1      2      3     4
+Times chosen              45.00 174.00 396.00 43.00
+Percentage chosen overall  6.84  26.44  60.18  6.53
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                             1     2      3      4
+Times chosen              25.0 89.00 416.00 128.00
+Percentage chosen overall  3.8 13.53  63.22  19.45
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3     4
+Times chosen              54.00 163.00 369.00 72.00
+Percentage chosen overall  8.21  24.77  56.08 10.94
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.522792720e+03
+     1     2 7.521817002e+03 1.297e-04 1.377e-04 4.51e-03   G   7.74e-01
+     2     3 7.521555155e+03 3.481e-05 4.117e-05 4.16e-03   G   1.01e-01
+     3     4 7.521534636e+03 2.728e-06 1.056e-05 3.85e-03   G   0.00e+00
+     4     5 7.521475420e+03 7.873e-06 7.429e-06 1.81e-03   S   0.00e+00
+     5     6 7.521468570e+03 9.107e-07 2.157e-06 1.37e-03   S   0.00e+00
+     6     7 7.521458376e+03 1.355e-06 1.065e-06 9.25e-04   S   0.00e+00
+     7     8 7.521455263e+03 4.139e-07 3.624e-07 7.25e-04   S   0.00e+00
+     8     9 7.521453648e+03 2.147e-07 1.517e-07 3.12e-04   S   0.00e+00
+     9    10 7.521452552e+03 1.457e-07 1.076e-07 3.44e-04   S   0.00e+00
+    10    11 7.521452097e+03 6.050e-08 4.602e-08 2.29e-04   S   0.00e+00
+    11    12 7.521451930e+03 2.221e-08 1.734e-08 1.13e-04   S   0.00e+00
+    12    13 7.521451869e+03 8.055e-09 6.682e-09 7.02e-05   S   0.00e+00
+    13    14 7.521451849e+03 2.691e-09 2.219e-09 3.88e-05   S   0.00e+00
+    14    15 7.521451843e+03 7.679e-10 6.661e-10 2.56e-05   S   0.00e+00
+    15    16 7.521451842e+03 1.532e-10 1.403e-10 1.02e-05   S   0.00e+00
+    16    17 7.521451842e+03 3.057e-11 2.470e-11 3.65e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.296901     0.05059        5.868488
+bRedness        -0.091667     0.05302       -1.728844
+bPreterm_mv     -0.568234     0.06901       -8.234648
+bHosp1.2      -6.7532e-04     0.08522       -0.007925
+bHosp0.9         0.009489     0.08459        0.112173
+bHosp0.3         0.328667     0.08802        3.734007
+bCost           -2.357468     0.05679      -41.514288
+bHospIntRisk     0.019895     0.11665        0.170551
+bOptIntLV        2.667981     0.10197       26.164112
+bOptIntRisk      0.438390     0.11169        3.925038
+gamma_age        0.139121     0.04757        2.924696
+gamma_sib       -0.092266     0.05256       -1.755507
+gamma_edu       -0.273388     0.08314       -3.288340
+gamma_inc       -0.025099     0.08228       -0.305027
+zeta_govTrust   -1.856658     0.15859      -11.707294
+zeta_vacImpt    -1.828560     0.16005      -11.424789
+zeta_vacSafe    -1.707487     0.15511      -11.008387
+zeta_vacEff     -1.694403     0.15563      -10.887539
+zeta_vacBlf     -1.889557     0.16720      -11.301441
+tau_govTrust1   -3.304789     0.21812      -15.151490
+tau_govTrust2   -1.217050     0.13818       -8.807909
+tau_govTrust3    3.157509     0.19952       15.825334
+tau_vacImpt1    -4.293154     0.34308      -12.513619
+tau_vacImpt2    -2.514282     0.20433      -12.305187
+tau_vacImpt3     1.694653     0.14498       11.689096
+tau_vacSafe1    -3.357875     0.24280      -13.830001
+tau_vacSafe2    -0.620133     0.12962       -4.784138
+tau_vacSafe3     4.103683     0.28285       14.508348
+tau_vacEff1     -4.147781     0.35788      -11.589917
+tau_vacEff2     -1.866841     0.16309      -11.446990
+tau_vacEff3      2.419632     0.17789       13.602173
+tau_vacBlf1     -3.259578     0.21926      -14.866604
+tau_vacBlf2     -0.644657     0.13339       -4.832768
+tau_vacBlf3      3.552887     0.24515       14.492516
+
+Final LL: -7521.4518
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -8.694987
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 17 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                              1     2     3      4
+Times chosen              29.00 55.00 379.0 195.00
+Percentage chosen overall  4.41  8.36  57.6  29.64
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1     2      3     4
+Times chosen              44.00 175.0 396.00 43.00
+Percentage chosen overall  6.69  26.6  60.18  6.53
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                             1     2      3      4
+Times chosen              27.0 88.00 417.00 126.00
+Percentage chosen overall  4.1 13.37  63.37  19.15
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3     4
+Times chosen              55.00 165.00 368.00 70.00
+Percentage chosen overall  8.36  25.08  55.93 10.64
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.509233757e+03
+     1     2 7.508710728e+03 6.965e-05 8.500e-05 5.46e-03   G   4.10e-01
+     2     3 7.508602628e+03 1.440e-05 1.587e-05 3.45e-03   G   0.00e+00
+     3     4 7.508582355e+03 2.700e-06 1.327e-05 2.45e-03   G   0.00e+00
+     4     6 7.508501651e+03 1.075e-05 8.505e-06 2.23e-03  G-S  0.00e+00
+     5     7 7.508479902e+03 2.897e-06 2.800e-06 1.25e-03   S   0.00e+00
+     6     8 7.508465651e+03 1.898e-06 1.371e-06 7.37e-04   S   0.00e+00
+     7     9 7.508456906e+03 1.165e-06 8.558e-07 7.03e-04   S   0.00e+00
+     8    10 7.508453535e+03 4.490e-07 3.685e-07 5.89e-04   S   0.00e+00
+     9    11 7.508452632e+03 1.203e-07 1.078e-07 3.33e-04   S   0.00e+00
+    10    12 7.508452256e+03 5.010e-08 3.656e-08 1.12e-04   S   0.00e+00
+    11    13 7.508452166e+03 1.198e-08 1.662e-08 8.12e-05   G   0.00e+00
+    12    14 7.508452157e+03 1.231e-09 1.887e-08 1.05e-04   G   0.00e+00
+    13    15 7.508452047e+03 1.463e-08 2.012e-08 6.31e-05   G   7.38e-01
+    14    16 7.508452025e+03 2.903e-09 2.395e-09 3.10e-05   S   0.00e+00
+    15    17 7.508452013e+03 1.525e-09 1.122e-09 1.52e-05   S   0.00e+00
+    16    18 7.508452008e+03 7.099e-10 6.132e-10 1.48e-05   S   0.00e+00
+    17    19 7.508452007e+03 1.592e-10 1.277e-10 8.80e-06   S   0.00e+00
+    18    20 7.508452006e+03 6.344e-11 4.943e-11 6.30e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.296674     0.05060         5.86313
+bRedness        -0.090497     0.05325        -1.69962
+bPreterm_mv     -0.567146     0.06899        -8.22116
+bHosp1.2         0.001841     0.08490         0.02169
+bHosp0.9         0.012577     0.08406         0.14962
+bHosp0.3         0.329032     0.08773         3.75045
+bCost           -2.355757     0.05686       -41.43340
+bHospIntRisk     0.016771     0.11636         0.14413
+bOptIntLV        2.639127     0.10011        26.36116
+bOptIntRisk      0.432473     0.11141         3.88169
+gamma_age        0.138370     0.04783         2.89279
+gamma_sib       -0.097701     0.05305        -1.84161
+gamma_edu       -0.276455     0.08436        -3.27725
+gamma_inc       -0.019647     0.08296        -0.23683
+zeta_govTrust   -1.860124     0.15603       -11.92148
+zeta_vacImpt    -1.850216     0.16170       -11.44242
+zeta_vacSafe    -1.754979     0.15858       -11.06661
+zeta_vacEff     -1.742205     0.15609       -11.16130
+zeta_vacBlf     -1.941489     0.16575       -11.71306
+tau_govTrust1   -3.297067     0.21924       -15.03888
+tau_govTrust2   -1.215493     0.13774        -8.82445
+tau_govTrust3    3.170295     0.19890        15.93915
+tau_vacImpt1    -4.151479     0.30971       -13.40445
+tau_vacImpt2    -2.505037     0.20345       -12.31292
+tau_vacImpt3     1.753649     0.14846        11.81252
+tau_vacSafe1    -3.431543     0.24998       -13.72726
+tau_vacSafe2    -0.613327     0.12993        -4.72050
+tau_vacSafe3     4.172689     0.28700        14.53889
+tau_vacEff1     -4.083210     0.33030       -12.36203
+tau_vacEff2     -1.862604     0.16659       -11.18045
+tau_vacEff3      2.491152     0.17924        13.89864
+tau_vacBlf1     -3.264254     0.22477       -14.52244
+tau_vacBlf2     -0.613798     0.12972        -4.73188
+tau_vacBlf3      3.660835     0.25442        14.38877
+
+Final LL: -7508.452
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -8.760279
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 18 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                              1     2      3      4
+Times chosen              29.00 59.00 375.00 195.00
+Percentage chosen overall  4.41  8.97  56.99  29.64
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1     2      3     4
+Times chosen              42.00 179.0 393.00 44.00
+Percentage chosen overall  6.38  27.2  59.73  6.69
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                             1     2      3     4
+Times chosen              27.0 88.00 416.00 127.0
+Percentage chosen overall  4.1 13.37  63.22  19.3
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3     4
+Times chosen              54.00 169.00 363.00 72.00
+Percentage chosen overall  8.21  25.68  55.17 10.94
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.511125439e+03
+     1     2 7.510528882e+03 7.942e-05 9.321e-05 4.90e-03   G   3.92e-01
+     2     3 7.510465495e+03 8.440e-06 2.678e-05 5.84e-03   G   0.00e+00
+     3     4 7.510308929e+03 2.085e-05 1.987e-05 3.06e-03   S   0.00e+00
+     4     5 7.510296154e+03 1.701e-06 3.293e-06 1.70e-03   S   0.00e+00
+     5     6 7.510283921e+03 1.629e-06 1.318e-06 9.75e-04   S   0.00e+00
+     6     7 7.510280191e+03 4.967e-07 3.893e-07 3.95e-04   S   0.00e+00
+     7     8 7.510278308e+03 2.507e-07 1.755e-07 3.42e-04   S   0.00e+00
+     8     9 7.510277170e+03 1.515e-07 1.193e-07 3.56e-04   S   0.00e+00
+     9    10 7.510276744e+03 5.678e-08 4.477e-08 1.97e-04   S   0.00e+00
+    10    11 7.510276527e+03 2.890e-08 2.185e-08 1.33e-04   S   0.00e+00
+    11    12 7.510276431e+03 1.280e-08 1.013e-08 9.06e-05   S   0.00e+00
+    12    13 7.510276403e+03 3.736e-09 3.284e-09 4.46e-05   S   0.00e+00
+    13    14 7.510276396e+03 8.867e-10 7.875e-10 2.35e-05   S   0.00e+00
+    14    15 7.510276395e+03 1.853e-10 1.674e-10 7.92e-06   S   0.00e+00
+    15    16 7.510276395e+03 2.416e-11 5.185e-11 9.18e-06   G   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.296937     0.05063         5.86516
+bRedness        -0.090696     0.05313        -1.70707
+bPreterm_mv     -0.567606     0.06905        -8.22048
+bHosp1.2         0.001854     0.08491         0.02183
+bHosp0.9         0.013961     0.08420         0.16582
+bHosp0.3         0.331564     0.08774         3.77877
+bCost           -2.357286     0.05705       -41.31962
+bHospIntRisk     0.015639     0.11647         0.13427
+bOptIntLV        2.659115     0.10177        26.12822
+bOptIntRisk      0.430229     0.11207         3.83898
+gamma_age        0.144483     0.04603         3.13912
+gamma_sib       -0.104719     0.05272        -1.98642
+gamma_edu       -0.271329     0.08388        -3.23461
+gamma_inc       2.707e-05     0.08267      3.2748e-04
+zeta_govTrust   -1.874332     0.15559       -12.04650
+zeta_vacImpt    -1.945033     0.16733       -11.62374
+zeta_vacSafe    -1.777703     0.16032       -11.08833
+zeta_vacEff     -1.757306     0.15448       -11.37560
+zeta_vacBlf     -2.012928     0.17075       -11.78878
+tau_govTrust1   -3.310819     0.21738       -15.23041
+tau_govTrust2   -1.219500     0.13619        -8.95460
+tau_govTrust3    3.160795     0.19800        15.96359
+tau_vacImpt1    -4.278092     0.33779       -12.66486
+tau_vacImpt2    -2.488117     0.20139       -12.35449
+tau_vacImpt3     1.798880     0.15105        11.90891
+tau_vacSafe1    -3.514406     0.26618       -13.20324
+tau_vacSafe2    -0.596166     0.13054        -4.56687
+tau_vacSafe3     4.143966     0.28533        14.52330
+tau_vacEff1     -4.099965     0.36040       -11.37617
+tau_vacEff2     -1.855343     0.16276       -11.39907
+tau_vacEff3      2.473669     0.17384        14.22933
+tau_vacBlf1     -3.359722     0.22640       -14.83954
+tau_vacBlf2     -0.587461     0.13321        -4.40996
+tau_vacBlf3      3.668720     0.25861        14.18657
+
+Final LL: -7510.2764
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -8.328946
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 19 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                              1     2      3      4
+Times chosen              30.00 54.00 378.00 196.00
+Percentage chosen overall  4.56  8.21  57.45  29.79
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1      2      3     4
+Times chosen              42.00 185.00 387.00 44.00
+Percentage chosen overall  6.38  28.12  58.81  6.69
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                             1     2      3   4
+Times chosen              23.0 90.00 420.00 125
+Percentage chosen overall  3.5 13.68  63.83  19
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3     4
+Times chosen              56.00 169.00 362.00 71.00
+Percentage chosen overall  8.51  25.68  55.02 10.79
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.524325018e+03
+     1     2 7.523213792e+03 1.477e-04 1.742e-04 4.65e-03   G   1.14e+00
+     2     3 7.522873812e+03 4.519e-05 5.067e-05 4.77e-03   G   1.90e-01
+     3     4 7.522781398e+03 1.228e-05 1.414e-05 3.47e-03   G   0.00e+00
+     4     5 7.522769704e+03 1.554e-06 1.243e-05 3.17e-03   G   0.00e+00
+     5     7 7.522695155e+03 9.910e-06 8.191e-06 2.06e-03  G-S  0.00e+00
+     6     8 7.522680288e+03 1.976e-06 2.014e-06 1.35e-03   S   0.00e+00
+     7     9 7.522668818e+03 1.525e-06 1.035e-06 8.04e-04   S   0.00e+00
+     8    10 7.522660514e+03 1.104e-06 8.595e-07 8.79e-04   S   0.00e+00
+     9    11 7.522658037e+03 3.292e-07 2.532e-07 5.50e-04   S   0.00e+00
+    10    12 7.522657121e+03 1.217e-07 1.038e-07 3.51e-04   S   0.00e+00
+    11    13 7.522656802e+03 4.247e-08 3.428e-08 1.54e-04   S   0.00e+00
+    12    14 7.522656684e+03 1.566e-08 1.270e-08 1.40e-04   S   0.00e+00
+    13    15 7.522656655e+03 3.840e-09 3.514e-09 5.18e-05   S   0.00e+00
+    14    16 7.522656651e+03 6.196e-10 5.783e-10 2.22e-05   S   0.00e+00
+    15    17 7.522656649e+03 1.530e-10 1.781e-10 1.06e-05   S   0.00e+00
+    16    18 7.522656649e+03 6.926e-11 4.486e-11 4.64e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.298606     0.05049         5.91454
+bRedness        -0.087894     0.05317        -1.65315
+bPreterm_mv     -0.567104     0.06897        -8.22301
+bHosp1.2         0.008234     0.08515         0.09670
+bHosp0.9         0.019194     0.08445         0.22729
+bHosp0.3         0.336880     0.08789         3.83288
+bCost           -2.354970     0.05654       -41.65416
+bHospIntRisk     0.009797     0.11682         0.08386
+bOptIntLV        2.639906     0.10359        25.48405
+bOptIntRisk      0.424034     0.11223         3.77826
+gamma_age        0.133719     0.04734         2.82440
+gamma_sib       -0.101032     0.05234        -1.93045
+gamma_edu       -0.276479     0.08311        -3.32669
+gamma_inc       -0.003183     0.08193        -0.03885
+zeta_govTrust   -1.827271     0.15790       -11.57198
+zeta_vacImpt    -1.813918     0.16218       -11.18449
+zeta_vacSafe    -1.716790     0.15179       -11.31019
+zeta_vacEff     -1.682379     0.15063       -11.16900
+zeta_vacBlf     -1.937416     0.16499       -11.74267
+tau_govTrust1   -3.288442     0.21881       -15.02870
+tau_govTrust2   -1.223924     0.13771        -8.88757
+tau_govTrust3    3.137506     0.19956        15.72201
+tau_vacImpt1    -4.090389     0.31231       -13.09716
+tau_vacImpt2    -2.518024     0.19877       -12.66807
+tau_vacImpt3     1.715866     0.14855        11.55110
+tau_vacSafe1    -3.465660     0.26188       -13.23353
+tau_vacSafe2    -0.538674     0.12950        -4.15953
+tau_vacSafe3     4.094284     0.27740        14.75923
+tau_vacEff1     -4.218437     0.35870       -11.76024
+tau_vacEff2     -1.881219     0.15976       -11.77527
+tau_vacEff3      2.453516     0.17891        13.71344
+tau_vacBlf1     -3.237462     0.21730       -14.89839
+tau_vacBlf2     -0.571096     0.12963        -4.40573
+tau_vacBlf3      3.634980     0.25616        14.19042
+
+Final LL: -7522.6566
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -8.928095
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 20 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                             1     2     3      4
+Times chosen              25.0 58.00 379.0 196.00
+Percentage chosen overall  3.8  8.81  57.6  29.79
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1      2      3     4
+Times chosen              41.00 178.00 396.00 43.00
+Percentage chosen overall  6.23  27.05  60.18  6.53
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                             1     2      3      4
+Times chosen              25.0 88.00 419.00 126.00
+Percentage chosen overall  3.8 13.37  63.68  19.15
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                             1      2      3     4
+Times chosen              50.0 165.00 372.00 71.00
+Percentage chosen overall  7.6  25.08  56.53 10.79
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.503843460e+03
+     1     2 7.502484330e+03 1.811e-04 2.094e-04 4.44e-03   G   1.45e+00
+     2     3 7.502043856e+03 5.871e-05 7.334e-05 4.40e-03   G   3.11e-01
+     3     4 7.501919293e+03 1.660e-05 1.248e-05 2.91e-03   S   0.00e+00
+     4     5 7.501844833e+03 9.926e-06 7.561e-06 3.03e-03   S   0.00e+00
+     5     6 7.501813814e+03 4.135e-06 3.243e-06 1.80e-03   S   0.00e+00
+     6     7 7.501802524e+03 1.505e-06 1.257e-06 7.84e-04   S   0.00e+00
+     7     8 7.501798423e+03 5.467e-07 4.418e-07 4.77e-04   S   0.00e+00
+     8     9 7.501796997e+03 1.901e-07 1.508e-07 2.83e-04   S   0.00e+00
+     9    10 7.501796587e+03 5.461e-08 4.776e-08 1.81e-04   S   0.00e+00
+    10    11 7.501796471e+03 1.557e-08 1.302e-08 1.07e-04   S   0.00e+00
+    11    12 7.501796426e+03 6.022e-09 4.402e-09 4.36e-05   S   0.00e+00
+    12    13 7.501796405e+03 2.791e-09 2.159e-09 5.57e-05   S   0.00e+00
+    13    14 7.501796397e+03 1.040e-09 7.441e-10 3.05e-05   S   0.00e+00
+    14    15 7.501796393e+03 5.118e-10 4.040e-10 2.53e-05   S   0.00e+00
+    15    16 7.501796392e+03 1.476e-10 1.252e-10 9.29e-06   S   0.00e+00
+    16    17 7.501796391e+03 4.531e-11 4.165e-11 4.24e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.299095     0.05045         5.92816
+bRedness        -0.091352     0.05316        -1.71859
+bPreterm_mv     -0.570336     0.06891        -8.27690
+bHosp1.2         0.002734     0.08528         0.03206
+bHosp0.9         0.013521     0.08447         0.16006
+bHosp0.3         0.333009     0.08803         3.78300
+bCost           -2.357444     0.05680       -41.50078
+bHospIntRisk     0.014303     0.11676         0.12249
+bOptIntLV        2.698906     0.10421        25.89902
+bOptIntRisk      0.431957     0.11203         3.85557
+gamma_age        0.138822     0.04752         2.92144
+gamma_sib       -0.100998     0.05222        -1.93423
+gamma_edu       -0.272113     0.08368        -3.25188
+gamma_inc       -0.007258     0.08227        -0.08822
+zeta_govTrust   -1.846108     0.15670       -11.78089
+zeta_vacImpt    -1.780462     0.15566       -11.43819
+zeta_vacSafe    -1.686283     0.15310       -11.01429
+zeta_vacEff     -1.687407     0.15351       -10.99234
+zeta_vacBlf     -1.903140     0.16292       -11.68112
+tau_govTrust1   -3.298795     0.21707       -15.19690
+tau_govTrust2   -1.217813     0.13746        -8.85961
+tau_govTrust3    3.140961     0.19813        15.85336
+tau_vacImpt1    -4.285762     0.31623       -13.55260
+tau_vacImpt2    -2.498706     0.19655       -12.71294
+tau_vacImpt3     1.688538     0.14486        11.65660
+tau_vacSafe1    -3.471881     0.25389       -13.67466
+tau_vacSafe2    -0.617279     0.12639        -4.88398
+tau_vacSafe3     4.072251     0.28098        14.49295
+tau_vacEff1     -4.132643     0.34447       -11.99717
+tau_vacEff2     -1.876497     0.16271       -11.53311
+tau_vacEff3      2.434728     0.17709        13.74824
+tau_vacBlf1     -3.385950     0.22925       -14.76956
+tau_vacBlf2     -0.670296     0.12744        -5.25984
+tau_vacBlf3      3.579621     0.25008        14.31414
+
+Final LL: -7501.7964
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -8.93945
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 21 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                              1     2     3      4
+Times chosen              26.00 54.00 381.0 197.00
+Percentage chosen overall  3.95  8.21  57.9  29.94
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1     2      3     4
+Times chosen              41.00 179.0 394.00 44.00
+Percentage chosen overall  6.23  27.2  59.88  6.69
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                              1     2      3     4
+Times chosen              24.00 87.00 420.00 127.0
+Percentage chosen overall  3.65 13.22  63.83  19.3
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3     4
+Times chosen              55.00 168.00 363.00 72.00
+Percentage chosen overall  8.36  25.53  55.17 10.94
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.509643970e+03
+     1     2 7.508993739e+03 8.659e-05 1.152e-04 4.90e-03   G   7.38e-01
+     2     3 7.508899999e+03 1.248e-05 2.754e-05 4.04e-03   G   5.20e-02
+     3     5 7.508838963e+03 8.129e-06 9.970e-06 2.13e-03  G-S  0.00e+00
+     4     6 7.508830284e+03 1.156e-06 1.660e-06 8.49e-04   S   0.00e+00
+     5     7 7.508827691e+03 3.452e-07 3.640e-07 4.64e-04   S   0.00e+00
+     6     8 7.508826908e+03 1.043e-07 9.720e-08 1.93e-04   S   0.00e+00
+     7     9 7.508826623e+03 3.793e-08 2.615e-08 1.02e-04   S   0.00e+00
+     8    10 7.508826463e+03 2.129e-08 1.850e-08 1.13e-04   S   0.00e+00
+     9    11 7.508826435e+03 3.708e-09 3.109e-09 5.28e-05   S   0.00e+00
+    10    12 7.508826423e+03 1.646e-09 1.275e-09 3.82e-05   S   0.00e+00
+    11    13 7.508826419e+03 5.816e-10 4.827e-10 2.22e-05   S   0.00e+00
+    12    14 7.508826418e+03 1.216e-10 1.015e-10 7.81e-06   S   0.00e+00
+    13    15 7.508826418e+03 2.642e-11 2.308e-11 4.41e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.299024     0.05063         5.90555
+bRedness        -0.091070     0.05329        -1.70895
+bPreterm_mv     -0.571683     0.06912        -8.27049
+bHosp1.2         0.001078     0.08514         0.01267
+bHosp0.9         0.011616     0.08437         0.13767
+bHosp0.3         0.330459     0.08805         3.75316
+bCost           -2.358591     0.05698       -41.39545
+bHospIntRisk     0.016420     0.11672         0.14068
+bOptIntLV        2.704054     0.10439        25.90244
+bOptIntRisk      0.434989     0.11191         3.88694
+gamma_age        0.132263     0.04797         2.75723
+gamma_sib       -0.096991     0.05239        -1.85140
+gamma_edu       -0.278887     0.08349        -3.34019
+gamma_inc       -0.006023     0.08173        -0.07370
+zeta_govTrust   -1.830349     0.15504       -11.80565
+zeta_vacImpt    -1.818783     0.15924       -11.42185
+zeta_vacSafe    -1.706863     0.15316       -11.14442
+zeta_vacEff     -1.665072     0.15417       -10.80052
+zeta_vacBlf     -1.892481     0.16586       -11.41011
+tau_govTrust1   -3.282456     0.21440       -15.31032
+tau_govTrust2   -1.215198     0.13707        -8.86581
+tau_govTrust3    3.125028     0.19728        15.84043
+tau_vacImpt1    -4.274923     0.34372       -12.43728
+tau_vacImpt2    -2.572221     0.20509       -12.54185
+tau_vacImpt3     1.702967     0.14362        11.85737
+tau_vacSafe1    -3.491410     0.25702       -13.58437
+tau_vacSafe2    -0.604540     0.12970        -4.66094
+tau_vacSafe3     4.067534     0.26965        15.08459
+tau_vacEff1     -4.147128     0.36373       -11.40181
+tau_vacEff2     -1.887588     0.16296       -11.58324
+tau_vacEff3      2.401784     0.17389        13.81180
+tau_vacBlf1     -3.233256     0.21112       -15.31492
+tau_vacBlf2     -0.593384     0.13094        -4.53175
+tau_vacBlf3      3.544580     0.24748        14.32279
+
+Final LL: -7508.8264
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -8.798602
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 22 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                              1     2      3      4
+Times chosen              31.00 57.00 375.00 195.00
+Percentage chosen overall  4.71  8.66  56.99  29.64
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1      2      3     4
+Times chosen              43.00 173.00 398.00 44.00
+Percentage chosen overall  6.53  26.29  60.49  6.69
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                             1     2      3      4
+Times chosen              23.0 93.00 414.00 128.00
+Percentage chosen overall  3.5 14.13  62.92  19.45
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3    4
+Times chosen              60.00 159.00 364.00 75.0
+Percentage chosen overall  9.12  24.16  55.32 11.4
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.541579999e+03
+     1     2 7.540284639e+03 1.718e-04 1.853e-04 4.15e-03   G   1.25e+00
+     2     3 7.539706839e+03 7.663e-05 8.209e-05 3.71e-03   G   4.47e-01
+     3     4 7.539536236e+03 2.263e-05 2.275e-05 4.05e-03   S   0.00e+00
+     4     5 7.539497710e+03 5.110e-06 4.631e-06 1.89e-03   S   0.00e+00
+     5     6 7.539479029e+03 2.478e-06 1.753e-06 9.95e-04   S   0.00e+00
+     6     7 7.539471085e+03 1.054e-06 1.004e-06 8.58e-04   S   0.00e+00
+     7     8 7.539470049e+03 1.373e-07 1.323e-07 2.50e-04   S   0.00e+00
+     8     9 7.539469413e+03 8.435e-08 5.323e-08 1.70e-04   S   0.00e+00
+     9    10 7.539468930e+03 6.406e-08 6.135e-08 2.80e-04   S   0.00e+00
+    10    11 7.539468898e+03 4.328e-09 4.438e-09 5.16e-05   S   0.00e+00
+    11    12 7.539468892e+03 7.140e-10 2.417e-09 4.78e-05   G   0.00e+00
+    12    13 7.539468881e+03 1.527e-09 1.252e-09 2.37e-05   S   0.00e+00
+    13    14 7.539468878e+03 3.467e-10 2.461e-10 1.46e-05   S   0.00e+00
+    14    15 7.539468877e+03 1.917e-10 1.523e-10 1.67e-05   S   0.00e+00
+    15    16 7.539468876e+03 6.738e-11 5.262e-11 8.27e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.299444     0.05047         5.93258
+bRedness        -0.087187     0.05331        -1.63532
+bPreterm_mv     -0.568287     0.06888        -8.25014
+bHosp1.2         0.005887     0.08531         0.06901
+bHosp0.9         0.015807     0.08473         0.18657
+bHosp0.3         0.333610     0.08804         3.78930
+bCost           -2.356288     0.05706       -41.29153
+bHospIntRisk     0.013169     0.11699         0.11257
+bOptIntLV        2.656604     0.10301        25.78915
+bOptIntRisk      0.427108     0.11190         3.81683
+gamma_age        0.142201     0.04779         2.97540
+gamma_sib       -0.094142     0.05244        -1.79512
+gamma_edu       -0.266665     0.08338        -3.19837
+gamma_inc       -0.021670     0.08192        -0.26453
+zeta_govTrust   -1.815022     0.15316       -11.85084
+zeta_vacImpt    -1.823134     0.15647       -11.65151
+zeta_vacSafe    -1.683643     0.14902       -11.29793
+zeta_vacEff     -1.698594     0.15198       -11.17649
+zeta_vacBlf     -1.825132     0.15690       -11.63216
+tau_govTrust1   -3.281359     0.21738       -15.09486
+tau_govTrust2   -1.218215     0.13553        -8.98866
+tau_govTrust3    3.121606     0.19579        15.94335
+tau_vacImpt1    -4.062284     0.31290       -12.98287
+tau_vacImpt2    -2.438044     0.19261       -12.65814
+tau_vacImpt3     1.732818     0.14631        11.84372
+tau_vacSafe1    -3.428109     0.24637       -13.91450
+tau_vacSafe2    -0.660619     0.13005        -5.07986
+tau_vacSafe3     4.046899     0.27510        14.71051
+tau_vacEff1     -4.280919     0.36474       -11.73686
+tau_vacEff2     -1.844908     0.16150       -11.42347
+tau_vacEff3      2.428008     0.17492        13.88084
+tau_vacBlf1     -3.055848     0.20626       -14.81586
+tau_vacBlf2     -0.618422     0.13082        -4.72744
+tau_vacBlf3      3.426890     0.22761        15.05566
+
+Final LL: -7539.4689
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -9.045835
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 23 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                             1     2      3      4
+Times chosen              27.0 60.00 372.00 199.00
+Percentage chosen overall  4.1  9.12  56.53  30.24
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1      2      3     4
+Times chosen              43.00 176.00 397.00 42.00
+Percentage chosen overall  6.53  26.75  60.33  6.38
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                             1     2      3   4
+Times chosen              27.0 85.00 421.00 125
+Percentage chosen overall  4.1 12.92  63.98  19
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3     4
+Times chosen              60.00 159.00 367.00 72.00
+Percentage chosen overall  9.12  24.16  55.78 10.94
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.531237889e+03
+     1     2 7.529919301e+03 1.751e-04 2.031e-04 5.53e-03   G   1.46e+00
+     2     3 7.529545161e+03 4.969e-05 7.286e-05 5.07e-03   G   3.73e-01
+     3     4 7.529471206e+03 9.822e-06 9.559e-06 3.86e-03   S   0.00e+00
+     4     5 7.529449649e+03 2.863e-06 2.695e-06 1.69e-03   S   0.00e+00
+     5     6 7.529441627e+03 1.065e-06 9.172e-07 8.74e-04   S   0.00e+00
+     6     7 7.529439837e+03 2.378e-07 2.197e-07 3.25e-04   S   0.00e+00
+     7     8 7.529439168e+03 8.883e-08 6.908e-08 1.19e-04   S   0.00e+00
+     8     9 7.529438846e+03 4.281e-08 3.173e-08 1.26e-04   S   0.00e+00
+     9    10 7.529438711e+03 1.792e-08 1.445e-08 9.59e-05   S   0.00e+00
+    10    11 7.529438660e+03 6.711e-09 5.123e-09 5.44e-05   S   0.00e+00
+    11    12 7.529438633e+03 3.613e-09 2.689e-09 3.71e-05   S   0.00e+00
+    12    13 7.529438621e+03 1.610e-09 1.265e-09 3.14e-05   S   0.00e+00
+    13    14 7.529438617e+03 4.730e-10 3.803e-10 1.39e-05   S   0.00e+00
+    14    15 7.529438616e+03 1.108e-10 9.611e-11 7.50e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.298317     0.05073         5.88096
+bRedness        -0.089993     0.05315        -1.69311
+bPreterm_mv     -0.569351     0.06923        -8.22361
+bHosp1.2         0.001933     0.08522         0.02268
+bHosp0.9         0.012722     0.08463         0.15031
+bHosp0.3         0.329982     0.08809         3.74599
+bCost           -2.357006     0.05685       -41.46150
+bHospIntRisk     0.016217     0.11659         0.13910
+bOptIntLV        2.717300     0.10436        26.03680
+bOptIntRisk      0.434783     0.11172         3.89182
+gamma_age        0.137303     0.04766         2.88098
+gamma_sib       -0.101511     0.05253        -1.93251
+gamma_edu       -0.280858     0.08315        -3.37783
+gamma_inc        0.005038     0.08122         0.06203
+zeta_govTrust   -1.832074     0.15328       -11.95285
+zeta_vacImpt    -1.828450     0.15786       -11.58278
+zeta_vacSafe    -1.716768     0.15443       -11.11670
+zeta_vacEff     -1.719831     0.15591       -11.03071
+zeta_vacBlf     -1.826376     0.16055       -11.37541
+tau_govTrust1   -3.281637     0.21700       -15.12300
+tau_govTrust2   -1.211979     0.13538        -8.95253
+tau_govTrust3    3.121619     0.19618        15.91211
+tau_vacImpt1    -4.243030     0.32581       -13.02292
+tau_vacImpt2    -2.422936     0.19656       -12.32675
+tau_vacImpt3     1.685344     0.14224        11.84884
+tau_vacSafe1    -3.423206     0.25176       -13.59734
+tau_vacSafe2    -0.617622     0.12671        -4.87419
+tau_vacSafe3     4.138225     0.29101        14.22006
+tau_vacEff1     -4.069972     0.34068       -11.94673
+tau_vacEff2     -1.897057     0.15993       -11.86178
+tau_vacEff3      2.469046     0.17950        13.75525
+tau_vacBlf1     -3.034488     0.20246       -14.98792
+tau_vacBlf2     -0.629281     0.12634        -4.98067
+tau_vacBlf3      3.472209     0.24289        14.29514
+
+Final LL: -7529.4386
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -9.04795
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 24 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                              1     2      3      4
+Times chosen              28.00 56.00 378.00 196.00
+Percentage chosen overall  4.26  8.51  57.45  29.79
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1      2      3     4
+Times chosen              46.00 173.00 397.00 42.00
+Percentage chosen overall  6.99  26.29  60.33  6.38
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                              1     2      3     4
+Times chosen              24.00 93.00 414.00 127.0
+Percentage chosen overall  3.65 14.13  62.92  19.3
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3     4
+Times chosen              55.00 167.00 365.00 71.00
+Percentage chosen overall  8.36  25.38  55.47 10.79
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.517577432e+03
+     1     2 7.516097597e+03 1.969e-04 2.257e-04 4.59e-03   G   1.55e+00
+     2     3 7.515633960e+03 6.169e-05 7.677e-05 5.36e-03   G   3.31e-01
+     3     4 7.515552485e+03 1.084e-05 1.503e-05 3.96e-03   S   0.00e+00
+     4     5 7.515498392e+03 7.198e-06 6.525e-06 1.47e-03   S   0.00e+00
+     5     6 7.515469129e+03 3.894e-06 2.900e-06 1.19e-03   S   0.00e+00
+     6     7 7.515450460e+03 2.484e-06 1.836e-06 1.10e-03   S   0.00e+00
+     7     8 7.515440648e+03 1.306e-06 1.026e-06 1.06e-03   S   0.00e+00
+     8     9 7.515436522e+03 5.490e-07 4.121e-07 6.34e-04   S   0.00e+00
+     9    10 7.515434742e+03 2.368e-07 1.879e-07 4.12e-04   S   0.00e+00
+    10    11 7.515434263e+03 6.374e-08 5.512e-08 1.22e-04   S   0.00e+00
+    11    12 7.515434155e+03 1.434e-08 1.361e-08 1.16e-04   S   0.00e+00
+    12    13 7.515434131e+03 3.271e-09 2.906e-09 5.52e-05   S   0.00e+00
+    13    14 7.515434125e+03 8.066e-10 7.447e-10 1.80e-05   S   0.00e+00
+    14    15 7.515434123e+03 2.328e-10 1.862e-10 1.20e-05   S   0.00e+00
+    15    16 7.515434122e+03 9.676e-11 7.832e-11 1.00e-05   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.297981     0.05049         5.90121
+bRedness        -0.089443     0.05312        -1.68386
+bPreterm_mv     -0.567233     0.06895        -8.22620
+bHosp1.2         0.008242     0.08517         0.09677
+bHosp0.9         0.018931     0.08441         0.22426
+bHosp0.3         0.337060     0.08811         3.82534
+bCost           -2.355847     0.05675       -41.51388
+bHospIntRisk     0.009927     0.11693         0.08490
+bOptIntLV        2.647028     0.10316        25.65911
+bOptIntRisk      0.424517     0.11222         3.78302
+gamma_age        0.139548     0.04792         2.91209
+gamma_sib       -0.087642     0.05270        -1.66290
+gamma_edu       -0.269153     0.08332        -3.23043
+gamma_inc       -0.018781     0.08215        -0.22862
+zeta_govTrust   -1.837632     0.15481       -11.87049
+zeta_vacImpt    -1.849315     0.16114       -11.47631
+zeta_vacSafe    -1.753205     0.16380       -10.70358
+zeta_vacEff     -1.775159     0.15949       -11.13045
+zeta_vacBlf     -1.876566     0.15917       -11.78983
+tau_govTrust1   -3.309569     0.21890       -15.11918
+tau_govTrust2   -1.225012     0.13744        -8.91309
+tau_govTrust3    3.136731     0.19756        15.87698
+tau_vacImpt1    -4.230326     0.34649       -12.20901
+tau_vacImpt2    -2.520438     0.20149       -12.50873
+tau_vacImpt3     1.732179     0.14682        11.79801
+tau_vacSafe1    -3.383831     0.25125       -13.46799
+tau_vacSafe2    -0.625433     0.13216        -4.73229
+tau_vacSafe3     4.192907     0.29988        13.98200
+tau_vacEff1     -4.309713     0.37429       -11.51448
+tau_vacEff2     -1.855223     0.16147       -11.48969
+tau_vacEff3      2.494505     0.17902        13.93388
+tau_vacBlf1     -3.241967     0.21695       -14.94304
+tau_vacBlf2     -0.594866     0.13150        -4.52381
+tau_vacBlf3      3.556500     0.23969        14.83780
+
+Final LL: -7515.4341
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -8.421338
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+
+===========================================================================
+
+Running model for imputation 25 
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+All checks on database completed.
+Generating inter-individual draws . Done
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_govTrust" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_govTrust", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_govTrust:
+                             1      2      3     4
+Times chosen              52.0 115.00 401.00 90.00
+Percentage chosen overall  7.9  17.48  60.94 13.68
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacImpt" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacImpt", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacImpt:
+                              1     2      3      4
+Times chosen              28.00 58.00 375.00 197.00
+Percentage chosen overall  4.26  8.81  56.99  29.94
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacSafe" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacSafe", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacSafe:
+                              1     2      3     4
+Times chosen              42.00 177.0 396.00 43.00
+Percentage chosen overall  6.38  26.9  60.18  6.53
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacEff" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacEff", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacEff:
+                             1     2      3   4
+Times chosen              25.0 84.00 424.00 125
+Percentage chosen overall  3.8 12.77  64.44  19
+Apollo found a model component of type OL without a componentName. The
+  name was set to "indic_vacBlf" by default.
+INFORMATION: No coding provided for Ordered model component
+  "indic_vacBlf", so assuming outcomeOrdered goes from 1 to 4 
+
+Overview of choices for OL model component indic_vacBlf:
+                              1      2      3     4
+Times chosen              58.00 160.00 366.00 74.00
+Percentage chosen overall  8.81  24.32  55.62 11.25
+Apollo found a model component of type MNL without a componentName. The
+  name was set to "choice" by default.
+
+Overview of choices for MNL model component choice:
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 7.525881711e+03
+     1     2 7.524376625e+03 2.000e-04 2.299e-04 4.46e-03   G   1.59e+00
+     2     3 7.523877325e+03 6.636e-05 7.805e-05 4.03e-03   G   3.16e-01
+     3     4 7.523752738e+03 1.656e-05 1.287e-05 3.00e-03   S   0.00e+00
+     4     5 7.523677837e+03 9.955e-06 7.360e-06 2.03e-03   S   0.00e+00
+     5     6 7.523635579e+03 5.617e-06 4.417e-06 1.64e-03   S   0.00e+00
+     6     7 7.523619562e+03 2.129e-06 1.700e-06 1.09e-03   S   0.00e+00
+     7     8 7.523613331e+03 8.283e-07 6.663e-07 6.43e-04   S   0.00e+00
+     8     9 7.523610858e+03 3.286e-07 2.629e-07 3.22e-04   S   0.00e+00
+     9    10 7.523609865e+03 1.321e-07 1.066e-07 2.41e-04   S   0.00e+00
+    10    11 7.523609538e+03 4.343e-08 3.551e-08 1.26e-04   S   0.00e+00
+    11    12 7.523609452e+03 1.142e-08 1.029e-08 9.16e-05   S   0.00e+00
+    12    13 7.523609430e+03 2.999e-09 2.726e-09 5.48e-05   S   0.00e+00
+    13    14 7.523609423e+03 9.112e-10 6.917e-10 1.77e-05   S   0.00e+00
+    14    15 7.523609420e+03 3.524e-10 2.869e-10 1.62e-05   S   0.00e+00
+    15    16 7.523609419e+03 1.076e-10 8.071e-11 4.99e-06   S   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                 Estimate     BHHH se BHH t-ratio (0)
+bPreg_mv         0.298285     0.05058         5.89785
+bRedness        -0.090866     0.05303        -1.71331
+bPreterm_mv     -0.569872     0.06914        -8.24229
+bHosp1.2         0.003244     0.08547         0.03796
+bHosp0.9         0.014489     0.08459         0.17128
+bHosp0.3         0.333469     0.08827         3.77780
+bCost           -2.357274     0.05682       -41.48626
+bHospIntRisk     0.012708     0.11682         0.10878
+bOptIntLV        2.695707     0.10339        26.07222
+bOptIntRisk      0.431585     0.11208         3.85055
+gamma_age        0.132369     0.04664         2.83831
+gamma_sib       -0.096389     0.05184        -1.85919
+gamma_edu       -0.281033     0.08343        -3.36839
+gamma_inc       -0.008909     0.08226        -0.10830
+zeta_govTrust   -1.823641     0.15553       -11.72549
+zeta_vacImpt    -1.783390     0.15761       -11.31523
+zeta_vacSafe    -1.678354     0.15406       -10.89410
+zeta_vacEff     -1.654195     0.15228       -10.86276
+zeta_vacBlf     -1.860264     0.15975       -11.64459
+tau_govTrust1   -3.277602     0.21736       -15.07900
+tau_govTrust2   -1.213952     0.13725        -8.84495
+tau_govTrust3    3.126116     0.19670        15.89243
+tau_vacImpt1    -4.145300     0.30928       -13.40303
+tau_vacImpt2    -2.436364     0.19750       -12.33603
+tau_vacImpt3     1.686153     0.14315        11.77889
+tau_vacSafe1    -3.440428     0.24480       -14.05427
+tau_vacSafe2    -0.630328     0.13085        -4.81710
+tau_vacSafe3     4.070562     0.28642        14.21181
+tau_vacEff1     -4.090801     0.34331       -11.91570
+tau_vacEff2     -1.924798     0.16224       -11.86359
+tau_vacEff3      2.424371     0.17515        13.84132
+tau_vacBlf1     -3.126802     0.20842       -15.00219
+tau_vacBlf2     -0.645826     0.13028        -4.95716
+tau_vacBlf3      3.478525     0.24129        14.41631
+
+Final LL: -7523.6094
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum eigenvalue: -9.358574
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+      ======================================================================================
+     Resource Usage on 2026-09-02 18:40:27.216449:
+     JobId: 996037.venus01  				 Project: jpn_dce 
+     Submission Host: atlas9-c01 
+     Exit Status: 0
+     NCPUs Requested: 12 				 NCPUs Used: 12
+     Memory Requested: 40gb 				 Memory Used: 6947072kb 
+     Vmem Used: 32516728kb
+     CPU Time Used: 08:50:39 
+     Walltime requested: 240:00:00 			 Walltime Used: 02:18:44
+     Submit Time:  Wed Sep  2 16:21:39 2026 		 Start Time: Wed Sep  2 16:21:43 2026 
+     End Time: Wed Sep  2 18:40:27 2026 
+     Execution Nodes Used: (cnode-33-43-23:ncpus=12)
+     ======================================================================================

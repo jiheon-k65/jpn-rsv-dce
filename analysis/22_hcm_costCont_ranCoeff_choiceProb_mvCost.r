@@ -1,6 +1,6 @@
 # ===========================================================================
-# Title: 21_hcm_costCont_ranCoeff_choiceProb_mvCost.r
-# Date: 2026-07-23
+# Title: 22_hcm_costCont_ranCoeff_choiceProb_mvCost.r
+# Date: 2026-09-02
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -13,14 +13,14 @@ library(dplyr)
 library(MASS)
 
 # ------------------------------------------------------------------------
-# SECTION 2: Load results from 18.2_hcm_costCont_ranCoeff.r
+# SECTION 2: Load results from 19.2_hcm_costCont_ranCoeff.r
 # ------------------------------------------------------------------------
 
 # Load data from WD
 data <- read.csv(here("data", "jpn_dataset_subset_imputed.csv"), header = TRUE)
 
-# Load results from 18.2_hcm_costCont_ranCoeff.r
-results <- readRDS(here("output", "18.2_hcm_costCont_ranCoeff_results.rds"))
+# Load results from 19.2_hcm_costCont_ranCoeff.r
+results <- readRDS(here("output", "19.2_hcm_costCont_ranCoeff_results.rds"))
 est_list <- results$est
 varcov_list <- results$varcov
 
@@ -88,8 +88,8 @@ for (m in 1:M) {
         bHosp0.3 <- theta[s, "bHosp0.3"]
         bRedness <- theta[s, "bRedness"]
         bHospIntRisk <- theta[s, "bHospIntRisk"]
-        bOptIntRisk <- theta[s, "bOptIntRisk"]
         bOptIntLV <- theta[s, "bOptIntLV"]
+        bOptIntRisk <- theta[s, "bOptIntRisk"]
 
         # Simulate bCost for each respondent
         mu_bCost <- theta[s, "mu_bCost"]
@@ -107,8 +107,8 @@ for (m in 1:M) {
         bPreterm_mv <- rnorm(N, mean = mu_bPreterm_mv, sd = abs(sigma_bPreterm_mv))
 
         # Simulate alpha for each respondent
-        sigma_ascOpt <- theta[s, "sigma_ascOpt"]
-        alpha <- rnorm(N, mean = 0, sd = abs(sigma_ascOpt))
+        sigma_pdt <- theta[s, "sigma_pdt"]
+        alpha <- rnorm(N, mean = 0, sd = abs(sigma_pdt))
 
         # Simulate LV for each respondent
         gamma_age <- theta[s, "gamma_age"]
@@ -137,17 +137,18 @@ for (m in 1:M) {
                 (bHosp1.2 + bHospIntRisk * risk) * mv_hosp1.2 +
                 (bHosp0.9 + bHospIntRisk * risk) * mv_hosp0.9 +
                 (bHosp0.3 + bHospIntRisk * risk) * mv_hosp0.3 +
-                bCost * mv_cost
+                bCost * mv_cost +
+                alpha
             )
             V_mab <- (
                 bRedness * mab_redness +
                 (bHosp1.2 + bHospIntRisk * risk) * mab_hosp1.2 +
                 (bHosp0.9 + bHospIntRisk * risk) * mab_hosp0.9 +
                 (bHosp0.3 + bHospIntRisk * risk) * mab_hosp0.3 +
-                bCost * mab_cost
+                bCost * mab_cost +
+                alpha
             )
             V_opt <- (
-                alpha +
                 bOptIntRisk * risk +
                 bOptIntLV* LV
             )

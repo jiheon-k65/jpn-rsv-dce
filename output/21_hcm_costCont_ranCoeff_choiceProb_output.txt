@@ -1,19 +1,19 @@
 ===========================================================================
-Title: 20_hcm_costCont_ranCoeff_choiceProb_output.txt
-Date: 2026-07-22
+Title: 21_hcm_costCont_ranCoeff_choiceProb_output.txt
+Date: 2026-09-02
 ===========================================================================
 
 Alternative-specific choice probabilities:
   Alternative    Mean Lower_UI Upper_UI
-1          MV 0.29657  0.27334  0.32056
-2         mAb 0.17491  0.15432  0.19734
-3         Opt 0.52852  0.49837  0.55821
+1          MV 0.29669  0.27352  0.32077
+2         mAb 0.17482  0.15445  0.19664
+3         Opt 0.52849  0.49887  0.55767
 
 Alternative-specific choice probability variances:
   Alternative Var_byN Var_byS Var_byM
-1          MV 0.06428 0.06300 0.06301
-2         mAb 0.04115 0.04100 0.04101
-3         Opt 0.14555 0.14286 0.14288
+1          MV 0.06432 0.06304 0.06305
+2         mAb 0.04113 0.04098 0.04098
+3         Opt 0.14556 0.14286 0.14288
 
 Var_byN: Preference heterogeneity
 Var_byS: Parameter uncertainty

@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 17.1_hcm_costCont.r
-# Date: 2026-07-22
+# Date: 2026-09-02
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -50,7 +50,6 @@ database <- data[data$rptTask != 1, ]
 
 # List all parameters & starting values
 apollo_beta <- c(
-    alpha = 0,
     bPreg_mv = 0,
     bRedness = 0 ,
     bPreterm_mv = 0,
@@ -59,8 +58,8 @@ apollo_beta <- c(
     bHosp0.3 = 0,
     bCost = 0,
     bHospIntRisk = 0,
-    bOptIntRisk = 0,
     bOptIntLV = 1,
+    bOptIntRisk = 0,
     gamma_age = 0,
     gamma_sib = 0,
     gamma_edu = 0,
@@ -197,7 +196,6 @@ apollo_probabilities <- function(apollo_beta, apollo_inputs, functionality = "es
         bCost * mab_cost
     )
     V[["opt"]] <- (
-        alpha +
         bOptIntLV * LV +
         bOptIntRisk * risk
     )
