@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 21_hcm_costCont_ranCoeff_choiceProb.r
-# Date: 2026-09-02
+# Date: 2026-09-04
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -34,16 +34,16 @@ S <- 500 # No. of simulations
 
 # Attribute levels for each alternative
 risk <- 0
-mv_hosp1.2 <- 0
-mv_hosp0.9 <- 1
+mv_hosp1.2 <- 0 # 50% efficacy for MV
+mv_hosp0.9 <- 0
 mv_hosp0.3 <- 0
 mv_cost <- 0.24 # 24,000 JPY for MV
 mv_redness <- 0
 mv_preterm <- 0
 mv_preg <- 0
 mab_hosp1.2 <- 0
-mab_hosp0.9 <- 0
-mab_hosp0.3 <- 1
+mab_hosp0.9 <- 1 # 70% efficacy for mAb
+mab_hosp0.3 <- 0
 mab_cost <- 0.45 # 45,000 JPY for mAb
 mab_redness <- 0
 
@@ -162,7 +162,7 @@ for (m in 1:M) {
 sink(here("output", "21_hcm_costCont_ranCoeff_choiceProb_output.txt"))
 cat("===========================================================================\n")
 cat("Title: 21_hcm_costCont_ranCoeff_choiceProb_output.txt\n")
-cat("Date: 2026-09-02\n")
+cat("Date: 2026-09-04\n")
 cat("===========================================================================\n")
 
 # Calculate means across respondents (Dim: S x M)
