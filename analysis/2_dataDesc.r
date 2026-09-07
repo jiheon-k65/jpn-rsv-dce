@@ -34,10 +34,13 @@ print(summary(df))
 # SECTION 2: Drop unused columns
 # ===========================================================================
 
+summ_cat(df, "chiiki")
+
 cols_toDrop <- c(
     "chiiki", "marriage", "job", "family", "home",
     "license", "car"
 )
+
 df <- df %>% select(-all_of(cols_toDrop))
 cat("\nDropped columns:", cols_toDrop, "\n")
 
@@ -54,6 +57,7 @@ summ_cat(df, cat_cols)
 
 cont_cols <- c("age", "gestAge")
 summ_cont(df, cont_cols)
+
 summ_cont(df, "time", iqr = TRUE)
 
 query_age(df$age)

@@ -117,6 +117,56 @@ Summary of variables:
  Max.   :2.000   Max.   :1.000   Max.   :1.000  
                                                 
 
+Summary of categorical variable(s):
+ Variable Category Count Percentage
+   chiiki        1    38       3.80
+   chiiki        2     6       0.60
+   chiiki        3     4       0.40
+   chiiki        4    24       2.40
+   chiiki        5     5       0.50
+   chiiki        6     7       0.70
+   chiiki        7     9       0.90
+   chiiki        8    18       1.80
+   chiiki        9    12       1.20
+   chiiki       10    15       1.50
+   chiiki       11    55       5.50
+   chiiki       12    50       5.00
+   chiiki       13   121      12.10
+   chiiki       14    71       7.10
+   chiiki       15     8       0.80
+   chiiki       16    13       1.30
+   chiiki       17    12       1.20
+   chiiki       18     4       0.40
+   chiiki       19     7       0.70
+   chiiki       20    22       2.20
+   chiiki       21    19       1.90
+   chiiki       22    31       3.10
+   chiiki       23    80       8.00
+   chiiki       24     9       0.90
+   chiiki       25    12       1.20
+   chiiki       26    22       2.20
+   chiiki       27    85       8.50
+   chiiki       28    35       3.50
+   chiiki       29    11       1.10
+   chiiki       30     6       0.60
+   chiiki       31     6       0.60
+   chiiki       32     7       0.70
+   chiiki       33    12       1.20
+   chiiki       34    26       2.60
+   chiiki       35     9       0.90
+   chiiki       36     5       0.50
+   chiiki       37    10       1.00
+   chiiki       38    12       1.20
+   chiiki       39     6       0.60
+   chiiki       40    44       4.40
+   chiiki       41     6       0.60
+   chiiki       42     8       0.80
+   chiiki       43    10       1.00
+   chiiki       44     6       0.60
+   chiiki       45     1       0.10
+   chiiki       46    10       1.00
+   chiiki       47    11       1.10
+
 Dropped columns: chiiki marriage job family home license car 
 
 Summary of categorical variable(s):
