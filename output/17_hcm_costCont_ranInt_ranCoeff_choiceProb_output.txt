@@ -1,0 +1,10 @@
+===========================================================================
+Title: 17_hcm_costCont_ranInt_ranCoeff_choiceProb_output.txt
+Date: 2026-09-10
+===========================================================================
+
+Alternative-specific choice probabilities:
+  Alternative  Mean Lower_UI Upper_UI
+1          MV 0.308    0.271    0.345
+2         mAb 0.150    0.126    0.175
+3         Opt 0.542    0.500    0.586

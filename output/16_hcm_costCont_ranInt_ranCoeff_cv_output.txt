@@ -1,0 +1,11 @@
+===========================================================================
+Title: 16_hcm_costCont_ranInt_ranCoeff_cv_output.txt
+Date: 2026-09-10
+===========================================================================
+
+Alternative-specific compensating variations (CVs) in JPY:
+  Alternative Median    Mean      Q1      Q3
+1          MV 12,116 170,800 -10,012 101,614
+2         mAb 11,637 164,676  -9,844  98,029
+
+Note: median & IQR are calculated across respondents, then averaged across simulations & imputations.

@@ -1,0 +1,12 @@
+===========================================================================
+Title: 15_hcm_costCont_ranInt_ranCoeff_wtp_output.txt
+Date: 2026-09-10
+===========================================================================
+
+Willingness-to-pay (WTP) for attribute changes in JPY:
+  Attribute  Median    Mean      Q1     Q3
+1      Preg   3,666  47,434  -1,771 27,279
+2   Preterm -12,786 -91,439 -51,326 -2,809
+3   Hosp0.3  10,949  60,325   3,180 37,902
+
+Note: median & IQR are calculated across respondents, then averaged across simulations & imputations.
