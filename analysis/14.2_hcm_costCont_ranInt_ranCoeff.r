@@ -1,6 +1,6 @@
 # ===========================================================================
-# Title: 19.2_hcm_costCont_ranCoeff.r
-# Date: 2026-09-02
+# Title: 14.2_hcm_costCont_ranInt_ranCoeff.r
+# Date: 2026-09-10
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -26,11 +26,11 @@ apollo_initialise()
 
 # Set core controls
 apollo_control <- list(
-    modelDescr = ("HCM; continuous cost & random coefficients (imputed)"),
-    modelName = "19.2_hcm_costCont_ranCoeff",
+    modelDescr = ("HCM; continuous cost, random intercept & random coefficients (imputed)"),
+    modelName = "14.2_hcm_costCont_ranInt_ranCoeff",
     indivID = "id",
     outputDirectory = here("output"),
-    nCores = 12
+    nCores = 8
 )
 
 # ------------------------------------------------------------------------
@@ -65,8 +65,8 @@ apollo_beta <- c(
     bHosp1.2 = 0,
     bHosp0.9 = 0,
     bHosp0.3 = 0,
-    mu_bCost = 0,
-    sigma_bCost = 0,
+    ln_mu_bCost = 0,
+    ln_sigma_bCost = 0,
     bHospIntRisk = 0,
     bOptIntLV = 1,
     bOptIntRisk = 0,
@@ -133,7 +133,7 @@ apollo_randCoeff <- function(apollo_beta, apollo_inputs) {
     randcoeff[["alpha"]] <- sigma_pdt * draws_pdt # Random intercept for product (mimics nested logit)
     randcoeff[["bPreg_mv"]] <- mu_bPreg_mv + sigma_bPreg_mv * draws_bPreg
     randcoeff[["bPreterm_mv"]] <- mu_bPreterm_mv + sigma_bPreterm_mv * draws_bPreterm
-    randcoeff[["bCost"]] <- mu_bCost + sigma_bCost * draws_bCost
+    randcoeff[["bCost"]] <- - exp(ln_mu_bCost + ln_sigma_bCost * draws_bCost) # Lognormal (ensures -ve coefficient)
     return(randcoeff)
 }
 
@@ -191,7 +191,7 @@ apollo_probabilities <- function(apollo_beta, apollo_inputs, functionality = "es
     P[["indic_vacBlf"]] <- apollo_ol(ol_settings5, functionality)
     P[["indic_vacBlf"]] <- apollo_panelProd(P[["indic_vacBlf"]], apollo_inputs, functionality)
 
-    # Likleihood of choices
+    # Likelihood of choices
     V <- list()
     V[["mv"]] <- (
         bPreg_mv * mv_preg +
@@ -288,7 +288,7 @@ saveRDS(
         est = est_list,
         varcov = varcov_list
     ),
-    here("output", "19.2_hcm_costCont_ranCoeff_results.rds")
+    here("output", "14.2_hcm_costCont_ranInt_ranCoeff_results.rds")
 )
 
 # ------------------------------------------------------------------------
@@ -296,10 +296,10 @@ saveRDS(
 # ------------------------------------------------------------------------
 
 # Write output to text file
-sink(here("output", "19.2_hcm_costCont_ranCoeff_output.txt"))
+sink(here("output", "14.2_hcm_costCont_ranInt_ranCoeff_output.txt"))
 cat("===========================================================================\n")
-cat("Title: 19.2_hcm_costCont_ranCoeff_output.txt\n")
-cat("Date: 2026-09-02\n")
+cat("Title: 14.2_hcm_costCont_ranInt_ranCoeff_output.txt\n")
+cat("Date: 2026-09-10\n")
 cat("===========================================================================\n")
 
 pool_coeff(est_list, varcov_list, M)

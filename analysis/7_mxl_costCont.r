@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 7_mxl_costCont
-# Date: 2026-07-20
+# Date: 2026-09-10
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -63,8 +63,8 @@ apollo_beta <- c(
     sigma_bHosp0.9 = 0,
     mu_bHosp0.3 = 0,
     sigma_bHosp0.3 = 0,
-    mu_bCost = 0,
-    sigma_bCost = 0,
+    ln_mu_bCost = 0,
+    ln_sigma_bCost = 0,
     bOptIntRisk = 0, # Assumed fixed effect
     bHospIntRisk = 0 # Assumed fixed effect
 )
@@ -106,7 +106,7 @@ apollo_randCoeff <- function(apollo_beta, apollo_inputs) {
     randcoeff[["bHosp1.2"]] <- mu_bHosp1.2 + sigma_bHosp1.2 * draws_bHosp1.2
     randcoeff[["bHosp0.9"]] <- mu_bHosp0.9 + sigma_bHosp0.9 * draws_bHosp0.9
     randcoeff[["bHosp0.3"]] <- mu_bHosp0.3 + sigma_bHosp0.3 * draws_bHosp0.3
-    randcoeff[["bCost"]] <- mu_bCost + sigma_bCost * draws_bCost
+    randcoeff[["bCost"]] <- - exp(ln_mu_bCost + ln_sigma_bCost * draws_bCost) # Lognormal distribution (ensures -ve coefficient)
     return(randcoeff)
 }
 
