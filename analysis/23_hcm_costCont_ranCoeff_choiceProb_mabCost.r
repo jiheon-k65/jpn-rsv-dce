@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 23_hcm_costCont_ranCoeff_choiceProb_mabCost.r
-# Date: 2026-09-02
+# Date: 2026-09-09
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -30,16 +30,16 @@ varcov_list <- results$varcov
 
 # Attribute levels for each alternative
 risk <- 0
-mv_hosp1.2 <- 0 # 50% efficacy for MV
-mv_hosp0.9 <- 0
+mv_hosp1.2 <- 0
+mv_hosp0.9 <- 1 # 70% efficacy for MV
 mv_hosp0.3 <- 0
 mv_cost <- 0.24 # 24,000 JPY for MV
 mv_redness <- 0
 mv_preterm <- 0
 mv_preg <- 0
 mab_hosp1.2 <- 0
-mab_hosp0.9 <- 1 # 70% efficacy for mAb
-mab_hosp0.3 <- 0
+mab_hosp0.9 <- 0
+mab_hosp0.3 <- 1 # 90% efficacy for mAb
 mab_cost_base <- 0.45 # 45,000 JPY for mAb
 mab_redness <- 0
 

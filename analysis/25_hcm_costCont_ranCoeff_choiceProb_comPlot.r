@@ -40,10 +40,30 @@ df_plot <- bind_rows(
         )
     )
 
+# Normalize mean probabilities to sum to 100% within each cost curve
+norm_meanProb <- function(df) {
+    df %>%
+        group_by(CostType, Cost) %>%
+        mutate(
+            Mean = {
+                raw_mean <- Mean / sum(Mean) * 100
+                rounded_mean <- round(raw_mean, 1)
+                correction <- round(100 - sum(rounded_mean), 1)
+                rounded_mean[which.max(raw_mean)] <-
+                    rounded_mean[which.max(raw_mean)] + correction
+                rounded_mean
+            }
+        ) %>%
+        ungroup() %>%
+        mutate(across(Lower_UI:Upper_UI, ~ round(.x, 1)))
+}
+
+df_plot <- norm_meanProb(df_plot)
+
 base_cases <- df_plot %>%
     distinct(CostType, base_cost) %>%
     mutate(
-        label = paste0("Base case: ", format(base_cost, big.mark = ","))
+        label = paste0("Base cost: ", format(base_cost, big.mark = ","))
     )
 
 y_max <- ceiling(max(df_plot$Upper_UI, na.rm = TRUE) / 5) * 5
@@ -58,10 +78,27 @@ color_manual <- c(
     "Opt-out" = "#C0504D"
 )
 
+prob_c0 <- df_plot %>%
+    filter(Cost == 0)
+
+prob_base <- df_plot %>%
+    inner_join(
+        base_cases[, c("CostType", "base_cost")],
+        by = c("CostType", "Cost" = "base_cost")
+    )
+
 choiceProb_combined <- ggplot(
     df_plot,
     aes(x = Cost, y = Mean, color = Alt, group = Alt)
 ) +
+    geom_vline(
+        data = base_cases,
+        aes(xintercept = base_cost),
+        linetype = "dashed",
+        color = "#404040",
+        linewidth = 0.4,
+        alpha = 0.6
+    ) +
     geom_ribbon(
         aes(ymin = Lower_UI, ymax = Upper_UI, fill = Alt),
         alpha = 0.2,
@@ -75,13 +112,29 @@ choiceProb_combined <- ggplot(
         size = 2,
         shape = 18
     ) +
-    geom_vline(
-        data = base_cases,
-        aes(xintercept = base_cost),
-        linetype = "dashed",
-        color = "#404040",
-        linewidth = 0.4,
-        alpha = 0.8
+    geom_text(
+        data = prob_c0,
+        aes(
+            x = Cost,
+            y = Lower_UI,
+            label = sprintf("%.1f", Mean)
+        ),
+        vjust = 1.25,
+        hjust = 0.65,
+        size = 2,
+        show.legend = FALSE
+    ) +
+    geom_text(
+        data = prob_base,
+        aes(
+            x = Cost,
+            y = Lower_UI,
+            label = sprintf("%.1f", Mean)
+        ),
+        vjust = 1.25,
+        hjust = -0.15,
+        size = 2,
+        show.legend = FALSE
     ) +
     geom_text(
         data = base_cases,
@@ -104,7 +157,7 @@ choiceProb_combined <- ggplot(
     ) +
     labs(
         x = NULL,
-        y = "Choice Probability (%)"
+        y = "Choice Probability"
     ) +
     scale_color_manual(values = color_manual) +
     scale_fill_manual(values = color_manual) +
@@ -119,7 +172,7 @@ choiceProb_combined <- ggplot(
         legend.text = element_text(size = 6),
         strip.background = element_rect(fill = "grey95", color = "grey60"),
         strip.text = element_text(size = 8),
-        panel.spacing = grid::unit(0.8, "lines")
+        panel.spacing.y = grid::unit(0.2, "lines")
     )
 
 # ------------------------------------------------------------------------

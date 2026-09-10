@@ -5,15 +5,15 @@ Date: 2026-09-04
 
 Alternative-specific choice probabilities:
   Alternative    Mean Lower_UI Upper_UI
-1          MV 0.30823  0.28463  0.33263
-2         mAb 0.14402  0.12431  0.16548
-3         Opt 0.54775  0.52015  0.57507
+1          MV 0.29669  0.27352  0.32077
+2         mAb 0.17482  0.15445  0.19664
+3         Opt 0.52849  0.49887  0.55767
 
 Alternative-specific choice probability variances:
   Alternative Var_byN Var_byS Var_byM
-1          MV 0.07177 0.07030 0.07031
-2         mAb 0.03230 0.03221 0.03222
-3         Opt 0.14405 0.14132 0.14135
+1          MV 0.06432 0.06304 0.06305
+2         mAb 0.04113 0.04098 0.04098
+3         Opt 0.14556 0.14286 0.14288
 
 Var_byN: Preference heterogeneity
 Var_byS: Parameter uncertainty
