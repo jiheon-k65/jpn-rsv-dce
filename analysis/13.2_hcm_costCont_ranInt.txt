@@ -1,0 +1,17 @@
+#!/bin/bash
+#PBS -P jpn_dce
+#PBS -q parallel
+#PBS -l select=1:ncpus=12
+#PBS -j oe
+#PBS -N hcm_costCont_ranInt
+
+cd $PBS_O_WORKDIR
+
+source /app1/ebenv
+module purge
+module load R-bundle-CRAN/2024.06-foss-2023b
+
+export RENV_CONFIG_SANDBOX_ENABLED=FALSE
+
+Rscript analysis/13.2_hcm_costCont_ranInt.r
+exit $?

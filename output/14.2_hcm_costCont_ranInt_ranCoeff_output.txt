@@ -1,0 +1,51 @@
+===========================================================================
+Title: 14.2_hcm_costCont_ranInt_ranCoeff_output.txt
+Date: 2026-09-10
+===========================================================================
+
+Pooled coefficients using Rubin's rules:
+                  Estimate      se      p
+sigma_pdt          2.74481 0.13265 <0.001
+mu_bPreg_mv        0.41997 0.07551 <0.001
+sigma_bPreg_mv     0.91013 0.09152 <0.001
+bRedness          -0.13442 0.06027  0.026
+mu_bPreterm_mv    -0.80990 0.09549 <0.001
+sigma_bPreterm_mv  0.53467 0.19580  0.007
+bHosp1.2           0.11667 0.09551  0.222
+bHosp0.9           0.17203 0.09582  0.073
+bHosp0.3           0.53759 0.09697 <0.001
+ln_mu_bCost        1.59621 0.09008 <0.001
+ln_sigma_bCost     1.84068 0.09637 <0.001
+bHospIntRisk      -0.13391 0.12381  0.279
+bOptIntLV          2.38408 0.15773 <0.001
+bOptIntRisk        0.41321 0.12701  0.001
+gamma_age          0.05193 0.03808  0.173
+gamma_sib         -0.21023 0.03923 <0.001
+gamma_edu         -0.29113 0.07867 <0.001
+gamma_inc         -0.17284 0.09118  0.060
+zeta_govTrust     -2.98470 0.23766 <0.001
+zeta_vacImpt      -3.57404 0.32551 <0.001
+zeta_vacSafe      -3.51834 0.31860 <0.001
+zeta_vacEff       -3.64368 0.33696 <0.001
+zeta_vacBlf       -3.92793 0.36302 <0.001
+tau_govTrust1     -3.41318 0.27515 <0.001
+tau_govTrust2     -0.85012 0.19621 <0.001
+tau_govTrust3      4.79887 0.34686 <0.001
+tau_vacImpt1      -5.11108 0.43590 <0.001
+tau_vacImpt2      -2.69792 0.29514 <0.001
+tau_vacImpt3       3.46474 0.33359 <0.001
+tau_vacSafe1      -4.17948 0.36102 <0.001
+tau_vacSafe2      -0.06038 0.22131  0.785
+tau_vacSafe3       7.08265 0.54432 <0.001
+tau_vacEff1       -5.36174 0.47444 <0.001
+tau_vacEff2       -2.00523 0.26433 <0.001
+tau_vacEff3        4.74910 0.40453 <0.001
+tau_vacBlf1       -3.94003 0.38464 <0.001
+tau_vacBlf2        0.00215 0.24543  0.993
+tau_vacBlf3        6.53896 0.55446 <0.001
+
+AIC values:
+[1] Min: 13266.73, Max: 13380.12
+
+BIC values:
+[1] Min: 13437.31, Max: 13550.71
