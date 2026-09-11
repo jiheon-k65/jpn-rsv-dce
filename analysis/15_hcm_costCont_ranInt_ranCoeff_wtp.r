@@ -118,16 +118,19 @@ wtp_hosp_q3ByN <- apply(wtp_hosp_array, c(2, 3), quantile, probs = 0.75)
 tot_summary <- data.frame(
     Attribute = c("Preg", "Preterm", "Hosp0.3"),
     Median = c(mean(wtp_preg_medByN), mean(wtp_pret_medByN), mean(wtp_hosp_medByN)),
-    Mean = c(mean(wtp_preg_array), mean(wtp_pret_array), mean(wtp_hosp_array)),
     Q1 = c(mean(wtp_preg_q1ByN), mean(wtp_pret_q1ByN), mean(wtp_hosp_q1ByN)),
-    Q3 = c(mean(wtp_preg_q3ByN), mean(wtp_pret_q3ByN), mean(wtp_hosp_q3ByN))
+    Q3 = c(mean(wtp_preg_q3ByN), mean(wtp_pret_q3ByN), mean(wtp_hosp_q3ByN)),
+    Mean = c(mean(wtp_preg_array), mean(wtp_pret_array), mean(wtp_hosp_array))
 ) %>% mutate(
-    across(Median:Q3, ~ format(round(.x, 0), big.mark = ","))
+    across(Median:Mean, ~ format(round(.x, 0), big.mark = ","))
 )
 
 cat("\nWillingness-to-pay (WTP) for attribute changes in JPY:\n")
 print(tot_summary)
-cat("\nNote: median & IQR are calculated across respondents, then averaged across simulations & imputations.\n")
+cat("\nNote:\n")
+cat("1. WTP is calculated as -bAttribute / bCost * 100,000 (JPY)\n")
+cat("2. WTP for preterm birth is negative because it is a negative attribute\n")
+cat("3. Medians & IQRs are calculated across respondents, then averaged across simulations & imputations\n")
 
 # Switch off writing
 sink()

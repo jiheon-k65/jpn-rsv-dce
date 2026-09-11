@@ -4,8 +4,11 @@ Date: 2026-09-10
 ===========================================================================
 
 Alternative-specific compensating variations (CVs) in JPY:
-  Alternative Median    Mean      Q1      Q3
-1          MV 12,116 170,800 -10,012 101,614
-2         mAb 11,637 164,676  -9,844  98,029
+  Alternative Median      Q1      Q3    Mean
+1          MV 12,116 -10,012 101,614 170,800
+2         mAb 11,637  -9,844  98,029 164,676
 
-Note: median & IQR are calculated across respondents, then averaged across simulations & imputations.
+Note:
+1. CV is calculated as - (V_alternative - V_opt) / bCost * 100,000 (JPY)
+2. Negative CV indicates that some respondents would require compensation to accept the alternative
+3. Medians & IQRs are calculated across respondents, then averaged across simulations & imputations

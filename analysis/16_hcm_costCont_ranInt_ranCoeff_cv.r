@@ -179,15 +179,18 @@ CV_mab_uppByN <- apply(CV_mab_array, c(2, 3), quantile, probs = 0.75)
 tot_summary <- data.frame(
     Alternative = c("MV", "mAb"),
     Median = c(mean(CV_mv_medByN), mean(CV_mab_medByN)),
-    Mean = c(mean(CV_mv_array), mean(CV_mab_array)),
     Q1 = c(mean(CV_mv_lowByN), mean(CV_mab_lowByN)),
-    Q3 = c(mean(CV_mv_uppByN), mean(CV_mab_uppByN))
+    Q3 = c(mean(CV_mv_uppByN), mean(CV_mab_uppByN)),
+    Mean = c(mean(CV_mv_array), mean(CV_mab_array))
 ) %>% mutate(
-    across(Median:Q3, ~ format(round(.x, 0), big.mark = ","))
+    across(Median:Mean, ~ format(round(.x, 0), big.mark = ","))
 )
 cat("\nAlternative-specific compensating variations (CVs) in JPY:\n")
 print(tot_summary)
-cat("\nNote: median & IQR are calculated across respondents, then averaged across simulations & imputations.\n")
+cat("\nNote:\n")
+cat("1. CV is calculated as - (V_alternative - V_opt) / bCost * 100,000 (JPY)\n")
+cat("2. Negative CV indicates that some respondents would require compensation to accept the alternative\n")
+cat("3. Medians & IQRs are calculated across respondents, then averaged across simulations & imputations\n")
 
 # Switch off writing
 sink()
