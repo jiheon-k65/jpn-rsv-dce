@@ -33,55 +33,48 @@ The scripts assume the project root is the working directory & use `here()` for 
 - `2_dataDesc.r` - describe data & respondents that failed quality checks
 - `3_dataImp.r` - describe missingness & conduct multiple imputation
 - `4_mnl.r` onwards - fit choice models to data
-- `19_hcm_costCont_ranCoeff_wtp.r` onwards - calculate willingness-to-pay (WTP) & choice probabilities
+- `15_hcm_costCont_ranInt_ranCoeff_wtp.r` onwards - model predictions
 
 ## 5. Choice Models
 
 ### Multinomial logit (MNL) models
-|Script|Description|Reported|
-|----|-----------|:------:|
-|`4_mnl.r`|All categorical variables|✅|
-|`5_mnl_costCont.r`|Linear cost coefficient||
-|`6_mnl_costContQuad.r`|Quadratic cost coefficient||
+|Script|Description|
+|----|-----------|
+|`4_mnl.r`|All categorical variables|
+|`5_mnl_costCont.r`|Linear cost coefficient|
+|`6_mnl_costContQuad.r`|Quadratic cost coefficient|
 
 ### Mixed logit (MXL) models
-|Script|Description|Reported|
-|----|-----------|:------:|
-|`7_mxl_costCont.r`|All random coefficients||
+|Script|Description|
+|----|-----------|
+|`7_mxl_costCont.r`|All random coefficients|
 
 ### MNL models with interactions
-|Script|Description|Reported|
-|----|-----------|:------:|
-|`8.x_mnl_costCont_ascInt.r`|ASC interactions|✅|
-|`9.x_mnl_costCont_pregInt.r`|Pregnant women interactions|✅|
-|`10.x_mnl_costCont_pretermInt.r`|Preterm birth interactions|✅|
-|`11.x_mnl_costCont_costInt.r`|Cost interactions|✅|
-|`12.x_mnl_costCont_fullInt.r`|Combined significant interactions (`8.2`-`11.2`)||
-|`13.x_mnl_costCont_parInt.r`|Reduced model from `12.2`||
-|`14.x_mnl_costCont_parInt_final.r`|Final reduced model from `13.2`||
-
-### MXL models with interactions
-|Script|Description|Reported|
-|----|-----------|:------:|
-|`15.x_mxl_costCont_parInt.r`|Selected random coefficients with interactions||
-|`16.x_mxl_costCont_parInt_final.r`|Final reduced model from `15.2`||
+|Script|Description|
+|----|-----------|
+|`8.x_mnl_costCont_ascInt.r`|ASC interactions|
+|`9.x_mnl_costCont_pregInt.r`|Pregnant women interactions|
+|`10.x_mnl_costCont_pretermInt.r`|Preterm birth interactions|
+|`11.x_mnl_costCont_costInt.r`|Cost interactions|
 
 ### Hybrid choice models (HCM)
-|Script|Description|Reported|
-|----|-----------|:------:|
-|`17.x_hcm_costCont.r`|All fixed coefficients||
-|`18.x_hcm_costCont_ranInt.r`|Only random intercept||
-|`19.x_hcm_costCont_ranCoeff.r`|Selected random coefficients|✅|
+|Script|Description|
+|----|-----------|
+|`12.x_hcm_costCont.r`|All fixed coefficients|
+|`13.x_hcm_costCont_ranInt.r`|Random intercept|
+|`14.x_hcm_costCont_rantInt_ranCoeff.r`|Random intercept & coefficients|
 
 **Note:** complete-case (`x=1`) & multiple imputation (`x=2`)
 
-## 6. Calculate mean & 95% uncertainty intervals (UIs)
+## 6. Model predictions
 
-- `20_hcm_costCont_ranCoeff_wtp.r` - WTP
-- `21_hcm_costCont_ranCoeff_choiceProb.r` - Choice probabilities
-- `22_hcm_costCont_ranCoeff_choiceProb_mvCost.r` - Choice probabilities across MV cost range
-- `23_hcm_costCont_ranCoeff_choiceProb_mabCost.r` - Choice probabilities across mAb cost range
-- `24_hcm_costCont_ranCoeff_choiceProb_plot.r` - Plot choice probabilities
+- `15_hcm_costCont_ranInt_ranCoeff_wtp.r` - Willingness-to-pay (WTP)
+- `16_hcm_costCont_ranInt_ranCoeff_cv.r` - Compensating variation (CV)
+- `17_hcm_costCont_ranInt_ranCoeff_choiceProb.r` - Choice probabilities at base cost
+- `18_hcm_costCont_ranInt_ranCoeff_choiceProb_mvCost.r` - Choice probabilities across MV cost range
+- `19_hcm_costCont_ranInt_ranCoeff_choiceProb_mabCost.r` - Choice probabilities across mAb cost range
+- `20_hcm_costCont_ranInt_ranCoeff_choiceProb_plot.r` - Plot choice probabilities individually
+- `21_hcm_costCont_ranInt_ranCoeff_choiceProb_comPlot.r` - Plot choice probabilities together
 
 ## 7. Outputs
 

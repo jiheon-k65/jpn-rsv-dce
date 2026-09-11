@@ -8,8 +8,8 @@ V_{\mathrm{mv},n,t} =\
 &+ \beta_{\mathrm{cost},n}x_{\mathrm{cost},n,t}
 + \beta_{\mathrm{red}}x_{\mathrm{red},n,t}
 + \alpha_{\mathrm{pdt},n}\\
-&+ \beta_{\mathrm{pret},n}^{\mathrm{mv}}x_{\mathrm{pret},n,t}
-+ \beta_{\mathrm{preg},n}^{\mathrm{mv}}x_{\mathrm{preg},n,t}\\
+&+ \beta_{\mathrm{pret},n}x_{\mathrm{pret},n,t}
++ \beta_{\mathrm{preg},n}x_{\mathrm{preg},n,t}\\
 V_{\mathrm{mab},n,t} =\
 &\sum_{h=1}^3 \Big[ \big( \beta_{\mathrm{hosp}[h]} + \beta_{\mathrm{hosp} \times \mathrm{risk}}w_{\mathrm{risk},n,t} \big) x_{\mathrm{hosp}[h],n,t} \Big]\\
 &+ \beta_{\mathrm{cost},n}x_{\mathrm{cost},n,t}
@@ -25,10 +25,10 @@ $$
 \text{Random coefficients}\\
 \begin{aligned}
 \beta_{\mathrm{cost},n}
-&\sim \mathrm{Normal}(\mu_{\mathrm{cost}}, \sigma_{\mathrm{cost}})\\
-\beta_{\mathrm{pret},n}^{\mathrm{mv}}
+&\sim -\, \text{Lognormal}\big(\ln(\mu_{\mathrm{cost}}), \ln(\sigma_{\mathrm{cost}})\big)\\
+\beta_{\mathrm{pret},n}
 &\sim \mathrm{Normal}(\mu_{\mathrm{pret}}, \sigma_{\mathrm{pret}})\\
-\beta_{\mathrm{preg},n}^{\mathrm{mv}}
+\beta_{\mathrm{preg},n}
 &\sim \mathrm{Normal}(\mu_{\mathrm{preg}}, \sigma_{\mathrm{preg}})\\
 \end{aligned}
 $$
