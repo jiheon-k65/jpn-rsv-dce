@@ -169,28 +169,28 @@ cat("===========================================================================
 CV_mv_medByN <- apply(CV_mv_array, c(2, 3), median)
 CV_mab_medByN <- apply(CV_mab_array, c(2, 3), median)
 
-# Calculate IQR across respondents (Dim: S x M)
-CV_mv_lowByN <- apply(CV_mv_array, c(2, 3), quantile, probs = 0.25)
-CV_mv_uppByN <- apply(CV_mv_array, c(2, 3), quantile, probs = 0.75)
-CV_mab_lowByN <- apply(CV_mab_array, c(2, 3), quantile, probs = 0.25)
-CV_mab_uppByN <- apply(CV_mab_array, c(2, 3), quantile, probs = 0.75)
+# Calculate 95% UI across medians
+CV_mv_lowByN <- quantile(CV_mv_medByN, 0.025)
+CV_mv_uppByN <- quantile(CV_mv_medByN, 0.975)
+CV_mab_lowByN <- quantile(CV_mab_medByN, 0.025)
+CV_mab_uppByN <- quantile(CV_mab_medByN, 0.975)
 
 # Format results into a data frame
 tot_summary <- data.frame(
     Alternative = c("MV", "mAb"),
     Median = c(mean(CV_mv_medByN), mean(CV_mab_medByN)),
-    Q1 = c(mean(CV_mv_lowByN), mean(CV_mab_lowByN)),
-    Q3 = c(mean(CV_mv_uppByN), mean(CV_mab_uppByN)),
-    Mean = c(mean(CV_mv_array), mean(CV_mab_array))
+    Lower_UI = c(CV_mv_lowByN, CV_mab_lowByN),
+    Upper_UI = c(CV_mv_uppByN, CV_mab_uppByN)
 ) %>% mutate(
-    across(Median:Mean, ~ format(round(.x, 0), big.mark = ","))
+    across(Median:Upper_UI, ~ format(round(.x, 0), big.mark = ","))
 )
 cat("\nAlternative-specific compensating variations (CVs) in JPY:\n")
 print(tot_summary)
 cat("\nNote:\n")
 cat("1. CV is calculated as - (V_alternative - V_opt) / bCost * 100,000 (JPY)\n")
 cat("2. Negative CV indicates that some respondents would require compensation to accept the alternative\n")
-cat("3. Medians & IQRs are calculated across respondents, then averaged across simulations & imputations\n")
+cat("3. Medians are calculated across respondents, then averaged across simulations & imputations\n")
+cat("4. 95% UI represents uncertainty in medians across simulations & imputations\n")
 
 # Switch off writing
 sink()

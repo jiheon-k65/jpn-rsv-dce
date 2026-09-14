@@ -106,23 +106,22 @@ wtp_preg_medByN <- apply(wtp_preg_array, c(2, 3), median)
 wtp_pret_medByN <- apply(wtp_pret_array, c(2, 3), median)
 wtp_hosp_medByN <- apply(wtp_hosp_array, c(2, 3), median)
 
-# Calculate IQR across respondents (Dim: S x M)
-wtp_preg_q1ByN <- apply(wtp_preg_array, c(2, 3), quantile, probs = 0.25)
-wtp_preg_q3ByN <- apply(wtp_preg_array, c(2, 3), quantile, probs = 0.75)
-wtp_pret_q1ByN <- apply(wtp_pret_array, c(2, 3), quantile, probs = 0.25)
-wtp_pret_q3ByN <- apply(wtp_pret_array, c(2, 3), quantile, probs = 0.75)
-wtp_hosp_q1ByN <- apply(wtp_hosp_array, c(2, 3), quantile, probs = 0.25)
-wtp_hosp_q3ByN <- apply(wtp_hosp_array, c(2, 3), quantile, probs = 0.75)
+# Calculate 95% UI across medians
+wtp_preg_lowByN <- quantile(wtp_preg_medByN, 0.025)
+wtp_preg_uppByN <- quantile(wtp_preg_medByN, 0.975)
+wtp_pret_lowByN <- quantile(wtp_pret_medByN, 0.025)
+wtp_pret_uppByN <- quantile(wtp_pret_medByN, 0.975)
+wtp_hosp_lowByN <- quantile(wtp_hosp_medByN, 0.025)
+wtp_hosp_uppByN <- quantile(wtp_hosp_medByN, 0.975)
 
 # Format results into a data frame
 tot_summary <- data.frame(
     Attribute = c("Preg", "Preterm", "Hosp0.3"),
     Median = c(mean(wtp_preg_medByN), mean(wtp_pret_medByN), mean(wtp_hosp_medByN)),
-    Q1 = c(mean(wtp_preg_q1ByN), mean(wtp_pret_q1ByN), mean(wtp_hosp_q1ByN)),
-    Q3 = c(mean(wtp_preg_q3ByN), mean(wtp_pret_q3ByN), mean(wtp_hosp_q3ByN)),
-    Mean = c(mean(wtp_preg_array), mean(wtp_pret_array), mean(wtp_hosp_array))
+    Lower_UI = c(wtp_preg_lowByN, wtp_pret_lowByN, wtp_hosp_lowByN),
+    Upper_UI = c(wtp_preg_uppByN, wtp_pret_uppByN, wtp_hosp_uppByN)
 ) %>% mutate(
-    across(Median:Mean, ~ format(round(.x, 0), big.mark = ","))
+    across(Median:Upper_UI, ~ format(round(.x, 0), big.mark = ","))
 )
 
 cat("\nWillingness-to-pay (WTP) for attribute changes in JPY:\n")
@@ -130,7 +129,8 @@ print(tot_summary)
 cat("\nNote:\n")
 cat("1. WTP is calculated as -bAttribute / bCost * 100,000 (JPY)\n")
 cat("2. WTP for preterm birth is negative because it is a negative attribute\n")
-cat("3. Medians & IQRs are calculated across respondents, then averaged across simulations & imputations\n")
+cat("3. Medians are calculated across respondents, then averaged across simulations & imputations\n")
+cat("4. 95% UI represents uncertainty in medians across simulations & imputations\n")
 
 # Switch off writing
 sink()
