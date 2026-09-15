@@ -1,16 +1,17 @@
 ===========================================================================
 Title: 15_hcm_costCont_ranInt_ranCoeff_wtp_output.txt
-Date: 2026-09-10
+Date: 2026-09-15
 ===========================================================================
 
 Willingness-to-pay (WTP) for attribute changes in JPY:
   Attribute  Median Lower_UI Upper_UI
 1      Preg   3,666    1,565    6,440
-2   Preterm -12,786  -19,269   -7,386
-3   Hosp0.3  10,949    6,697   15,974
+2   Redness  -2,757   -5,388     -334
+3   Preterm -12,786  -19,269   -7,386
+4   Hosp0.3  10,949    6,697   15,974
 
 Note:
 1. WTP is calculated as -bAttribute / bCost * 100,000 (JPY)
-2. WTP for preterm birth is negative because it is a negative attribute
+2. WTP for redness & preterm birth are negative because they are negative attributes
 3. Medians are calculated across respondents, then averaged across simulations & imputations
 4. 95% UI represents uncertainty in medians across simulations & imputations
