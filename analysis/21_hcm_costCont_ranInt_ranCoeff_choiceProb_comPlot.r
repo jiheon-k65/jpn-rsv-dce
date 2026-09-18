@@ -157,7 +157,7 @@ choiceProb_combined <- ggplot(
     ) +
     labs(
         x = NULL,
-        y = "Choice Probability"
+        y = "Population-level choice probability (%)"
     ) +
     scale_color_manual(values = color_manual) +
     scale_fill_manual(values = color_manual) +

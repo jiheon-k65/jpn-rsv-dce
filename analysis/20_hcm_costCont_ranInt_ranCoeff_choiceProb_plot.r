@@ -124,7 +124,7 @@ plot_choiceProb <- function(df, base_cost, x_label) {
         ) +
         labs(
             x = x_label,
-            y = "Choice Probability"
+            y = "Population-level choice probability (%)"
         ) +
         theme_bw(base_size = 8) +
         theme(
