@@ -10,6 +10,5 @@ Alternative-specific compensating variations (CVs) in JPY:
 
 Note:
 1. CV is calculated as - (V_alternative - V_opt) / bCost * 100,000 (JPY)
-2. Negative CV indicates that some respondents would require compensation to accept the alternative
-3. Medians are calculated across respondents, then averaged across simulations & imputations
-4. 95% UI represents uncertainty in medians across simulations & imputations
+2. Medians are calculated across respondents, then averaged across simulations & imputations
+3. 95% UI represents uncertainty in medians across simulations & imputations

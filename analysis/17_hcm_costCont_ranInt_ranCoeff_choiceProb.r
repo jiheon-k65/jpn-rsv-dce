@@ -195,6 +195,9 @@ tot_summary <- data.frame(
 )
 cat("\nAlternative-specific choice probabilities:\n")
 print(tot_summary)
+cat("\nNote:\n")
+cat("1. Means are calculated across respondents, then averaged across simulations & imputations\n")
+cat("2. 95% UI represents uncertainty in means across simulations & imputations\n")
 
 # Switch off writing
 sink()

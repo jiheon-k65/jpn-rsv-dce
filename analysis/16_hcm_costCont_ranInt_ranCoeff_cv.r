@@ -188,9 +188,8 @@ cat("\nAlternative-specific compensating variations (CVs) in JPY:\n")
 print(tot_summary)
 cat("\nNote:\n")
 cat("1. CV is calculated as - (V_alternative - V_opt) / bCost * 100,000 (JPY)\n")
-cat("2. Negative CV indicates that some respondents would require compensation to accept the alternative\n")
-cat("3. Medians are calculated across respondents, then averaged across simulations & imputations\n")
-cat("4. 95% UI represents uncertainty in medians across simulations & imputations\n")
+cat("2. Medians are calculated across respondents, then averaged across simulations & imputations\n")
+cat("3. 95% UI represents uncertainty in medians across simulations & imputations\n")
 
 # Switch off writing
 sink()

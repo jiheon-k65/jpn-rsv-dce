@@ -8,3 +8,7 @@ Alternative-specific choice probabilities:
 1          MV 0.308    0.271    0.345
 2         mAb 0.150    0.126    0.175
 3         Opt 0.542    0.500    0.586
+
+Note:
+1. Means are calculated across respondents, then averaged across simulations & imputations
+2. 95% UI represents uncertainty in means across simulations & imputations
