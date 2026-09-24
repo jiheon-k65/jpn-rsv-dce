@@ -1,32 +1,32 @@
 ===========================================================================
 Title: 8.2_mnl_costCont_ascInt_output.txt
-Date: 2026-07-20
+Date: 2026-09-23
 ===========================================================================
 
-Pooled coefficients using Rubin's rules:
-                 Estimate      se      p
-ascOpt            2.36951 0.15137 <0.001
-bPreg_mv          0.25143 0.05118 <0.001
-bRedness         -0.07445 0.04639  0.109
-bPreterm_mv      -0.48503 0.06651 <0.001
-bHosp1.2          0.00688 0.07530  0.927
-bHosp0.9          0.01089 0.07526  0.885
-bHosp0.3          0.30024 0.07483 <0.001
-bCost            -2.25663 0.08668 <0.001
-bOptIntRisk       0.24792 0.09292  0.008
-bHospIntRisk     -0.00014 0.09647  0.999
-ascOptIntAge      0.11241 0.03528  0.001
-ascOptIntSib      0.02867 0.04393  0.514
-ascOptIntEdu     -0.24095 0.06357 <0.001
-ascOptIntInc      0.09791 0.06327  0.122
-ascOptIntGov     -0.56861 0.06559 <0.001
-ascOptIntVacImpt -0.29450 0.07686 <0.001
-ascOptIntVacSafe -0.01988 0.08511  0.816
-ascOptIntVacEff  -0.01788 0.10328  0.863
-ascOptIntVacBlf  -0.50398 0.08265 <0.001
+Pooled estimates using Rubin's rules:
+                      Est  Rob_SE p_2sided
+ascOpt            2.36951 0.28107   <0.001
+bPreg_mv          0.25143 0.05653   <0.001
+bRedness         -0.07445 0.04413    0.092
+bPreterm_mv      -0.48503 0.06906   <0.001
+bHosp1.2          0.00688 0.06983    0.921
+bHosp0.9          0.01089 0.06904    0.875
+bHosp0.3          0.30024 0.06708   <0.001
+bCost            -2.25663 0.14504   <0.001
+bOptIntRisk       0.24792 0.08034    0.002
+bHospIntRisk     -0.00014 0.08407    0.999
+ascOptIntAge      0.11241 0.07211    0.119
+ascOptIntSib      0.02867 0.09028    0.751
+ascOptIntEdu     -0.24095 0.13251    0.069
+ascOptIntInc      0.09791 0.13427    0.466
+ascOptIntGov     -0.56861 0.12905   <0.001
+ascOptIntVacImpt -0.29450 0.14781    0.046
+ascOptIntVacSafe -0.01988 0.15328    0.897
+ascOptIntVacEff  -0.01788 0.16819    0.915
+ascOptIntVacBlf  -0.50398 0.14210   <0.001
 
 AIC values:
-[1] Min: 10696.00, Max: 10808.72
+Min: 10696 , Max: 10809 
 
 BIC values:
-[1] Min: 10823.04, Max: 10935.76
+Min: 10823 , Max: 10936

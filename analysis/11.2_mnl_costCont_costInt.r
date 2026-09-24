@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 11.2_mnl_costCont_costInt.r
-# Date: 2026-07-20
+# Date: 2026-09-23
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -148,14 +148,15 @@ apollo_probabilities <- function(apollo_beta, apollo_inputs, functionality = "es
 M <- 25
 
 # Initialize list to store results
-est_list <- vector("list", M)
-varcov_list <- vector("list", M)
+est_list <- vector("list", M) # Maximum likelihood estimates
+varcov_list <- vector("list", M) # Variance-covariance matrices
+robvarcov_list <- vector("list", M) # Robust variance-covariance matrices
 aic_list <- vector("list", M)
 bic_list <- vector("list", M)
 
 for (i in 1:M) {
     cat("\n===========================================================================\n")
-    cat("\nRunning model for imputation", i, "\n")
+    cat("\nRunning model for imputation", i, "\n\n")
     # Load imputed dataset for current imputation
     database <- data %>% filter(imp == i)
     # Validate Apollo inputs
@@ -170,6 +171,7 @@ for (i in 1:M) {
     # Store estimates and variance-covariance matrix
     est_list[[i]] <- fit$estimate
     varcov_list[[i]] <- fit$varcov
+    robvarcov_list[[i]] <- fit$robvarcov
     aic_list[[i]] <- fit$AIC
     bic_list[[i]] <- fit$BIC
 }
@@ -182,10 +184,10 @@ for (i in 1:M) {
 sink(here("output", "11.2_mnl_costCont_costInt_output.txt"))
 cat("===========================================================================\n")
 cat("Title: 11.2_mnl_costCont_costInt_output.txt\n")
-cat("Date: 2026-07-20\n")
+cat("Date: 2026-09-23\n")
 cat("===========================================================================\n")
 
-pool_coeff(est_list, varcov_list, M)
+pool_coeff(est_list, robvarcov_list, M)
 summ_aic_bic(aic_list, bic_list)
 
 # Switch off writing

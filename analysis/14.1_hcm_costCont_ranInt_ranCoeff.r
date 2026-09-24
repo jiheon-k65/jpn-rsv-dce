@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 14.1_hcm_costCont_ranInt_ranCoeff.r
-# Date: 2026-09-10
+# Date: 2026-09-23
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -14,6 +14,9 @@ rm(list = ls())
 library(here)
 library(dplyr)
 library(apollo)
+
+# Source universal functions
+source(here("utils.r"))
 
 # Initialize code
 apollo_initialise()
@@ -257,16 +260,18 @@ fit <- apollo_estimate(
 
 # Show 2-sided p values for coefficients
 modelOutput_settings <- list(printPVal = 2)
-saveOutput_settings <- list(printPVal = 2)
 
 # Output model to terminal
 apollo_modelOutput(fit, modelOutput_settings)
 
-# Save model output to WD
-apollo_saveOutput(fit, saveOutput_settings)
+# Write custom output to text file
+sink(here("output", "14.1_hcm_costCont_ranInt_ranCoeff_output.txt"))
+cat("===========================================================================\n")
+cat("Title: 14.1_hcm_costCont_ranInt_ranCoeff_output.txt\n")
+cat("Date: 2026-09-23\n")
+cat("===========================================================================\n")
 
-# Save estimates & variance-covariance matrix to WD
-saveRDS(list(
-    est = fit$estimate,
-    varcov = fit$varcov
-), here("output", "14.1_hcm_costCont_ranInt_ranCoeff_results.rds"))
+format_cca_results(fit)
+
+# Switch off writing
+sink()

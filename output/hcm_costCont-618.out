@@ -1,47 +1,4 @@
-here() starts at /hpctmp/e1519538/jpn_dce
-
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-
-
-             . ,,                                                            
-            ,      ,,                                                        
- ,,,,,,    ,         ,,                                                      
-,     ,,  ,            ,,,,.                                                 
-,,     , ,,   ,,,,,,    ,,,                                 //  //           
-  ,     ,,,.   ,,,,,.   ,,      ////                        //  //           
-,,     ,,,,,.           ,,     // //     //////    /////    //  //    /////  
-,,,        ,,           ,      //  //    /    //  //   //   //  //   //   // 
-              ,,       ,      ////////   /    //  //   //   //  //   //   // 
-                ,,   ,,      //     //   /   ///  //   //   //  //   //   // 
-                   ,         //      //  /////      ///      //  //    ///   
-                                         //                                  
-                                         //                                  
-
-Apollo 0.3.8
-https://www.ApolloChoiceModelling.com
-See url for a detailed manual, examples and a user forum.
-Sign up to the user forum to receive updates on new releases.
-
-Please cite Apollo in all written material you produce:
-Hess S, Palma D (2019). "Apollo: a flexible, powerful and customisable
-freeware package for choice model estimation and application." Journal
-of Choice Modelling, 32. doi.org/10.1016/j.jocm.2019.100170
-
-The developers of Apollo acknowledge the substantial support provided by
-the European Research Council (ERC) through the consolidator grant DECISIONS,
-the proof of concept grant APOLLO, and the advanced grant SYNERGY.
-
-Apollo is integrated into SurveyEngine, a leading stated choice platform
-Try it at www.surveyengine.com/apollo
+- The project is out-of-sync -- use `renv::status()` for details.
 Apollo ignition sequence completed
 
 ===========================================================================
@@ -116,6 +73,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -124,7 +89,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 1.024701693e+04
      1     4 9.765423132e+03 4.700e-02 2.785e-02 5.19e-02   G   2.57e-01
@@ -289,6 +254,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -297,7 +270,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.504918439e+03
      1     2 7.503814827e+03 1.471e-04 1.582e-04 4.20e-03   G   1.00e+00
@@ -446,6 +419,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -454,7 +435,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.518831401e+03
      1     2 7.517593884e+03 1.646e-04 1.903e-04 5.39e-03   G   1.29e+00
@@ -603,6 +584,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -611,7 +600,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.534071500e+03
      1     2 7.532900747e+03 1.554e-04 1.720e-04 6.38e-03   G   1.08e+00
@@ -758,6 +747,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -766,7 +763,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.521985695e+03
      1     2 7.521007117e+03 1.301e-04 1.466e-04 4.91e-03   G   9.32e-01
@@ -920,6 +917,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -928,7 +933,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.513083843e+03
      1     3 7.511220125e+03 2.481e-04 3.000e-04 1.03e-02   G   8.00e-01
@@ -1081,6 +1086,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -1089,7 +1102,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.479327516e+03
      1     3 7.477492409e+03 2.454e-04 2.863e-04 6.76e-03   G   7.17e-01
@@ -1242,6 +1255,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -1250,7 +1271,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.508497954e+03
      1     2 7.507386027e+03 1.481e-04 1.573e-04 4.91e-03   G   1.03e+00
@@ -1399,6 +1420,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -1407,7 +1436,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.539775468e+03
      1     2 7.539116765e+03 8.736e-05 1.122e-04 4.49e-03   G   7.62e-01
@@ -1556,6 +1585,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -1564,7 +1601,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.528270082e+03
      1     2 7.527340452e+03 1.235e-04 1.429e-04 4.85e-03   G   9.12e-01
@@ -1713,6 +1750,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -1721,7 +1766,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.520632004e+03
      1     2 7.519878009e+03 1.003e-04 1.380e-04 4.30e-03   G   8.28e-01
@@ -1869,6 +1914,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -1877,7 +1930,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.535759748e+03
      1     2 7.535078812e+03 9.036e-05 1.148e-04 5.92e-03   G   6.17e-01
@@ -2026,6 +2079,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -2034,7 +2095,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.522625779e+03
      1     3 7.520205895e+03 3.217e-04 3.642e-04 8.03e-03   G   6.65e-01
@@ -2185,6 +2246,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -2193,7 +2262,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.536580904e+03
      1     3 7.533908186e+03 3.546e-04 4.111e-04 1.07e-02   G   5.31e-01
@@ -2343,6 +2412,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -2351,7 +2428,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.515993234e+03
      1     2 7.514516257e+03 1.965e-04 2.089e-04 7.56e-03   G   1.36e+00
@@ -2501,6 +2578,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -2509,7 +2594,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.522792720e+03
      1     2 7.521817002e+03 1.297e-04 1.377e-04 4.51e-03   G   7.74e-01
@@ -2659,6 +2744,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -2667,7 +2760,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.509233757e+03
      1     2 7.508710728e+03 6.965e-05 8.500e-05 5.46e-03   G   4.10e-01
@@ -2819,6 +2912,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -2827,7 +2928,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.511125439e+03
      1     2 7.510528882e+03 7.942e-05 9.321e-05 4.90e-03   G   3.92e-01
@@ -2976,6 +3077,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -2984,7 +3093,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.524325018e+03
      1     2 7.523213792e+03 1.477e-04 1.742e-04 4.65e-03   G   1.14e+00
@@ -3134,6 +3243,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -3142,7 +3259,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.503843460e+03
      1     2 7.502484330e+03 1.811e-04 2.094e-04 4.44e-03   G   1.45e+00
@@ -3292,6 +3409,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -3300,7 +3425,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.509643970e+03
      1     2 7.508993739e+03 8.659e-05 1.152e-04 4.90e-03   G   7.38e-01
@@ -3447,6 +3572,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -3455,7 +3588,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.541579999e+03
      1     2 7.540284639e+03 1.718e-04 1.853e-04 4.15e-03   G   1.25e+00
@@ -3604,6 +3737,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -3612,7 +3753,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.531237889e+03
      1     2 7.529919301e+03 1.751e-04 2.031e-04 5.53e-03   G   1.46e+00
@@ -3760,6 +3901,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -3768,7 +3917,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.517577432e+03
      1     2 7.516097597e+03 1.969e-04 2.257e-04 4.59e-03   G   1.55e+00
@@ -3917,6 +4066,14 @@ Percentage chosen when available   29.67   29.69   40.65
 Pre-processing likelihood function...
 Creating cluster...
 Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
 
 Testing influence of parameters
 Starting main estimation
@@ -3925,7 +4082,7 @@ BGW using analytic model derivatives supplied by caller...
 
 
 Iterates will be written to: 
- /hpctmp/e1519538/jpn_dce/output/17.2_hcm_costCont_iterations.csv
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/12.2_hcm_costCont_iterations.csv
     it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
      0     1 7.525881711e+03
      1     2 7.524376625e+03 2.000e-04 2.299e-04 4.46e-03   G   1.59e+00
@@ -4001,17 +4158,3 @@ Your model was estimated using the BGW algorithm. Please acknowledge
 
 Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
   doi.org/10.1016/j.jocm.2019.100170
-      ======================================================================================
-     Resource Usage on 2026-09-10 16:30:58.555765:
-     JobId: 1003877.venus01  				 Project: jpn_dce 
-     Submission Host: atlas9-c01 
-     Exit Status: 0
-     NCPUs Requested: 12 				 NCPUs Used: 12
-     Memory Requested: 40gb 				 Memory Used: 5212364kb 
-     Vmem Used: 24221060kb
-     CPU Time Used: 09:04:01 
-     Walltime requested: 240:00:00 			 Walltime Used: 02:04:42
-     Submit Time:  Thu Sep 10 14:25:10 2026 		 Start Time: Thu Sep 10 14:26:16 2026 
-     End Time: Thu Sep 10 16:30:58 2026 
-     Execution Nodes Used: (cnode-33-43-32:ncpus=12)
-     ======================================================================================

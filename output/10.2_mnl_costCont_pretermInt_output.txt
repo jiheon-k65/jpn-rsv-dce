@@ -1,32 +1,32 @@
 ===========================================================================
 Title: 10.2_mnl_costCont_pretermInt_output.txt
-Date: 2026-07-20
+Date: 2026-09-23
 ===========================================================================
 
-Pooled coefficients using Rubin's rules:
-                   Estimate      se      p
-ascOpt             -0.20313 0.06901  0.003
-bPreg_mv            0.23358 0.04977 <0.001
-bRedness           -0.05440 0.04536  0.230
-bPreterm_mv        -2.23291 0.19048 <0.001
-bHosp1.2            0.00933 0.07383  0.899
-bHosp0.9            0.00361 0.07377  0.961
-bHosp0.3            0.29795 0.07331 <0.001
-bCost              -2.23604 0.08612 <0.001
-bOptIntRisk         0.20469 0.08882  0.021
-bHospIntRisk       -0.00326 0.09451  0.973
-bPretermIntAge     -0.08580 0.05062  0.090
-bPretermIntSib      0.09620 0.06168  0.119
-bPretermIntEdu      0.15498 0.08901  0.082
-bPretermIntInc     -0.07590 0.08729  0.385
-bPretermIntGov      0.43779 0.08622 <0.001
-bPretermIntVacImpt  0.18277 0.09960  0.067
-bPretermIntVacSafe -0.01588 0.10352  0.878
-bPretermIntVacEff  -0.02374 0.10479  0.821
-bPretermIntVacBlf   0.29590 0.09871  0.003
+Pooled estimates using Rubin's rules:
+                        Est  Rob_SE p_2sided
+ascOpt             -0.20313 0.08632    0.019
+bPreg_mv            0.23358 0.05371   <0.001
+bRedness           -0.05440 0.04434    0.220
+bPreterm_mv        -2.23291 0.25962   <0.001
+bHosp1.2            0.00933 0.06865    0.892
+bHosp0.9            0.00361 0.06777    0.958
+bHosp0.3            0.29795 0.06571   <0.001
+bCost              -2.23604 0.14271   <0.001
+bOptIntRisk         0.20469 0.07461    0.006
+bHospIntRisk       -0.00326 0.08222    0.968
+bPretermIntAge     -0.08580 0.07388    0.245
+bPretermIntSib      0.09620 0.08234    0.243
+bPretermIntEdu      0.15498 0.12250    0.206
+bPretermIntInc     -0.07590 0.12379    0.540
+bPretermIntGov      0.43779 0.11249   <0.001
+bPretermIntVacImpt  0.18277 0.14762    0.216
+bPretermIntVacSafe -0.01588 0.13294    0.905
+bPretermIntVacEff  -0.02374 0.14655    0.871
+bPretermIntVacBlf   0.29590 0.13698    0.031
 
 AIC values:
-[1] Min: 11572.27, Max: 11595.04
+Min: 11572 , Max: 11595 
 
 BIC values:
-[1] Min: 11699.31, Max: 11722.08
+Min: 11699 , Max: 11722
