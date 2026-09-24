@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 18_hcm_costCont_ranInt_ranCoeff_choiceProb_mvCost.r
-# Date: 2026-09-10
+# Date: 2026-09-23
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -20,7 +20,7 @@ data <- read.csv(here("data", "jpn_dataset_subset_imputed.csv"), header = TRUE)
 
 results <- readRDS(here("output", "14.2_hcm_costCont_ranInt_ranCoeff_results.rds"))
 est_list <- results$est
-varcov_list <- results$varcov
+robvarcov_list <- results$robvarcov # Robust variance-covariance matrices
 
 # ------------------------------------------------------------------------
 # SECTION 3: Define inputs for calculations
@@ -74,7 +74,7 @@ for (m in 1:M) {
 
     # Extract estimates & variance-covariance matrix
     theta_hat <- est_list[[m]]
-    sigma <- varcov_list[[m]]
+    sigma <- robvarcov_list[[m]]
 
     # Draw parameter values from multivariate normal distribution
     set.seed(123 + m)
