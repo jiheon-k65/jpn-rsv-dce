@@ -7,15 +7,15 @@
 # SECTION 1: Functions for data wrangling
 # ------------------------------------------------------------------------
 
-# Function to create dummy columns for categorical factors
+# Create dummy columns for categorical factors
 create_dummy_cols <- function(x) {
-    # To obtain col name
+    # Obtain col name
     col_name <- deparse(substitute(x))
-    # To obtain no. of levels excluding reference level
+    # Obtain no. of levels excluding reference level
     n_dummy_cols <- length(unique(x[x != 0 & !is.na(x)]))
-    # To initialize new matrix with 0s
+    # Initialize new matrix with 0s
     new_mat <- matrix(0, nrow = length(x), ncol = n_dummy_cols)
-    # To insert 1s into the appropriate column
+    # Insert 1s into the appropriate column
     for (i in 1:length(x)) {
         if (is.na(x[i])) {
             new_mat[i, ] <- NA
@@ -27,7 +27,7 @@ create_dummy_cols <- function(x) {
     return(new_mat)
 }
 
-# Function to add prefix to column names
+# Add prefix to column names
 add_prefix <- function(df, cols, prefix) {
     idx <- colnames(df) %in% cols
     colnames(df)[idx] <- paste0(prefix, colnames(df)[idx])
@@ -35,11 +35,11 @@ add_prefix <- function(df, cols, prefix) {
     return(df)
 }
 
-# Function to indicate no. of women that passed logical test
+# Indicate no. of women that passed logical test
 indicate_passTest <- function(df) {
-    # To obtain df name
+    # Obtain df name
     df_name <- deparse(substitute(df))
-    # To indicate if answers to repeated questions are the same
+    # Indicate if answers to repeated questions are the same
     df$passTest <- ifelse(
         df$block <= 10,
         as.integer(df$Q1S1 == df$Q4S1), # Qns 1 & 4 for blocks 1-10
@@ -51,15 +51,15 @@ indicate_passTest <- function(df) {
     return(df)
 }
 
-# Function to indicate no. of women with same responses
+# Indicate no. of women with same responses
 indicate_allSame <- function(df) {
-    # To obtain df name
+    # Obtain df name
     df_name <- deparse(substitute(df))
-    # To create vector of column names
+    # Create vector of column names
     col_names <- paste0("Q", 1:10, "S1")
-    # To count unique no. of values across each row
+    # Count unique no. of values across each row
     unique_counts <- apply(df[, col_names], 1, function(x) length(unique(x)))
-    # To indicate allSame = 1 if unique_counts = 1
+    # Indicate allSame = 1 if unique_counts = 1
     df$allSame <- as.integer(unique_counts == 1)
     num_same <- sum(df$allSame == 1)
     cat("\nAdded column for same responses (allSame)\n")
@@ -67,13 +67,13 @@ indicate_allSame <- function(df) {
     return(df)
 }
 
-# Function to indicate repeated task
+# Indicate repeated task
 indicate_rptTask <- function(df) {
-    # To obtain df name
+    # Obtain df name
     df_name <- deparse(substitute(df))
-    # To initialize new column as 0s
+    # Initialize new column as 0s
     df$rptTask <- 0
-    # To loop through each "id"
+    # Loop through each "id"
     for (i in unique(df$id)) {
         sub <- df[df$id == i, ]
         if (all(sub$block <= 10)) {
@@ -87,50 +87,48 @@ indicate_rptTask <- function(df) {
     return(df)
 }
 
-# Function to reassign columns as MV (left) & mAb (right)
+# Reassign columns as MV (left) & mAb (right)
 reassign_columns <- function(df) {
-    # To obtain df name
+    # Obtain df name
     df_name <- deparse(substitute(df))
-    # To identify & sort "alt1" & "alt2" columns
+    # Identify & sort "alt1" & "alt2" columns
     alt1_cols <- grep("^alt1_", colnames(df), value = TRUE) %>% sort()
     alt2_cols <- grep("^alt2_", colnames(df), value = TRUE) %>% sort()
-    # To indicate rows that require swapping
+    # Indicate rows that require swapping
     swap_rows <- (df$alt1_preg == 0)
-    # To replace "alt1" columns with "alt2" columns & vice versa for those rows
+    # Replace "alt1" columns with "alt2" columns & vice versa for those rows
     df[swap_rows, c(alt1_cols, alt2_cols)] <- df[swap_rows, c(alt2_cols, alt1_cols)]
-    # To update "choice_stage1" column
-    # 1 = MV, 2 = mAb
+    # Update "choice_stage1" column (1 = MV, 2 = mAb)
     df[swap_rows, "choice_stage1"] <- ifelse(df[swap_rows, "choice_stage1"] == 1, 2, 1)
-    # To update "choice_stage2" column
-    # 1 = MV, 2 = mAb, 3 = opt-out
+    # Update "choice_stage2" column (1 = MV, 2 = mAb, 3 = opt-out)
     df$choice_stage2 <- ifelse(df$choice_stage2 == 2, 3, df$choice_stage1)
-    # To drop "preg" & "preterm" columns for "alt2" (mab)
+    # Drop "preg" & "preterm" columns for "alt2" (mab)
     df$alt2_preg <- NULL
     df$alt2_preterm <- NULL
-    # To update column prefixes
+    # Update column prefixes
     colnames(df) <- sub("^alt1_", "mv_", colnames(df))
     colnames(df) <- sub("^alt2_", "mab_", colnames(df))
-    # To print message & return df
+    # Print message & return df
     cat("\nReassigned columns as mv (left) & mab (right)\n")
     cat("Dropped mab_preg & mab_preterm columns as not applicable\n")
     return(df)
 }
 
-# Function to indicate product availability in stage 2
+# Indicate product availability in stage 2
 indicate_prodAv <- function(df) {
-    # To obtain df name
+    # Obtain df name
     df_name <- deparse(substitute(df))
-    # To create new columns
+    # Create new columns
     df$mv_av <- ifelse(df$choice_stage1 == 1, 1, 0) # MV chosen
     df$mab_av <- ifelse(df$choice_stage1 == 2, 1, 0) # mAb chosen
-    # To add "av_opt" for 2nd stage
+    # Add "av_opt" for 2nd stage
     df$opt_av <- 1
-    # To print message & return df
+    # Print message & return df
     cat("\nAdded columns for product availability (mv_av, mab_av, opt_av)\n")
     return(df)
 }
 
-# Function to indicate missing as NA
+# Indicate missing as NA
 indicate_NA <- function(df, cols, na_val) {
     for (col in cols) {
         df[[col]][df[[col]] == na_val] <- NA
@@ -143,20 +141,20 @@ indicate_NA <- function(df, cols, na_val) {
 # SECTION 2: Functions for data exploration
 # ------------------------------------------------------------------------
 
-# Function to query time at multple cutoffs
+# Query time at multple cutoffs
 query_time <- function(col) {
     counts <- c(
         "<3" = sum(col < 3),
         "3-<4" = sum(col >= 3 & col < 4),
         "4-<5" = sum(col >= 4 & col < 5),
         ">5" = sum(col > 5)
-    ) / 10 # No. of tasks per respondent
+    ) / 10 # No. of rows per respondent
     cat("\nNo. of women by survey completion time (min):\n")
     print(counts)
     invisible(counts)
 }
 
-# Function to query age at multiple cutoffs
+# Query age at multiple cutoffs
 query_age <- function(col) {
     counts <- c(
         "<20" = sum(col < 20),
@@ -165,25 +163,25 @@ query_age <- function(col) {
         "40-<50" = sum(col >= 40 & col < 50),
         "50-<60" = sum(col >= 50 & col < 60),
         ">60" = sum(col > 60)
-    ) / 10 # No. of tasks per respondent
+    ) / 10 # No. of rows per respondent
     cat("\nNo. of women by age group:\n")
     print(counts)
     invisible(counts)
 }
 
-# Function to query gestational age at multiple cutoffs
+# Query gestational age at multiple cutoffs
 query_gestAge <- function(col) {
     counts <- c(
         "<=4" = sum(col <= 4),
         ">4-42" = sum(col > 4 & col <= 42),
         ">42" = sum(col > 42)
-    ) / 10 # No. of tasks per respondent
+    ) / 10 # No. of rows per respondent
     cat("\nNo. of women by gestational age (week):\n")
     print(counts)
     invisible(counts)
 }
 
-# Function to summarize categorical variables
+# Summarize categorical variables
 summ_cat <- function(df, cols) {
     # Keep first observation for each "id"
     df_person <- df %>%
@@ -208,7 +206,7 @@ summ_cat <- function(df, cols) {
     invisible(summary)
 }
 
-# Function to summarize continuous variables
+# Summarize continuous variables
 summ_cont <- function(df, cols, iqr = NULL) {
     # Keep first observation for each "id"
     df_person <- df %>%
@@ -247,7 +245,7 @@ summ_cont <- function(df, cols, iqr = NULL) {
     invisible(summary)
 }
 
-# Function to summarize categorical variable by subgroup
+# Summarize categorical variable by subgroup
 summ_cat_bySub <- function(df, col, grp_col) {
     # Keep first observation for each "id"
     df_person <- df %>%
@@ -291,7 +289,7 @@ summ_cat_bySub <- function(df, col, grp_col) {
     invisible(summary)
 }
 
-# Function to summarize continuous variables by subgroup
+# Summarize continuous variables by subgroup
 summ_cont_bySub <- function(df, col, grp_col) {
     # Keep first observation for each "id"
     df_person <- df %>%
@@ -326,13 +324,13 @@ summ_cont_bySub <- function(df, col, grp_col) {
 # SECTION 3: Functions for data visualization
 # ------------------------------------------------------------------------
 
-# Function to plot bar chart of imputed values
+# Plot bar chart of imputed values
 plot_bar <- function(
         df,
         x, 
         x_title = NULL
     ) {
-    # To plot bar plot by subgroup
+    # Plot bar plot by subgroup
     plot <- ggplot(df, aes(x = .data[[x]])) +
         geom_bar(fill = "#9BBB59") +
         labs(x = x_title, y = "Count") +
@@ -348,7 +346,7 @@ plot_bar <- function(
             axis.title.x = element_text(margin = margin(t = 4)),
             axis.text.x = element_text(size = 4.5),
         )
-    # To save bar plot
+    # Save bar plot
     fig_name <- glue("{x}_imputedVal")
     ggsave(
         filename = here("figs", paste0(fig_name, "_barChart.png")),
@@ -356,14 +354,14 @@ plot_bar <- function(
     )
 }
 
-# Function to plot bar chart by missingness
+# Plot bar chart by missingness
 plot_bar_byMissing <- function(
         df,
         x, 
         fill,
         x_title = NULL
     ) {
-    # To plot bar plot by subgroup
+    # Plot bar plot by subgroup
     plot <- ggplot(
         df, aes(
             x = .data[[x]],
@@ -399,7 +397,7 @@ plot_bar_byMissing <- function(
             legend.key.size = unit(0.2, "cm"),
             legend.text = element_text(size = 4)
         )
-    # To save bar plot
+    # Save bar plot
     fig_name <- glue("{x}_byMissing")
     ggsave(
         filename = here("figs", paste0(fig_name, "_barChart.png")),
@@ -407,14 +405,14 @@ plot_bar_byMissing <- function(
     )
 }
 
-# Function to prepare df for line plot
+# Prepare df for line plot
 linePrep <- function(df) {
-    # To isolate columns of interest
+    # Isolate columns of interest
     cols <- c("X", "Estimate", "Std.err.")
     df <- subset(df, select = cols)
-    # To drop int term
+    # Drop int term
     df <- df[!grepl("Int", df$X), ]
-    # To assign grp to coeff
+    # Assign grp to coeff
     df$grp <- character(nrow(df))
     for (i in 1:nrow(df)) {
         if (df$X[i] %in% c("ascPdt", "ascOpt")) {
@@ -429,19 +427,19 @@ linePrep <- function(df) {
             df$grp[i] <- "Cost"
         }
     }
-    # To calculate 95% CI
+    # Calculate 95% CI
     df$ci_lower <- df$Estimate - 1.96 * df$Std.err.
     df$ci_upper <- df$Estimate + 1.96 * df$Std.err.
     return(df)
 }
 
-# Function to plot & save line plot
+# Plot & save line plot
 linePlot <- function(df) {
-    # To obtain df name
+    # Obtain df name
     df_name <- deparse(substitute(df))
-    # To fix factor levels
+    # Fix factor levels
     df$X <- factor(df$X, levels = unique(df$X))
-    # To plot line plot
+    # Plot line plot
     plot <- ggplot(df, aes(x = X, y = Estimate, group = grp, color = grp)) +
         geom_line(linewidth = 0.5) +
         geom_point(size = 1) +
@@ -453,7 +451,7 @@ linePlot <- function(df) {
             axis.text.x = element_text(angle = 45, hjust = 1),
             legend.position = "top"
         )
-    # To save line plot
+    # Save line plot
     cat("\nSaved", paste0(df_name, "_linePlot.png"), "\n")
     ggsave(
         filename = here("figs", paste0(df_name, "_linePlot.png")),
@@ -490,7 +488,7 @@ format_cca_results <- function(fit) {
     cat("\nBIC:", sprintf("%.0f", bic))
 }
 
-# Function to pool coefficients using Rubin's rules
+# Pool coefficients using Rubin's rules
 pool_coeff <- function(est_list, varcov_list, M) {
     # Bind estimates from all imputations
     Qhat <- do.call(rbind, est_list) %>% as.data.frame()
@@ -532,7 +530,7 @@ pool_coeff <- function(est_list, varcov_list, M) {
     invisible(results)
 }
 
-# Function to summarize range of AIC & BIC values across imputations
+# Summarize range of AIC & BIC values across imputations
 summ_aic_bic <- function(aic_list, bic_list) {
     aic_vals <- unlist(aic_list)
     bic_vals <- unlist(bic_list)
