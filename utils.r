@@ -465,6 +465,31 @@ linePlot <- function(df) {
 # SECTION 4: Functions for coefficient estimation
 # ------------------------------------------------------------------------
 
+# Format CCA results
+format_cca_results <- function(fit) {
+    # Extract AIC & BIC
+    aic <- fit$AIC
+    bic <- fit$BIC
+    # Extract estimates & robust standard errors
+    est <- fit$estimate
+    rob_se <- fit$robse
+    # Calculate t-ratios & 2-sided p-values
+    t_rat <- est / rob_se
+    p_val <- 2 * pnorm(-abs(t_rat))
+    # Create a data frame to store the results
+    results <- data.frame(
+        Est = sprintf("%.5f", est),
+        Rob_SE = sprintf("%.5f", rob_se),
+        p_2sided = ifelse(p_val < 0.001, "<0.001", sprintf("%.3f", p_val)),
+        row.names = names(est)
+    )
+    cat("\nEstimates from complete case analysis:\n")
+    print(results)
+    invisible(results)
+    cat("\nAIC:", sprintf("%.0f", aic), "\n")
+    cat("\nBIC:", sprintf("%.0f", bic))
+}
+
 # Function to pool coefficients using Rubin's rules
 pool_coeff <- function(est_list, varcov_list, M) {
     # Bind estimates from all imputations
@@ -497,12 +522,12 @@ pool_coeff <- function(est_list, varcov_list, M) {
     p <- pf(F, df1 = 1, df2 = nu, lower.tail = FALSE)
     # Create a data frame to store the results
     results <- data.frame(
-        Estimate = sprintf("%.5f", Qbar),
-        se = sprintf("%.5f", SE),
-        p = ifelse(p < 0.001, "<0.001", sprintf("%.3f", p)),
+        Est = sprintf("%.5f", Qbar),
+        Rob_SE = sprintf("%.5f", SE),
+        p_2sided = ifelse(p < 0.001, "<0.001", sprintf("%.3f", p)),
         row.names = names(Qbar)
     )
-    cat("\nPooled coefficients using Rubin's rules:\n")
+    cat("\nPooled estimates using Rubin's rules:\n")
     print(results)
     invisible(results)
 }
@@ -511,12 +536,12 @@ pool_coeff <- function(est_list, varcov_list, M) {
 summ_aic_bic <- function(aic_list, bic_list) {
     aic_vals <- unlist(aic_list)
     bic_vals <- unlist(bic_list)
-    aic_min <- sprintf("%.2f", min(aic_vals))
-    aic_max <- sprintf("%.2f", max(aic_vals))
-    bic_min <- sprintf("%.2f", min(bic_vals))
-    bic_max <- sprintf("%.2f", max(bic_vals))
+    aic_min <- sprintf("%.0f", min(aic_vals))
+    aic_max <- sprintf("%.0f", max(aic_vals))
+    bic_min <- sprintf("%.0f", min(bic_vals))
+    bic_max <- sprintf("%.0f", max(bic_vals))
     cat("\nAIC values:\n")
-    print(noquote(paste0("Min: ", aic_min, ", Max: ", aic_max)))
+    cat("Min:", aic_min, ", Max:", aic_max, "\n")
     cat("\nBIC values:\n")
-    print(noquote(paste0("Min: ", bic_min, ", Max: ", bic_max)))
+    cat("Min:", bic_min, ", Max:", bic_max)
 }
