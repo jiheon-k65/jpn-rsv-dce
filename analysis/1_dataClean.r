@@ -238,19 +238,6 @@ char_data$time <- as.numeric(
 )
 cat("\nAdded column for completion time (time)\n")
 
-# # Visualize correlation between SC3.1 & AGE
-# cat("\nCorrelation between SC3.1 & AGE:\n")
-# sc31_age_corr <- ggplot(char_data, aes(x = SC3.1, y = AGE)) +
-#     geom_point(
-#         fill = "#C0504D",
-#         shape = 21,
-#         size = 3.5,
-#         stroke = 0.9,
-#         alpha = 0.6
-#     ) +
-#     theme_bw(base_size = 14)
-# print(sc31_age_corr)
-
 # Drop redundant columns
 cols_toDrop <- c(
     "start", "end", "X1", "SC1", "SC2",
@@ -328,8 +315,8 @@ dataset$fluCovVac <- fluCovVac_map[as.character(dataset$fluCovVac)]
 scale_cols <- c("govTrust", "vacImpt", "vacSafe", "vacEff", "vacBlf")
 scale_map <- c(
     "1" = 3, # Strongly agree
-    "2" = 2, # Tend to agree
-    "3" = 1, # Tend to disagree
+    "2" = 2, # Somewhat agree
+    "3" = 1, # Somewhat disagree
     "4" = 0 # Strongly disagree
 )
 for (col in scale_cols) {
@@ -340,25 +327,25 @@ for (col in scale_cols) {
 edu_map <- c(
     "1" = 0, # Junior high school
     "2" = 0, # High school
-    "3" = 0, # Technical school
-    "4" = 0, # College
-    "5" = 1, # University
-    "6" = 1, # Postgraduate
-    "7" = 0, # Student
+    "3" = 0, # Vocational school
+    "4" = 0, # Junior college / college of technology
+    "5" = 1, # Bachelor's degree
+    "6" = 1, # Postgraduate degree
+    "7" = 0, # Currently studying
     "8" = 0 # Others
 )
 dataset$eduGrp <- edu_map[as.character(dataset$education)]
 cat("\nAdded column for education group (eduGrp)\n")
 
-# Group income into 2 categories
+# Group annual income into 2 categories
 inc_map <- c(
-    "1" = 0, # <=400
-    "2" = 0, # >400 & <=600
-    "3" = 1, # >600 & <=800
-    "4" = 1, # >800 & <=1000
-    "5" = 1, # >1000 & <=1200
-    "6" = 1, # >1200 & <=1500
-    "7" = 1 # >1500
+    "1" = 0, # <=4 million
+    "2" = 0, # >4 to <=6 million
+    "3" = 1, # >6 to <=8 million
+    "4" = 1, # >8 to <=10 million
+    "5" = 1, # >10 to <=12 million
+    "6" = 1, # >12 to <=15 million
+    "7" = 1 # >15 million
 )
 dataset$incGrp <- inc_map[as.character(dataset$income)]
 cat("\nAdded column for income group (incGrp)\n")

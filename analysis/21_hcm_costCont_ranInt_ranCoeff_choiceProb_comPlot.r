@@ -170,7 +170,11 @@ choiceProb_combined <- ggplot(
         legend.key.size = grid::unit(0.4, "cm"),
         legend.title = element_blank(),
         legend.text = element_text(size = 6),
-        strip.background = element_rect(fill = "grey95", color = "grey60"),
+        strip.background = element_rect(
+            fill = "#F2F2F2",
+            colour = "#000000",
+            linewidth = 0.4
+        ),
         strip.text = element_text(size = 8),
         panel.spacing.y = grid::unit(0.2, "lines")
     )
