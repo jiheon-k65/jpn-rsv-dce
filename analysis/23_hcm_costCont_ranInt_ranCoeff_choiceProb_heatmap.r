@@ -21,9 +21,6 @@ df <- read.csv(here("data", "choiceProb_bothCost.csv"))
 df$MV_Cost <- df$MV_Cost * 100000 # Convert MV cost to JPY
 df$mAb_Cost <- df$mAb_Cost * 100000 # Convert mAb cost to JPY
 
-df_plot <- df %>% mutate(
-    Alt = factor(Alt, levels = c("MV", "mAb", "Opt-out"))
-)
 # ------------------------------------------------------------------------
 # SECTION 6: Plot heatmaps of mean choice probabilities
 # ------------------------------------------------------------------------
@@ -34,20 +31,20 @@ color_manual <- c(
     "Opt-out" = "#C0504D"
 )
 
-df_plot <- df_plot %>%
-    mutate(
-        tile_color = mapply(
-            function(alt, mean) {
-                grDevices::colorRampPalette(
-                    c("#FFFFFF", color_manual[[alt]])
-                )(101)[round(mean * 100) + 1]
-            },
-            Alt,
-            Mean
-        )
+df_plot <- df %>% mutate(
+    Alt = factor(Alt, levels = c("MV", "mAb", "Opt-out")),
+    tile_color = mapply(
+        function(alt, mean) {
+            grDevices::colorRampPalette(
+                c("#FFFFFF", color_manual[[alt]])
+            )(101)[round(mean * 100) + 1]
+        },
+        Alt,
+        Mean
     )
+)
 
-combined_heatmap <- ggplot(
+heatmap <- ggplot(
     df_plot,
     aes(x = MV_Cost, y = mAb_Cost)
 ) +
@@ -97,12 +94,11 @@ combined_heatmap <- ggplot(
     )
 
 ggsave(
-    filename = here("figs", "choiceProb_all_heatmaps.png"),
-    plot = combined_heatmap,
+    filename = here("figs", "choiceProb_heatmap.png"),
+    plot = heatmap,
     height = 6.1,
     width = 10,
     units = "cm",
     dpi = 600
 )
-
-cat("\nCombined heatmaps successfully saved as choiceProb_all_heatmaps.png\n")
+cat("\nPlot successfully saved!\n")
