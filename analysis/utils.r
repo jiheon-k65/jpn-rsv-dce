@@ -31,7 +31,7 @@ create_dummy_cols <- function(x) {
 add_prefix <- function(df, cols, prefix) {
     idx <- colnames(df) %in% cols
     colnames(df)[idx] <- paste0(prefix, colnames(df)[idx])
-    cat("\nAdded prefix", prefix, "to columns:", cols, "\n")
+    cat("\nAdded prefix ", prefix, " to columns: ", paste(cols, collapse = ", "), "\n", sep = "")
     return(df)
 }
 
@@ -46,7 +46,7 @@ indicate_passTest <- function(df) {
         as.integer(df$Q6S1 == df$Q9S1) # Qns 6 & 9 for blocks 11-20
     )
     num_passes <- sum(df$passTest == 1)
-    cat("\nAdded column for logical test results (passTest)\n")
+    cat("\nAdded column for logical test results: passTest\n")
     cat("No. of women that passed logical test:", num_passes, "\n")
     return(df)
 }
@@ -62,7 +62,7 @@ indicate_allSame <- function(df) {
     # Indicate allSame = 1 if unique_counts = 1
     df$allSame <- as.integer(unique_counts == 1)
     num_same <- sum(df$allSame == 1)
-    cat("\nAdded column for same responses (allSame)\n")
+    cat("\nAdded column for same responses: allSame\n")
     cat("No. of women with same responses:", num_same, "\n")
     return(df)
 }
@@ -83,7 +83,7 @@ indicate_rptTask <- function(df) {
         }
         df$rptTask[df$id == i] <- sub$rptTask
     }
-    cat("\nAdded column for repeated task (rptTask)\n")
+    cat("\nAdded column for repeated task: rptTask\n")
     return(df)
 }
 
@@ -124,7 +124,7 @@ indicate_prodAv <- function(df) {
     # Add "av_opt" for 2nd stage
     df$opt_av <- 1
     # Print message & return df
-    cat("\nAdded columns for product availability (mv_av, mab_av, opt_av)\n")
+    cat("\nAdded columns for product availability: mv_av, mab_av, opt_av\n")
     return(df)
 }
 
@@ -133,7 +133,7 @@ indicate_NA <- function(df, cols, na_val) {
     for (col in cols) {
         df[[col]][df[[col]] == na_val] <- NA
     }
-    cat("\nIndicated NA for", cols, "\n")
+    cat("\nIndicated NA for columns: ", paste(cols, collapse = ", "), "\n", sep = "")
     return(df)
 }
 
