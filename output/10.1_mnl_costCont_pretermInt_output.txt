@@ -1,30 +1,30 @@
 ===========================================================================
 Title: 10.1_mnl_costCont_pretermInt_output.txt
-Date: 2026-09-23
+Date: 2026-10-18
 ===========================================================================
 
 Estimates from complete case analysis:
                         Est  Rob_SE p_2sided
-ascOpt             -0.37720 0.09747   <0.001
-bPreg_mv            0.25652 0.05873   <0.001
-bRedness           -0.07113 0.04870    0.144
-bPreterm_mv        -2.20201 0.26617   <0.001
-bHosp1.2           -0.00683 0.07760    0.930
-bHosp0.9            0.01380 0.07558    0.855
-bHosp0.3            0.30276 0.07329   <0.001
-bCost              -2.17353 0.15304   <0.001
-bOptIntRisk         0.18995 0.08462    0.025
-bHospIntRisk       -0.00805 0.09120    0.930
-bPretermIntAge     -0.10057 0.08111    0.215
-bPretermIntSib      0.06098 0.08815    0.489
-bPretermIntEdu      0.06059 0.13297    0.649
-bPretermIntInc     -0.04105 0.13399    0.759
-bPretermIntGov      0.40249 0.11081   <0.001
-bPretermIntVacImpt  0.18185 0.15820    0.250
-bPretermIntVacSafe  0.01737 0.13593    0.898
-bPretermIntVacEff   0.07685 0.15502    0.620
-bPretermIntVacBlf   0.18897 0.14492    0.192
+ascOpt             -0.37725 0.09746   <0.001
+bPreg_mv            0.25655 0.05873   <0.001
+bRedness           -0.07103 0.04870    0.145
+bPreterm_mv        -2.16483 0.26306   <0.001
+bHosp1.2           -0.00725 0.07755    0.925
+bHosp0.9            0.01344 0.07555    0.859
+bHosp0.3            0.30228 0.07327   <0.001
+bCost              -2.17302 0.15300   <0.001
+bOptIntRisk         0.18976 0.08461    0.025
+bHospIntRisk       -0.00816 0.09119    0.929
+bPretermIntAge     -0.08006 0.07181    0.265
+bPretermIntSib      0.01803 0.12307    0.884
+bPretermIntEdu      0.05009 0.13274    0.706
+bPretermIntInc     -0.03981 0.13379    0.766
+bPretermIntGov      0.40442 0.11037   <0.001
+bPretermIntVacImpt  0.17627 0.15821    0.265
+bPretermIntVacSafe  0.01727 0.13620    0.899
+bPretermIntVacEff   0.07601 0.15576    0.626
+bPretermIntVacBlf   0.19680 0.14542    0.176
 
-AIC: 9196 
+AIC: 9197 
 
-BIC: 9319
+BIC: 9320

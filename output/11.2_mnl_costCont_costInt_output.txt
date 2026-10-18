@@ -1,32 +1,32 @@
 ===========================================================================
 Title: 11.2_mnl_costCont_costInt_output.txt
-Date: 2026-09-23
+Date: 2026-10-18
 ===========================================================================
 
 Pooled estimates using Rubin's rules:
                      Est  Rob_SE p_2sided
-ascOpt          -0.22037 0.08518    0.010
-bPreg_mv         0.23375 0.05360   <0.001
-bRedness        -0.05674 0.04428    0.200
-bPreterm_mv     -0.44987 0.06551   <0.001
-bHosp1.2         0.01084 0.06643    0.870
-bHosp0.9         0.01163 0.06618    0.861
-bHosp0.3         0.28732 0.06434   <0.001
-bCost           -4.24269 0.67092   <0.001
-bOptIntRisk      0.20863 0.07316    0.004
-bHospIntRisk     0.00433 0.07985    0.957
-bCostIntAge     -0.31021 0.18426    0.092
-bCostIntSib      0.33546 0.22443    0.135
-bCostIntEdu      0.67442 0.32302    0.037
-bCostIntInc     -0.21374 0.29514    0.469
-bCostIntGov      0.71153 0.36372    0.050
-bCostIntVacImpt  0.18932 0.33846    0.576
-bCostIntVacSafe -0.13853 0.35318    0.695
-bCostIntVacEff  -0.45263 0.35950    0.208
-bCostIntVacBlf   0.45159 0.35436    0.203
+ascOpt          -0.21856 0.08516    0.010
+bPreg_mv         0.23416 0.05361   <0.001
+bRedness        -0.05646 0.04431    0.203
+bPreterm_mv     -0.45010 0.06545   <0.001
+bHosp1.2         0.01057 0.06644    0.874
+bHosp0.9         0.01196 0.06623    0.857
+bHosp0.3         0.28778 0.06430   <0.001
+bCost           -4.03988 0.65650   <0.001
+bOptIntRisk      0.20717 0.07319    0.005
+bHospIntRisk     0.00272 0.07988    0.973
+bCostIntAge     -0.22663 0.16153    0.161
+bCostIntSib      0.16845 0.28282    0.551
+bCostIntEdu      0.61464 0.31903    0.054
+bCostIntInc     -0.22583 0.29623    0.446
+bCostIntGov      0.72064 0.36726    0.050
+bCostIntVacImpt  0.15976 0.34026    0.639
+bCostIntVacSafe -0.13959 0.35611    0.695
+bCostIntVacEff  -0.45785 0.36452    0.209
+bCostIntVacBlf   0.48459 0.36114    0.180
 
 AIC values:
-Min: 11669 , Max: 11682 
+Min: 11676 , Max: 11689 
 
 BIC values:
-Min: 11796 , Max: 11809
+Min: 11803 , Max: 11817

@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 11.1_mnl_costCont_costInt.r
-# Date: 2026-09-23
+# Date: 2026-10-18
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -16,7 +16,7 @@ library(dplyr)
 library(apollo)
 
 # Source universal functions
-source(here("utils.r"))
+source(here("analysis", "utils.r"))
 
 # Initialize code
 apollo_initialise()
@@ -172,7 +172,7 @@ apollo_modelOutput(fit, modelOutput_settings)
 sink(here("output", "11.1_mnl_costCont_costInt_output.txt"))
 cat("===========================================================================\n")
 cat("Title: 11.1_mnl_costCont_costInt_output.txt\n")
-cat("Date: 2026-09-23\n")
+cat("Date: 2026-10-18\n")
 cat("===========================================================================\n")
 
 format_cca_results(fit)

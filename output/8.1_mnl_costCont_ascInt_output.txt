@@ -1,30 +1,30 @@
 ===========================================================================
 Title: 8.1_mnl_costCont_ascInt_output.txt
-Date: 2026-09-23
+Date: 2026-10-18
 ===========================================================================
 
 Estimates from complete case analysis:
                       Est  Rob_SE p_2sided
-ascOpt            2.37197 0.30732   <0.001
-bPreg_mv          0.26926 0.06146   <0.001
-bRedness         -0.08454 0.04792    0.078
-bPreterm_mv      -0.43638 0.07449   <0.001
-bHosp1.2         -0.00803 0.07889    0.919
-bHosp0.9          0.02071 0.07727    0.789
-bHosp0.3          0.30246 0.07457   <0.001
-bCost            -2.18685 0.15486   <0.001
-bOptIntRisk       0.22488 0.09185    0.014
-bHospIntRisk     -0.01158 0.09331    0.901
-ascOptIntAge      0.14728 0.08105    0.069
-ascOptIntSib      0.02473 0.10036    0.805
-ascOptIntEdu     -0.26986 0.14903    0.070
-ascOptIntInc      0.02364 0.15064    0.875
-ascOptIntGov     -0.60166 0.13758   <0.001
-ascOptIntVacImpt -0.19277 0.15879    0.225
-ascOptIntVacSafe -0.03391 0.16541    0.838
-ascOptIntVacEff  -0.18885 0.17327    0.276
-ascOptIntVacBlf  -0.39694 0.15010    0.008
+ascOpt            2.31984 0.30396   <0.001
+bPreg_mv          0.26957 0.06145   <0.001
+bRedness         -0.08473 0.04791    0.077
+bPreterm_mv      -0.43719 0.07446   <0.001
+bHosp1.2         -0.00827 0.07889    0.917
+bHosp0.9          0.02031 0.07729    0.793
+bHosp0.3          0.30263 0.07455   <0.001
+bCost            -2.18718 0.15493   <0.001
+bOptIntRisk       0.22509 0.09183    0.014
+bHospIntRisk     -0.01163 0.09332    0.901
+ascOptIntAge      0.12091 0.07084    0.088
+ascOptIntSib      0.14082 0.14588    0.334
+ascOptIntEdu     -0.26044 0.14892    0.080
+ascOptIntInc      0.01864 0.15057    0.901
+ascOptIntGov     -0.61228 0.13818   <0.001
+ascOptIntVacImpt -0.19020 0.15844    0.230
+ascOptIntVacSafe -0.03145 0.16616    0.850
+ascOptIntVacEff  -0.18409 0.17370    0.289
+ascOptIntVacBlf  -0.40433 0.15012    0.007
 
-AIC: 8576 
+AIC: 8572 
 
-BIC: 8698
+BIC: 8694

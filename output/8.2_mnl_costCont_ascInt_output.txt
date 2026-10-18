@@ -1,32 +1,32 @@
 ===========================================================================
 Title: 8.2_mnl_costCont_ascInt_output.txt
-Date: 2026-09-23
+Date: 2026-10-18
 ===========================================================================
 
 Pooled estimates using Rubin's rules:
                       Est  Rob_SE p_2sided
-ascOpt            2.36951 0.28107   <0.001
-bPreg_mv          0.25143 0.05653   <0.001
-bRedness         -0.07445 0.04413    0.092
-bPreterm_mv      -0.48503 0.06906   <0.001
-bHosp1.2          0.00688 0.06983    0.921
-bHosp0.9          0.01089 0.06904    0.875
-bHosp0.3          0.30024 0.06708   <0.001
-bCost            -2.25663 0.14504   <0.001
-bOptIntRisk       0.24792 0.08034    0.002
-bHospIntRisk     -0.00014 0.08407    0.999
-ascOptIntAge      0.11241 0.07211    0.119
-ascOptIntSib      0.02867 0.09028    0.751
-ascOptIntEdu     -0.24095 0.13251    0.069
-ascOptIntInc      0.09791 0.13427    0.466
-ascOptIntGov     -0.56861 0.12905   <0.001
-ascOptIntVacImpt -0.29450 0.14781    0.046
-ascOptIntVacSafe -0.01988 0.15328    0.897
-ascOptIntVacEff  -0.01788 0.16819    0.915
-ascOptIntVacBlf  -0.50398 0.14210   <0.001
+ascOpt            2.31429 0.27938   <0.001
+bPreg_mv          0.25176 0.05653   <0.001
+bRedness         -0.07463 0.04411    0.091
+bPreterm_mv      -0.48572 0.06903   <0.001
+bHosp1.2          0.00668 0.06984    0.924
+bHosp0.9          0.01036 0.06906    0.881
+bHosp0.3          0.30012 0.06707   <0.001
+bCost            -2.25702 0.14508   <0.001
+bOptIntRisk       0.24860 0.08030    0.002
+bHospIntRisk      0.00006 0.08406    0.999
+ascOptIntAge      0.09085 0.06274    0.148
+ascOptIntSib      0.14585 0.12944    0.260
+ascOptIntEdu     -0.22992 0.13199    0.082
+ascOptIntInc      0.09654 0.13403    0.471
+ascOptIntGov     -0.57787 0.12951   <0.001
+ascOptIntVacImpt -0.29217 0.14770    0.048
+ascOptIntVacSafe -0.01682 0.15378    0.913
+ascOptIntVacEff  -0.01412 0.16805    0.933
+ascOptIntVacBlf  -0.51052 0.14214   <0.001
 
 AIC values:
-Min: 10696 , Max: 10809 
+Min: 10689 , Max: 10803 
 
 BIC values:
-Min: 10823 , Max: 10936
+Min: 10816 , Max: 10930
