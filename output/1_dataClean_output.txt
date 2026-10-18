@@ -1,6 +1,6 @@
 ===========================================================================
 Title: 1_dataClean_output.txt
-Date: 2026-07-20
+Date: 2026-10-18
 ===========================================================================
 
 Dummy columns created for adv_col 
@@ -58,29 +58,24 @@ Added column for completion time (time)
 
 Dropped redundant columns: start end X1 SC1 SC2 SEG SEX AGE CHILD NAGE 
 
-Added column for standardized age (ageStd)
-
-Added column for sibling group (sibGrp)
-
 Added column for education group (eduGrp)
 
 Added column for income group (incGrp)
 
 File successfully saved as jpn_dataset.csv
 Column names of jpn_dataset.csv:
- [1] "id"            "block"         "passTest"      "allSame"      
- [5] "task"          "choice_stage1" "choice_stage2" "mv_cost"      
- [9] "mv_cost0.05"   "mv_cost0.1"    "mv_cost0.3"    "mv_cost1"     
-[13] "mv_hosp"       "mv_hosp0.3"    "mv_hosp0.9"    "mv_hosp1.2"   
-[17] "mv_preg"       "mv_preterm"    "mv_redness"    "mab_cost"     
-[21] "mab_cost0.05"  "mab_cost0.1"   "mab_cost0.3"   "mab_cost1"    
-[25] "mab_hosp"      "mab_hosp0.3"   "mab_hosp0.9"   "mab_hosp1.2"  
-[29] "mab_redness"   "risk"          "rptTask"       "mv_av"        
-[33] "mab_av"        "opt_av"        "propOpt"       "age"          
-[37] "sibling"       "numSib"        "fluCovVac"     "tdapVac"      
-[41] "rsvVac"        "gestAge"       "govTrust"      "vacImpt"      
-[45] "vacSafe"       "vacEff"        "vacBlf"        "chiiki"       
-[49] "marriage"      "job"           "family"        "education"    
-[53] "income"        "home"          "license"       "car"          
-[57] "time"          "ageStd"        "sibGrp"        "eduGrp"       
-[61] "incGrp"       
+ [1] "age"           "allSame"       "block"         "car"          
+ [5] "chiiki"        "choice_stage1" "choice_stage2" "education"    
+ [9] "eduGrp"        "family"        "fluCovVac"     "gestAge"      
+[13] "govTrust"      "home"          "id"            "incGrp"       
+[17] "income"        "job"           "license"       "mab_av"       
+[21] "mab_cost"      "mab_cost0.05"  "mab_cost0.1"   "mab_cost0.3"  
+[25] "mab_cost1"     "mab_hosp"      "mab_hosp0.3"   "mab_hosp0.9"  
+[29] "mab_hosp1.2"   "mab_redness"   "marriage"      "mv_av"        
+[33] "mv_cost"       "mv_cost0.05"   "mv_cost0.1"    "mv_cost0.3"   
+[37] "mv_cost1"      "mv_hosp"       "mv_hosp0.3"    "mv_hosp0.9"   
+[41] "mv_hosp1.2"    "mv_preg"       "mv_preterm"    "mv_redness"   
+[45] "numSib"        "opt_av"        "passTest"      "propOpt"      
+[49] "risk"          "rptTask"       "rsvVac"        "sibling"      
+[53] "task"          "tdapVac"       "time"          "vacBlf"       
+[57] "vacEff"        "vacImpt"       "vacSafe"      

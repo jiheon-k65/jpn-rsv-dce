@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 1_dataClean.r
-# Date: 2026-07-20
+# Date: 2026-10-18
 # ===========================================================================
 
 # Load packages
@@ -19,7 +19,7 @@ dir.create(here("output"), showWarnings = FALSE, recursive = TRUE)
 sink(here("output", "1_dataClean_output.txt"))
 cat("===========================================================================\n")
 cat("Title: 1_dataClean_output.txt\n")
-cat("Date: 2026-07-20\n")
+cat("Date: 2026-10-18\n")
 cat("===========================================================================\n")
 
 # ===========================================================================
@@ -275,32 +275,11 @@ stopifnot(
 # SECTION 5: Create new columns for respondent characteristics
 # ===========================================================================
 
-# Standardize age
-age_mean <- mean(dataset$age, na.rm = TRUE)
-age_sd <- sd(dataset$age, na.rm = TRUE)
-dataset$ageStd <- (dataset$age - age_mean) / age_sd
-cat("\nAdded column for standardized age (ageStd)\n")
-
 # Recode binary categories to 0-indexed values
 binary_cols <- c("sibling", "tdapVac", "rsvVac")
 for (col in binary_cols) {
     dataset[[col]] <- ifelse(dataset[[col]] == 2, 0, 1)
 } # No: 0, Yes: 1
-
-# Fill in NA values for number of sibling with 0
-dataset[dataset$sibling == 0, "numSib"] <- 0
-
-# Group number of siblings into 3 categories
-numSib_map <- c(
-    "0" = 0, # No sibling
-    "1" = 1, # 1 sibling
-    "2" = 2, # 2 siblings
-    "3" = 2, # 3 siblings
-    "4" = 2, # 4 siblings
-    "5" = 2 # 5 siblings
-)
-dataset$sibGrp <- numSib_map[as.character(dataset$numSib)]
-cat("\nAdded column for sibling group (sibGrp)\n")
 
 # Recode flu &/or covid vaccine into 0-indexed values
 fluCovVac_map <- c(
@@ -351,6 +330,7 @@ dataset$incGrp <- inc_map[as.character(dataset$income)]
 cat("\nAdded column for income group (incGrp)\n")
 
 # Save dataframe for DCE design, results & respondent characteristics
+dataset <- dataset[, sort(names(dataset))]
 write.csv(dataset, file = here("data", "jpn_dataset.csv"), row.names = FALSE)
 cat("\nFile successfully saved as jpn_dataset.csv\n")
 cat("Column names of jpn_dataset.csv:\n")

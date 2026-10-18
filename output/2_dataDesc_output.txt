@@ -1,121 +1,121 @@
 ===========================================================================
 Title: 2_dataDesc_output.txt
-Date: 2026-07-20
+Date: 2026-10-18
 ===========================================================================
 
 Summary of variables:
-      id                block          passTest        allSame     
- Length:10000       Min.   : 1.00   Min.   :0.000   Min.   :0.000  
- Class :character   1st Qu.: 5.75   1st Qu.:1.000   1st Qu.:0.000  
- Mode  :character   Median :10.50   Median :1.000   Median :0.000  
-                    Mean   :10.50   Mean   :0.786   Mean   :0.106  
-                    3rd Qu.:15.25   3rd Qu.:1.000   3rd Qu.:0.000  
-                    Max.   :20.00   Max.   :1.000   Max.   :1.000  
-                                                                   
-      task      choice_stage1  choice_stage2      mv_cost        mv_cost0.05   
- Min.   : 1.0   Min.   :1.00   Min.   :1.000   Min.   :0.0000   Min.   :0.000  
- 1st Qu.: 3.0   1st Qu.:1.00   1st Qu.:1.000   1st Qu.:0.0500   1st Qu.:0.000  
- Median : 5.5   Median :1.00   Median :2.000   Median :0.1000   Median :0.000  
- Mean   : 5.5   Mean   :1.48   Mean   :2.123   Mean   :0.2762   Mean   :0.205  
- 3rd Qu.: 8.0   3rd Qu.:2.00   3rd Qu.:3.000   3rd Qu.:0.3000   3rd Qu.:0.000  
- Max.   :10.0   Max.   :2.00   Max.   :3.000   Max.   :1.0000   Max.   :1.000  
-                                                                               
-   mv_cost0.1      mv_cost0.3       mv_cost1        mv_hosp      
- Min.   :0.000   Min.   :0.000   Min.   :0.000   Min.   :0.3000  
- 1st Qu.:0.000   1st Qu.:0.000   1st Qu.:0.000   1st Qu.:0.3000  
- Median :0.000   Median :0.000   Median :0.000   Median :1.2000  
- Mean   :0.195   Mean   :0.205   Mean   :0.185   Mean   :0.9735  
- 3rd Qu.:0.000   3rd Qu.:0.000   3rd Qu.:0.000   3rd Qu.:1.5000  
- Max.   :1.000   Max.   :1.000   Max.   :1.000   Max.   :1.5000  
-                                                                 
-   mv_hosp0.3     mv_hosp0.9      mv_hosp1.2       mv_preg    mv_preterm 
- Min.   :0.00   Min.   :0.000   Min.   :0.000   Min.   :1   Min.   :0.0  
- 1st Qu.:0.00   1st Qu.:0.000   1st Qu.:0.000   1st Qu.:1   1st Qu.:0.0  
- Median :0.00   Median :0.000   Median :0.000   Median :1   Median :1.0  
- Mean   :0.26   Mean   :0.235   Mean   :0.245   Mean   :1   Mean   :0.6  
- 3rd Qu.:1.00   3rd Qu.:0.000   3rd Qu.:0.000   3rd Qu.:1   3rd Qu.:1.0  
- Max.   :1.00   Max.   :1.000   Max.   :1.000   Max.   :1   Max.   :1.0  
-                                                                         
-   mv_redness      mab_cost       mab_cost0.05    mab_cost0.1    mab_cost0.3  
- Min.   :0.00   Min.   :0.0000   Min.   :0.000   Min.   :0.00   Min.   :0.00  
- 1st Qu.:0.00   1st Qu.:0.0500   1st Qu.:0.000   1st Qu.:0.00   1st Qu.:0.00  
- Median :0.00   Median :0.1000   Median :0.000   Median :0.00   Median :0.00  
- Mean   :0.21   Mean   :0.3068   Mean   :0.215   Mean   :0.18   Mean   :0.21  
- 3rd Qu.:0.00   3rd Qu.:0.3000   3rd Qu.:0.000   3rd Qu.:0.00   3rd Qu.:0.00  
- Max.   :1.00   Max.   :1.0000   Max.   :1.000   Max.   :1.00   Max.   :1.00  
-                                                                              
-   mab_cost1        mab_hosp      mab_hosp0.3     mab_hosp0.9    mab_hosp1.2  
- Min.   :0.000   Min.   :0.300   Min.   :0.000   Min.   :0.00   Min.   :0.00  
- 1st Qu.:0.000   1st Qu.:0.900   1st Qu.:0.000   1st Qu.:0.00   1st Qu.:0.00  
- Median :0.000   Median :1.200   Median :0.000   Median :0.00   Median :0.00  
- Mean   :0.215   Mean   :0.984   Mean   :0.235   Mean   :0.26   Mean   :0.26  
- 3rd Qu.:0.000   3rd Qu.:1.200   3rd Qu.:0.000   3rd Qu.:1.00   3rd Qu.:1.00  
- Max.   :1.000   Max.   :1.500   Max.   :1.000   Max.   :1.00   Max.   :1.00  
-                                                                              
-  mab_redness        risk        rptTask        mv_av            mab_av      
- Min.   :0.00   Min.   :0.0   Min.   :0.0   Min.   :0.0000   Min.   :0.0000  
- 1st Qu.:0.00   1st Qu.:0.0   1st Qu.:0.0   1st Qu.:0.0000   1st Qu.:0.0000  
- Median :0.00   Median :0.5   Median :0.0   Median :1.0000   Median :0.0000  
- Mean   :0.49   Mean   :0.5   Mean   :0.1   Mean   :0.5201   Mean   :0.4799  
- 3rd Qu.:1.00   3rd Qu.:1.0   3rd Qu.:0.0   3rd Qu.:1.0000   3rd Qu.:1.0000  
- Max.   :1.00   Max.   :1.0   Max.   :1.0   Max.   :1.0000   Max.   :1.0000  
-                                                                             
-     opt_av     propOpt            age           sibling        numSib     
- Min.   :1   Min.   :0.0000   Min.   :18.00   Min.   :0.0   Min.   :0.000  
- 1st Qu.:1   1st Qu.:0.0000   1st Qu.:29.00   1st Qu.:0.0   1st Qu.:0.000  
- Median :1   Median :0.3000   Median :33.00   Median :0.5   Median :0.500  
- Mean   :1   Mean   :0.4199   Mean   :33.45   Mean   :0.5   Mean   :0.708  
- 3rd Qu.:1   3rd Qu.:0.8000   3rd Qu.:37.00   3rd Qu.:1.0   3rd Qu.:1.000  
- Max.   :1   Max.   :1.0000   Max.   :66.00   Max.   :1.0   Max.   :5.000  
-                                                                           
-   fluCovVac        tdapVac           rsvVac          gestAge     
- Min.   :0.000   Min.   :0.0000   Min.   :0.0000   Min.   : 0.00  
- 1st Qu.:0.000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:15.00  
- Median :1.000   Median :0.0000   Median :0.0000   Median :25.00  
- Mean   :1.031   Mean   :0.1305   Mean   :0.1623   Mean   :23.13  
- 3rd Qu.:2.000   3rd Qu.:0.0000   3rd Qu.:0.0000   3rd Qu.:32.00  
- Max.   :3.000   Max.   :1.0000   Max.   :1.0000   Max.   :48.00  
- NA's   :400     NA's   :1190     NA's   :880                     
-    govTrust        vacImpt         vacSafe          vacEff     
- Min.   :0.000   Min.   :0.000   Min.   :0.000   Min.   :0.000  
- 1st Qu.:1.000   1st Qu.:2.000   1st Qu.:1.000   1st Qu.:2.000  
- Median :2.000   Median :2.000   Median :2.000   Median :2.000  
- Mean   :1.782   Mean   :2.118   Mean   :1.666   Mean   :1.957  
- 3rd Qu.:2.000   3rd Qu.:3.000   3rd Qu.:2.000   3rd Qu.:2.000  
- Max.   :3.000   Max.   :3.000   Max.   :3.000   Max.   :3.000  
-                 NA's   :580     NA's   :1120    NA's   :780    
-     vacBlf          chiiki         marriage          job       
- Min.   :0.000   Min.   : 1.00   Min.   :1.000   Min.   : 1.00  
- 1st Qu.:1.000   1st Qu.:13.00   1st Qu.:1.000   1st Qu.: 7.00  
- Median :2.000   Median :20.00   Median :1.000   Median :12.00  
- Mean   :1.691   Mean   :20.73   Mean   :1.142   Mean   :11.23  
- 3rd Qu.:2.000   3rd Qu.:27.00   3rd Qu.:1.000   3rd Qu.:16.00  
- Max.   :3.000   Max.   :47.00   Max.   :2.000   Max.   :25.00  
- NA's   :1640                                                   
-     family        education         income           home      
- Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
- 1st Qu.:2.000   1st Qu.:3.000   1st Qu.:2.000   1st Qu.:1.000  
- Median :3.000   Median :5.000   Median :3.000   Median :4.000  
- Mean   :3.053   Mean   :4.118   Mean   :2.864   Mean   :2.777  
- 3rd Qu.:4.000   3rd Qu.:5.000   3rd Qu.:4.000   3rd Qu.:4.000  
- Max.   :8.000   Max.   :8.000   Max.   :7.000   Max.   :6.000  
+      age           allSame          block            car       
+ Min.   :18.00   Min.   :0.000   Min.   : 1.00   Min.   :1.000  
+ 1st Qu.:29.00   1st Qu.:0.000   1st Qu.: 5.75   1st Qu.:1.000  
+ Median :33.00   Median :0.000   Median :10.50   Median :2.000  
+ Mean   :33.45   Mean   :0.106   Mean   :10.50   Mean   :1.772  
+ 3rd Qu.:37.00   3rd Qu.:0.000   3rd Qu.:15.25   3rd Qu.:2.000  
+ Max.   :66.00   Max.   :1.000   Max.   :20.00   Max.   :3.000  
                                                                 
-    license           car             time             ageStd        
- Min.   :1.000   Min.   :1.000   Min.   : 0.9833   Min.   :-2.82249  
- 1st Qu.:1.000   1st Qu.:1.000   1st Qu.: 2.0667   1st Qu.:-0.81360  
- Median :1.000   Median :2.000   Median : 3.2000   Median :-0.08309  
- Mean   :1.073   Mean   :1.772   Mean   : 3.9409   Mean   : 0.00000  
- 3rd Qu.:1.000   3rd Qu.:2.000   3rd Qu.: 4.4208   3rd Qu.: 0.64741  
- Max.   :2.000   Max.   :3.000   Max.   :61.7667   Max.   : 5.94356  
-                                                                     
-     sibGrp          eduGrp          incGrp     
- Min.   :0.000   Min.   :0.000   Min.   :0.000  
- 1st Qu.:0.000   1st Qu.:0.000   1st Qu.:0.000  
- Median :0.500   Median :1.000   Median :1.000  
- Mean   :0.658   Mean   :0.542   Mean   :0.536  
- 3rd Qu.:1.000   3rd Qu.:1.000   3rd Qu.:1.000  
- Max.   :2.000   Max.   :1.000   Max.   :1.000  
-                                                
+     chiiki      choice_stage1  choice_stage2     education         eduGrp     
+ Min.   : 1.00   Min.   :1.00   Min.   :1.000   Min.   :1.000   Min.   :0.000  
+ 1st Qu.:13.00   1st Qu.:1.00   1st Qu.:1.000   1st Qu.:3.000   1st Qu.:0.000  
+ Median :20.00   Median :1.00   Median :2.000   Median :5.000   Median :1.000  
+ Mean   :20.73   Mean   :1.48   Mean   :2.123   Mean   :4.118   Mean   :0.542  
+ 3rd Qu.:27.00   3rd Qu.:2.00   3rd Qu.:3.000   3rd Qu.:5.000   3rd Qu.:1.000  
+ Max.   :47.00   Max.   :2.00   Max.   :3.000   Max.   :8.000   Max.   :1.000  
+                                                                               
+     family        fluCovVac        gestAge         govTrust    
+ Min.   :1.000   Min.   :0.000   Min.   : 0.00   Min.   :0.000  
+ 1st Qu.:2.000   1st Qu.:0.000   1st Qu.:15.00   1st Qu.:1.000  
+ Median :3.000   Median :1.000   Median :25.00   Median :2.000  
+ Mean   :3.053   Mean   :1.031   Mean   :23.13   Mean   :1.782  
+ 3rd Qu.:4.000   3rd Qu.:2.000   3rd Qu.:32.00   3rd Qu.:2.000  
+ Max.   :8.000   Max.   :3.000   Max.   :48.00   Max.   :3.000  
+                 NA's   :400                                    
+      home            id                incGrp          income     
+ Min.   :1.000   Length:10000       Min.   :0.000   Min.   :1.000  
+ 1st Qu.:1.000   Class :character   1st Qu.:0.000   1st Qu.:2.000  
+ Median :4.000   Mode  :character   Median :1.000   Median :3.000  
+ Mean   :2.777                      Mean   :0.536   Mean   :2.864  
+ 3rd Qu.:4.000                      3rd Qu.:1.000   3rd Qu.:4.000  
+ Max.   :6.000                      Max.   :1.000   Max.   :7.000  
+                                                                   
+      job           license          mab_av          mab_cost     
+ Min.   : 1.00   Min.   :1.000   Min.   :0.0000   Min.   :0.0000  
+ 1st Qu.: 7.00   1st Qu.:1.000   1st Qu.:0.0000   1st Qu.:0.0500  
+ Median :12.00   Median :1.000   Median :0.0000   Median :0.1000  
+ Mean   :11.23   Mean   :1.073   Mean   :0.4799   Mean   :0.3068  
+ 3rd Qu.:16.00   3rd Qu.:1.000   3rd Qu.:1.0000   3rd Qu.:0.3000  
+ Max.   :25.00   Max.   :2.000   Max.   :1.0000   Max.   :1.0000  
+                                                                  
+  mab_cost0.05    mab_cost0.1    mab_cost0.3     mab_cost1        mab_hosp    
+ Min.   :0.000   Min.   :0.00   Min.   :0.00   Min.   :0.000   Min.   :0.300  
+ 1st Qu.:0.000   1st Qu.:0.00   1st Qu.:0.00   1st Qu.:0.000   1st Qu.:0.900  
+ Median :0.000   Median :0.00   Median :0.00   Median :0.000   Median :1.200  
+ Mean   :0.215   Mean   :0.18   Mean   :0.21   Mean   :0.215   Mean   :0.984  
+ 3rd Qu.:0.000   3rd Qu.:0.00   3rd Qu.:0.00   3rd Qu.:0.000   3rd Qu.:1.200  
+ Max.   :1.000   Max.   :1.00   Max.   :1.00   Max.   :1.000   Max.   :1.500  
+                                                                              
+  mab_hosp0.3     mab_hosp0.9    mab_hosp1.2    mab_redness      marriage    
+ Min.   :0.000   Min.   :0.00   Min.   :0.00   Min.   :0.00   Min.   :1.000  
+ 1st Qu.:0.000   1st Qu.:0.00   1st Qu.:0.00   1st Qu.:0.00   1st Qu.:1.000  
+ Median :0.000   Median :0.00   Median :0.00   Median :0.00   Median :1.000  
+ Mean   :0.235   Mean   :0.26   Mean   :0.26   Mean   :0.49   Mean   :1.142  
+ 3rd Qu.:0.000   3rd Qu.:1.00   3rd Qu.:1.00   3rd Qu.:1.00   3rd Qu.:1.000  
+ Max.   :1.000   Max.   :1.00   Max.   :1.00   Max.   :1.00   Max.   :2.000  
+                                                                             
+     mv_av           mv_cost        mv_cost0.05      mv_cost0.1   
+ Min.   :0.0000   Min.   :0.0000   Min.   :0.000   Min.   :0.000  
+ 1st Qu.:0.0000   1st Qu.:0.0500   1st Qu.:0.000   1st Qu.:0.000  
+ Median :1.0000   Median :0.1000   Median :0.000   Median :0.000  
+ Mean   :0.5201   Mean   :0.2762   Mean   :0.205   Mean   :0.195  
+ 3rd Qu.:1.0000   3rd Qu.:0.3000   3rd Qu.:0.000   3rd Qu.:0.000  
+ Max.   :1.0000   Max.   :1.0000   Max.   :1.000   Max.   :1.000  
+                                                                  
+   mv_cost0.3       mv_cost1        mv_hosp         mv_hosp0.3  
+ Min.   :0.000   Min.   :0.000   Min.   :0.3000   Min.   :0.00  
+ 1st Qu.:0.000   1st Qu.:0.000   1st Qu.:0.3000   1st Qu.:0.00  
+ Median :0.000   Median :0.000   Median :1.2000   Median :0.00  
+ Mean   :0.205   Mean   :0.185   Mean   :0.9735   Mean   :0.26  
+ 3rd Qu.:0.000   3rd Qu.:0.000   3rd Qu.:1.5000   3rd Qu.:1.00  
+ Max.   :1.000   Max.   :1.000   Max.   :1.5000   Max.   :1.00  
+                                                                
+   mv_hosp0.9      mv_hosp1.2       mv_preg    mv_preterm    mv_redness  
+ Min.   :0.000   Min.   :0.000   Min.   :1   Min.   :0.0   Min.   :0.00  
+ 1st Qu.:0.000   1st Qu.:0.000   1st Qu.:1   1st Qu.:0.0   1st Qu.:0.00  
+ Median :0.000   Median :0.000   Median :1   Median :1.0   Median :0.00  
+ Mean   :0.235   Mean   :0.245   Mean   :1   Mean   :0.6   Mean   :0.21  
+ 3rd Qu.:0.000   3rd Qu.:0.000   3rd Qu.:1   3rd Qu.:1.0   3rd Qu.:0.00  
+ Max.   :1.000   Max.   :1.000   Max.   :1   Max.   :1.0   Max.   :1.00  
+                                                                         
+     numSib          opt_av     passTest        propOpt            risk    
+ Min.   :1.000   Min.   :1   Min.   :0.000   Min.   :0.0000   Min.   :0.0  
+ 1st Qu.:1.000   1st Qu.:1   1st Qu.:1.000   1st Qu.:0.0000   1st Qu.:0.0  
+ Median :1.000   Median :1   Median :1.000   Median :0.3000   Median :0.5  
+ Mean   :1.416   Mean   :1   Mean   :0.786   Mean   :0.4199   Mean   :0.5  
+ 3rd Qu.:2.000   3rd Qu.:1   3rd Qu.:1.000   3rd Qu.:0.8000   3rd Qu.:1.0  
+ Max.   :5.000   Max.   :1   Max.   :1.000   Max.   :1.0000   Max.   :1.0  
+ NA's   :5000                                                              
+    rptTask        rsvVac          sibling         task         tdapVac      
+ Min.   :0.0   Min.   :0.0000   Min.   :0.0   Min.   : 1.0   Min.   :0.0000  
+ 1st Qu.:0.0   1st Qu.:0.0000   1st Qu.:0.0   1st Qu.: 3.0   1st Qu.:0.0000  
+ Median :0.0   Median :0.0000   Median :0.5   Median : 5.5   Median :0.0000  
+ Mean   :0.1   Mean   :0.1623   Mean   :0.5   Mean   : 5.5   Mean   :0.1305  
+ 3rd Qu.:0.0   3rd Qu.:0.0000   3rd Qu.:1.0   3rd Qu.: 8.0   3rd Qu.:0.0000  
+ Max.   :1.0   Max.   :1.0000   Max.   :1.0   Max.   :10.0   Max.   :1.0000  
+               NA's   :880                                   NA's   :1190    
+      time             vacBlf          vacEff         vacImpt     
+ Min.   : 0.9833   Min.   :0.000   Min.   :0.000   Min.   :0.000  
+ 1st Qu.: 2.0667   1st Qu.:1.000   1st Qu.:2.000   1st Qu.:2.000  
+ Median : 3.2000   Median :2.000   Median :2.000   Median :2.000  
+ Mean   : 3.9409   Mean   :1.691   Mean   :1.957   Mean   :2.118  
+ 3rd Qu.: 4.4208   3rd Qu.:2.000   3rd Qu.:2.000   3rd Qu.:3.000  
+ Max.   :61.7667   Max.   :3.000   Max.   :3.000   Max.   :3.000  
+                   NA's   :1640    NA's   :780     NA's   :580    
+    vacSafe     
+ Min.   :0.000  
+ 1st Qu.:1.000  
+ Median :2.000  
+ Mean   :1.666  
+ 3rd Qu.:2.000  
+ Max.   :3.000  
+ NA's   :1120   
 
 Summary of categorical variable(s):
  Variable Category Count Percentage
@@ -173,12 +173,12 @@ Summary of categorical variable(s):
   Variable Category Count Percentage
    sibling        0   500      50.00
    sibling        1   500      50.00
-    numSib        0   500      50.00
     numSib        1   342      34.20
     numSib        2   121      12.10
     numSib        3    26       2.60
     numSib        4     9       0.90
     numSib        5     2       0.20
+    numSib     <NA>   500      50.00
  fluCovVac        0   463      46.30
  fluCovVac        1   125      12.50
  fluCovVac        2   251      25.10
@@ -229,9 +229,6 @@ Summary of categorical variable(s):
     income        5    80       8.00
     income        6    30       3.00
     income        7    27       2.70
-    sibGrp        0   500      50.00
-    sibGrp        1   342      34.20
-    sibGrp        2   158      15.80
     eduGrp        0   458      45.80
     eduGrp        1   542      54.20
     incGrp        0   464      46.40
@@ -277,12 +274,12 @@ Summary of gestAge by passTest:
      1   786 23.37 10.68 0.00 48.00
 p-value (t-test): 0.165 
 
-Crosstabulation of passTest by sibGrp:
-        sibGrp
-passTest 0           1           2          
-       0 99 (46.26)  76 (35.51)  39 (18.22) 
-       1 401 (51.02) 266 (33.84) 119 (15.14)
-p-value (chi-squared test): 0.385
+Crosstabulation of passTest by sibling:
+        sibling
+passTest 0           1          
+       0 99 (46.26)  115 (53.74)
+       1 401 (51.02) 385 (48.98)
+p-value (chi-squared test): 0.247
 
 Crosstabulation of passTest by eduGrp:
         eduGrp
@@ -310,12 +307,12 @@ Summary of gestAge by allSame:
      1   106 20.63 11.82 0.00 48.00
 p-value (t-test): 0.022 
 
-Crosstabulation of allSame by sibGrp:
-       sibGrp
-allSame 0           1           2          
-      0 454 (50.78) 308 (34.45) 132 (14.77)
-      1 46 (43.40)  34 (32.08)  26 (24.53) 
-p-value (chi-squared test): 0.032
+Crosstabulation of allSame by sibling:
+       sibling
+allSame 0           1          
+      0 454 (50.78) 440 (49.22)
+      1 46 (43.40)  60 (56.60) 
+p-value (chi-squared test): 0.182
 
 Crosstabulation of allSame by eduGrp:
        eduGrp
@@ -346,12 +343,12 @@ Summary of categorical variable(s):
   Variable Category Count Percentage
    sibling        0   341      51.82
    sibling        1   317      48.18
-    numSib        0   341      51.82
     numSib        1   227      34.50
     numSib        2    69      10.49
     numSib        3    13       1.98
     numSib        4     6       0.91
     numSib        5     2       0.30
+    numSib     <NA>   341      51.82
  fluCovVac        0   314      47.72
  fluCovVac        1    76      11.55
  fluCovVac        2   166      25.23
@@ -402,9 +399,6 @@ Summary of categorical variable(s):
     income        5    54       8.21
     income        6    22       3.34
     income        7    16       2.43
-    sibGrp        0   341      51.82
-    sibGrp        1   227      34.50
-    sibGrp        2    90      13.68
     eduGrp        0   302      45.90
     eduGrp        1   356      54.10
     incGrp        0   294      44.68
@@ -419,19 +413,21 @@ Summary of continuous variable(s):
  Variable Count Median   Q1   Q3  Min   Max
      time   658   3.49 2.62 4.75 0.98 61.15
 
+Added column for standardized age (ageStd)
+
 File successfully saved as jpn_dataset_subset.csv
 Column names of jpn_dataset_subset.csv:
- [1] "id"            "block"         "passTest"      "allSame"      
- [5] "task"          "choice_stage1" "choice_stage2" "mv_cost"      
- [9] "mv_cost0.05"   "mv_cost0.1"    "mv_cost0.3"    "mv_cost1"     
-[13] "mv_hosp"       "mv_hosp0.3"    "mv_hosp0.9"    "mv_hosp1.2"   
-[17] "mv_preg"       "mv_preterm"    "mv_redness"    "mab_cost"     
-[21] "mab_cost0.05"  "mab_cost0.1"   "mab_cost0.3"   "mab_cost1"    
-[25] "mab_hosp"      "mab_hosp0.3"   "mab_hosp0.9"   "mab_hosp1.2"  
-[29] "mab_redness"   "risk"          "rptTask"       "mv_av"        
-[33] "mab_av"        "opt_av"        "propOpt"       "age"          
-[37] "sibling"       "numSib"        "fluCovVac"     "tdapVac"      
-[41] "rsvVac"        "gestAge"       "govTrust"      "vacImpt"      
-[45] "vacSafe"       "vacEff"        "vacBlf"        "education"    
-[49] "income"        "time"          "ageStd"        "sibGrp"       
-[53] "eduGrp"        "incGrp"       
+ [1] "age"           "ageStd"        "allSame"       "block"        
+ [5] "choice_stage1" "choice_stage2" "education"     "eduGrp"       
+ [9] "fluCovVac"     "gestAge"       "govTrust"      "id"           
+[13] "incGrp"        "income"        "mab_av"        "mab_cost"     
+[17] "mab_cost0.05"  "mab_cost0.1"   "mab_cost0.3"   "mab_cost1"    
+[21] "mab_hosp"      "mab_hosp0.3"   "mab_hosp0.9"   "mab_hosp1.2"  
+[25] "mab_redness"   "mv_av"         "mv_cost"       "mv_cost0.05"  
+[29] "mv_cost0.1"    "mv_cost0.3"    "mv_cost1"      "mv_hosp"      
+[33] "mv_hosp0.3"    "mv_hosp0.9"    "mv_hosp1.2"    "mv_preg"      
+[37] "mv_preterm"    "mv_redness"    "numSib"        "opt_av"       
+[41] "passTest"      "propOpt"       "risk"          "rptTask"      
+[45] "rsvVac"        "sibling"       "task"          "tdapVac"      
+[49] "time"          "vacBlf"        "vacEff"        "vacImpt"      
+[53] "vacSafe"      

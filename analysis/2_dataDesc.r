@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 2_dataDesc.r
-# Date: 2026-07-20
+# Date: 2026-10-18
 # ===========================================================================
 
 # Load packages
@@ -18,7 +18,7 @@ dir.create(here("output"), showWarnings = FALSE, recursive = TRUE)
 sink(here("output", "2_dataDesc_output.txt"))
 cat("===========================================================================\n")
 cat("Title: 2_dataDesc_output.txt\n")
-cat("Date: 2026-07-20\n")
+cat("Date: 2026-10-18\n")
 cat("===========================================================================\n")
 
 # ===========================================================================
@@ -51,7 +51,7 @@ cat("\nDropped columns:", cols_toDrop, "\n")
 cat_cols <- c(
     "sibling", "numSib", "fluCovVac", "tdapVac", "rsvVac",
     "govTrust", "vacImpt", "vacSafe", "vacEff", "vacBlf", 
-    "education", "income", "sibGrp", "eduGrp", "incGrp"
+    "education", "income", "eduGrp", "incGrp"
 )
 summ_cat(df, cat_cols)
 
@@ -73,7 +73,7 @@ query_time(df$time)
 summ_cat_bySub(df, "allSame", "passTest")
 
 cont_cols_toIx <- c("age", "gestAge")
-cat_cols_toIx <- c("sibGrp", "eduGrp", "incGrp")
+cat_cols_toIx <- c("sibling", "eduGrp", "incGrp")
 
 for (col in cont_cols_toIx) {
     summ_cont_bySub(df, col, "passTest")
@@ -123,7 +123,14 @@ summ_cat(df_subset, cat_cols)
 summ_cont(df_subset, cont_cols)
 summ_cont(df_subset, "time", iqr = TRUE)
 
+# Standardize age after exclusions
+age_mean <- mean(df_subset$age, na.rm = TRUE)
+age_sd <- sd(df_subset$age, na.rm = TRUE)
+df_subset$ageStd <- (df_subset$age - age_mean) / age_sd
+cat("\nAdded column for standardized age (ageStd)\n")
+
 # Save dataframe subset
+df_subset <- df_subset[, sort(names(df_subset))]
 write.csv(df_subset, file = here("data", "jpn_dataset_subset.csv"), row.names = FALSE)
 cat("\nFile successfully saved as jpn_dataset_subset.csv\n")
 cat("Column names of jpn_dataset_subset.csv:\n")
