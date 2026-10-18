@@ -9,7 +9,7 @@ library(glue)
 library(dplyr)
 
 # Source universal functions
-source(here("utils.r"))
+source(here("analysis", "utils.r"))
 
 # Create output folder if it doesn't exist
 dir.create(here("output"), showWarnings = FALSE, recursive = TRUE)
@@ -34,22 +34,19 @@ print(summary(df))
 # SECTION 2: Drop unused columns
 # ===========================================================================
 
-summ_cat(df, "chiiki")
-
 cols_toDrop <- c(
-    "chiiki", "marriage", "job", "family", "home",
+    "chiiki", "marital", "job", "family", "home",
     "license", "car"
 )
-
 df <- df %>% select(-all_of(cols_toDrop))
-cat("\nDropped columns:", cols_toDrop, "\n")
+cat("\nDropped columns: ", paste(cols_toDrop, collapse = ", "), "\n", sep = "")
 
 # ===========================================================================
 # SECTION 3: Explore respondent characteristics
 # ===========================================================================
 
 cat_cols <- c(
-    "sibling", "numSib", "fluCovVac", "tdapVac", "rsvVac",
+    "sibling", "sibGrp", "fluCovVac", "pertVac", "rsvVac",
     "govTrust", "vacImpt", "vacSafe", "vacEff", "vacBlf", 
     "education", "income", "eduGrp", "incGrp"
 )
@@ -127,7 +124,7 @@ summ_cont(df_subset, "time", iqr = TRUE)
 age_mean <- mean(df_subset$age, na.rm = TRUE)
 age_sd <- sd(df_subset$age, na.rm = TRUE)
 df_subset$ageStd <- (df_subset$age - age_mean) / age_sd
-cat("\nAdded column for standardized age (ageStd)\n")
+cat("\nAdded column for standardized age: ageStd\n")
 
 # Save dataframe subset
 df_subset <- df_subset[, sort(names(df_subset))]

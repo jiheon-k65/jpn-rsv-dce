@@ -11,7 +11,7 @@ library(ggplot2)
 library(mice, warn.conflicts = FALSE)
 
 # Source universal functions
-source(here("utils.r"))
+source(here("analysis", "utils.r"))
 
 # Create output folder if it doesn't exist
 dir.create(here("output"), showWarnings = FALSE, recursive = TRUE)
@@ -20,7 +20,7 @@ dir.create(here("output"), showWarnings = FALSE, recursive = TRUE)
 sink(here("output", "3_dataImp_output.txt"))
 cat("===========================================================================\n")
 cat("Title: 3_dataImp_output.txt\n")
-cat("Date: 2026-07-20\n")
+cat("Date: 2026-10-18\n")
 cat("===========================================================================\n")
 
 # ===========================================================================
@@ -33,9 +33,9 @@ cat("\nColumn names of jpn_dataset_subset.csv:\n")
 print(colnames(df))
 
 # Further drop unused columns
-cols_unused <- c("fluCovVac", "tdapVac", "rsvVac")
+cols_unused <- c("fluCovVac", "pertVac", "rsvVac")
 df <- df %>% select(-all_of(cols_unused))
-cat("\nDropped columns:", cols_unused, "\n")
+cat("\nDropped columns: ", paste(cols_unused, collapse = ", "), "\n", sep = "")
 
 # ===========================================================================
 # SECTION 2: Save dataset for complete case analysis
@@ -51,8 +51,9 @@ cols_indicator <- c("vacImpt", "vacSafe", "vacEff", "vacBlf")
 df_complete$vacConf <- rowMeans(df_complete[cols_indicator])
 
 # Save dataframe for complete case analysis
-cat("\nFile successfully saved as jpn_dataset_subset_complete.csv\n")
+df_complete <- df_complete[, sort(names(df_complete))]
 write.csv(df_complete, file = here("data", "jpn_dataset_subset_complete.csv"), row.names = FALSE)
+cat("\nFile successfully saved as jpn_dataset_subset_complete.csv\n")
 cat("Column names of jpn_dataset_subset_complete.csv:\n")
 print(colnames(df_complete))
 
@@ -63,7 +64,7 @@ print(colnames(df_complete))
 # Isolate columns for imputation
 # Removed derived columns to avoid multicollinearity
 cols_forImp <- c(
-    "id", "age", "numSib", "gestAge", "govTrust",
+    "id", "age", "sibling", "gestAge", "govTrust",
     "vacImpt", "vacSafe", "vacEff", "vacBlf", "education",
     "income", "time", "propOpt"
 )
@@ -83,7 +84,7 @@ for (col in cols_indicator) {
 } # Available: 0, Missing: 1
 stopifnot (ncol(df_forImp) == length(cols_forImp) + length(cols_indicator))
 
-cols_cat <- c("numSib", "govTrust", "education", "income")
+cols_cat <- c("sibling", "govTrust", "education", "income")
 cols_cont <- c("age", "gestAge", "time", "propOpt")
 
 # Summarize vaccine importance missingness
@@ -122,7 +123,7 @@ for (col in cols_cont) {
 glm_vacImpt <- summary(glm(vacImpt_missing ~
       age +
       gestAge +
-      numSib +
+      sibling +
       govTrust +
       education +
       income +
@@ -136,7 +137,7 @@ print(glm_vacImpt)
 glm_vacSafe <- summary(glm(vacSafe_missing ~
       age +
       gestAge +
-      numSib +
+      sibling +
       govTrust +
       education +
       income +
@@ -150,7 +151,7 @@ print(glm_vacSafe)
 glm_vacEff <- summary(glm(vacEff_missing ~
       age +
       gestAge +
-      numSib +
+      sibling +
       govTrust +
       education +
       income +
@@ -164,7 +165,7 @@ print(glm_vacEff)
 glm_vacBlf <- summary(glm(vacBlf_missing ~
       age +
       gestAge +
-      numSib +
+      sibling +
       govTrust +
       education +
       income +
@@ -236,8 +237,9 @@ stopifnot(
 )
 
 # Save imputed dataset
+df_imputed <- df_imputed[, sort(names(df_imputed))]
 write.csv(df_imputed, file = here("data", "jpn_dataset_subset_imputed.csv"), row.names = FALSE)
-cat("\nFile successfully saved as jpn_dataset_subset_imputed.csv\n")
+cat("File successfully saved as jpn_dataset_subset_imputed.csv\n")
 cat("Column names of jpn_dataset_subset_imputed.csv:\n")
 print(colnames(df_imputed))
 

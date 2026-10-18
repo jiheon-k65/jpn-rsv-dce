@@ -10,7 +10,8 @@ library(tidyr)
 library(ggplot2)
 
 # Source universal functions
-source(here("utils.r"))
+source(here("analysis", "utils.r"))
+source(here("analysis", "col_name.r"))
 
 # Create output folder if it doesn't exist
 dir.create(here("output"), showWarnings = FALSE, recursive = TRUE)
@@ -33,9 +34,9 @@ raw_design <- read.csv(
 )
 
 # Rename columns
-colnames(raw_design) <- c("block", "task", "alt", "preg", "hosp", "adv", "cost")
+raw_design <- raw_design %>% rename(any_of(col_dict))
 
-# Separate "adv" into "adv" & "risk"
+# Separate adv into adv & risk columns
 raw_design <- separate(
     raw_design,
     col = "adv",
@@ -89,16 +90,17 @@ colnames(cost_dummy_cols) <- c("cost0.05", "cost0.1", "cost0.3", "cost1")
 raw_design <- cbind(
     raw_design, adv_dummy_cols, hosp_dummy_cols, cost_dummy_cols
 )
-raw_design$adv <- NULL # Redundant column
+raw_design$adv <- NULL # Drop redundant adv column
 
 # Create dataframe for 1st stage
 design_alt1 <- raw_design[raw_design$alt == 1, ]
 design_alt2 <- raw_design[raw_design$alt == 2, ]
 
-# Add prefix to attribute columns
+# Isolate attribute columns to be labeled
 cols_noLabel <- c("block", "task", "alt", "risk")
 cols_label <- setdiff(colnames(design_alt1), cols_noLabel)
 
+# Add prefix to attribute columns
 design_alt1 <- add_prefix(design_alt1, cols_label, "alt1_")
 design_alt2 <- add_prefix(design_alt2, cols_label, "alt2_")
 
@@ -108,13 +110,11 @@ stopifnot(
     nrow(design) == nrow(design_alt1),
     ncol(design) == ncol(design_alt1) + length(cols_label)
 )
-design$alt <- NULL # Redundant column
+design$alt <- NULL # Drop redundant alt column
 rownames(design) <- NULL # Reset index
 
-# Sort columns alphabetically
-design <- design[, order(names(design))]
-
 # Save dataframe for DCE design
+design <- design[, sort(names(design))]
 write.csv(design, file = here("data", "jpn_design.csv"), row.names = FALSE)
 cat("\nFile successfully saved as jpn_design.csv\n")
 cat("Column names of jpn_design.csv:\n")
@@ -176,7 +176,7 @@ dce <- left_join(
     by = c("id", "block", "task"),
     suffix = c("", "_stage2")
 )
-dce$stage <- NULL # Redundant column
+dce$stage <- NULL # Drop redundant stage column
 colnames(dce)[colnames(dce) == "choice"] <- "choice_stage1"
 stopifnot(
     dim(dce)[1] == dim(dce_stage1)[1],
@@ -207,9 +207,10 @@ dceDesign <- dceDesign %>%
     group_by(id) %>%
     mutate(propOpt = mean(choice_stage2 == 3)) %>%
     ungroup()
-cat("\nAdded column for proportion of opt-out (propOpt)\n")
+cat("\nAdded column for proportion of opt-out: propOpt\n")
 
 # Save dataframe for DCE design & results
+dceDesign <- dceDesign[, sort(names(dceDesign))]
 write.csv(dceDesign, file = here("data", "jpn_dceDesign.csv"), row.names = FALSE)
 cat("\nFile successfully saved as jpn_dceDesign.csv\n")
 cat("Column names of jpn_dceDesign.csv:\n")
@@ -236,7 +237,7 @@ char_data$time <- as.numeric(
         units = "mins"
     )
 )
-cat("\nAdded column for completion time (time)\n")
+cat("\nAdded column for completion time: time\n")
 
 # Drop redundant columns
 cols_toDrop <- c(
@@ -244,17 +245,10 @@ cols_toDrop <- c(
     "SEG", "SEX", "AGE", "CHILD", "NAGE"
 )
 char_data <- char_data %>% select(-all_of(cols_toDrop))
-cat("\nDropped redundant columns:", cols_toDrop, "\n")
+cat("\nDropped redundant columns: ", paste(cols_toDrop, collapse = ", "), "\n", sep = "")
 
 # Rename columns
-new_colnames <- c(
-    "id", "age", "sibling", "numSib", "fluCovVac",
-    "tdapVac", "rsvVac", "gestAge", "govTrust", "vacImpt",
-    "vacSafe", "vacEff", "vacBlf", "chiiki", "marriage",
-    "job", "family", "education", "income", "home",
-    "license", "car", "time"
-)
-colnames(char_data) <- new_colnames
+char_data <- char_data %>% rename(any_of(col_dict))
 
 # ===========================================================================
 # SECTION 4: Merge DCE design with respondent characteristics
@@ -276,10 +270,13 @@ stopifnot(
 # ===========================================================================
 
 # Recode binary categories to 0-indexed values
-binary_cols <- c("sibling", "tdapVac", "rsvVac")
+binary_cols <- c("sibGrp", "pertVac", "rsvVac")
 for (col in binary_cols) {
     dataset[[col]] <- ifelse(dataset[[col]] == 2, 0, 1)
 } # No: 0, Yes: 1
+
+# Fill in NA values for number of sibling with 0
+dataset[dataset$sibGrp == 0, "sibling"] <- 0
 
 # Recode flu &/or covid vaccine into 0-indexed values
 fluCovVac_map <- c(
@@ -302,7 +299,7 @@ for (col in scale_cols) {
     dataset[[col]] <- scale_map[as.character(dataset[[col]])]
 }
 
-# Group education into 2 categories
+# Group edu into 2 categories
 edu_map <- c(
     "1" = 0, # Junior high school
     "2" = 0, # High school
@@ -314,9 +311,9 @@ edu_map <- c(
     "8" = 0 # Others
 )
 dataset$eduGrp <- edu_map[as.character(dataset$education)]
-cat("\nAdded column for education group (eduGrp)\n")
+cat("\nAdded column for education group: eduGrp\n")
 
-# Group annual income into 2 categories
+# Group annual inc into 2 categories
 inc_map <- c(
     "1" = 0, # <=4 million
     "2" = 0, # >4 to <=6 million
@@ -327,7 +324,7 @@ inc_map <- c(
     "7" = 1 # >15 million
 )
 dataset$incGrp <- inc_map[as.character(dataset$income)]
-cat("\nAdded column for income group (incGrp)\n")
+cat("\nAdded column for income group: incGrp\n")
 
 # Save dataframe for DCE design, results & respondent characteristics
 dataset <- dataset[, sort(names(dataset))]

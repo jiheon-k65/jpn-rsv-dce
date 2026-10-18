@@ -9,9 +9,9 @@ Dummy columns created for hosp_col
 
 Dummy columns created for cost_col 
 
-Added prefix alt1_ to columns: preg hosp cost redness preterm hosp1.2 hosp0.9 hosp0.3 cost0.05 cost0.1 cost0.3 cost1 
+Added prefix alt1_ to columns: preg, hosp, cost, redness, preterm, hosp1.2, hosp0.9, hosp0.3, cost0.05, cost0.1, cost0.3, cost1
 
-Added prefix alt2_ to columns: preg hosp cost redness preterm hosp1.2 hosp0.9 hosp0.3 cost0.05 cost0.1 cost0.3 cost1 
+Added prefix alt2_ to columns: preg, hosp, cost, redness, preterm, hosp1.2, hosp0.9, hosp0.3, cost0.05, cost0.1, cost0.3, cost1
 
 File successfully saved as jpn_design.csv
 Column names of jpn_design.csv:
@@ -23,44 +23,44 @@ Column names of jpn_design.csv:
 [21] "alt2_hosp1.2"  "alt2_preg"     "alt2_preterm"  "alt2_redness" 
 [25] "block"         "risk"          "task"         
 
-Added column for logical test results (passTest)
+Added column for logical test results: passTest
 No. of women that passed logical test: 786 
 
-Added column for same responses (allSame)
+Added column for same responses: allSame
 No. of women with same responses: 106 
 
-Added column for repeated task (rptTask)
+Added column for repeated task: rptTask
 
 Reassigned columns as mv (left) & mab (right)
 Dropped mab_preg & mab_preterm columns as not applicable
 
-Added columns for product availability (mv_av, mab_av, opt_av)
+Added columns for product availability: mv_av, mab_av, opt_av
 
-Added column for proportion of opt-out (propOpt)
+Added column for proportion of opt-out: propOpt
 
 File successfully saved as jpn_dceDesign.csv
 Column names of jpn_dceDesign.csv:
- [1] "id"            "block"         "passTest"      "allSame"      
- [5] "task"          "choice_stage1" "choice_stage2" "mv_cost"      
- [9] "mv_cost0.05"   "mv_cost0.1"    "mv_cost0.3"    "mv_cost1"     
-[13] "mv_hosp"       "mv_hosp0.3"    "mv_hosp0.9"    "mv_hosp1.2"   
-[17] "mv_preg"       "mv_preterm"    "mv_redness"    "mab_cost"     
-[21] "mab_cost0.05"  "mab_cost0.1"   "mab_cost0.3"   "mab_cost1"    
-[25] "mab_hosp"      "mab_hosp0.3"   "mab_hosp0.9"   "mab_hosp1.2"  
-[29] "mab_redness"   "risk"          "rptTask"       "mv_av"        
-[33] "mab_av"        "opt_av"        "propOpt"      
+ [1] "allSame"       "block"         "choice_stage1" "choice_stage2"
+ [5] "id"            "mab_av"        "mab_cost"      "mab_cost0.05" 
+ [9] "mab_cost0.1"   "mab_cost0.3"   "mab_cost1"     "mab_hosp"     
+[13] "mab_hosp0.3"   "mab_hosp0.9"   "mab_hosp1.2"   "mab_redness"  
+[17] "mv_av"         "mv_cost"       "mv_cost0.05"   "mv_cost0.1"   
+[21] "mv_cost0.3"    "mv_cost1"      "mv_hosp"       "mv_hosp0.3"   
+[25] "mv_hosp0.9"    "mv_hosp1.2"    "mv_preg"       "mv_preterm"   
+[29] "mv_redness"    "opt_av"        "passTest"      "propOpt"      
+[33] "risk"          "rptTask"       "task"         
 
-Indicated NA for Q11 Q16 Q17 Q18 Q19 
+Indicated NA for columns: Q11, Q16, Q17, Q18, Q19
 
-Indicated NA for Q12 Q13 
+Indicated NA for columns: Q12, Q13
 
-Added column for completion time (time)
+Added column for completion time: time
 
-Dropped redundant columns: start end X1 SC1 SC2 SEG SEX AGE CHILD NAGE 
+Dropped redundant columns: start, end, X1, SC1, SC2, SEG, SEX, AGE, CHILD, NAGE
 
-Added column for education group (eduGrp)
+Added column for education group: eduGrp
 
-Added column for income group (incGrp)
+Added column for income group: incGrp
 
 File successfully saved as jpn_dataset.csv
 Column names of jpn_dataset.csv:
@@ -71,11 +71,11 @@ Column names of jpn_dataset.csv:
 [17] "income"        "job"           "license"       "mab_av"       
 [21] "mab_cost"      "mab_cost0.05"  "mab_cost0.1"   "mab_cost0.3"  
 [25] "mab_cost1"     "mab_hosp"      "mab_hosp0.3"   "mab_hosp0.9"  
-[29] "mab_hosp1.2"   "mab_redness"   "marriage"      "mv_av"        
+[29] "mab_hosp1.2"   "mab_redness"   "marital"       "mv_av"        
 [33] "mv_cost"       "mv_cost0.05"   "mv_cost0.1"    "mv_cost0.3"   
 [37] "mv_cost1"      "mv_hosp"       "mv_hosp0.3"    "mv_hosp0.9"   
 [41] "mv_hosp1.2"    "mv_preg"       "mv_preterm"    "mv_redness"   
-[45] "numSib"        "opt_av"        "passTest"      "propOpt"      
-[49] "risk"          "rptTask"       "rsvVac"        "sibling"      
-[53] "task"          "tdapVac"       "time"          "vacBlf"       
+[45] "opt_av"        "passTest"      "pertVac"       "propOpt"      
+[49] "risk"          "rptTask"       "rsvVac"        "sibGrp"       
+[53] "sibling"       "task"          "time"          "vacBlf"       
 [57] "vacEff"        "vacImpt"       "vacSafe"      

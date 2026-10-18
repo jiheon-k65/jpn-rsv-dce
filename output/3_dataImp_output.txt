@@ -1,46 +1,46 @@
 ===========================================================================
 Title: 3_dataImp_output.txt
-Date: 2026-07-20
+Date: 2026-10-18
 ===========================================================================
 
 Column names of jpn_dataset_subset.csv:
- [1] "id"            "block"         "passTest"      "allSame"      
- [5] "task"          "choice_stage1" "choice_stage2" "mv_cost"      
- [9] "mv_cost0.05"   "mv_cost0.1"    "mv_cost0.3"    "mv_cost1"     
-[13] "mv_hosp"       "mv_hosp0.3"    "mv_hosp0.9"    "mv_hosp1.2"   
-[17] "mv_preg"       "mv_preterm"    "mv_redness"    "mab_cost"     
-[21] "mab_cost0.05"  "mab_cost0.1"   "mab_cost0.3"   "mab_cost1"    
-[25] "mab_hosp"      "mab_hosp0.3"   "mab_hosp0.9"   "mab_hosp1.2"  
-[29] "mab_redness"   "risk"          "rptTask"       "mv_av"        
-[33] "mab_av"        "opt_av"        "propOpt"       "age"          
-[37] "sibling"       "numSib"        "fluCovVac"     "tdapVac"      
-[41] "rsvVac"        "gestAge"       "govTrust"      "vacImpt"      
-[45] "vacSafe"       "vacEff"        "vacBlf"        "education"    
-[49] "income"        "time"          "ageStd"        "sibGrp"       
-[53] "eduGrp"        "incGrp"       
+ [1] "age"           "ageStd"        "allSame"       "block"        
+ [5] "choice_stage1" "choice_stage2" "education"     "eduGrp"       
+ [9] "fluCovVac"     "gestAge"       "govTrust"      "id"           
+[13] "incGrp"        "income"        "mab_av"        "mab_cost"     
+[17] "mab_cost0.05"  "mab_cost0.1"   "mab_cost0.3"   "mab_cost1"    
+[21] "mab_hosp"      "mab_hosp0.3"   "mab_hosp0.9"   "mab_hosp1.2"  
+[25] "mab_redness"   "mv_av"         "mv_cost"       "mv_cost0.05"  
+[29] "mv_cost0.1"    "mv_cost0.3"    "mv_cost1"      "mv_hosp"      
+[33] "mv_hosp0.3"    "mv_hosp0.9"    "mv_hosp1.2"    "mv_preg"      
+[37] "mv_preterm"    "mv_redness"    "opt_av"        "passTest"     
+[41] "pertVac"       "propOpt"       "risk"          "rptTask"      
+[45] "rsvVac"        "sibGrp"        "sibling"       "task"         
+[49] "time"          "vacBlf"        "vacEff"        "vacImpt"      
+[53] "vacSafe"      
 
-Dropped columns: fluCovVac tdapVac rsvVac 
+Dropped columns: fluCovVac, pertVac, rsvVac
 
 Proportion of unique IDs with missing values: 21.43 %
 
 File successfully saved as jpn_dataset_subset_complete.csv
 Column names of jpn_dataset_subset_complete.csv:
- [1] "id"            "block"         "passTest"      "allSame"      
- [5] "task"          "choice_stage1" "choice_stage2" "mv_cost"      
- [9] "mv_cost0.05"   "mv_cost0.1"    "mv_cost0.3"    "mv_cost1"     
-[13] "mv_hosp"       "mv_hosp0.3"    "mv_hosp0.9"    "mv_hosp1.2"   
-[17] "mv_preg"       "mv_preterm"    "mv_redness"    "mab_cost"     
-[21] "mab_cost0.05"  "mab_cost0.1"   "mab_cost0.3"   "mab_cost1"    
-[25] "mab_hosp"      "mab_hosp0.3"   "mab_hosp0.9"   "mab_hosp1.2"  
-[29] "mab_redness"   "risk"          "rptTask"       "mv_av"        
-[33] "mab_av"        "opt_av"        "propOpt"       "age"          
-[37] "sibling"       "numSib"        "gestAge"       "govTrust"     
-[41] "vacImpt"       "vacSafe"       "vacEff"        "vacBlf"       
-[45] "education"     "income"        "time"          "ageStd"       
-[49] "sibGrp"        "eduGrp"        "incGrp"        "vacConf"      
+ [1] "age"           "ageStd"        "allSame"       "block"        
+ [5] "choice_stage1" "choice_stage2" "education"     "eduGrp"       
+ [9] "gestAge"       "govTrust"      "id"            "incGrp"       
+[13] "income"        "mab_av"        "mab_cost"      "mab_cost0.05" 
+[17] "mab_cost0.1"   "mab_cost0.3"   "mab_cost1"     "mab_hosp"     
+[21] "mab_hosp0.3"   "mab_hosp0.9"   "mab_hosp1.2"   "mab_redness"  
+[25] "mv_av"         "mv_cost"       "mv_cost0.05"   "mv_cost0.1"   
+[29] "mv_cost0.3"    "mv_cost1"      "mv_hosp"       "mv_hosp0.3"   
+[33] "mv_hosp0.9"    "mv_hosp1.2"    "mv_preg"       "mv_preterm"   
+[37] "mv_redness"    "opt_av"        "passTest"      "propOpt"      
+[41] "risk"          "rptTask"       "sibGrp"        "sibling"      
+[45] "task"          "time"          "vacBlf"        "vacConf"      
+[49] "vacEff"        "vacImpt"       "vacSafe"      
 
-Crosstabulation of vacImpt_missing by numSib:
-               numSib
+Crosstabulation of vacImpt_missing by sibling:
+               sibling
 vacImpt_missing 0           1           2          3         4        5       
               0 317 (51.05) 218 (35.10) 65 (10.47) 13 (2.09) 6 (0.97) 2 (0.32)
               1 24 (64.86)  9 (24.32)   4 (10.81)  0 (0.00)  0 (0.00) 0 (0.00)
@@ -99,8 +99,8 @@ Summary of propOpt by vacImpt_missing:
      1    37 0.71 0.34 0.00 1.00
 p-value (t-test): <0.001 
 
-Crosstabulation of vacSafe_missing by numSib:
-               numSib
+Crosstabulation of vacSafe_missing by sibling:
+               sibling
 vacSafe_missing 0           1           2          3         4        5       
               0 300 (51.64) 202 (34.77) 61 (10.50) 11 (1.89) 5 (0.86) 2 (0.34)
               1 41 (53.25)  25 (32.47)  8 (10.39)  2 (2.60)  1 (1.30) 0 (0.00)
@@ -159,8 +159,8 @@ Summary of propOpt by vacSafe_missing:
      1    77 0.57 0.38 0.00 1.00
 p-value (t-test): <0.001 
 
-Crosstabulation of vacEff_missing by numSib:
-              numSib
+Crosstabulation of vacEff_missing by sibling:
+              sibling
 vacEff_missing 0           1           2          3         4        5       
              0 311 (51.32) 210 (34.65) 64 (10.56) 13 (2.15) 6 (0.99) 2 (0.33)
              1 30 (57.69)  17 (32.69)  5 (9.62)   0 (0.00)  0 (0.00) 0 (0.00)
@@ -219,8 +219,8 @@ Summary of propOpt by vacEff_missing:
      1    52 0.72 0.37 0.00 1.00
 p-value (t-test): <0.001 
 
-Crosstabulation of vacBlf_missing by numSib:
-              numSib
+Crosstabulation of vacBlf_missing by sibling:
+              sibling
 vacBlf_missing 0           1           2          3         4        5       
              0 281 (51.37) 193 (35.28) 54 (9.87)  13 (2.38) 4 (0.73) 2 (0.37)
              1 60 (54.05)  34 (30.63)  15 (13.51) 0 (0.00)  2 (1.80) 0 (0.00)
@@ -280,7 +280,7 @@ Summary of propOpt by vacBlf_missing:
 p-value (t-test): <0.001 
 
 Call:
-glm(formula = vacImpt_missing ~ age + gestAge + numSib + govTrust + 
+glm(formula = vacImpt_missing ~ age + gestAge + sibling + govTrust + 
     education + income + time + propOpt, family = binomial, data = df_forImp)
 
 Coefficients:
@@ -288,7 +288,7 @@ Coefficients:
 (Intercept) -2.05610    1.53198  -1.342   0.1796   
 age          0.04034    0.03575   1.129   0.2591   
 gestAge     -0.01700    0.01804  -0.942   0.3462   
-numSib      -0.47188    0.26393  -1.788   0.0738 . 
+sibling     -0.47188    0.26393  -1.788   0.0738 . 
 govTrust    -0.69980    0.23237  -3.012   0.0026 **
 education   -0.10861    0.14156  -0.767   0.4429   
 income      -0.09680    0.13806  -0.701   0.4832   
@@ -307,7 +307,7 @@ Number of Fisher Scoring iterations: 7
 
 
 Call:
-glm(formula = vacSafe_missing ~ age + gestAge + numSib + govTrust + 
+glm(formula = vacSafe_missing ~ age + gestAge + sibling + govTrust + 
     education + income + time + propOpt, family = binomial, data = df_forImp)
 
 Coefficients:
@@ -315,7 +315,7 @@ Coefficients:
 (Intercept) -1.541218   1.074661  -1.434  0.15153   
 age          0.007166   0.025720   0.279  0.78053   
 gestAge     -0.007237   0.012550  -0.577  0.56417   
-numSib      -0.030919   0.151569  -0.204  0.83836   
+sibling     -0.030919   0.151569  -0.204  0.83836   
 govTrust    -0.215097   0.171375  -1.255  0.20944   
 education   -0.143015   0.098588  -1.451  0.14688   
 income       0.002930   0.092021   0.032  0.97460   
@@ -334,7 +334,7 @@ Number of Fisher Scoring iterations: 5
 
 
 Call:
-glm(formula = vacEff_missing ~ age + gestAge + numSib + govTrust + 
+glm(formula = vacEff_missing ~ age + gestAge + sibling + govTrust + 
     education + income + time + propOpt, family = binomial, data = df_forImp)
 
 Coefficients:
@@ -342,7 +342,7 @@ Coefficients:
 (Intercept) -0.857700   1.308521  -0.655 0.512163    
 age         -0.006442   0.031123  -0.207 0.836027    
 gestAge     -0.007481   0.015556  -0.481 0.630585    
-numSib      -0.313929   0.214416  -1.464 0.143162    
+sibling     -0.313929   0.214416  -1.464 0.143162    
 govTrust    -0.469550   0.200673  -2.340 0.019290 *  
 education   -0.150423   0.120265  -1.251 0.211022    
 income      -0.106952   0.119196  -0.897 0.369569    
@@ -361,7 +361,7 @@ Number of Fisher Scoring iterations: 6
 
 
 Call:
-glm(formula = vacBlf_missing ~ age + gestAge + numSib + govTrust + 
+glm(formula = vacBlf_missing ~ age + gestAge + sibling + govTrust + 
     education + income + time + propOpt, family = binomial, data = df_forImp)
 
 Coefficients:
@@ -369,7 +369,7 @@ Coefficients:
 (Intercept) -0.956610   0.940338  -1.017   0.3090    
 age         -0.011663   0.022732  -0.513   0.6079    
 gestAge      0.005408   0.011092   0.488   0.6259    
-numSib      -0.033832   0.133756  -0.253   0.8003    
+sibling     -0.033832   0.133756  -0.253   0.8003    
 govTrust    -0.203839   0.150980  -1.350   0.1770    
 education   -0.166996   0.085879  -1.945   0.0518 .  
 income       0.020695   0.079937   0.259   0.7957    
@@ -386,21 +386,19 @@ AIC: 576.52
 
 Number of Fisher Scoring iterations: 4
 
-
 File successfully saved as jpn_dataset_subset_imputed.csv
 Column names of jpn_dataset_subset_imputed.csv:
- [1] "id"              "block"           "passTest"        "allSame"        
- [5] "task"            "choice_stage1"   "choice_stage2"   "mv_cost"        
- [9] "mv_cost0.05"     "mv_cost0.1"      "mv_cost0.3"      "mv_cost1"       
-[13] "mv_hosp"         "mv_hosp0.3"      "mv_hosp0.9"      "mv_hosp1.2"     
-[17] "mv_preg"         "mv_preterm"      "mv_redness"      "mab_cost"       
-[21] "mab_cost0.05"    "mab_cost0.1"     "mab_cost0.3"     "mab_cost1"      
-[25] "mab_hosp"        "mab_hosp0.3"     "mab_hosp0.9"     "mab_hosp1.2"    
-[29] "mab_redness"     "risk"            "rptTask"         "mv_av"          
-[33] "mab_av"          "opt_av"          "propOpt"         "age"            
-[37] "sibling"         "numSib"          "gestAge"         "govTrust"       
-[41] "education"       "income"          "time"            "ageStd"         
-[45] "sibGrp"          "eduGrp"          "incGrp"          "vacImpt"        
-[49] "vacSafe"         "vacEff"          "vacBlf"          "vacImpt_missing"
-[53] "vacSafe_missing" "vacEff_missing"  "vacBlf_missing"  "imp"            
-[57] "vacConf"        
+ [1] "age"             "ageStd"          "allSame"         "block"          
+ [5] "choice_stage1"   "choice_stage2"   "education"       "eduGrp"         
+ [9] "gestAge"         "govTrust"        "id"              "imp"            
+[13] "incGrp"          "income"          "mab_av"          "mab_cost"       
+[17] "mab_cost0.05"    "mab_cost0.1"     "mab_cost0.3"     "mab_cost1"      
+[21] "mab_hosp"        "mab_hosp0.3"     "mab_hosp0.9"     "mab_hosp1.2"    
+[25] "mab_redness"     "mv_av"           "mv_cost"         "mv_cost0.05"    
+[29] "mv_cost0.1"      "mv_cost0.3"      "mv_cost1"        "mv_hosp"        
+[33] "mv_hosp0.3"      "mv_hosp0.9"      "mv_hosp1.2"      "mv_preg"        
+[37] "mv_preterm"      "mv_redness"      "opt_av"          "passTest"       
+[41] "propOpt"         "risk"            "rptTask"         "sibGrp"         
+[45] "sibling"         "task"            "time"            "vacBlf"         
+[49] "vacBlf_missing"  "vacConf"         "vacEff"          "vacEff_missing" 
+[53] "vacImpt"         "vacImpt_missing" "vacSafe"         "vacSafe_missing"
