@@ -9,7 +9,6 @@ Analysis codes for a discrete choice experiment (DCE) conducted among Japanese p
 - `figs/` - exported figures from analysis scripts
 - `markdown/` - markdown files for equations & legend
 - `output/` - text log files from analysis scripts
-- `utils.r` - shared helper functions used across analysis scripts
 - `renv/`, `renv.lock` - project library management
 
 ## 2. Requirements
@@ -71,10 +70,12 @@ The scripts assume the project root is the working directory & use `here()` for 
 - `15_hcm_costCont_ranInt_ranCoeff_wtp.r` - Willingness-to-pay (WTP)
 - `16_hcm_costCont_ranInt_ranCoeff_cv.r` - Compensating variation (CV)
 - `17_hcm_costCont_ranInt_ranCoeff_choiceProb.r` - Choice probabilities at base cost
-- `18_hcm_costCont_ranInt_ranCoeff_choiceProb_mvCost.r` - Choice probabilities across MV cost range
-- `19_hcm_costCont_ranInt_ranCoeff_choiceProb_mabCost.r` - Choice probabilities across mAb cost range
-- `20_hcm_costCont_ranInt_ranCoeff_choiceProb_plot.r` - Plot choice probabilities individually
+- `18_hcm_costCont_ranInt_ranCoeff_choiceProb_mvCost.r` - Choice probabilities across varying MV costs
+- `19_hcm_costCont_ranInt_ranCoeff_choiceProb_mabCost.r` - Choice probabilities across varying mAb costs
+- `20_hcm_costCont_ranInt_ranCoeff_choiceProb_plot.r` - Plot choice probabilities separately
 - `21_hcm_costCont_ranInt_ranCoeff_choiceProb_comPlot.r` - Plot choice probabilities together
+- `22_hcm_costCont_ranInt_ranCoeff_choiceProb_bothCosts.r` - Choice probabilities across simultaneously varying MV & mAb costs
+- `23_hcm_costCont_ranInt_ranCoeff_choiceProb_heatmap.r` - Plot choice probabilities with simultaneously varying MV & mAb costs as a heatmap
 
 ## 7. Outputs
 
