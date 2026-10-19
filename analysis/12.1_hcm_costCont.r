@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 12.1_hcm_costCont.r
-# Date: 2026-09-23
+# Date: 2026-10-18
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -16,7 +16,7 @@ library(dplyr)
 library(apollo)
 
 # Source universal functions
-source(here("utils.r"))
+source(here("analysis", "utils.r"))
 
 # Initialize code
 apollo_initialise()
@@ -98,7 +98,7 @@ apollo_fixed <- c()
 # Set parameters for generating draws
 apollo_draws <- list(
     interDrawsType = "halton",
-    interNDraws = 100,
+    interNDraws = 1000,
     interUnifDraws = c(),
     interNormDraws = c("eta"),
     intraDrawsType = "",
@@ -252,7 +252,7 @@ apollo_modelOutput(fit, modelOutput_settings)
 sink(here("output", "12.1_hcm_costCont_output.txt"))
 cat("===========================================================================\n")
 cat("Title: 12.1_hcm_costCont_output.txt\n")
-cat("Date: 2026-09-23\n")
+cat("Date: 2026-10-18\n")
 cat("===========================================================================\n")
 
 format_cca_results(fit)

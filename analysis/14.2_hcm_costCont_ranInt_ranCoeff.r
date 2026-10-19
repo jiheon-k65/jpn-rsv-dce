@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 14.2_hcm_costCont_ranInt_ranCoeff.r
-# Date: 2026-09-23
+# Date: 2026-10-18
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -19,7 +19,7 @@ library(dplyr)
 library(apollo)
 
 # Source universal functions
-source(here("utils.r"))
+source(here("analysis", "utils.r"))
 
 # Initialize code
 apollo_initialise()
@@ -57,16 +57,16 @@ data <- data[data$rptTask != 1, ]
 # List all parameters & starting values
 apollo_beta <- c(
     sigma_pdt = 0,
-    mu_bPreg_mv = 0,
-    sigma_bPreg_mv = 0,
+    mu_preg_mv = 0,
+    sigma_preg_mv = 0,
     bRedness = 0 ,
-    mu_bPreterm_mv = 0,
-    sigma_bPreterm_mv = 0,
+    mu_preterm_mv = 0,
+    sigma_preterm_mv = 0,
     bHosp1.2 = 0,
     bHosp0.9 = 0,
     bHosp0.3 = 0,
-    ln_mu_bCost = 0,
-    ln_sigma_bCost = 0,
+    ln_mu_cost = 0,
+    ln_sigma_cost = 0,
     bHospIntRisk = 0,
     bOptIntLV = 1,
     bOptIntRisk = 0,
@@ -105,14 +105,14 @@ apollo_fixed <- c()
 # Set parameters for generating draws
 apollo_draws <- list(
     interDrawsType = "halton",
-    interNDraws = 100,
+    interNDraws = 1000,
     interUnifDraws = c(),
     interNormDraws = c(
         "eta",
         "draws_pdt",
-        "draws_bPreg",
-        "draws_bPreterm",
-        "draws_bCost"
+        "draws_preg",
+        "draws_preterm",
+        "draws_cost"
     ),
     intraDrawsType = "",
     intraNDraws = 0,
@@ -131,9 +131,9 @@ apollo_randCoeff <- function(apollo_beta, apollo_inputs) {
         eta
     )
     randcoeff[["alpha"]] <- sigma_pdt * draws_pdt # Random intercept for product (mimics nested logit)
-    randcoeff[["bPreg_mv"]] <- mu_bPreg_mv + sigma_bPreg_mv * draws_bPreg
-    randcoeff[["bPreterm_mv"]] <- mu_bPreterm_mv + sigma_bPreterm_mv * draws_bPreterm
-    randcoeff[["bCost"]] <- - exp(ln_mu_bCost + ln_sigma_bCost * draws_bCost) # Lognormal (ensures -ve coefficient)
+    randcoeff[["bPreg_mv"]] <- mu_preg_mv + sigma_preg_mv * draws_preg
+    randcoeff[["bPreterm_mv"]] <- mu_preterm_mv + sigma_preterm_mv * draws_preterm
+    randcoeff[["bCost"]] <- - exp(ln_mu_cost + ln_sigma_cost * draws_cost) # Lognormal (ensures -ve coefficient)
     return(randcoeff)
 }
 
@@ -302,7 +302,7 @@ saveRDS(
 sink(here("output", "14.2_hcm_costCont_ranInt_ranCoeff_output.txt"))
 cat("===========================================================================\n")
 cat("Title: 14.2_hcm_costCont_ranInt_ranCoeff_output.txt\n")
-cat("Date: 2026-09-23\n")
+cat("Date: 2026-10-18\n")
 cat("===========================================================================\n")
 
 pool_coeff(est_list, robvarcov_list, M)

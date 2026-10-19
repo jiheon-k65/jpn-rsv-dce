@@ -1,51 +1,51 @@
 ===========================================================================
 Title: 14.2_hcm_costCont_ranInt_ranCoeff_output.txt
-Date: 2026-09-23
+Date: 2026-10-18
 ===========================================================================
 
 Pooled estimates using Rubin's rules:
-                       Est  Rob_SE p_2sided
-sigma_pdt          2.74481 0.17887   <0.001
-mu_bPreg_mv        0.41997 0.08224   <0.001
-sigma_bPreg_mv     0.91013 0.14830   <0.001
-bRedness          -0.13442 0.05971    0.024
-mu_bPreterm_mv    -0.80990 0.11849   <0.001
-sigma_bPreterm_mv  0.53467 0.41258    0.195
-bHosp1.2           0.11667 0.10840    0.282
-bHosp0.9           0.17203 0.11223    0.125
-bHosp0.3           0.53759 0.11143   <0.001
-ln_mu_bCost        1.59621 0.14587   <0.001
-ln_sigma_bCost     1.84068 0.15815   <0.001
-bHospIntRisk      -0.13391 0.12941    0.301
-bOptIntLV          2.38408 0.28032   <0.001
-bOptIntRisk        0.41321 0.14874    0.005
-gamma_age          0.05193 0.06568    0.429
-gamma_sib         -0.21023 0.05678   <0.001
-gamma_edu         -0.29113 0.14152    0.040
-gamma_inc         -0.17284 0.17883    0.334
-zeta_govTrust     -2.98470 0.29171   <0.001
-zeta_vacImpt      -3.57404 0.40993   <0.001
-zeta_vacSafe      -3.51834 0.38016   <0.001
-zeta_vacEff       -3.64368 0.42621   <0.001
-zeta_vacBlf       -3.92793 0.41328   <0.001
-tau_govTrust1     -3.41318 0.33269   <0.001
-tau_govTrust2     -0.85012 0.25247   <0.001
-tau_govTrust3      4.79887 0.41974   <0.001
-tau_vacImpt1      -5.11108 0.53781   <0.001
-tau_vacImpt2      -2.69792 0.36270   <0.001
-tau_vacImpt3       3.46474 0.42763   <0.001
-tau_vacSafe1      -4.17948 0.42356   <0.001
-tau_vacSafe2      -0.06038 0.29589    0.838
-tau_vacSafe3       7.08265 0.57511   <0.001
-tau_vacEff1       -5.36174 0.54967   <0.001
-tau_vacEff2       -2.00523 0.35598   <0.001
-tau_vacEff3        4.74910 0.48843   <0.001
-tau_vacBlf1       -3.94003 0.45787   <0.001
-tau_vacBlf2        0.00215 0.33120    0.995
-tau_vacBlf3        6.53896 0.66210   <0.001
+                      Est  Rob_SE p_2sided
+sigma_pdt         3.10709 0.18458   <0.001
+mu_preg_mv        0.40357 0.08379   <0.001
+sigma_preg_mv    -0.95751 0.11801   <0.001
+bRedness         -0.15165 0.06046    0.012
+mu_preterm_mv    -0.94146 0.12681   <0.001
+sigma_preterm_mv  1.12365 0.16247   <0.001
+bHosp1.2          0.10315 0.10771    0.338
+bHosp0.9          0.16671 0.10894    0.126
+bHosp0.3          0.56458 0.11200   <0.001
+ln_mu_cost        1.71218 0.10598   <0.001
+ln_sigma_cost    -1.92743 0.08233   <0.001
+bHospIntRisk     -0.14408 0.12974    0.267
+bOptIntLV         2.49171 0.21942   <0.001
+bOptIntRisk       0.45443 0.14283    0.001
+gamma_age         0.04721 0.05909    0.424
+gamma_sib        -0.30847 0.08396   <0.001
+gamma_edu        -0.35458 0.09834   <0.001
+gamma_inc        -0.17273 0.09750    0.077
+zeta_govTrust    -2.83799 0.25327   <0.001
+zeta_vacImpt     -3.54897 0.39386   <0.001
+zeta_vacSafe     -3.67485 0.36507   <0.001
+zeta_vacEff      -3.57536 0.39337   <0.001
+zeta_vacBlf      -3.87541 0.39299   <0.001
+tau_govTrust1    -3.30859 0.30525   <0.001
+tau_govTrust2    -0.75517 0.20673   <0.001
+tau_govTrust3     4.91069 0.40015   <0.001
+tau_vacImpt1     -5.12014 0.52871   <0.001
+tau_vacImpt2     -2.64283 0.32985   <0.001
+tau_vacImpt3      3.70666 0.44381   <0.001
+tau_vacSafe1     -4.30786 0.43218   <0.001
+tau_vacSafe2      0.08311 0.27046    0.759
+tau_vacSafe3      7.80465 0.66560   <0.001
+tau_vacEff1      -5.33716 0.49417   <0.001
+tau_vacEff2      -1.92040 0.30029   <0.001
+tau_vacEff3       5.01339 0.54312   <0.001
+tau_vacBlf1      -3.90422 0.45957   <0.001
+tau_vacBlf2       0.12937 0.27475    0.638
+tau_vacBlf3       6.92869 0.61944   <0.001
 
 AIC values:
-Min: 13267 , Max: 13380 
+Min: 13127 , Max: 13236 
 
 BIC values:
-Min: 13437 , Max: 13551
+Min: 13298 , Max: 13406

@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 7_mxl_costCont
-# Date: 2026-09-23
+# Date: 2026-10-18
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -15,7 +15,7 @@ library(here)
 library(apollo)
 
 # Source universal functions
-source(here("utils.r"))
+source(here("analysis", "utils.r"))
 
 # Initialize code
 apollo_initialise()
@@ -48,31 +48,27 @@ database <- data[data$rptTask != 1, ]
 
 # List all parameters & starting values
 apollo_beta <- c(
-    ascPdt = 0,
-    mu_ascOpt = 0,
-    sigma_ascOpt = 0,
-    bInf_mab = 0,
-    mu_bPreg_mv = 0,
-    sigma_bPreg_mv = 0,
-    bNoAe = 0,
-    mu_bRedness = 0,
-    sigma_bRedness = 0,
-    mu_bPreterm_mv = 0,
-    sigma_bPreterm_mv = 0,
-    bHosp15 = 0,
-    mu_bHosp1.2 = 0,
-    sigma_bHosp1.2 = 0,
-    mu_bHosp0.9 = 0,
-    sigma_bHosp0.9 = 0,
-    mu_bHosp0.3 = 0,
-    sigma_bHosp0.3 = 0,
-    ln_mu_bCost = 0,
-    ln_sigma_bCost = 0,
+    mu_opt = 0,
+    sigma_opt = 0,
+    mu_preg_mv = 0,
+    sigma_preg_mv = 0,
+    mu_redness = 0,
+    sigma_redness = 0,
+    mu_preterm_mv = 0,
+    sigma_preterm_mv = 0,
+    mu_hosp1.2 = 0,
+    sigma_hosp1.2 = 0,
+    mu_hosp0.9 = 0,
+    sigma_hosp0.9 = 0,
+    mu_hosp0.3 = 0,
+    sigma_hosp0.3 = 0,
+    ln_mu_cost = 0,
+    ln_sigma_cost = 0,
     bOptIntRisk = 0, # Assumed fixed effect
     bHospIntRisk = 0 # Assumed fixed effect
 )
 # List parameters to be fixed at their starting values
-apollo_fixed <- c("ascPdt", "bInf_mab", "bNoAe", "bHosp15")
+apollo_fixed <- c()
 
 # ------------------------------------------------------------------------
 # SECTION 4: Define draws & random parameters
@@ -81,17 +77,17 @@ apollo_fixed <- c("ascPdt", "bInf_mab", "bNoAe", "bHosp15")
 # To set parameters for generating draws
 apollo_draws <- list(
     interDrawsType = "sobol", # Halton not recommended for >5
-    interNDraws = 100,
+    interNDraws = 1000,
     interUnifDraws = c(),
     interNormDraws = c(
-        "draws_ascOpt",
-        "draws_bPreg",
-        "draws_bRedness",
-        "draws_bPreterm",
-        "draws_bHosp1.2",
-        "draws_bHosp0.9",
-        "draws_bHosp0.3",
-        "draws_bCost"
+        "draws_opt",
+        "draws_preg",
+        "draws_redness",
+        "draws_preterm",
+        "draws_hosp1.2",
+        "draws_hosp0.9",
+        "draws_hosp0.3",
+        "draws_cost"
     ),
     intraDrawsType = "",
     intraNDraws = 0,
@@ -102,14 +98,14 @@ apollo_draws <- list(
 # To create random parameters
 apollo_randCoeff <- function(apollo_beta, apollo_inputs) {
     randcoeff <- list()
-    randcoeff[["ascOpt"]] <- mu_ascOpt + sigma_ascOpt * draws_ascOpt
-    randcoeff[["bPreg_mv"]] <- mu_bPreg_mv + sigma_bPreg_mv * draws_bPreg
-    randcoeff[["bRedness"]] <- mu_bRedness + sigma_bRedness * draws_bRedness
-    randcoeff[["bPreterm_mv"]] <- mu_bPreterm_mv + sigma_bPreterm_mv * draws_bPreterm
-    randcoeff[["bHosp1.2"]] <- mu_bHosp1.2 + sigma_bHosp1.2 * draws_bHosp1.2
-    randcoeff[["bHosp0.9"]] <- mu_bHosp0.9 + sigma_bHosp0.9 * draws_bHosp0.9
-    randcoeff[["bHosp0.3"]] <- mu_bHosp0.3 + sigma_bHosp0.3 * draws_bHosp0.3
-    randcoeff[["bCost"]] <- - exp(ln_mu_bCost + ln_sigma_bCost * draws_bCost) # Lognormal distribution (ensures -ve coefficient)
+    randcoeff[["ascOpt"]] <- mu_opt + sigma_opt * draws_opt
+    randcoeff[["bPreg_mv"]] <- mu_preg_mv + sigma_preg_mv * draws_preg
+    randcoeff[["bRedness"]] <- mu_redness + sigma_redness * draws_redness
+    randcoeff[["bPreterm_mv"]] <- mu_preterm_mv + sigma_preterm_mv * draws_preterm
+    randcoeff[["bHosp1.2"]] <- mu_hosp1.2 + sigma_hosp1.2 * draws_hosp1.2
+    randcoeff[["bHosp0.9"]] <- mu_hosp0.9 + sigma_hosp0.9 * draws_hosp0.9
+    randcoeff[["bHosp0.3"]] <- mu_hosp0.3 + sigma_hosp0.3 * draws_hosp0.3
+    randcoeff[["bCost"]] <- - exp(ln_mu_cost + ln_sigma_cost * draws_cost) # Lognormal distribution (ensures -ve coefficient)
     return(randcoeff)
 }
 
@@ -207,7 +203,7 @@ apollo_modelOutput(fit, modelOutput_settings)
 sink(here("output", "7_mxl_costCont_output.txt"))
 cat("===========================================================================\n")
 cat("Title: 7_mxl_costCont_output.txt\n")
-cat("Date: 2026-09-23\n")
+cat("Date: 2026-10-18\n")
 cat("===========================================================================\n")
 
 format_cca_results(fit)

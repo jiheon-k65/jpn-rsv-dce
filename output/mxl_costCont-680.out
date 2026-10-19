@@ -1,0 +1,323 @@
+- The project is out-of-sync -- use `renv::status()` for details.
+Apollo ignition sequence completed
+apollo_draws and apollo_randCoeff were found, so apollo_control$mixing
+  was set to TRUE
+Several observations per individual detected based on the value of id.
+  Setting panelData in apollo_control set to TRUE.
+All checks on apollo_control completed.
+WARNING: Your database contains some entries that are NA. This may well
+  be intentional, but be advised that if these entries are used in your
+  model, the behaviour may be unexpected. 
+All checks on database completed.
+Generating inter-individual draws ........ Done
+Testing probability function (apollo_probabilities)
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+INFORMATION: Apollo was not able to compute analytical gradients for
+  your model. This could be because you are using model components for
+  which analytical gradients are not yet implemented, or because you
+  coded your own model functions. If however you only used apollo_mnl,
+  apollo_fmnl, apollo_normalDensity, apollo_ol or apollo_op, then there
+  could be another issue. You might want to ask for help in the Apollo
+  forum (https://www.ApolloChoiceModelling.com/forum) on how to solve
+  this issue. If you do, please post your code and data (if not
+  confidential). 
+Creating initial set of 100 candidate values.
+Calculating LL of candidates 0%....50%.....100%
+
+Stage 1, 100 active candidates.
+Estimating 20 BGW iteration(s) for each active candidate.
+ Candidate......LLstart.....LLfinish.....GradientNorm...Converged
+         1        -6051        -4110            0.002           1
+         2        -6053        -4111            0.001           1
+         3        -6057        -4107            0.001           1
+         4        -6028        -4110            0.001           1
+         5        -6040        -4110            0.001           1
+         6        -6052        -4109            0.001           1
+         7        -6120        -4110                0           1
+         8        -6074        -4110            0.001           1
+         9        -6052        -4112            0.001           1
+        10        -6024        -4113            0.001           1
+        11        -6015        -4113            0.001           1
+        12        -6041        -4107            0.002           1
+        13        -6054        -4110            0.001           1
+        14        -6027        -4111            0.001           1
+        15        -6043        -4110                0           1
+        16        -6043        -4109                0           1
+        17        -6033        -4111                0           1
+        18        -6085        -4111            0.003           1
+        19        -6057        -4112            0.002           1
+        20        -6020        -4110            0.002           1
+        21        -6055        -4113            0.002           0
+        22        -6051        -4109            0.001           1
+        23        -6039        -4108            0.002           1
+        24        -6030        -4112            0.001           1
+        25        -6069        -4109            0.002           1
+        26        -6076        -4111            0.001           1
+        27        -6058        -4110            0.001           1
+        28        -6048        -4112            0.003           1
+        29        -6075        -4108            0.001           1
+        30        -6015        -4110            0.001           1
+        31        -6072        -4108            0.001           1
+        32        -6070        -4110            0.002           1
+        33        -6035        -4108            0.004           0
+        34        -6028        -4111            0.001           1
+        35        -6083        -4110            0.001           1
+        36        -6035        -4112            0.001           1
+        37        -6026        -4113            0.002           1
+        38        -6037        -4111            0.001           1
+        39        -6017        -4110            0.001           1
+        40        -6075        -4112                0           1
+        41        -6019        -4107            0.001           1
+        42        -6042        -4109            0.001           1
+        43        -6055        -4113            0.001           1
+        44        -6077        -4111            0.002           1
+        45        -6057        -4108            0.003           1
+        46        -6023        -4107            0.001           1
+        47        -6011        -4110            0.001           1
+        48        -6041        -4110            0.003           1
+        49        -6066        -4110            0.001           1
+        50        -6032        -4107            0.002           1
+        51        -6028        -4107                0           1
+        52        -6054        -4112                0           1
+        53        -6011        -4113            0.001           1
+        54        -6091        -4110            0.002           1
+        55        -6041        -4111            0.001           1
+        56        -5998        -4113            0.005           1
+        57        -6014        -4113                0           1
+        58        -6055        -4110            0.001           1
+        59        -6020        -4111            0.001           1
+        60        -6041        -4110            0.001           1
+        61        -5998        -4111            0.001           1
+        62        -6051        -4110            0.001           1
+        63        -6025        -4111            0.001           1
+        64        -6048        -4110            0.002           1
+        65        -6051        -4112            0.001           1
+        66        -6069        -4111            0.002           1
+        67        -6033        -4107            0.002           1
+        68        -6050        -4114            0.001           1
+        69        -6018        -4110            0.001           1
+        70        -6021        -4108            0.001           1
+        71        -6089        -4110            0.001           1
+        72        -6023        -4112            0.001           1
+        73        -6035        -4107            0.002           1
+        74        -6041        -4108            0.001           1
+        75        -6017        -4109                0           1
+        76        -6041        -4111            0.001           1
+        77        -6092        -4107                0           1
+        78        -6088        -4111            0.001           1
+        79        -6035        -4112            0.001           1
+        80        -6054        -4107            0.001           1
+        81        -6039        -4111            0.001           1
+        82        -6051        -4110            0.023           0
+        83        -6049        -4111            0.001           1
+        84        -6033        -4110            0.002           1
+        85        -6050        -4112            0.003           1
+        86        -6074        -4113            0.001           1
+        87        -6049        -4108            0.002           1
+        88        -6060        -4111            0.001           1
+        89        -6029        -4110            0.001           1
+        90        -6071        -4110            0.003           1
+        91        -6048        -4110            0.001           1
+        92        -6041        -4111            0.002           1
+        93        -6045        -4112            0.002           1
+        94        -6019        -4113            0.001           1
+        95        -6046        -4110            0.001           1
+        96        -6053        -4111            0.001           1
+        97        -6084        -4107                0           1
+        98        -6034        -4111            0.001           1
+        99        -6018        -4113            0.002           1
+       100        -6046        -4112            0.001           1
+Candidate 21 dropped.
+- Failed test 1: Too close to 10 in parameter space.
+Candidate 33 dropped.
+- Failed test 1: Too close to 74 in parameter space.
+Candidate 82 dropped.
+- Failed test 1: Too close to 49 in parameter space.
+Best candidate so far (LL=-4106.7)
+                   Value
+mu_opt           -1.7660
+sigma_opt        -4.0641
+mu_preg_mv        0.3881
+sigma_preg_mv     1.0878
+mu_redness       -0.1950
+sigma_redness     0.1362
+mu_preterm_mv    -1.0238
+sigma_preterm_mv  1.2820
+mu_hosp1.2       -0.0132
+sigma_hosp1.2     0.4872
+mu_hosp0.9        0.0494
+sigma_hosp0.9    -0.4470
+mu_hosp0.3        0.4813
+sigma_hosp0.3    -0.6721
+ln_mu_cost        1.7948
+ln_sigma_cost    -1.7695
+bOptIntRisk       0.6180
+bHospIntRisk     -0.0537
+Preparing user-defined functions.
+
+Testing likelihood function...
+
+Overview of choices for MNL model component :
+                                      mv     mab     opt
+Times available                  5922.00 5922.00 5922.00
+Times chosen                     1757.00 1758.00 2407.00
+Percentage chosen overall          29.67   29.69   40.65
+Percentage chosen when available   29.67   29.69   40.65
+
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+- The project is out-of-sync -- use `renv::status()` for details.
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ /mnt/hdd/scratch/e1519538/jpn_dce/output/7_mxl_costCont_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 4.106652019e+03
+     1     2 4.106652019e+03 1.017e-13 2.549e-13 5.42e-07   G   0.00e+00
+
+***** Relative function convergence (favorable) *****
+
+Estimated parameters with approximate standard errors from BHHH matrix:
+                    Estimate     BHHH se BHH t-ratio (0)
+mu_opt              -1.76602     0.21095         -8.3719
+sigma_opt           -4.06410     0.20704        -19.6293
+mu_preg_mv           0.38813     0.09108          4.2613
+sigma_preg_mv        1.08780     0.09106         11.9464
+mu_redness          -0.19496     0.07353         -2.6512
+sigma_redness        0.13618     0.34606          0.3935
+mu_preterm_mv       -1.02379     0.11883         -8.6156
+sigma_preterm_mv     1.28203     0.14443          8.8762
+mu_hosp1.2          -0.01324     0.10978         -0.1206
+sigma_hosp1.2        0.48720     0.19245          2.5315
+mu_hosp0.9           0.04939     0.11031          0.4477
+sigma_hosp0.9       -0.44699     0.18863         -2.3696
+mu_hosp0.3           0.48130     0.11178          4.3057
+sigma_hosp0.3       -0.67206     0.13753         -4.8866
+ln_mu_cost           1.79485     0.08974         20.0006
+ln_sigma_cost       -1.76954     0.08835        -20.0293
+bOptIntRisk          0.61802     0.13220          4.6750
+bHospIntRisk        -0.05367     0.14130         -0.3798
+
+Final LL: -4106.652
+
+Calculating log-likelihood at equal shares (LL(0)) for applicable
+  models...
+Calculating log-likelihood at observed shares from estimation data
+  (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian of analytical
+  gradient.
+ 0%....25%....50%....75%...100%
+Negative definite Hessian with maximum eigenvalue: -14.588434
+
+Your model was estimated using the BGW algorithm. Please acknowledge
+  this by citing Bunch et al. (1993) - doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+Model run by e1519538 using Apollo 0.3.8 on R 4.6.1 for Linux.
+Please acknowledge the use of Apollo by citing Hess & Palma (2019)
+  DOI 10.1016/j.jocm.2019.100170
+  www.ApolloChoiceModelling.com
+
+Model name                                  : 7_mxl_costCont
+Model description                           : MXL; continuous cost
+Model run at                                : 2026-10-18 20:29:13.146115
+Estimation method                           : bgw
+Estimation diagnosis                        : Relative function convergence (favorable)
+Optimisation diagnosis                      : Maximum found
+     hessian properties                     : Negative definite
+     maximum eigenvalue                     : -14.588434
+     reciprocal of condition number         : 0.0487453
+Number of individuals                       : 658
+Number of rows in database                  : 5922
+Number of modelled outcomes                 : 5922
+
+Number of cores used                        :  8 
+Number of inter-individual draws            : 1000 (sobol)
+
+LL(start)                                   : -4106.65
+LL at equal shares, LL(0)                   : -6505.98
+LL at observed shares, LL(C)                : -6436.96
+LL(final)                                   : -4106.65
+Rho-squared vs equal shares                  :  0.3688 
+Adj.Rho-squared vs equal shares              :  0.366 
+Rho-squared vs observed shares               :  0.362 
+Adj.Rho-squared vs observed shares           :  0.3595 
+AIC                                         :  8249.3 
+BIC                                         :  8369.66 
+
+Estimated parameters                        : 18
+Time taken (hh:mm:ss)                       :  00:03:41.67 
+     pre-estimation                         :  00:00:47.39 
+     estimation                             :  00:00:7.2 
+     post-estimation                        :  00:02:47.08 
+Iterations                                  :  1  
+
+Unconstrained optimisation.
+
+Estimates:
+                    Estimate        s.e.   t.rat.(0)  p(2-sided)    Rob.s.e.
+mu_opt              -1.76602     0.20793     -8.4933    0.000000     0.20878
+sigma_opt           -4.06410     0.21946    -18.5190    0.000000     0.23644
+mu_preg_mv           0.38813     0.08923      4.3498   1.362e-05     0.08946
+sigma_preg_mv        1.08780     0.10388     10.4718    0.000000     0.12019
+mu_redness          -0.19496     0.06839     -2.8506    0.004363     0.06603
+sigma_redness        0.13618     0.18002      0.7565    0.449366     0.09724
+mu_preterm_mv       -1.02379     0.12259     -8.3514    0.000000     0.13353
+sigma_preterm_mv     1.28203     0.14685      8.7302    0.000000     0.15654
+mu_hosp1.2          -0.01324     0.11056     -0.1198    0.904667     0.11257
+sigma_hosp1.2        0.48720     0.17865      2.7270    0.006391     0.16825
+mu_hosp0.9           0.04939     0.11088      0.4454    0.656046     0.11332
+sigma_hosp0.9       -0.44699     0.16329     -2.7374    0.006193     0.14597
+mu_hosp0.3           0.48130     0.11349      4.2408   2.227e-05     0.11847
+sigma_hosp0.3       -0.67206     0.14677     -4.5789   4.675e-06     0.15894
+ln_mu_cost           1.79485     0.08950     20.0545    0.000000     0.09404
+ln_sigma_cost       -1.76954     0.07793    -22.7062    0.000000     0.07265
+bOptIntRisk          0.61802     0.13949      4.4304   9.404e-06     0.15018
+bHospIntRisk        -0.05367     0.13786     -0.3893    0.697061     0.13710
+                 Rob.t.rat.(0)  p(2-sided)
+mu_opt                 -8.4587    0.000000
+sigma_opt             -17.1889    0.000000
+mu_preg_mv              4.3385   1.434e-05
+sigma_preg_mv           9.0509    0.000000
+mu_redness             -2.9527    0.003150
+sigma_redness           1.4005    0.161368
+mu_preterm_mv          -7.6668   1.754e-14
+sigma_preterm_mv        8.1897   2.220e-16
+mu_hosp1.2             -0.1176    0.906360
+sigma_hosp1.2           2.8957    0.003783
+mu_hosp0.9              0.4358    0.662990
+sigma_hosp0.9          -3.0621    0.002198
+mu_hosp0.3              4.0627   4.851e-05
+sigma_hosp0.3          -4.2283   2.354e-05
+ln_mu_cost             19.0866    0.000000
+ln_sigma_cost         -24.3561    0.000000
+bOptIntRisk             4.1151   3.870e-05
+bHospIntRisk           -0.3914    0.695477
+
