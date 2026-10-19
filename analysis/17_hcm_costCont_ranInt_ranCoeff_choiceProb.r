@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 17_hcm_costCont_ranInt_ranCoeff_choiceProb.r
-# Date: 2026-09-23
+# Date: 2026-10-19
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -89,19 +89,19 @@ for (m in 1:M) {
         bOptIntRisk <- theta[s, "bOptIntRisk"]
 
         # Simulate bCost for each respondent
-        ln_mu_bCost <- theta[s, "ln_mu_bCost"]
-        ln_sigma_bCost <- theta[s, "ln_sigma_bCost"]
-        bCost <- - rlnorm(N, mean = ln_mu_bCost, sd = abs(ln_sigma_bCost)) # Lognormal
+        ln_mu_cost <- theta[s, "ln_mu_cost"]
+        ln_sigma_cost <- theta[s, "ln_sigma_cost"]
+        bCost <- - rlnorm(N, mean = ln_mu_cost, sd = abs(ln_sigma_cost))
 
         # Simulate bPreg_mv for each respondent
-        mu_bPreg_mv <- theta[s, "mu_bPreg_mv"]
-        sigma_bPreg_mv <- theta[s, "sigma_bPreg_mv"]
-        bPreg_mv <- rnorm(N, mean = mu_bPreg_mv, sd = abs(sigma_bPreg_mv))
+        mu_preg_mv <- theta[s, "mu_preg_mv"]
+        sigma_preg_mv <- theta[s, "sigma_preg_mv"]
+        bPreg_mv <- rnorm(N, mean = mu_preg_mv, sd = abs(sigma_preg_mv))
 
         # Simulate bPreterm_mv for each respondent
-        mu_bPreterm_mv <- theta[s, "mu_bPreterm_mv"]
-        sigma_bPreterm_mv <- theta[s, "sigma_bPreterm_mv"]
-        bPreterm_mv <- rnorm(N, mean = mu_bPreterm_mv, sd = abs(sigma_bPreterm_mv))
+        mu_preterm_mv <- theta[s, "mu_preterm_mv"]
+        sigma_preterm_mv <- theta[s, "sigma_preterm_mv"]
+        bPreterm_mv <- rnorm(N, mean = mu_preterm_mv, sd = abs(sigma_preterm_mv))
 
         # Simulate alpha for each respondent
         sigma_pdt <- theta[s, "sigma_pdt"]
@@ -168,7 +168,7 @@ for (m in 1:M) {
 sink(here("output", "17_hcm_costCont_ranInt_ranCoeff_choiceProb_output.txt"))
 cat("===========================================================================\n")
 cat("Title: 17_hcm_costCont_ranInt_ranCoeff_choiceProb_output.txt\n")
-cat("Date: 2026-09-23\n")
+cat("Date: 2026-10-19\n")
 cat("===========================================================================\n")
 
 # Calculate means over simulations & imputations

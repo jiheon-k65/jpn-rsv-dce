@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 15_hcm_costCont_ranInt_ranCoeff_wtp.r
-# Date: 2026-09-23
+# Date: 2026-10-19
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -65,19 +65,19 @@ for (m in 1:M) {
         bRedness <- rep(theta[s, "bRedness"], N)
 
         # Simulate bCost for each respondent
-        ln_mu_bCost <- theta[s, "ln_mu_bCost"]
-        ln_sigma_bCost <- theta[s, "ln_sigma_bCost"]
-        bCost <- - rlnorm(N, mean = ln_mu_bCost, sd = abs(ln_sigma_bCost)) # Lognormal
+        ln_mu_cost <- theta[s, "ln_mu_cost"]
+        ln_sigma_cost <- theta[s, "ln_sigma_cost"]
+        bCost <- - rlnorm(N, mean = ln_mu_cost, sd = abs(ln_sigma_cost))
 
         # Simulate bPreg_mv for each respondent
-        mu_bPreg_mv <- theta[s, "mu_bPreg_mv"]
-        sigma_bPreg_mv <- theta[s, "sigma_bPreg_mv"]
-        bPreg_mv <- rnorm(N, mean = mu_bPreg_mv, sd = abs(sigma_bPreg_mv))
+        mu_preg_mv <- theta[s, "mu_preg_mv"]
+        sigma_preg_mv <- theta[s, "sigma_preg_mv"]
+        bPreg_mv <- rnorm(N, mean = mu_preg_mv, sd = abs(sigma_preg_mv))
 
         # Simulate bPreterm_mv for each respondent
-        mu_bPreterm_mv <- theta[s, "mu_bPreterm_mv"]
-        sigma_bPreterm_mv <- theta[s, "sigma_bPreterm_mv"]
-        bPreterm_mv <- rnorm(N, mean = mu_bPreterm_mv, sd = abs(sigma_bPreterm_mv))
+        mu_preterm_mv <- theta[s, "mu_preterm_mv"]
+        sigma_preterm_mv <- theta[s, "sigma_preterm_mv"]
+        bPreterm_mv <- rnorm(N, mean = mu_preterm_mv, sd = abs(sigma_preterm_mv))
 
         # Calculate WTP for each respondent (Dim: N x S x M)
         wtp_preg <- - bPreg_mv / bCost * F
@@ -103,7 +103,7 @@ for (m in 1:M) {
 sink(here("output", "15_hcm_costCont_ranInt_ranCoeff_wtp_output.txt"))
 cat("===========================================================================\n")
 cat("Title: 15_hcm_costCont_ranInt_ranCoeff_wtp_output.txt\n")
-cat("Date: 2026-09-23\n")
+cat("Date: 2026-10-19\n")
 cat("===========================================================================\n")
 
 # Calculate medians across respondents (Dim: S x M)
