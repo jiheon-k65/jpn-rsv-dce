@@ -1,6 +1,6 @@
 # ===========================================================================
-# Title: 6_mnl_hospOrd.r
-# Date: 2026-10-23
+# Title: 5_mnl_costCont.r
+# Date: 2026-07-20
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -14,16 +14,13 @@ rm(list = ls())
 library(here)
 library(apollo)
 
-# Source universal functions
-source(here("analysis", "utils.r"))
-
 # Initialize code
 apollo_initialise()
 
 # Set core controls
 apollo_control <- list(
-    modelDescr = "MNL; hospital as ordered monotonic effect",
-    modelName = "6_mnl_hospOrd",
+    modelDescr = "MNL; continuous cost",
+    modelName = "5_mnl_costCont",
     indivID = "id",
     outputDirectory = here("output")
 )
@@ -47,22 +44,23 @@ database <- data[data$rptTask != 1, ]
 
 # List all parameters & starting values
 apollo_beta <- c(
+    ascPdt = 0,
     ascOpt = 0, # Alternative-specific constant for opt-out
+    bInf_mab = 0, # Alternative-specific coefficient
     bPreg_mv = 0, # Alternative-specific coefficient
+    bNoAe = 0,
     bRedness = 0,
     bPreterm_mv = 0, # Alternative-specific coefficient
-    bHosp = 0,
-    theta_hosp1.2 = 0,
-    theta_hosp0.9 = 0,
-    bCost0.05 = 0,
-    bCost0.1 = 0,
-    bCost0.3 = 0,
-    bCost1 = 0,
+    bHosp1.5 = 0,
+    bHosp1.2 = 0,
+    bHosp0.9 = 0,
+    bHosp0.3 = 0,
+    bCost = 0, # Linear cost coefficient (per 100,000 JPY)
     bOptIntRisk = 0,
     bHospIntRisk = 0
 )
 # List parameters to be fixed at their starting values
-apollo_fixed <- c()
+apollo_fixed <- c("ascPdt", "bInf_mab", "bNoAe", "bHosp1.5")
 
 # ------------------------------------------------------------------------
 # SECTION 4: Group & validate inputs
@@ -81,11 +79,6 @@ apollo_probabilities <- function(apollo_beta, apollo_inputs, functionality = "es
 
     # Create list of probabilities
     P <- list()
-
-    # Softmax transformation to ensure probabilities sum to one
-    delta_denom <- 1 + exp(theta_hosp1.2) + exp(theta_hosp0.9)
-    delta_hosp1.2 <- exp(theta_hosp1.2) / delta_denom
-    delta_hosp0.9 <- exp(theta_hosp0.9) / delta_denom
     
     # List utilities
     V <- list()
@@ -93,23 +86,17 @@ apollo_probabilities <- function(apollo_beta, apollo_inputs, functionality = "es
         bPreg_mv * mv_preg +
         bRedness * mv_redness +
         bPreterm_mv * mv_preterm +
-        (bHosp + bHospIntRisk * risk) * mv_hosp1.2 * delta_hosp1.2 +
-        (bHosp + bHospIntRisk * risk) * mv_hosp0.9 * (delta_hosp1.2 + delta_hosp0.9) +
-        (bHosp + bHospIntRisk * risk) * mv_hosp0.3 +
-        bCost0.05 * mv_cost0.05 +
-        bCost0.1 * mv_cost0.1 +
-        bCost0.3 * mv_cost0.3 +
-        bCost1 * mv_cost1
+        (bHosp1.2 + bHospIntRisk * risk) * mv_hosp1.2 +
+        (bHosp0.9 + bHospIntRisk * risk) * mv_hosp0.9 +
+        (bHosp0.3 + bHospIntRisk * risk) * mv_hosp0.3 +
+        bCost * mv_cost
     )
     V[["mab"]] <- (
         bRedness * mab_redness +
-        (bHosp + bHospIntRisk * risk) * mab_hosp1.2 * delta_hosp1.2 +
-        (bHosp + bHospIntRisk * risk) * mab_hosp0.9 * (delta_hosp1.2 + delta_hosp0.9) +
-        (bHosp + bHospIntRisk * risk) * mab_hosp0.3 +
-        bCost0.05 * mab_cost0.05 +
-        bCost0.1 * mab_cost0.1 +
-        bCost0.3 * mab_cost0.3 +
-        bCost1 * mab_cost1
+        (bHosp1.2 + bHospIntRisk * risk) * mab_hosp1.2 +
+        (bHosp0.9 + bHospIntRisk * risk) * mab_hosp0.9 +
+        (bHosp0.3 + bHospIntRisk * risk) * mab_hosp0.3 +
+        bCost * mab_cost
     )
     V[["opt"]] <- ascOpt + bOptIntRisk * risk
 
@@ -119,7 +106,7 @@ apollo_probabilities <- function(apollo_beta, apollo_inputs, functionality = "es
         avail = 1, # All alternatives available
         choiceVar = choice_stage2,
         utilities = V
-    )
+    ) 
 
     # Compute probabilities using MNL model
     P[["model"]] <- apollo_mnl(mnl_settings, functionality)
@@ -136,6 +123,7 @@ apollo_probabilities <- function(apollo_beta, apollo_inputs, functionality = "es
 # SECTION 6: Estimate model
 # ------------------------------------------------------------------------
 
+# Estimate model
 fit <- apollo_estimate(
     apollo_beta,
     apollo_fixed,
@@ -149,18 +137,31 @@ fit <- apollo_estimate(
 
 # Show 2-sided p values for coefficients
 modelOutput_settings <- list(printPVal = 2)
+saveOutput_settings <- list(printPVal = 2)
 
 # Output model to terminal
 apollo_modelOutput(fit, modelOutput_settings)
 
-# Write custom output to text file
-sink(here("output", "6_mnl_hospOrd.txt"))
-cat("===========================================================================\n")
-cat("Title: 6_mnl_hospOrd.txt\n")
-cat("Date: 2026-10-23\n")
-cat("===========================================================================\n")
+# Save model output to WD
+apollo_saveOutput(fit, saveOutput_settings)
 
-format_cca_results(fit)
+# ------------------------------------------------------------------------
+# SESSION 8: Calculate WTP
+# ------------------------------------------------------------------------
+
+# Write to output
+apollo_sink()
+
+cat("\n===== WTP using delta method =====\n")
+deltaMethod_settings <- list(expression = c(
+    wtpPreg = "-bPreg_mv/bCost",
+    wtpRedness = "-bRedness/bCost",
+    wtpPreterm = "-bPreterm_mv/bCost",
+    wtpHosp12 = "-bHosp1.2/bCost",
+    wtpHosp9 = "-bHosp0.9/bCost",
+    wtpHosp3 = "-bHosp0.3/bCost"
+))
+apollo_deltaMethod(fit, deltaMethod_settings)
 
 # Switch off writing
-sink()
+apollo_sink()
