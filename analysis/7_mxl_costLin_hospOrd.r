@@ -1,6 +1,6 @@
 # ===========================================================================
-# Title: 7_mxl_costCont
-# Date: 2026-10-18
+# Title: 7_mxl_costLin_hospOrd.r
+# Date: 2026-10-23
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -23,7 +23,7 @@ apollo_initialise()
 # Set core controls
 apollo_control <- list(
     modelDescr = "MXL; continuous cost",
-    modelName = "7_mxl_costCont",
+    modelName = "7_mxl_costLin_hospOrd",
     indivID = "id",
     outputDirectory = here("output"),
     nCores = 8
@@ -56,16 +56,14 @@ apollo_beta <- c(
     sigma_redness = 0,
     mu_preterm_mv = 0,
     sigma_preterm_mv = 0,
-    mu_hosp1.2 = 0,
-    sigma_hosp1.2 = 0,
-    mu_hosp0.9 = 0,
-    sigma_hosp0.9 = 0,
-    mu_hosp0.3 = 0,
-    sigma_hosp0.3 = 0,
+    mu_hosp = 0,
+    sigma_hosp = 0,
+    theta_hosp1.2 = 0, # Assumed fixed
+    theta_hosp0.9 = 0, # Assumed fixed
     ln_mu_cost = 0,
     ln_sigma_cost = 0,
-    bOptIntRisk = 0, # Assumed fixed effect
-    bHospIntRisk = 0 # Assumed fixed effect
+    bOptIntRisk = 0, # Assumed fixed
+    bHospIntRisk = 0 # Assumed fixed
 )
 # List parameters to be fixed at their starting values
 apollo_fixed <- c()
@@ -84,9 +82,7 @@ apollo_draws <- list(
         "draws_preg",
         "draws_redness",
         "draws_preterm",
-        "draws_hosp1.2",
-        "draws_hosp0.9",
-        "draws_hosp0.3",
+        "draws_hosp",
         "draws_cost"
     ),
     intraDrawsType = "",
@@ -102,9 +98,7 @@ apollo_randCoeff <- function(apollo_beta, apollo_inputs) {
     randcoeff[["bPreg_mv"]] <- mu_preg_mv + sigma_preg_mv * draws_preg
     randcoeff[["bRedness"]] <- mu_redness + sigma_redness * draws_redness
     randcoeff[["bPreterm_mv"]] <- mu_preterm_mv + sigma_preterm_mv * draws_preterm
-    randcoeff[["bHosp1.2"]] <- mu_hosp1.2 + sigma_hosp1.2 * draws_hosp1.2
-    randcoeff[["bHosp0.9"]] <- mu_hosp0.9 + sigma_hosp0.9 * draws_hosp0.9
-    randcoeff[["bHosp0.3"]] <- mu_hosp0.3 + sigma_hosp0.3 * draws_hosp0.3
+    randcoeff[["bHosp"]] <- mu_hosp + sigma_hosp * draws_hosp
     randcoeff[["bCost"]] <- - exp(ln_mu_cost + ln_sigma_cost * draws_cost) # Lognormal distribution (ensures -ve coefficient)
     return(randcoeff)
 }
@@ -127,22 +121,27 @@ apollo_probabilities <- function(apollo_beta, apollo_inputs, functionality = "es
     # To create list of probabilities
     P <- list()
 
+    # Softmax transformation to ensure probabilities sum to one
+    delta_denom <- 1 + exp(theta_hosp1.2) + exp(theta_hosp0.9)
+    delta_hosp1.2 <- exp(theta_hosp1.2) / delta_denom
+    delta_hosp0.9 <- exp(theta_hosp0.9) / delta_denom
+
     # List utilities
     V <- list()
     V[["mv"]] <- (
         bPreg_mv * mv_preg +
         bRedness * mv_redness +
         bPreterm_mv * mv_preterm +
-        (bHosp1.2 + bHospIntRisk * risk) * mv_hosp1.2 +
-        (bHosp0.9 + bHospIntRisk * risk) * mv_hosp0.9 +
-        (bHosp0.3 + bHospIntRisk * risk) * mv_hosp0.3 +
+        (bHosp + bHospIntRisk * risk) * mv_hosp1.2 * delta_hosp1.2 +
+        (bHosp + bHospIntRisk * risk) * mv_hosp0.9 * (delta_hosp1.2 + delta_hosp0.9) +
+        (bHosp + bHospIntRisk * risk) * mv_hosp0.3 +
         bCost * mv_cost
     )
     V[["mab"]] <- (
         bRedness * mab_redness +
-        (bHosp1.2 + bHospIntRisk * risk) * mab_hosp1.2 +
-        (bHosp0.9 + bHospIntRisk * risk) * mab_hosp0.9 +
-        (bHosp0.3 + bHospIntRisk * risk) * mab_hosp0.3 +
+        (bHosp + bHospIntRisk * risk) * mab_hosp1.2 * delta_hosp1.2 +
+        (bHosp + bHospIntRisk * risk) * mab_hosp0.9 * (delta_hosp1.2 + delta_hosp0.9) +
+        (bHosp + bHospIntRisk * risk) * mab_hosp0.3 +
         bCost * mab_cost
     )
     V[["opt"]] <- ascOpt + bOptIntRisk * risk
@@ -200,10 +199,10 @@ modelOutput_settings <- list(printPVal = 2)
 apollo_modelOutput(fit, modelOutput_settings)
 
 # Write custom output to text file
-sink(here("output", "7_mxl_costCont_output.txt"))
+sink(here("output", "7_mxl_costLin_hospOrd_output.txt"))
 cat("===========================================================================\n")
-cat("Title: 7_mxl_costCont_output.txt\n")
-cat("Date: 2026-10-18\n")
+cat("Title: 7_mxl_costLin_hospOrd_output.txt\n")
+cat("Date: 2026-10-23\n")
 cat("===========================================================================\n")
 
 format_cca_results(fit)

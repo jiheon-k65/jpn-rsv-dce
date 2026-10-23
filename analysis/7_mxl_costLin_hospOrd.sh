@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=mxl_costCont
+#SBATCH --job-name=mxl_costLin_hospOrd
 #SBATCH --partition=cpu
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=64G
@@ -17,6 +17,6 @@ export MKL_NUM_THREADS=1
 
 export RENV_CONFIG_SANDBOX_ENABLED=FALSE
 
-Rscript analysis/7_mxl_costCont.r
+Rscript analysis/7_mxl_costLin_hospOrd.r
 
 exit $?
