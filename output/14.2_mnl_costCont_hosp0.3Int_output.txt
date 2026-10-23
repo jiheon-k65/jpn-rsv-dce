@@ -1,0 +1,32 @@
+===========================================================================
+Title: 14.2_mnl_costCont_hosp0.3Int_output.txt
+Date: 2026-10-23
+===========================================================================
+
+Pooled estimates using Rubin's rules:
+                        Est  Rob_SE p_2sided
+ascOpt             -0.31175 0.08379   <0.001
+bPreg_mv            0.23780 0.05393   <0.001
+bRedness           -0.06340 0.04361    0.146
+bPreterm_mv        -0.46157 0.06627   <0.001
+bHosp1.2           -0.06507 0.06217    0.295
+bHosp0.9           -0.09151 0.05330    0.086
+bHosp0.3           -2.44855 0.31262   <0.001
+bCost              -2.20747 0.14023   <0.001
+bOptIntRisk         0.23551 0.06236   <0.001
+bHospIntRisk        0.02012 0.06502    0.757
+bHosp0.3IntAge     -0.12576 0.07635    0.100
+bHosp0.3IntSib     -0.13421 0.15669    0.392
+bHosp0.3IntEdu      0.41000 0.15823    0.010
+bHosp0.3IntInc     -0.21976 0.16127    0.173
+bHosp0.3IntGov      0.61934 0.13915   <0.001
+bHosp0.3IntVacImpt  0.27920 0.17598    0.113
+bHosp0.3IntVacSafe -0.02397 0.17722    0.892
+bHosp0.3IntVacEff  -0.06411 0.19511    0.743
+bHosp0.3IntVacBlf   0.57048 0.16822   <0.001
+
+AIC values:
+Min: 11521 , Max: 11547 
+
+BIC values:
+Min: 11648 , Max: 11674
