@@ -23,7 +23,7 @@ apollo_initialise()
 
 # Set core controls
 apollo_control <- list(
-    modelDescr = "MNL; continuous cost & preterm interaction (complete)",
+    modelDescr = "MNL; linear cost & preterm interactions (complete)",
     modelName = "10.1_mnl_costCont_pretermInt",
     indivID = "id",
     outputDirectory = here("output")

@@ -22,7 +22,7 @@ apollo_initialise()
 
 # Set core controls
 apollo_control <- list(
-    modelDescr = "MXL; continuous cost",
+    modelDescr = "MXL; linear cost",
     modelName = "7_mxl_costCont",
     indivID = "id",
     outputDirectory = here("output"),

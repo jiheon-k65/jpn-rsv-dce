@@ -23,7 +23,7 @@ apollo_initialise()
 
 # Set core controls
 apollo_control <- list(
-    modelDescr = "MNL; continuous cost & cost interaction (imputed)",
+    modelDescr = "MNL; linear cost & cost interactions (imputed)",
     modelName = "11.2_mnl_costCont_costInt",
     indivID = "id",
     outputDirectory = here("output")
