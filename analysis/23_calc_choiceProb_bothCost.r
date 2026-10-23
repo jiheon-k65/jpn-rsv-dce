@@ -1,5 +1,5 @@
 # ===========================================================================
-# Title: 22_calc_choiceProb_bothCost.r
+# Title: 23_calc_choiceProb_bothCost.r
 # Date: 2026-10-23
 # ===========================================================================
 
@@ -18,7 +18,7 @@ library(MASS)
 
 data <- read.csv(here("data", "jpn_dataset_subset_imputed.csv"), header = TRUE)
 
-results <- readRDS(here("output", "14.2_hcm_costCont_ranInt_ranCoeff_results.rds"))
+results <- readRDS(here("output", "17.2_hcm_costCont_ranInt_ranCoeff_results.rds"))
 est_list <- results$est
 robvarcov_list <- results$robvarcov # Robust variance-covariance matrices
 

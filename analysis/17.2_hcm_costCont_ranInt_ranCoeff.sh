@@ -17,6 +17,6 @@ export MKL_NUM_THREADS=1
 
 export RENV_CONFIG_SANDBOX_ENABLED=FALSE
 
-Rscript analysis/14.2_hcm_costCont_ranInt_ranCoeff.r
+Rscript analysis/17.2_hcm_costCont_ranInt_ranCoeff.r
 
 exit $?

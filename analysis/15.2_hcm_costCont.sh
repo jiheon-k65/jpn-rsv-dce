@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=hcm_costCont_ranInt
+#SBATCH --job-name=hcm_costCont
 #SBATCH --partition=cpu
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=64G
@@ -17,6 +17,6 @@ export MKL_NUM_THREADS=1
 
 export RENV_CONFIG_SANDBOX_ENABLED=FALSE
 
-Rscript analysis/13.2_hcm_costCont_ranInt.r
+Rscript analysis/15.2_hcm_costCont.r
 
 exit $?

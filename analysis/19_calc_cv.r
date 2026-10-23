@@ -1,5 +1,5 @@
 # ===========================================================================
-# Title: 16_calc_cv.r
+# Title: 19_calc_cv.r
 # Date: 2026-10-23
 # ===========================================================================
 
@@ -19,7 +19,7 @@ library(ggplot2)
 
 data <- read.csv(here("data", "jpn_dataset_subset_imputed.csv"), header = TRUE)
 
-results <- readRDS(here("output", "14.2_hcm_costCont_ranInt_ranCoeff_results.rds"))
+results <- readRDS(here("output", "17.2_hcm_costCont_ranInt_ranCoeff_results.rds"))
 est_list <- results$est
 robvarcov_list <- results$robvarcov # Robust variance-covariance matrices
 
@@ -167,9 +167,9 @@ for (m in 1:M) {
 }
 
 # Write output to text file
-sink(here("output", "16_calc_cv_output.txt"))
+sink(here("output", "19_calc_cv_output.txt"))
 cat("===========================================================================\n")
-cat("Title: 16_calc_cv_output.txt\n")
+cat("Title: 19_calc_cv_output.txt\n")
 cat("Date: 2026-10-23\n")
 cat("===========================================================================\n")
 

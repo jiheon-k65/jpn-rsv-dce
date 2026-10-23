@@ -1,5 +1,5 @@
 # ===========================================================================
-# Title: 18_calc_choiceProb_mvCost.r
+# Title: 22_calc_choiceProb_mabCost.r
 # Date: 2026-10-23
 # ===========================================================================
 
@@ -18,7 +18,7 @@ library(MASS)
 
 data <- read.csv(here("data", "jpn_dataset_subset_imputed.csv"), header = TRUE)
 
-results <- readRDS(here("output", "14.2_hcm_costCont_ranInt_ranCoeff_results.rds"))
+results <- readRDS(here("output", "17.2_hcm_costCont_ranInt_ranCoeff_results.rds"))
 est_list <- results$est
 robvarcov_list <- results$robvarcov # Robust variance-covariance matrices
 
@@ -31,18 +31,20 @@ risk <- 0
 mv_hosp1.2 <- 0
 mv_hosp0.9 <- 1 # 70% efficacy for MV
 mv_hosp0.3 <- 0
-mv_cost_base <- 0.24 # 24,000 JPY for MV
+mv_cost <- 0.24 # 24,000 JPY for MV
 mv_redness <- 0
 mv_preterm <- 0
 mv_preg <- 1 # Pregnant women as recipient for MV
 mab_hosp1.2 <- 0
 mab_hosp0.9 <- 0
 mab_hosp0.3 <- 1 # 90% efficacy for mAb
-mab_cost <- 0.45 # 45,000 JPY for mAb
+mab_cost_base <- 0.45 # 45,000 JPY for mAb
 mab_redness <- 0
 
 # Cost grid for MV
-cost_grid <- seq(0, 0.4, by = 0.02)
+cost_grid <- seq(0, 0.7, by = 0.02)
+cost_grid <- sort(c(cost_grid, mab_cost_base)) # Add base case cost
+
 
 # Keep only first imputation & unique respondents
 df <- data %>% filter(imp == 1) %>% distinct(id, .keep_all = TRUE)
@@ -135,8 +137,8 @@ for (m in 1:M) {
         stopifnot(length(LV) == N)
 
         for (k in seq_along(cost_grid)) {
-            # Update mv_cost for each iteration
-            mv_cost <- cost_grid[k]
+            # Update mab_cost for each iteration
+            mab_cost <- cost_grid[k]
 
             # Calculate utilities for each alternative
             V_mv <- (
@@ -187,7 +189,7 @@ summary_list <- vector("list", length = length(cost_grid))
 for (k in seq_along(cost_grid)) {
     cat("\n===========================================================================\n")
     cat("\nCalculating mean & 95% UI for cost value", k, "\n")
-    
+
     summary_list[[k]] <- data.frame(
         Cost = cost_grid[k],
         Alt = c("MV", "mAb", "Opt-out"),
@@ -216,7 +218,7 @@ summary_combined <- bind_rows(summary_list) %>%
 # Save results as CSV
 write.csv(
     summary_combined,
-    file = here("data", "calc_choiceProb_mvCost_results.csv"),
+    file = here("data", "calc_choiceProb_mabCost_results.csv"),
     row.names = FALSE
 )
-cat("\nFile successfully saved as calc_choiceProb_mvCost_results.csv\n")
+cat("\nFile successfully saved as calc_choiceProb_mabCost_results.csv\n")

@@ -1,14 +1,11 @@
 # ===========================================================================
-# Title: 12.2_hcm_costCont.r
+# Title: 15.1_hcm_costCont.r
 # Date: 2026-10-18
 # ===========================================================================
 
 # ------------------------------------------------------------------------
 # SECTION 1: Load library & define core setting
 # ------------------------------------------------------------------------
-
-# Activate renv (for HPC)
-renv::activate()
 
 # Clear memory
 rm(list = ls())
@@ -26,8 +23,8 @@ apollo_initialise()
 
 # Set core controls
 apollo_control <- list(
-    modelDescr = ("HCM; continuous cost (imputed)"),
-    modelName = "12.2_hcm_costCont",
+    modelDescr = ("HCM; linear cost (complete)"),
+    modelName = "15.1_hcm_costCont",
     indivID = "id",
     outputDirectory = here("output"),
     nCores = 8
@@ -38,17 +35,17 @@ apollo_control <- list(
 # ------------------------------------------------------------------------
 
 # Load data from WD
-data <- read.csv(here("data", "jpn_dataset_subset_imputed.csv"), header = TRUE)
+data <- read.csv(here("data", "jpn_dataset_subset_complete.csv"), header = TRUE)
 
 # Recode indicators to start from 1 (instead of 0)
 indicator_cols <- c("govTrust", "vacImpt", "vacSafe", "vacEff", "vacBlf")
 data[indicator_cols] <- data[indicator_cols] + 1
 
 # Exclude repeated task
-data <- data[data$rptTask != 1, ]
+database <- data[data$rptTask != 1, ]
 
 # # Exclude respondents with short completion times
-# data <- data[data$time >= 4, ]
+# database <- database[database$time >= 4, ]
 
 # ------------------------------------------------------------------------
 # SECTION 3: Define model parameters
@@ -124,7 +121,13 @@ apollo_randCoeff <- function(apollo_beta, apollo_inputs) {
 }
 
 # ------------------------------------------------------------------------
-# SECTION 5: Define model & likelihood function
+# SECTION 5: Group & validate inputs
+# ------------------------------------------------------------------------
+
+apollo_inputs <- apollo_validateInputs()
+
+# ------------------------------------------------------------------------
+# SECTION 6: Define model & likelihood function
 # ------------------------------------------------------------------------
 
 apollo_probabilities <- function(apollo_beta, apollo_inputs, functionality = "estimate") {
@@ -224,63 +227,35 @@ apollo_probabilities <- function(apollo_beta, apollo_inputs, functionality = "es
 }
 
 # ------------------------------------------------------------------------
-# SECTION 6: Estimate model
+# SECTION 7: Estimate model
 # ------------------------------------------------------------------------
 
-# Number of imputations
-M <- 25
-
-# Initialize list to store results
-est_list <- vector("list", M) # Maximum likelihood estimates
-varcov_list <- vector("list", M) # Variance-covariance matrices
-robvarcov_list <- vector("list", M) # Robust variance-covariance matrices
-aic_list <- vector("list", M)
-bic_list <- vector("list", M)
-
-for (i in 1:M) {
-    cat("\n===========================================================================\n")
-    cat("\nRunning model for imputation", i, "\n\n")
-    # Load imputed dataset for current imputation
-    database <- data %>% filter(imp == i)
-    # Validate Apollo inputs
-    apollo_inputs <- apollo_validateInputs()
-    if (i == 1) {
-        fit <- apollo_estimate(
-            apollo_beta,
-            apollo_fixed,
-            apollo_probabilities,
-            apollo_inputs
-        )
-    } else {
-        # Use previous estimates as starting values
-        fit <- apollo_estimate(
-            fit$estimate,
-            apollo_fixed,
-            apollo_probabilities,
-            apollo_inputs
-        )
-    }
-    # Store estimates and variance-covariance matrix
-    est_list[[i]] <- fit$estimate
-    varcov_list[[i]] <- fit$varcov
-    robvarcov_list[[i]] <- fit$robvarcov
-    aic_list[[i]] <- fit$AIC
-    bic_list[[i]] <- fit$BIC
-}
+# Estimate model
+fit <- apollo_estimate(
+    apollo_beta,
+    apollo_fixed,
+    apollo_probabilities, 
+    apollo_inputs
+)
 
 # ------------------------------------------------------------------------
-# SECTION 7: Pool results using Rubin's rules
+# SECTION 8: Output model results
 # ------------------------------------------------------------------------
 
-# Write output to text file
-sink(here("output", "12.2_hcm_costCont_output.txt"))
+# Show 2-sided p values for coefficients
+modelOutput_settings <- list(printPVal = 2)
+
+# Output model to terminal
+apollo_modelOutput(fit, modelOutput_settings)
+
+# Write custom output to text file
+sink(here("output", "15.1_hcm_costCont_output.txt"))
 cat("===========================================================================\n")
-cat("Title: 12.2_hcm_costCont_output.txt\n")
+cat("Title: 15.1_hcm_costCont_output.txt\n")
 cat("Date: 2026-10-18\n")
 cat("===========================================================================\n")
 
-pool_coeff(est_list, robvarcov_list, M)
-summ_aic_bic(aic_list, bic_list)
+format_cca_results(fit)
 
 # Switch off writing
 sink()

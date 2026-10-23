@@ -1,5 +1,5 @@
 # ===========================================================================
-# Title: 15_calc_wtp.r
+# Title: 18_calc_wtp.r
 # Date: 2026-10-23
 # ===========================================================================
 
@@ -18,7 +18,7 @@ library(MASS)
 
 data <- read.csv(here("data", "jpn_dataset_subset_imputed.csv"), header = TRUE)
 
-results <- readRDS(here("output", "14.2_hcm_costCont_ranInt_ranCoeff_results.rds"))
+results <- readRDS(here("output", "17.2_hcm_costCont_ranInt_ranCoeff_results.rds"))
 est_list <- results$est
 robvarcov_list <- results$robvarcov # Robust variance-covariance matrices
 
@@ -104,9 +104,9 @@ for (m in 1:M) {
 }
 
 # Write output to text file
-sink(here("output", "15_calc_wtp_output.txt"))
+sink(here("output", "18_calc_wtp_output.txt"))
 cat("===========================================================================\n")
-cat("Title: 15_calc_wtp_output.txt\n")
+cat("Title: 18_calc_wtp_output.txt\n")
 cat("Date: 2026-10-23\n")
 cat("===========================================================================\n")
 

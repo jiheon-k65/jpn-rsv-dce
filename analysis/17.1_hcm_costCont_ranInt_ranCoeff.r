@@ -1,14 +1,11 @@
 # ===========================================================================
-# Title: 13.2_hcm_costCont_ranInt.r
-# Date: 2026-10-18
+# Title: 17.1_hcm_costCont_ranInt_ranCoeff.r
+# Date: 2026-10-23
 # ===========================================================================
 
 # ------------------------------------------------------------------------
 # SECTION 1: Load library & define core setting
 # ------------------------------------------------------------------------
-
-# Activate renv (for HPC)
-renv::activate()
 
 # Clear memory
 rm(list = ls())
@@ -26,8 +23,8 @@ apollo_initialise()
 
 # Set core controls
 apollo_control <- list(
-    modelDescr = ("HCM; continuous cost (imputed) & random intercept"),
-    modelName = "13.2_hcm_costCont_ranInt",
+    modelDescr = ("HCM; linear cost, random intercept & random coefficients (complete)"),
+    modelName = "17.1_hcm_costCont_ranInt_ranCoeff",
     indivID = "id",
     outputDirectory = here("output"),
     nCores = 8
@@ -38,17 +35,17 @@ apollo_control <- list(
 # ------------------------------------------------------------------------
 
 # Load data from WD
-data <- read.csv(here("data", "jpn_dataset_subset_imputed.csv"), header = TRUE)
+data <- read.csv(here("data", "jpn_dataset_subset_complete.csv"), header = TRUE)
 
 # Recode indicators to start from 1 (instead of 0)
 indicator_cols <- c("govTrust", "vacImpt", "vacSafe", "vacEff", "vacBlf")
 data[indicator_cols] <- data[indicator_cols] + 1
 
 # Exclude repeated task
-data <- data[data$rptTask != 1, ]
+database <- data[data$rptTask != 1, ]
 
 # # Exclude respondents with short completion times
-# data <- data[data$time >= 4, ]
+# database <- database[database$time >= 4, ]
 
 # ------------------------------------------------------------------------
 # SECTION 3: Define model parameters
@@ -57,13 +54,18 @@ data <- data[data$rptTask != 1, ]
 # List all parameters & starting values
 apollo_beta <- c(
     sigma_pdt = 0,
-    bPreg_mv = 0,
+    mu_preg_mv = 0,
+    sigma_preg_mv = 0,
     bRedness = 0 ,
-    bPreterm_mv = 0,
-    bHosp1.2 = 0,
-    bHosp0.9 = 0,
-    bHosp0.3 = 0,
-    bCost = 0,
+    mu_preterm_mv = 0,
+    sigma_preterm_mv = 0,
+    mu_hosp1.2 = 0,
+    sigma_hosp1.2 = 0,
+    bHosp0.9 = 0,  # Fixed as SD was not different from zero
+    mu_hosp0.3 = 0,
+    sigma_hosp0.3 = 0,
+    ln_mu_cost = 0,
+    ln_sigma_cost = 0,
     bHospIntRisk = 0,
     bOptIntLV = 1,
     bOptIntRisk = 0,
@@ -101,10 +103,18 @@ apollo_fixed <- c()
 
 # Set parameters for generating draws
 apollo_draws <- list(
-    interDrawsType = "halton",
+    interDrawsType = "sobol",
     interNDraws = 1000,
     interUnifDraws = c(),
-    interNormDraws = c("eta", "draws_pdt"),
+    interNormDraws = c(
+        "eta",
+        "draws_pdt",
+        "draws_preg",
+        "draws_preterm",
+        "draws_hosp1.2",
+        "draws_hosp0.3",
+        "draws_cost"
+    ),
     intraDrawsType = "",
     intraNDraws = 0,
     intraUnifDraws = c(),
@@ -121,12 +131,23 @@ apollo_randCoeff <- function(apollo_beta, apollo_inputs) {
         gamma_inc * incGrp +
         eta
     )
-    randcoeff[["alpha"]] <- sigma_pdt * draws_pdt # Random intercept for product
+    randcoeff[["alpha"]] <- sigma_pdt * draws_pdt # Random intercept for product (mimics nested logit)
+    randcoeff[["bPreg_mv"]] <- mu_preg_mv + sigma_preg_mv * draws_preg
+    randcoeff[["bPreterm_mv"]] <- mu_preterm_mv + sigma_preterm_mv * draws_preterm
+    randcoeff[["bHosp1.2"]] <- mu_hosp1.2 + sigma_hosp1.2 * draws_hosp1.2
+    randcoeff[["bHosp0.3"]] <- mu_hosp0.3 + sigma_hosp0.3 * draws_hosp0.3
+    randcoeff[["bCost"]] <- - exp(ln_mu_cost + ln_sigma_cost * draws_cost) # Lognormal (ensures -ve coefficient)
     return(randcoeff)
 }
+    
+# ------------------------------------------------------------------------
+# SECTION 5: Group & validate inputs
+# ------------------------------------------------------------------------
+
+apollo_inputs <- apollo_validateInputs()
 
 # ------------------------------------------------------------------------
-# SECTION 5: Define model & likelihood function
+# SECTION 6: Define model & likelihood function
 # ------------------------------------------------------------------------
 
 apollo_probabilities <- function(apollo_beta, apollo_inputs, functionality = "estimate") {
@@ -188,7 +209,7 @@ apollo_probabilities <- function(apollo_beta, apollo_inputs, functionality = "es
         (bHosp1.2 + bHospIntRisk * risk) * mv_hosp1.2 +
         (bHosp0.9 + bHospIntRisk * risk) * mv_hosp0.9 +
         (bHosp0.3 + bHospIntRisk * risk) * mv_hosp0.3 +
-        bCost * mv_cost +
+        bCost * mv_cost + 
         alpha
     )
     V[["mab"]] <- (
@@ -228,63 +249,35 @@ apollo_probabilities <- function(apollo_beta, apollo_inputs, functionality = "es
 }
 
 # ------------------------------------------------------------------------
-# SECTION 6: Estimate model
+# SECTION 7: Estimate model
 # ------------------------------------------------------------------------
 
-# Number of imputations
-M <- 25
-
-# Initialize list to store results
-est_list <- vector("list", M) # Maximum likelihood estimates
-varcov_list <- vector("list", M) # Variance-covariance matrices
-robvarcov_list <- vector("list", M) # Robust variance-covariance matrices
-aic_list <- vector("list", M)
-bic_list <- vector("list", M)
-
-for (i in 1:M) {
-    cat("\n===========================================================================\n")
-    cat("\nRunning model for imputation", i, "\n\n")
-    # Load imputed dataset for current imputation
-    database <- data %>% filter(imp == i)
-    # Validate Apollo inputs
-    apollo_inputs <- apollo_validateInputs()
-    if (i == 1) {
-        fit <- apollo_estimate(
-            apollo_beta,
-            apollo_fixed,
-            apollo_probabilities,
-            apollo_inputs
-        )
-    } else {
-        # Use previous estimates as starting values
-        fit <- apollo_estimate(
-            fit$estimate,
-            apollo_fixed,
-            apollo_probabilities,
-            apollo_inputs
-        )
-    }
-    # Store estimates and variance-covariance matrix
-    est_list[[i]] <- fit$estimate
-    varcov_list[[i]] <- fit$varcov
-    robvarcov_list[[i]] <- fit$robvarcov
-    aic_list[[i]] <- fit$AIC
-    bic_list[[i]] <- fit$BIC
-}
+# Estimate model
+fit <- apollo_estimate(
+    apollo_beta,
+    apollo_fixed,
+    apollo_probabilities, 
+    apollo_inputs
+)
 
 # ------------------------------------------------------------------------
-# SECTION 7: Pool results using Rubin's rules
+# SECTION 8: Output model results
 # ------------------------------------------------------------------------
 
-# Write output to text file
-sink(here("output", "13.2_hcm_costCont_ranInt_output.txt"))
+# Show 2-sided p values for coefficients
+modelOutput_settings <- list(printPVal = 2)
+
+# Output model to terminal
+apollo_modelOutput(fit, modelOutput_settings)
+
+# Write custom output to text file
+sink(here("output", "17.1_hcm_costCont_ranInt_ranCoeff_output.txt"))
 cat("===========================================================================\n")
-cat("Title: 13.2_hcm_costCont_ranInt_output.txt\n")
-cat("Date: 2026-10-18\n")
+cat("Title: 17.1_hcm_costCont_ranInt_ranCoeff_output.txt\n")
+cat("Date: 2026-10-23\n")
 cat("===========================================================================\n")
 
-pool_coeff(est_list, robvarcov_list, M)
-summ_aic_bic(aic_list, bic_list)
+format_cca_results(fit)
 
 # Switch off writing
 sink()
