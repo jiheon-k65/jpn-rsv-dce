@@ -1,7 +1,7 @@
 
 # ===========================================================================
-# Title: 23_hcm_costCont_ranInt_ranCoeff_choiceProb_heatmap.r
-# Date: 2026-10-01
+# Title: 23_plot_choiceProb_heatmap.r
+# Date: 2026-10-23
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -17,7 +17,7 @@ library(ggplot2)
 # SECTION 2: Load data & results
 # ------------------------------------------------------------------------
 
-df <- read.csv(here("data", "choiceProb_bothCost.csv"))
+df <- read.csv(here("data", "calc_choiceProb_bothCost_results.csv"))
 df$MV_Cost <- df$MV_Cost * 100000 # Convert MV cost to JPY
 df$mAb_Cost <- df$mAb_Cost * 100000 # Convert mAb cost to JPY
 

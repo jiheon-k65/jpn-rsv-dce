@@ -1,6 +1,6 @@
 # ===========================================================================
-# Title: 19_hcm_costCont_ranInt_ranCoeff_choiceProb_mabCost.r
-# Date: 2026-10-19
+# Title: 16_calc_cv.r
+# Date: 2026-10-23
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -11,6 +11,7 @@
 library(here)
 library(dplyr)
 library(MASS)
+library(ggplot2)
 
 # ------------------------------------------------------------------------
 # SECTION 2: Load data & results
@@ -31,20 +32,13 @@ risk <- 0
 mv_hosp1.2 <- 0
 mv_hosp0.9 <- 1 # 70% efficacy for MV
 mv_hosp0.3 <- 0
-mv_cost <- 0.24 # 24,000 JPY for MV
 mv_redness <- 0
 mv_preterm <- 0
 mv_preg <- 1 # Pregnant women as recipient for MV
 mab_hosp1.2 <- 0
 mab_hosp0.9 <- 0
 mab_hosp0.3 <- 1 # 90% efficacy for mAb
-mab_cost_base <- 0.45 # 45,000 JPY for mAb
 mab_redness <- 0
-
-# Cost grid for MV
-cost_grid <- seq(0, 0.7, by = 0.02)
-cost_grid <- sort(c(cost_grid, mab_cost_base)) # Add base case cost
-
 
 # Keep only first imputation & unique respondents
 df <- data %>% filter(imp == 1) %>% distinct(id, .keep_all = TRUE)
@@ -53,7 +47,7 @@ stopifnot(nrow(df) == length(unique(df$id)))
 N <- nrow(df) # No. of respondents
 M <- max(data$imp) # No. of imputations
 S <- 500 # No. of simulations
-K <- length(cost_grid) # No. of cost values for MV
+F <- 100000 # Scaling factor for cost (JPY)
 
 # ------------------------------------------------------------------------
 # SECTION 4: Simulate parameter values
@@ -65,14 +59,13 @@ sibGrp <- df$sibGrp
 eduGrp <- df$eduGrp
 incGrp <- df$incGrp
 
-# Initialize arrays to hold probabilities
-prob_mv_array <- array(NA, dim = c(S, M, K))
-prob_mab_array <- array(NA, dim = c(S, M, K))
-prob_opt_array <- array(NA, dim = c(S, M, K))
+# Initialize arrays to hold CVs
+CV_mv_array <- array(NA, dim = c(N, S, M))
+CV_mab_array <- array(NA, dim = c(N, S, M))
 
 for (m in 1:M) {
     cat("\n===========================================================================\n")
-    cat("\nCalculating probabilities for imputation", m, "\n")
+    cat("\nCalculating CVs for imputation", m, "\n")
 
     # Extract estimates & variance-covariance matrix
     theta_hat <- est_list[[m]]
@@ -85,10 +78,8 @@ for (m in 1:M) {
 
     # Simulate random coefficients
     for (s in 1:S) {
-        # Isolate fixed coefficients
-        bHosp1.2 <- theta[s, "bHosp1.2"]
+        # Simulate fixed coefficients
         bHosp0.9 <- theta[s, "bHosp0.9"]
-        bHosp0.3 <- theta[s, "bHosp0.3"]
         bRedness <- theta[s, "bRedness"]
         bHospIntRisk <- theta[s, "bHospIntRisk"]
         bOptIntLV <- theta[s, "bOptIntLV"]
@@ -109,6 +100,16 @@ for (m in 1:M) {
         sigma_preterm_mv <- theta[s, "sigma_preterm_mv"]
         bPreterm_mv <- rnorm(N, mean = mu_preterm_mv, sd = abs(sigma_preterm_mv))
 
+        # Simulate bHosp1.2 for each respondent
+        mu_hosp1.2 <- theta[s, "mu_hosp1.2"]
+        sigma_hosp1.2 <- theta[s, "sigma_hosp1.2"]
+        bHosp1.2 <- rnorm(N, mean = mu_hosp1.2, sd = abs(sigma_hosp1.2))
+
+        # Simulate bHosp0.3 for each respondent
+        mu_hosp0.3 <- theta[s, "mu_hosp0.3"]
+        sigma_hosp0.3 <- theta[s, "sigma_hosp0.3"]
+        bHosp0.3 <- rnorm(N, mean = mu_hosp0.3, sd = abs(sigma_hosp0.3))
+
         # Simulate alpha for each respondent
         sigma_pdt <- theta[s, "sigma_pdt"]
         alpha <- rnorm(N, mean = 0, sd = abs(sigma_pdt))
@@ -118,7 +119,7 @@ for (m in 1:M) {
         gamma_sib <- theta[s, "gamma_sib"]
         gamma_edu <- theta[s, "gamma_edu"]
         gamma_inc <- theta[s, "gamma_inc"]
-        eta <- rnorm(N, mean = 0, sd = 1) # Random disturbance
+        eta <- rnorm(N, mean = 0, sd = 1) # Random distur   xsdbance
         LV <- (
             gamma_age * ageStd +
             gamma_sib * sibGrp +
@@ -128,89 +129,76 @@ for (m in 1:M) {
         )
         stopifnot(length(LV) == N)
 
-        for (k in seq_along(cost_grid)) {
-            # Update mab_cost for each iteration
-            mab_cost <- cost_grid[k]
+        # Calculate utilities for each alternative
+        V_mv <- (
+            bPreg_mv * mv_preg +
+            bRedness * mv_redness +
+            bPreterm_mv * mv_preterm +
+            (bHosp1.2 + bHospIntRisk * risk) * mv_hosp1.2 +
+            (bHosp0.9 + bHospIntRisk * risk) * mv_hosp0.9 +
+            (bHosp0.3 + bHospIntRisk * risk) * mv_hosp0.3 +
+            alpha
+        )
+        V_mab <- (
+            bRedness * mab_redness +
+            (bHosp1.2 + bHospIntRisk * risk) * mab_hosp1.2 +
+            (bHosp0.9 + bHospIntRisk * risk) * mab_hosp0.9 +
+            (bHosp0.3 + bHospIntRisk * risk) * mab_hosp0.3 +
+            alpha
+        )
+        V_opt <- (
+            bOptIntRisk * risk +
+            bOptIntLV* LV
+        )
+        stopifnot(
+            length(V_mv) == N,
+            length(V_mab) == N,
+            length(V_opt) == N
+        )
 
-            # Calculate utilities for each alternative
-            V_mv <- (
-                bPreg_mv * mv_preg +
-                bRedness * mv_redness +
-                bPreterm_mv * mv_preterm +
-                (bHosp1.2 + bHospIntRisk * risk) * mv_hosp1.2 +
-                (bHosp0.9 + bHospIntRisk * risk) * mv_hosp0.9 +
-                (bHosp0.3 + bHospIntRisk * risk) * mv_hosp0.3 +
-                bCost * mv_cost +
-                alpha
-            )
-            V_mab <- (
-                bRedness * mab_redness +
-                (bHosp1.2 + bHospIntRisk * risk) * mab_hosp1.2 +
-                (bHosp0.9 + bHospIntRisk * risk) * mab_hosp0.9 +
-                (bHosp0.3 + bHospIntRisk * risk) * mab_hosp0.3 +
-                bCost * mab_cost +
-                alpha
-            )
-            V_opt <- (
-                bOptIntRisk * risk +
-                bOptIntLV* LV
-            )
-            stopifnot(
-                length(V_mv) == N,
-                length(V_mab) == N,
-                length(V_opt) == N
-            )
+        # Calculate CV (Dim: N x S x M)
+        CV_mv <- - (V_mv - V_opt) / bCost * F
+        CV_mab <- - (V_mab - V_opt) / bCost * F
 
-            # Calculate choice probabilities (Dim: N x S x M x K)
-            prob_total <- exp(V_mv) + exp(V_mab) + exp(V_opt)
-            prob_mv <- exp(V_mv) / prob_total
-            prob_mab <- exp(V_mab) / prob_total
-            prob_opt <- exp(V_opt) / prob_total
-
-            # Calculate & store means across respondents (Dim: S x M x K)
-            prob_mv_array[s, m, k] <- mean(prob_mv)
-            prob_mab_array[s, m, k] <- mean(prob_mab)
-            prob_opt_array[s, m, k] <- mean(prob_opt)
-        }
+        # Store CVs in arrays (Dim: N x S x M)
+        CV_mv_array[, s, m] <- CV_mv
+        CV_mab_array[, s, m] <- CV_mab
     }
 }
 
-# Initialize list to hold results for each cost value
-summary_list <- vector("list", length = length(cost_grid))
+# Write output to text file
+sink(here("output", "16_calc_cv_output.txt"))
+cat("===========================================================================\n")
+cat("Title: 16_calc_cv_output.txt\n")
+cat("Date: 2026-10-23\n")
+cat("===========================================================================\n")
 
-for (k in seq_along(cost_grid)) {
-    cat("\n===========================================================================\n")
-    cat("\nCalculating mean & 95% UI for cost value", k, "\n")
+# Calculate median across respondents (Dim: S x M)
+CV_mv_medByN <- apply(CV_mv_array, c(2, 3), median)
+CV_mab_medByN <- apply(CV_mab_array, c(2, 3), median)
 
-    summary_list[[k]] <- data.frame(
-        Cost = cost_grid[k],
-        Alt = c("MV", "mAb", "Opt-out"),
-        Mean = c(
-            mean(prob_mv_array[, , k]),
-            mean(prob_mab_array[, , k]),
-            mean(prob_opt_array[, , k])
-        ),
-        Lower_UI = c(
-            quantile(as.vector(prob_mv_array[, , k]), 0.025),
-            quantile(as.vector(prob_mab_array[, , k]), 0.025),
-            quantile(as.vector(prob_opt_array[, , k]), 0.025)
-        ),
-        Upper_UI = c(
-            quantile(as.vector(prob_mv_array[, , k]), 0.975),
-            quantile(as.vector(prob_mab_array[, , k]), 0.975),
-            quantile(as.vector(prob_opt_array[, , k]), 0.975)
-        )
-    )
-}
+# Calculate 95% UI across medians
+CV_mv_lowByN <- quantile(CV_mv_medByN, 0.025)
+CV_mv_uppByN <- quantile(CV_mv_medByN, 0.975)
+CV_mab_lowByN <- quantile(CV_mab_medByN, 0.025)
+CV_mab_uppByN <- quantile(CV_mab_medByN, 0.975)
 
-# Bind results into a single data frame
-summary_combined <- bind_rows(summary_list) %>%
-    mutate(across(Mean:Upper_UI, ~ round(.x, 5)))
-
-# Save results as CSV
-write.csv(
-    summary_combined,
-    file = here("data", "choiceProb_mabCost.csv"),
-    row.names = FALSE
+# Format results into a data frame
+tot_summary <- data.frame(
+    Alternative = c("MV", "mAb"),
+    Median = c(mean(CV_mv_medByN), mean(CV_mab_medByN)),
+    Lower_UI = c(CV_mv_lowByN, CV_mab_lowByN),
+    Upper_UI = c(CV_mv_uppByN, CV_mab_uppByN)
+) %>% mutate(
+    across(Median:Upper_UI, ~ format(round(.x, 0), big.mark = ","))
 )
-cat("\nFile successfully saved as choiceProb_mabCost.csv\n")
+cat("\nAlternative-specific compensating variations (CVs) in JPY:\n")
+print(tot_summary)
+cat("\nNote:\n")
+cat("1. CV is calculated as - (V_alternative - V_opt) / bCost * 100,000 (JPY)\n")
+cat("2. Medians are calculated across respondents, then averaged across simulations & imputations\n")
+cat("3. 95% UI represents uncertainty in medians across simulations & imputations\n")
+
+# Switch off writing
+sink()
+cat("\nOutput successfully saved!\n")

@@ -1,6 +1,6 @@
 # ===========================================================================
-# Title: 21_hcm_costCont_ranInt_ranCoeff_choiceProb_comPlot.r
-# Date: 2026-09-10
+# Title: 22_plot_choiceProb_combined.r
+# Date: 2026-10-23
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -15,8 +15,8 @@ library(ggplot2)
 # SECTION 2: Load and combine choice-probability results
 # ------------------------------------------------------------------------
 
-df_mvCost <- read.csv(here("data", "choiceProb_mvCost.csv"))
-df_mabCost <- read.csv(here("data", "choiceProb_mabCost.csv"))
+df_mvCost <- read.csv(here("data", "calc_choiceProb_mvCost_results.csv"))
+df_mabCost <- read.csv(here("data", "calc_choiceProb_mabCost_results.csv"))
 
 df_plot <- bind_rows(
     df_mvCost %>% mutate(

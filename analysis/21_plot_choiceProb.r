@@ -1,6 +1,6 @@
 # ===========================================================================
-# Title: 20_hcm_costCont_ranInt_ranCoeff_choiceProb_plot.r
-# Date: 2026-09-10
+# Title: 21_plot_choiceProb.r
+# Date: 2026-10-23
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -16,9 +16,9 @@ library(ggplot2)
 # SECTION 2: Load results from Monte Carlo simulations
 # ------------------------------------------------------------------------
 
-df_mv <- read.csv(here("data", "choiceProb_mvCost.csv"))
+df_mv <- read.csv(here("data", "calc_choiceProb_mvCost_results.csv"))
 
-df_mab <- read.csv(here("data", "choiceProb_mabCost.csv"))
+df_mab <- read.csv(here("data", "calc_choiceProb_mabCost_results.csv"))
 
 # ------------------------------------------------------------------------
 # SECTION 3: Transform data for plotting

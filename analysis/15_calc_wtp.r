@@ -1,6 +1,6 @@
 # ===========================================================================
-# Title: 15_hcm_costCont_ranInt_ranCoeff_wtp.r
-# Date: 2026-10-19
+# Title: 15_calc_wtp.r
+# Date: 2026-10-23
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -47,7 +47,7 @@ wtp_hosp_array <- array(NA, dim = c(N, S, M))
     
 for (m in 1:M) {
     cat("\n===========================================================================\n")
-    cat("\nSimulating coefficients for imputation", m, "\n")
+    cat("\nCalculating WTPs for imputation", m, "\n")
 
     # Extract estimates & variance-covariance matrix
     theta_hat <- est_list[[m]]
@@ -61,7 +61,6 @@ for (m in 1:M) {
     # Simulate random coefficients
     for (s in 1:S) {
         # Simulate fixed coefficients
-        bHosp0.3 <- rep(theta[s, "bHosp0.3"], N)
         bRedness <- rep(theta[s, "bRedness"], N)
 
         # Simulate bCost for each respondent
@@ -78,6 +77,11 @@ for (m in 1:M) {
         mu_preterm_mv <- theta[s, "mu_preterm_mv"]
         sigma_preterm_mv <- theta[s, "sigma_preterm_mv"]
         bPreterm_mv <- rnorm(N, mean = mu_preterm_mv, sd = abs(sigma_preterm_mv))
+
+        # Simulate bHosp0.3 for each respondent
+        mu_hosp0.3 <- theta[s, "mu_hosp0.3"]
+        sigma_hosp0.3 <- theta[s, "sigma_hosp0.3"]
+        bHosp0.3 <- rnorm(N, mean = mu_hosp0.3, sd = abs(sigma_hosp0.3))
 
         # Calculate WTP for each respondent (Dim: N x S x M)
         wtp_preg <- - bPreg_mv / bCost * F
@@ -100,10 +104,10 @@ for (m in 1:M) {
 }
 
 # Write output to text file
-sink(here("output", "15_hcm_costCont_ranInt_ranCoeff_wtp_output.txt"))
+sink(here("output", "15_calc_wtp_output.txt"))
 cat("===========================================================================\n")
-cat("Title: 15_hcm_costCont_ranInt_ranCoeff_wtp_output.txt\n")
-cat("Date: 2026-10-19\n")
+cat("Title: 15_calc_wtp_output.txt\n")
+cat("Date: 2026-10-23\n")
 cat("===========================================================================\n")
 
 # Calculate medians across respondents (Dim: S x M)
