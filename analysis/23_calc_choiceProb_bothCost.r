@@ -84,9 +84,7 @@ for (m in 1:M) {
     # Simulate random coefficients
     for (s in 1:S) {
         # Isolate fixed coefficients
-        bHosp1.2 <- theta[s, "bHosp1.2"]
         bHosp0.9 <- theta[s, "bHosp0.9"]
-        bHosp0.3 <- theta[s, "bHosp0.3"]
         bRedness <- theta[s, "bRedness"]
         bHospIntRisk <- theta[s, "bHospIntRisk"]
         bOptIntLV <- theta[s, "bOptIntLV"]
