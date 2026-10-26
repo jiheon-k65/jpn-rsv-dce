@@ -1,0 +1,53 @@
+===========================================================================
+Title: 17.2_hcm_costCont_ranInt_ranCoeff_output.txt
+Date: 2026-10-23
+===========================================================================
+
+Pooled estimates using Rubin's rules:
+                      Est  Rob_SE p_2sided
+sigma_pdt         3.09737 0.23116   <0.001
+mu_preg_mv        0.39529 0.08582   <0.001
+sigma_preg_mv    -0.98687 0.13949   <0.001
+bRedness         -0.15189 0.06199    0.014
+mu_preterm_mv    -0.91518 0.12294   <0.001
+sigma_preterm_mv -1.06792 0.18075   <0.001
+mu_hosp1.2        0.08976 0.10783    0.405
+sigma_hosp1.2     0.54541 0.17185    0.002
+bHosp0.9          0.18064 0.10870    0.097
+mu_hosp0.3        0.56834 0.11287   <0.001
+sigma_hosp0.3    -0.50626 0.18449    0.006
+ln_mu_cost        1.70386 0.11598   <0.001
+ln_sigma_cost    -1.73294 0.06037   <0.001
+bHospIntRisk     -0.14388 0.13021    0.269
+bOptIntLV         2.30264 0.24896   <0.001
+bOptIntRisk       0.45598 0.14238    0.001
+gamma_age         0.09219 0.05348    0.085
+gamma_sib        -0.37433 0.10744   <0.001
+gamma_edu        -0.24493 0.12749    0.055
+gamma_inc        -0.25800 0.12802    0.044
+zeta_govTrust    -2.78334 0.24881   <0.001
+zeta_vacImpt     -3.53011 0.38621   <0.001
+zeta_vacSafe     -3.61968 0.36166   <0.001
+zeta_vacEff      -3.57446 0.37151   <0.001
+zeta_vacBlf      -3.84400 0.40906   <0.001
+tau_govTrust1    -3.20473 0.28984   <0.001
+tau_govTrust2    -0.67080 0.20307   <0.001
+tau_govTrust3     4.95403 0.40197   <0.001
+tau_vacImpt1     -5.02669 0.53545   <0.001
+tau_vacImpt2     -2.53733 0.34067   <0.001
+tau_vacImpt3      3.82739 0.42372   <0.001
+tau_vacSafe1     -4.17790 0.41423   <0.001
+tau_vacSafe2      0.19779 0.26896    0.462
+tau_vacSafe3      7.86546 0.67762   <0.001
+tau_vacEff1      -5.26169 0.49710   <0.001
+tau_vacEff2      -1.82284 0.30391   <0.001
+tau_vacEff3       5.15832 0.51077   <0.001
+tau_vacBlf1      -3.78831 0.42685   <0.001
+tau_vacBlf2       0.25414 0.27866    0.362
+tau_vacBlf3       7.04346 0.66831   <0.001
+
+AIC values:
+Min: 13145 , Max: 13250 
+
+BIC values:
+Min: 13325 , Max: 13430
