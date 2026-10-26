@@ -31,8 +31,9 @@ The scripts assume the project root is the working directory & use `here()` for 
 - `1_dataClean.r` - format dataset & re-code respondent characteristics
 - `2_dataDesc.r` - describe data & respondents that failed quality checks
 - `3_dataImp.r` - describe missingness & conduct multiple imputation
-- `4_mnl.r` onwards - fit choice models to data
-- `15_hcm_costCont_ranInt_ranCoeff_wtp.r` onwards - model predictions
+- `4_mnl.r` onwards - fit choice models
+- `18_calc_wtp.r` onwards - simulate predictions
+- `24_plot_choiceProb.r` onwards - visualize predictions
 
 ## 5. Choice Models
 
@@ -46,7 +47,7 @@ The scripts assume the project root is the working directory & use `here()` for 
 ### Mixed logit (MXL) models
 |Script|Description|
 |----|-----------|
-|`7_mxl_costCont.r`|All random coefficients|
+|`7_mxl_costCont.r`|All main effects as random coefficients|
 
 ### MNL models with interactions
 |Script|Description|
@@ -55,29 +56,35 @@ The scripts assume the project root is the working directory & use `here()` for 
 |`9.x_mnl_costCont_pregInt.r`|Pregnant women interactions|
 |`10.x_mnl_costCont_pretermInt.r`|Preterm birth interactions|
 |`11.x_mnl_costCont_costInt.r`|Cost interactions|
+|`12.x_mnl_costCont_hosp1.2Int.r`|12/1,000 risk (60% efficacy) interactions|
+|`13.x_mnl_costCont_hosp0.9Int.r`|9/1,000 risk (70% efficacy) interactions|
+|`14.x_mnl_costCont_hosp0.3Int.r`|3/1,000 risk (90% efficacy) interactions|
 
 ### Hybrid choice models (HCM)
 |Script|Description|
 |----|-----------|
-|`12.x_hcm_costCont.r`|All fixed coefficients|
-|`13.x_hcm_costCont_ranInt.r`|Random intercept|
-|`14.x_hcm_costCont_rantInt_ranCoeff.r`|Random intercept & coefficients|
+|`15.x_hcm_costCont.r`|All fixed coefficients|
+|`16.x_hcm_costCont_ranInt.r`|Random intercept|
+|`17.x_hcm_costCont_rantInt_ranCoeff.r`|Random intercept & coefficients|
 
 **Note:** complete-case (`x=1`) & multiple imputation (`x=2`)
 
 ## 6. Model predictions
 
-- `15_hcm_costCont_ranInt_ranCoeff_wtp.r` - Willingness-to-pay (WTP)
-- `16_hcm_costCont_ranInt_ranCoeff_cv.r` - Compensating variation (CV)
-- `17_hcm_costCont_ranInt_ranCoeff_choiceProb.r` - Choice probabilities at base cost
-- `18_hcm_costCont_ranInt_ranCoeff_choiceProb_mvCost.r` - Choice probabilities across varying MV costs
-- `19_hcm_costCont_ranInt_ranCoeff_choiceProb_mabCost.r` - Choice probabilities across varying mAb costs
-- `20_hcm_costCont_ranInt_ranCoeff_choiceProb_plot.r` - Plot choice probabilities separately
-- `21_hcm_costCont_ranInt_ranCoeff_choiceProb_comPlot.r` - Plot choice probabilities together
-- `22_hcm_costCont_ranInt_ranCoeff_choiceProb_bothCosts.r` - Choice probabilities across simultaneously varying MV & mAb costs
-- `23_hcm_costCont_ranInt_ranCoeff_choiceProb_heatmap.r` - Plot choice probabilities with simultaneously varying MV & mAb costs as a heatmap
+- `18_calc_wtp.r` - Willingness-to-pay (WTP)
+- `19_calc_cv.r` - Compensating variation (CV)
+- `20_calc_choiceProb.r` - Choice probabilities at base cost for both products
+- `21_calc_choiceProb_mvCost.r` - Choice probabilities across varying MV costs
+- `22_calc_choicProb_mabCost.r` - Choice probabilities across varying mAb costs
+- `23_calc_choicProb_bothCost.r` - Choice probabilities across varying MV & mAb costs
 
-## 7. Outputs
+## 7. Model visualization
+
+- `24_plot_choiceProb.r` - Plot choice probabilities as individual line plots
+- `25_plot_choiceProb_combined.r` - Plot choice probabilities as a combined line plot
+- `26_plot_choiceProb_heatmat.r` - Plot choice probabilities as a heatmap
+
+## 8. Outputs
 
 - Derived datasets are written back to `data/`
 - Figures are written to `figs/`
