@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 17.2_hcm_costCont_ranInt_ranCoeff.r
-# Date: 2026-10-23
+# Date: 2026-10-27
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -59,7 +59,7 @@ apollo_beta <- c(
     sigma_pdt = 0,
     mu_preg_mv = 0,
     sigma_preg_mv = 0,
-    bRedness = 0 ,
+    bRedness = 0 , # Fixed as SD was not different from zero
     mu_preterm_mv = 0,
     sigma_preterm_mv = 0,
     mu_hosp1.2 = 0,
@@ -69,9 +69,10 @@ apollo_beta <- c(
     sigma_hosp0.3 = 0,
     ln_mu_cost = 0,
     ln_sigma_cost = 0,
-    bHospIntRisk = 0,
+    bHospIntRisk = 0, # Fixed as SD was not different from zero
     bOptIntLV = 1,
-    bOptIntRisk = 0,
+    mu_optIntRisk = 0,
+    sigma_optIntRisk = 0,
     gamma_age = 0,
     gamma_sib = 0,
     gamma_edu = 0,
@@ -116,7 +117,8 @@ apollo_draws <- list(
         "draws_preterm",
         "draws_hosp1.2",
         "draws_hosp0.3",
-        "draws_cost"
+        "draws_cost",
+        "draws_optIntRisk"
     ),
     intraDrawsType = "",
     intraNDraws = 0,
@@ -140,6 +142,7 @@ apollo_randCoeff <- function(apollo_beta, apollo_inputs) {
     randcoeff[["bHosp1.2"]] <- mu_hosp1.2 + sigma_hosp1.2 * draws_hosp1.2
     randcoeff[["bHosp0.3"]] <- mu_hosp0.3 + sigma_hosp0.3 * draws_hosp0.3
     randcoeff[["bCost"]] <- - exp(ln_mu_cost + ln_sigma_cost * draws_cost) # Lognormal (ensures -ve coefficient)
+    randcoeff[["bOptIntRisk"]] <- mu_optIntRisk + sigma_optIntRisk * draws_optIntRisk
     return(randcoeff)
 }
 
@@ -308,11 +311,14 @@ saveRDS(
 sink(here("output", "17.2_hcm_costCont_ranInt_ranCoeff_output.txt"))
 cat("===========================================================================\n")
 cat("Title: 17.2_hcm_costCont_ranInt_ranCoeff_output.txt\n")
-cat("Date: 2026-10-23\n")
+cat("Date: 2026-10-27\n")
 cat("===========================================================================\n")
 
 pool_coeff(est_list, robvarcov_list, M)
 summ_aic_bic(aic_list, bic_list)
+
+cat("\nNote:\n")
+cat("Negative scale estimates may arise due to non-centered parameterization")
 
 # Switch off writing
 sink()
