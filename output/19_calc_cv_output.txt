@@ -1,12 +1,12 @@
 ===========================================================================
 Title: 19_calc_cv_output.txt
-Date: 2026-10-23
+Date: 2026-10-28
 ===========================================================================
 
 Alternative-specific compensating variations (CVs) in JPY:
-  Alternative Median Lower_UI Upper_UI
-1          MV 12,598    6,604   20,509
-2         mAb 12,634    6,637   20,460
+       Alternative Median Lower_UI Upper_UI
+1 Maternal vaccine  9,896    4,155   18,326
+2  Long-acting mAb  9,987    4,359   18,301
 
 Note:
 1. CV is calculated as - (V_alternative - V_opt) / bCost * 100,000 (JPY)

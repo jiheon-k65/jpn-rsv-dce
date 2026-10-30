@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 20_calc_choiceProb.r
-# Date: 2026-10-23
+# Date: 2026-10-28
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -84,7 +84,6 @@ for (m in 1:M) {
         bRedness <- theta[s, "bRedness"]
         bHospIntRisk <- theta[s, "bHospIntRisk"]
         bOptIntLV <- theta[s, "bOptIntLV"]
-        bOptIntRisk <- theta[s, "bOptIntRisk"]
 
         # Simulate bCost for each respondent
         ln_mu_cost <- theta[s, "ln_mu_cost"]
@@ -114,6 +113,11 @@ for (m in 1:M) {
         # Simulate alpha for each respondent
         sigma_pdt <- theta[s, "sigma_pdt"]
         alpha <- rnorm(N, mean = 0, sd = abs(sigma_pdt))
+
+        # Simulate bOptIntRisk for each respondent
+        mu_optIntRisk <- theta[s, "mu_optIntRisk"]
+        sigma_optIntRisk <- theta[s, "sigma_optIntRisk"]
+        bOptIntRisk <- rnorm(N, mean = mu_optIntRisk, sd = abs(sigma_optIntRisk))
 
         # Simulate LV for each respondent
         gamma_age <- theta[s, "gamma_age"]
@@ -176,7 +180,7 @@ for (m in 1:M) {
 sink(here("output", "20_calc_choiceProb_output.txt"))
 cat("===========================================================================\n")
 cat("Title: 20_calc_choiceProb_output.txt\n")
-cat("Date: 2026-10-23\n")
+cat("Date: 2026-10-28\n")
 cat("===========================================================================\n")
 
 # Calculate means over simulations & imputations
@@ -194,7 +198,7 @@ prob_opt_uppByN <- quantile(as.vector(prob_opt_mat), 0.975)
 
 # Format results into a data frame
 tot_summary <- data.frame(
-    Alternative = c("MV", "mAb", "Opt"),
+    Alternative = c("Maternal vaccine", "Long-acting mAb", "Opt out"),
     Mean = c(prob_mv_mean, prob_mab_mean, prob_opt_mean),
     Lower_UI = c(prob_mv_lowByN, prob_mab_lowByN, prob_opt_lowByN),
     Upper_UI = c(prob_mv_uppByN, prob_mab_uppByN, prob_opt_uppByN)
@@ -205,7 +209,7 @@ cat("\nAlternative-specific choice probabilities:\n")
 print(tot_summary)
 cat("\nNote:\n")
 cat("1. Means are calculated across respondents, then averaged across simulations & imputations\n")
-cat("2. 95% UI represents uncertainty in means across simulations & imputations\n")
+cat("2. 95% UI represents uncertainty in means across simulations & imputations")
 
 # Switch off writing
 sink()

@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 18_calc_wtp.r
-# Date: 2026-10-23
+# Date: 2026-10-28
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -107,7 +107,7 @@ for (m in 1:M) {
 sink(here("output", "18_calc_wtp_output.txt"))
 cat("===========================================================================\n")
 cat("Title: 18_calc_wtp_output.txt\n")
-cat("Date: 2026-10-23\n")
+cat("Date: 2026-10-28\n")
 cat("===========================================================================\n")
 
 # Calculate medians across respondents (Dim: S x M)
@@ -142,7 +142,7 @@ cat("\nNote:\n")
 cat("1. WTP is calculated as -bAttribute / bCost * 100,000 (JPY)\n")
 cat("2. WTP for redness & preterm birth are negative because they are negative attributes\n")
 cat("3. Medians are calculated across respondents, then averaged across simulations & imputations\n")
-cat("4. 95% UI represents uncertainty in medians across simulations & imputations\n")
+cat("4. 95% UI represents uncertainty in medians across simulations & imputations")
 
 # Switch off writing
 sink()

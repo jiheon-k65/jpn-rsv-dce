@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 22_calc_choiceProb_mabCost.r
-# Date: 2026-10-23
+# Date: 2026-10-28
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -90,7 +90,6 @@ for (m in 1:M) {
         bRedness <- theta[s, "bRedness"]
         bHospIntRisk <- theta[s, "bHospIntRisk"]
         bOptIntLV <- theta[s, "bOptIntLV"]
-        bOptIntRisk <- theta[s, "bOptIntRisk"]
 
         # Simulate bCost for each respondent
         ln_mu_cost <- theta[s, "ln_mu_cost"]
@@ -120,6 +119,11 @@ for (m in 1:M) {
         # Simulate alpha for each respondent
         sigma_pdt <- theta[s, "sigma_pdt"]
         alpha <- rnorm(N, mean = 0, sd = abs(sigma_pdt))
+
+        # Simulate bOptIntRisk for each respondent
+        mu_optIntRisk <- theta[s, "mu_optIntRisk"]
+        sigma_optIntRisk <- theta[s, "sigma_optIntRisk"]
+        bOptIntRisk <- rnorm(N, mean = mu_optIntRisk, sd = abs(sigma_optIntRisk))
 
         # Simulate LV for each respondent
         gamma_age <- theta[s, "gamma_age"]
@@ -192,7 +196,7 @@ for (k in seq_along(cost_grid)) {
 
     summary_list[[k]] <- data.frame(
         Cost = cost_grid[k],
-        Alt = c("MV", "mAb", "Opt-out"),
+        Alt = c("MV", "mAb", "Opt out"),
         Mean = c(
             mean(prob_mv_array[, , k]),
             mean(prob_mab_array[, , k]),

@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 19_calc_cv.r
-# Date: 2026-10-23
+# Date: 2026-10-28
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -83,7 +83,6 @@ for (m in 1:M) {
         bRedness <- theta[s, "bRedness"]
         bHospIntRisk <- theta[s, "bHospIntRisk"]
         bOptIntLV <- theta[s, "bOptIntLV"]
-        bOptIntRisk <- theta[s, "bOptIntRisk"]
 
         # Simulate bCost for each respondent
         ln_mu_cost <- theta[s, "ln_mu_cost"]
@@ -113,6 +112,11 @@ for (m in 1:M) {
         # Simulate alpha for each respondent
         sigma_pdt <- theta[s, "sigma_pdt"]
         alpha <- rnorm(N, mean = 0, sd = abs(sigma_pdt))
+
+        # Simulate bOptIntRisk for each respondent
+        mu_optIntRisk <- theta[s, "mu_optIntRisk"]
+        sigma_optIntRisk <- theta[s, "sigma_optIntRisk"]
+        bOptIntRisk <- rnorm(N, mean = mu_optIntRisk, sd = abs(sigma_optIntRisk))
 
         # Simulate LV for each respondent
         gamma_age <- theta[s, "gamma_age"]
@@ -170,7 +174,7 @@ for (m in 1:M) {
 sink(here("output", "19_calc_cv_output.txt"))
 cat("===========================================================================\n")
 cat("Title: 19_calc_cv_output.txt\n")
-cat("Date: 2026-10-23\n")
+cat("Date: 2026-10-28\n")
 cat("===========================================================================\n")
 
 # Calculate median across respondents (Dim: S x M)
@@ -185,7 +189,7 @@ CV_mab_uppByN <- quantile(CV_mab_medByN, 0.975)
 
 # Format results into a data frame
 tot_summary <- data.frame(
-    Alternative = c("MV", "mAb"),
+    Alternative = c("Maternal vaccine", "Long-acting mAb"),
     Median = c(mean(CV_mv_medByN), mean(CV_mab_medByN)),
     Lower_UI = c(CV_mv_lowByN, CV_mab_lowByN),
     Upper_UI = c(CV_mv_uppByN, CV_mab_uppByN)
@@ -197,7 +201,7 @@ print(tot_summary)
 cat("\nNote:\n")
 cat("1. CV is calculated as - (V_alternative - V_opt) / bCost * 100,000 (JPY)\n")
 cat("2. Medians are calculated across respondents, then averaged across simulations & imputations\n")
-cat("3. 95% UI represents uncertainty in medians across simulations & imputations\n")
+cat("3. 95% UI represents uncertainty in medians across simulations & imputations")
 
 # Switch off writing
 sink()

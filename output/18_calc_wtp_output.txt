@@ -1,14 +1,14 @@
 ===========================================================================
 Title: 18_calc_wtp_output.txt
-Date: 2026-10-23
+Date: 2026-10-28
 ===========================================================================
 
 Willingness-to-pay (WTP) for attribute changes in JPY:
-  Attribute  Median Lower_UI Upper_UI
-1      Preg   3,117    1,192    5,691
-2   Redness  -2,791   -5,237     -557
-3   Preterm -10,099  -15,457   -5,888
-4   Hosp0.3   7,338    3,042   13,070
+  Attribute Median Lower_UI Upper_UI
+1      Preg  2,566      872    4,933
+2   Redness -2,488   -4,795     -445
+3   Preterm -8,577  -13,685   -4,619
+4   Hosp0.3  6,574    2,447   12,218
 
 Note:
 1. WTP is calculated as -bAttribute / bCost * 100,000 (JPY)
