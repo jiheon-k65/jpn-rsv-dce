@@ -1,7 +1,7 @@
 
 # ===========================================================================
 # Title: 26_plot_choiceProb_heatmap.r
-# Date: 2026-10-23
+# Date: 2026-10-28
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -28,11 +28,11 @@ df$mAb_Cost <- df$mAb_Cost * 100000 # Convert mAb cost to JPY
 color_manual <- c(
     "MV" = "#4F81BD",
     "mAb" = "#9BBB59",
-    "Opt-out" = "#C0504D"
+    "Opt out" = "#C0504D"
 )
 
 df_plot <- df %>% mutate(
-    Alt = factor(Alt, levels = c("MV", "mAb", "Opt-out")),
+    Alt = factor(Alt, levels = c("MV", "mAb", "Opt out")),
     tile_color = mapply(
         function(alt, mean) {
             grDevices::colorRampPalette(
@@ -64,11 +64,19 @@ heatmap <- ggplot(
     ) +
     scale_y_continuous(
         breaks = sort(unique(df_plot$mAb_Cost)),
-        name = "mAb cost (JPY)",
+        name = "Long-acting mAb cost (JPY)",
         label = scales::comma
     ) +
     scale_fill_identity() +
-    facet_wrap(~Alt, nrow = 1) +
+    facet_wrap(
+        ~Alt,
+        nrow = 1,
+        labeller = as_labeller(c(
+            "MV" = "Maternal vaccine",
+            "mAb" = "Long-acting mAb",
+            "Opt out" = "Opt out"
+        ))
+    ) +
     coord_fixed(ratio = 1, expand = FALSE) +
     theme_bw(base_size = 6) +
     theme(

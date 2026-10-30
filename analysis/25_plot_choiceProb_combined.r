@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 25_plot_choiceProb_combined.r
-# Date: 2026-10-23
+# Date: 2026-10-28
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -24,7 +24,7 @@ df_plot <- bind_rows(
         base_cost = 24000
     ),
     df_mabCost %>% mutate(
-        CostType = "Change in monoclonal antibody cost (JPY)",
+        CostType = "Change in long-acting monoclonal antibody cost (JPY)",
         base_cost = 45000
     )
 ) %>%
@@ -35,7 +35,7 @@ df_plot <- bind_rows(
             CostType,
             levels = c(
                 "Change in maternal vaccine cost (JPY)",
-                "Change in monoclonal antibody cost (JPY)"
+                "Change in long-acting monoclonal antibody cost (JPY)"
             )
         )
     )
@@ -75,7 +75,7 @@ y_max <- ceiling(max(df_plot$Upper_UI, na.rm = TRUE) / 5) * 5
 color_manual <- c(
     "MV" = "#4F81BD",
     "mAb" = "#9BBB59",
-    "Opt-out" = "#C0504D"
+    "Opt out" = "#C0504D"
 )
 
 prob_c0 <- df_plot %>%

@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 24_plot_choiceProb.r
-# Date: 2026-10-23
+# Date: 2026-10-28
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -64,7 +64,7 @@ df_mab_plot <- norm_meanProb(df_mab_plot)
 color_manual <- c(
     "MV" = "#4F81BD",
     "mAb" = "#9BBB59",
-    "Opt-out" = "#C0504D"
+    "Opt out" = "#C0504D"
 )
 
 # Function to plot choice probabilities by product cost
@@ -146,7 +146,7 @@ plot_choiceProb <- function(df, base_cost, x_label) {
 choiceProb_mvCost <- plot_choiceProb(
     df_mv_plot,
     base_cost = 24000,
-    x_label = "Maternal Vaccine Cost (JPY)"
+    x_label = "Maternal vaccine cost (JPY)"
 )
 ggsave(
     here("figs", "choiceProb_mvCost_linePlot.png"),
@@ -159,7 +159,7 @@ ggsave(
 choiceProb_mabCost <- plot_choiceProb(
     df_mab_plot,
     base_cost = 45000,
-    x_label = "Monoclonal Antibody Cost (JPY)"
+    x_label = "Long-acting monoclonal antibody cost (JPY)"
 )
 ggsave(
     here("figs", "choiceProb_mabCost_linePlot.png"),
