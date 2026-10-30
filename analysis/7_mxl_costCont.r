@@ -1,6 +1,6 @@
 # ===========================================================================
 # Title: 7_mxl_costCont
-# Date: 2026-10-18
+# Date: 2026-10-27
 # ===========================================================================
 
 # ------------------------------------------------------------------------
@@ -64,8 +64,10 @@ apollo_beta <- c(
     sigma_hosp0.3 = 0,
     ln_mu_cost = 0,
     ln_sigma_cost = 0,
-    bOptIntRisk = 0, # Assumed fixed effect
-    bHospIntRisk = 0 # Assumed fixed effect
+    mu_optIntRisk = 0,
+    sigma_optIntRisk = 0,
+    mu_hospIntRisk = 0,
+    sigma_hospIntRisk = 0
 )
 # List parameters to be fixed at their starting values
 apollo_fixed <- c()
@@ -87,7 +89,9 @@ apollo_draws <- list(
         "draws_hosp1.2",
         "draws_hosp0.9",
         "draws_hosp0.3",
-        "draws_cost"
+        "draws_cost",
+        "draws_optIntRisk",
+        "draws_hospIntRisk"
     ),
     intraDrawsType = "",
     intraNDraws = 0,
@@ -106,6 +110,8 @@ apollo_randCoeff <- function(apollo_beta, apollo_inputs) {
     randcoeff[["bHosp0.9"]] <- mu_hosp0.9 + sigma_hosp0.9 * draws_hosp0.9
     randcoeff[["bHosp0.3"]] <- mu_hosp0.3 + sigma_hosp0.3 * draws_hosp0.3
     randcoeff[["bCost"]] <- - exp(ln_mu_cost + ln_sigma_cost * draws_cost) # Lognormal distribution (ensures -ve coefficient)
+    randcoeff[["bOptIntRisk"]] <- mu_optIntRisk + sigma_optIntRisk * draws_optIntRisk
+    randcoeff[["bHospIntRisk"]] <- mu_hospIntRisk + sigma_hospIntRisk * draws_hospIntRisk
     return(randcoeff)
 }
 
@@ -203,10 +209,13 @@ apollo_modelOutput(fit, modelOutput_settings)
 sink(here("output", "7_mxl_costCont_output.txt"))
 cat("===========================================================================\n")
 cat("Title: 7_mxl_costCont_output.txt\n")
-cat("Date: 2026-10-18\n")
+cat("Date: 2026-10-27\n")
 cat("===========================================================================\n")
 
 format_cca_results(fit)
+
+cat("\nNote:\n")
+cat("Negative scale estimates may arise due to non-centered parameterization")
 
 # Switch off writing
 sink()
