@@ -20,11 +20,11 @@ df_mabCost <- read.csv(here("data", "calc_choiceProb_mabCost_results.csv"))
 
 df_plot <- bind_rows(
     df_mvCost %>% mutate(
-        CostType = "Change in maternal vaccine cost (JPY)",
+        CostType = "Change in maternal vaccine cost",
         base_cost = 24000
     ),
     df_mabCost %>% mutate(
-        CostType = "Change in long-acting monoclonal antibody cost (JPY)",
+        CostType = "Change in long-acting monoclonal antibody cost",
         base_cost = 45000
     )
 ) %>%
@@ -34,8 +34,8 @@ df_plot <- bind_rows(
         CostType = factor(
             CostType,
             levels = c(
-                "Change in maternal vaccine cost (JPY)",
-                "Change in long-acting monoclonal antibody cost (JPY)"
+                "Change in maternal vaccine cost",
+                "Change in long-acting monoclonal antibody cost"
             )
         )
     )
@@ -156,7 +156,7 @@ choiceProb_combined <- ggplot(
         strip.position = "top"
     ) +
     labs(
-        x = NULL,
+        x = "Out-of-pocket cost (JPY)",
         y = "Population-level choice probability (%)"
     ) +
     scale_color_manual(values = color_manual) +

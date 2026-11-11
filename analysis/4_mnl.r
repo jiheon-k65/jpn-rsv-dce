@@ -16,7 +16,7 @@ library(apollo)
 library(ggplot2)
 
 # Source universal functions
-source(here("utils.r"))
+source(here("analysis", "utils.r"))
 
 # Initialize code
 apollo_initialise()

@@ -424,7 +424,7 @@ linePrep <- function(df) {
         } else if (grepl("^bHosp", df$X[i])) {
             df$grp[i] <- "Hospitalization"
         } else if (grepl("^bCost", df$X[i])) {
-            df$grp[i] <- "Cost"
+            df$grp[i] <- "Cost (JPY)"
         }
     }
     # Calculate 95% CI
@@ -432,6 +432,26 @@ linePrep <- function(df) {
     df$ci_upper <- df$Estimate + 1.96 * df$Std.err.
     return(df)
 }
+
+# Labels for coefficient names in line plots
+line_labels <- c(
+    "bNoAe" = "No AE",
+    "bRedness" = "Redness",
+    "bPreterm_mv" = "Preterm\nbirth",
+    "ascPdt" = "Product",
+    "ascOpt" = "Opt-out",
+    "bCost0" = "0",
+    "bCost0.05" = "5,000",
+    "bCost0.1" = "10,000",
+    "bCost0.3" = "30,000",
+    "bCost1" = "100,000",
+    "bHosp1.5" = "15/1,000",
+    "bHosp1.2" = "12/1,000",
+    "bHosp0.9" = "9/1,000",
+    "bHosp0.3" = "3/1,000",
+    "bPreg_mv" = "Pregnant\nwoman",
+    "bInf_mab" = "Infant"
+)
 
 # Plot & save line plot
 linePlot <- function(df) {
@@ -445,11 +465,17 @@ linePlot <- function(df) {
         geom_point(size = 1) +
         geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0.2) +
         facet_wrap(~grp, scales = "free", nrow = 1) +
-        labs(x = "Coefficients", y = "Estimates", color = "Group") +
+        scale_x_discrete(labels = line_labels) +
+        labs(x = "Attribute levels", y = "Coefficient estimates", color = "Group") +
         theme_bw(base_size = 8) +
         theme(
             axis.text.x = element_text(angle = 45, hjust = 1),
-            legend.position = "top"
+            legend.position = "top",
+            legend.title = element_text(margin = margin(r = 0)),
+            legend.spacing.x = unit(0, "pt"),
+            legend.key.spacing.x = unit(0, "pt"),
+            legend.box.spacing = unit(4, "pt"),
+            legend.margin = margin(0, 0, 0, 0)
         )
     # Save line plot
     cat("\nSaved", paste0(df_name, "_linePlot.png"), "\n")
