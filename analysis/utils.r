@@ -420,9 +420,9 @@ linePrep <- function(df) {
         } else if (df$X[i] %in% c("bPreg_mv", "bInf_mab")) {
             df$grp[i] <- "Recipient"
         } else if (grepl("^(bNoAe|bRedness|bPreterm)", df$X[i])) {
-            df$grp[i] <- "Adverse Event"
+            df$grp[i] <- "Adverse event"
         } else if (grepl("^bHosp", df$X[i])) {
-            df$grp[i] <- "Hospitalization"
+            df$grp[i] <- "Hospitalization risk"
         } else if (grepl("^bCost", df$X[i])) {
             df$grp[i] <- "Cost (JPY)"
         }
@@ -471,9 +471,9 @@ linePlot <- function(df) {
         theme(
             axis.text.x = element_text(angle = 45, hjust = 1),
             legend.position = "top",
-            legend.title = element_text(margin = margin(r = 0)),
-            legend.spacing.x = unit(0, "pt"),
-            legend.key.spacing.x = unit(0, "pt"),
+            legend.title = element_text(margin = margin(r = 4, unit = "pt")),
+            legend.spacing.x = unit(2, "pt"),
+            legend.key.spacing.x = unit(4, "pt"),
             legend.box.spacing = unit(4, "pt"),
             legend.margin = margin(0, 0, 0, 0)
         )
